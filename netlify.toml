@@ -3,8 +3,9 @@
   publish = "dist"
 
 [context.production.environment]
+  # Use the "real" ID in production.
   GA_TRACKING_ID = "UA-123240233-7"
 
-# Use a "fake" ID for previews (avoid skewing production analytics).
 [context.deploy-preview.environment]
+  # Use a "fake" ID for previews (avoid skewing production analytics).
   GA_TRACKING_ID = "UA-111111111-1"
