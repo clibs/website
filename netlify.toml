@@ -1,7 +1,6 @@
 [build]
   command = "scripts/netlifyBuild.sh"
   publish = "dist"
-  environment = { NODE_ENV = "production" }
 
 [context.production.environment]
   GA_TRACKING_ID = "UA-123240233-7"
