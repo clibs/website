@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import GithubForkRibbon from 'react-github-fork-ribbon'
 import { Helmet } from 'react-helmet'
+import { OutboundLink } from '../lib/analytics'
 import InstallationGuide from '../components/InstallationGuide'
 import styles from './Home.css'
 
@@ -54,9 +55,12 @@ const Home: React.ComponentType = () => (
 
       <p>
         The GitHub wiki{' '}
-        <a href="https://github.com/clibs/clib/wiki/Packages" rel="external">
+        <OutboundLink
+          href="https://github.com/clibs/clib/wiki/Packages"
+          label="GitHub Wiki"
+        >
           listing of packages
-        </a>{' '}
+        </OutboundLink>{' '}
         acts as the “registry” and populates both the{' '}
         <Link to="/packages">Packages</Link> page and the results from{' '}
         <code>clib-search(1)</code>.
