@@ -1,0 +1,38 @@
+# clibs.org
+
+> The source code for [clibs.org](https://www.clibs.org/).
+
+## Development
+
+### Getting started
+
+To work on the site locally, first install [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/).
+
+Next install the project's dependencies with:
+
+```
+yarn
+```
+
+Finally, start [Parcel's development server](https://parceljs.org/cli.html#serve) with:
+
+```
+yarn dev
+```
+
+### Updating the registry
+
+The registry is [automatically updated](https://github.com/clibs/website/blob/master/.github/workflows/registry.yml) every 6 hours.
+
+To manually rebuild the registry:
+
+1. [Get a GitHub token](https://github.com/settings/tokens/new)
+1. Run `yarn registry --token=YOUR_TOKEN`
+
+## Deployment
+
+Netlify deploys all commits that land in the `master` branch by running the `scripts/netlifyBuild.sh` program. This will perform a "regular" build (`parcel build`) and optionally "pre-render" all pages as static HTML.
+
+## License
+
+MIT

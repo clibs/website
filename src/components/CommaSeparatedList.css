@@ -1,0 +1,17 @@
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  display: inline;
+}
+
+.list li:after {
+  content: ',\0000a0'; /* nonbreaking space */
+}
+
+.list li:last-child:after {
+  content: '';
+}

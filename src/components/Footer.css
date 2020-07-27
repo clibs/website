@@ -1,0 +1,26 @@
+.footer {
+  margin-bottom: var(--space-large);
+}
+
+.links {
+  padding-top: var(--space-huge);
+  text-align: center;
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.copyright {
+  padding-top: var(--space-huge);
+  text-align: center;
+}
+
+.build {
+  text-align: center;
+  font-size: var(--font-small);
+}

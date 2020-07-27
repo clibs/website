@@ -1,0 +1,79 @@
+{
+  "name": "clibs.org",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "registry": "ts-node scripts/buildRegistry.ts",
+    "dev": "parcel src/index.html",
+    "prebuild": "rimraf dist",
+    "build": "parcel build src/index.html",
+    "build:static": "react-snap",
+    "fmt": "prettier --write *.{md,js,json} .*.json scripts/*.ts 'src/**/*.{ts,tsx,css,html}'",
+    "lint": "eslint *.js scripts/*.ts 'src/**/*.{ts,tsx}'",
+    "test:ts": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sindresorhus/class-names": "^1.1.0",
+    "@sindresorhus/slugify": "^1.0.0",
+    "normalize.css": "^8.0.1",
+    "qs": "^6.9.4",
+    "react": "^16.13.1",
+    "react-autocomplete": "^1.8.1",
+    "react-dom": "^16.13.1",
+    "react-github-fork-ribbon": "^0.6.0",
+    "react-helmet": "^6.0.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-syntax-highlighter": "6",
+    "react-tabs": "^3.1.0",
+    "react-timeago": "^4.4.0",
+    "ts-dedent": "^1.1.1"
+  },
+  "devDependencies": {
+    "@octokit/rest": "^17.8.0",
+    "@types/node": "^13.13.5",
+    "@types/prettier": "^2.0.0",
+    "@types/qs": "^6.9.2",
+    "@types/react": "^16.9.35",
+    "@types/react-autocomplete": "^1.8.5",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^5.0.15",
+    "@types/react-router": "^5.1.7",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-tabs": "^2.3.1",
+    "@types/react-timeago": "^4.1.1",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.32.0",
+    "autoprefixer": "^9.7.6",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "execa": "^4.0.1",
+    "express": "^4.17.1",
+    "fast-deep-equal": "^3.1.1",
+    "husky": "^4.2.5",
+    "imagemin-cli": "^6.0.0",
+    "imagemin-lint-staged": "^0.4.0",
+    "lint-staged": "^10.2.2",
+    "meow": "^7.0.1",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^2.0.0",
+    "prettier": "^2.0.5",
+    "react-snap": "^1.23.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3",
+    "wiki-registry": "^0.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "reactSnap": {
+    "source": "dist",
+    "skipThirdPartyRequests": true
+  }
+}

@@ -1,0 +1,11 @@
+.app {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 740px) {
+  .app {
+    padding-left: var(--space-large);
+    padding-right: var(--space-large);
+  }
+}

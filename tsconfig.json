@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "target": "es5",
+    "lib": ["dom", "es5"],
+    "jsx": "react",
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "typeRoots": ["node_modules/@types", "./typings"]
+  }
+}

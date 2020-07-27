@@ -1,0 +1,61 @@
+.header {
+  padding-bottom: var(--space-small);
+}
+
+.logo {
+  text-align: center;
+  padding-top: var(--space-small);
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo img {
+  width: 44px;
+  height: 44px;
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li:first-of-type {
+  padding-left: 0;
+}
+
+.nav li {
+  padding-left: var(--space-small);
+  display: inline-block;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.search {
+  padding-top: var(--space-small);
+}
+
+@media screen and (min-width: 750px) {
+  .header {
+    position: relative;
+  }
+
+  .logo h1 {
+    text-align: left;
+  }
+
+  .nav {
+    position: absolute;
+    top: var(--space-small);
+    right: 0;
+    text-align: right;
+  }
+}

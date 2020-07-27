@@ -1,0 +1,6 @@
+.package {
+}
+
+.package h3 {
+  margin-top: var(--space-small);
+}

@@ -1,0 +1,7 @@
+.hero {
+  margin-bottom: var(--space-medium);
+}
+
+.about {
+  margin-top: var(--space-large);
+}

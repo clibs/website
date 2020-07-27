@@ -1,0 +1,105 @@
+@import 'normalize.css';
+
+:root {
+  /* colors */
+  --black: rgba(0, 0, 0, 0.9);
+  --light-gray: #f8f8f8;
+  --dark-gray: #dddddd;
+  --white: #fff;
+
+  /* spacing */
+  --space-small: 12px;
+  --space-medium: 24px;
+  --space-large: 36px;
+  --space-huge: 48px;
+
+  /* font */
+  --font-small: 10px;
+  --font-normal: 12px;
+  --font-medium: 18px;
+  --font-large: 24px;
+  --font-huge: 28px;
+
+  /* misc */
+  --max-content-width: 800px;
+  --border-radius: 3px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline-color: var(--nude);
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--off-white);
+  color: var(--black);
+}
+
+a {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--font-huge);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: var(--font-large);
+  font-weight: 400;
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-size: var(--font-large);
+  font-weight: 400;
+  letter-spacing: -0.3px;
+}
+
+h4 {
+  font-size: var(--font-medium);
+}
+
+h5 {
+  font-size: var(--font-normal);
+}
+
+h6 {
+  font-size: var(--font-normal);
+}
+
+p {
+  margin-top: var(--space-small);
+  margin-bottom: var(--space-small);
+}

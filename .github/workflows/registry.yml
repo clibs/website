@@ -1,0 +1,25 @@
+name: Registry
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # Must set the ref since this workflow is triggered on a schedule (not by push).
+          ref: ${{ github.head_ref }}
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: yarn
+      - run: yarn registry --token=${{ secrets.GITHUB_TOKEN }}
+      - uses: stefanzweifel/git-auto-commit-action@v4.2.0
+        with:
+          commit_message: Update registry
+          commit_options: --no-verify
+          file_pattern: src/registry.ts

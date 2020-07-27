@@ -1,0 +1,61 @@
+@import 'react-tabs/style/react-tabs.css';
+
+.guide {
+}
+
+.guide h3 {
+  margin-bottom: var(--space-small);
+}
+
+.guide :global(.react-tabs) [role='tablist'] {
+  border-bottom: 1px solid var(--dark-gray);
+  margin-bottom: var(--space-small);
+  padding: 0;
+}
+
+.guide :global(.react-tabs) [role='tab'] {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+
+  /* hack */
+  position: relative;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.guide :global(.react-tabs) [role='tab'][aria-selected='true'] {
+  background: var(--white);
+  border-color: var(--dark-gray);
+  border-radius: var(--border-radius);
+}
+
+.guide :global(.react-tabs) [role='tab']:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%); /* TODO: use a var and fix color */
+  border-color: var(--light-gray);
+  outline: none;
+}
+
+/* hack */
+.guide :global(.react-tabs) [role='tab']:focus:after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: var(--white);
+}
+
+@media screen and (min-width: 750px) {
+  .guide :global(.react-tabs) [role='tab'] {
+    padding-right: var(--space-small);
+    padding-left: var(--space-small);
+  }
+}
