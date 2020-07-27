@@ -2,6 +2,7 @@ import React from 'react'
 import Autocomplete from 'react-autocomplete'
 import { useHistory, useLocation } from 'react-router'
 import { stringify, parse } from 'qs'
+import * as analytics from '../lib/analytics'
 import classNames from '@sindresorhus/class-names'
 import { packages } from '../registry'
 import { Package } from '../types'
@@ -36,6 +37,8 @@ const SearchForm: React.ComponentType = () => {
       return
     }
 
+    analytics.submitSearch()
+
     e.preventDefault()
     const q = stringify({ q: value })
     history.push(`/search?${q}`)
@@ -44,7 +47,10 @@ const SearchForm: React.ComponentType = () => {
   const handleChange = (e: React.ChangeEvent, name: string): void =>
     setValue(name)
 
-  const handleSelect = (name: string): void => history.push(`/packages/${name}`)
+  const handleSelect = (name: string): void => {
+    analytics.selectPackage()
+    history.push(`/packages/${name}`)
+  }
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>

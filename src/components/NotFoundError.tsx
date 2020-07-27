@@ -1,4 +1,5 @@
 import React from 'react'
+import { OutboundLink } from '../lib/analytics'
 import ErrorMessage from './ErrorMessage'
 
 interface Props {
@@ -7,24 +8,23 @@ interface Props {
   children?: React.ReactNode
 }
 
-const defaultChildren = (
-  <p>
-    If you believe this is an error, either submit an issue at{' '}
-    <a
-      href="https://github.com/clibs/website"
-      target="_blank"
-      rel="noopener noreferrer external"
-    >
-      github.com/clibs/website
-    </a>{' '}
-    or try again later.
-  </p>
-)
-
 const NotFoundError: React.ComponentType<Props> = ({
   title,
   header,
-  children = defaultChildren
+  children = (
+    <p>
+      If you believe this is an error, either submit an issue at{' '}
+      <OutboundLink
+        href="https://github.com/clibs/website"
+        target="_blank"
+        rel="noopener noreferrer external"
+        eventLabel="Github Repository"
+      >
+        github.com/clibs/website
+      </OutboundLink>{' '}
+      or try again later.
+    </p>
+  )
 }) => {
   return (
     <ErrorMessage title={title}>

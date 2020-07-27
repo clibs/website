@@ -1,3 +1,11 @@
 [build]
   command = "scripts/netlifyBuild.sh"
   publish = "dist"
+
+[context.production.environment]
+  # Use the "real" ID in production.
+  GA_TRACKING_ID = "UA-123240233-7"
+
+[context.deploy-preview.environment]
+  # Use a "fake" ID for previews (avoid skewing production analytics).
+  GA_TRACKING_ID = "UA-111111111-1"

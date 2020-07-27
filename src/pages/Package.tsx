@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import slugify from '@sindresorhus/slugify'
 import { packages } from '../registry'
+import * as analytics from '../lib/analytics'
 import CommaSeparatedList from '../components/CommaSeparatedList'
 import CodeBlock from '../components/CodeBlock'
 import NotFoundError from '../components/NotFoundError'
@@ -35,6 +36,7 @@ const Package: React.ComponentType<Props> = ({ match }) => {
   const pkg = packages.find(p => p.name === `${owner}/${repo}`)
 
   if (!pkg) {
+    analytics.missingPackage(owner, repo)
     return (
       <React.Fragment>
         <Helmet title={`Package “${owner}/${repo}” Not Found`}>
@@ -75,9 +77,12 @@ const Package: React.ComponentType<Props> = ({ match }) => {
 
         <div className={styles.repository}>
           <h3>Repository</h3>
-          <a href={pkg.url} rel="external">
+          <analytics.OutboundLink
+            href={pkg.url}
+            eventLabel="GitHub Package Repository"
+          >
             {pkg.url}
-          </a>
+          </analytics.OutboundLink>
         </div>
 
         <div className={styles.license}>

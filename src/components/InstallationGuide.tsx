@@ -1,115 +1,57 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import dedent from 'ts-dedent'
+import * as analytics from '../lib/analytics'
 import CodeBlock from './CodeBlock'
 import styles from './InstallationGuide.css'
 
-enum Platform {
+export enum Platform {
   MacOS = 0,
   Linux,
   Windows,
   Other
 }
 
-const Windows: React.ComponentType = () => (
-  <p>
-    For Windows users, we have pre-compiled binaries available on our{' '}
-    <a href="https://github.com/clibs/clib/releases" rel="external">
-      GitHub Releases
-    </a>{' '}
-    page.
-  </p>
+const Git: React.ComponentType = () => (
+  <analytics.OutboundLink href="https://git-scm.com/" eventLabel="Git">
+    <code>git</code>
+  </analytics.OutboundLink>
 )
 
-Windows.displayName = 'Windows'
-
-const Linux: React.ComponentType = () => (
-  <React.Fragment>
-    <p>
-      First, you’ll need your distibution’s version of{' '}
-      <a href="https://curl.haxx.se/libcurl/" rel="external">
-        <code>libcurl</code>
-      </a>{' '}
-      (on Ubuntu, this is <code>libcurl4-gnutls-dev</code>).
-    </p>
-    <p>
-      Next, download and build the source with{' '}
-      <a href="https://git-scm.com/" rel="external">
-        <code>git</code>
-      </a>
-      :
-    </p>
-    <CodeBlock
-      source={dedent`
-        git clone https://github.com/clibs/clib.git /tmp/clib
-        cd /tmp/clib
-        make
-        sudo make install
-      `}
-    />
-  </React.Fragment>
+const Releases: React.ComponentType = () => (
+  <analytics.OutboundLink
+    href="https://github.com/clibs/clib/releases"
+    eventLabel="GitHub Releases"
+  >
+    GitHub Releases
+  </analytics.OutboundLink>
 )
 
-Linux.displayName = 'Linux'
-
-const Other: React.ComponentType = () => (
-  <React.Fragment>
-    <p>
-      With{' '}
-      <a href="https://git-scm.com/" rel="external">
-        <code>git</code>
-      </a>
-      , do:
-    </p>
-    <CodeBlock
-      source={dedent`
-        git clone https://github.com/clibs/clib.git /tmp/clib
-        cd /tmp/clib
-        make install
-        cd -
-      `}
-    />
-  </React.Fragment>
+const CURL: React.ComponentType = () => (
+  <analytics.OutboundLink
+    href="https://curl.haxx.se/libcurl/"
+    eventLabel="cURL"
+  >
+    <code>libcurl</code>
+  </analytics.OutboundLink>
 )
 
-Other.displayName = 'Other'
-
-const MacOS: React.ComponentType = () => (
-  <React.Fragment>
-    <p>
-      With{' '}
-      <a href="https://github.com/Homebrew/homebrew" rel="external">
-        <code>homebrew</code>
-      </a>
-      , do:
-    </p>
-
-    <CodeBlock source="brew install clib" />
-
-    <p>
-      With{' '}
-      <a href="https://git-scm.com/" rel="external">
-        <code>git</code>
-      </a>
-      , do:
-    </p>
-
-    <CodeBlock
-      source={dedent`
-        git clone https://github.com/clibs/clib.git /tmp/clib
-        cd /tmp/clib
-        make install
-      `}
-    />
-  </React.Fragment>
+const Homebrew: React.ComponentType = () => (
+  <analytics.OutboundLink
+    href="https://github.com/Homebrew/homebrew"
+    eventLabel="Homebrew"
+  >
+    <code>homebrew</code>
+  </analytics.OutboundLink>
 )
-
-MacOS.displayName = 'MacOS'
 
 const InstallationGuide: React.ComponentType = () => {
   const [index, setIndex] = React.useState(0) // Default to MacOS
 
-  const handleSelectTab = (i: number): void => setIndex(i)
+  const handleSelectTab = (i: number): void => {
+    analytics.selectInstallationInstruction(i)
+    setIndex(i)
+  }
 
   // Detect platform type based on User Agent.
   React.useEffect(() => {
@@ -148,16 +90,59 @@ const InstallationGuide: React.ComponentType = () => {
         </TabList>
 
         <TabPanel>
-          <MacOS />
+          <p>
+            With <Homebrew />, do:
+          </p>
+
+          <CodeBlock source="brew install clib" />
+
+          <p>
+            With <Git />, do:
+          </p>
+
+          <CodeBlock
+            source={dedent`
+              git clone https://github.com/clibs/clib.git /tmp/clib
+              cd /tmp/clib
+              make install
+            `}
+          />
         </TabPanel>
         <TabPanel>
-          <Linux />
+          <p>
+            First, you’ll need your distibution’s version of <CURL /> (on
+            Ubuntu, this is <code>libcurl4-gnutls-dev</code>).
+          </p>
+          <p>
+            Next, download and build the source with <Git />:
+          </p>
+          <CodeBlock
+            source={dedent`
+              git clone https://github.com/clibs/clib.git /tmp/clib
+              cd /tmp/clib
+              make
+              sudo make install
+            `}
+          />
         </TabPanel>
         <TabPanel>
-          <Windows />
+          <p>
+            For Windows users, we have pre-compiled binaries available on our{' '}
+            <Releases /> page.
+          </p>
         </TabPanel>
         <TabPanel>
-          <Other />
+          <p>
+            With <Git />, do:
+          </p>
+          <CodeBlock
+            source={dedent`
+              git clone https://github.com/clibs/clib.git /tmp/clib
+              cd /tmp/clib
+              make install
+              cd -
+            `}
+          />
         </TabPanel>
       </Tabs>
     </div>

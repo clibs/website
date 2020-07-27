@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { OutboundLink } from '../lib/analytics'
 import logo from '../images/logo.png'
-
 import SearchForm from './SearchForm'
 import styles from './Header.css'
 
@@ -22,14 +21,17 @@ const Header: React.ComponentType = () => (
           <Link to="/packages">Packages</Link>
         </li>
         <li>
-          <a href="https://github.com/clibs" rel="external">
+          <OutboundLink href="https://github.com/clibs" eventLabel="GitHub">
             GitHub
-          </a>
+          </OutboundLink>
         </li>
         <li>
-          <a href="https://github.com/clibs/clib/issues" rel="external">
+          <OutboundLink
+            href="https://github.com/clibs/clib/issues"
+            eventLabel="GitHub Issues"
+          >
             Issues &amp; Help
-          </a>
+          </OutboundLink>
         </li>
       </ul>
     </nav>

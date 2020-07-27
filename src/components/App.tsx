@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import * as analytics from '../lib/analytics'
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
 import Group from '../pages/Group'
@@ -15,6 +16,7 @@ const App: React.ComponentType = () => {
   const location = useLocation()
 
   React.useEffect(() => {
+    analytics.page(location.pathname)
     window.scrollTo(0, 0)
   }, [location.pathname])
 

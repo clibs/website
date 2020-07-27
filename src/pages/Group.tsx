@@ -1,6 +1,7 @@
 import React from 'react'
 import { RouteComponentProps } from 'react-router'
 import { Helmet } from 'react-helmet'
+import * as analytics from '../lib/analytics'
 import { getNameFromSlug, getPackagesBySlug } from '../lib/search'
 import PackageList from '../components/PackageList'
 import NotFoundError from '../components/NotFoundError'
@@ -21,6 +22,7 @@ const Group: React.ComponentType<Props> = ({ match }) => {
   }
 
   if (!name || packages.length === 0) {
+    analytics.missingGroup(group, slug)
     return (
       <React.Fragment>
         <Helmet title="No packages found">
