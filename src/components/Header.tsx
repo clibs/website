@@ -21,14 +21,14 @@ const Header: React.ComponentType = () => (
           <Link to="/packages">Packages</Link>
         </li>
         <li>
-          <OutboundLink href="https://github.com/clibs" label="GitHub">
+          <OutboundLink href="https://github.com/clibs" eventLabel="GitHub">
             GitHub
           </OutboundLink>
         </li>
         <li>
           <OutboundLink
             href="https://github.com/clibs/clib/issues"
-            label="GitHub Issues"
+            eventLabel="GitHub Issues"
           >
             Issues &amp; Help
           </OutboundLink>

@@ -57,7 +57,7 @@ const Home: React.ComponentType = () => (
         The GitHub wiki{' '}
         <OutboundLink
           href="https://github.com/clibs/clib/wiki/Packages"
-          label="GitHub Wiki"
+          eventLabel="GitHub Wiki"
         >
           listing of packages
         </OutboundLink>{' '}

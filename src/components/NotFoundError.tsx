@@ -18,7 +18,7 @@ const NotFoundError: React.ComponentType<Props> = ({
         href="https://github.com/clibs/website"
         target="_blank"
         rel="noopener noreferrer external"
-        label="Github Repository"
+        eventLabel="Github Repository"
       >
         github.com/clibs/website
       </OutboundLink>{' '}

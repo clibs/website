@@ -79,7 +79,7 @@ const Package: React.ComponentType<Props> = ({ match }) => {
           <h3>Repository</h3>
           <analytics.OutboundLink
             href={pkg.url}
-            label="GitHub Package Repository"
+            eventLabel="GitHub Package Repository"
           >
             {pkg.url}
           </analytics.OutboundLink>

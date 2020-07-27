@@ -13,14 +13,14 @@ const Footer: React.ComponentType = () => (
           <Link to="/packages">Packages</Link>
         </li>
         <li>
-          <OutboundLink href="https://github.com/clibs" label="GitHub">
+          <OutboundLink href="https://github.com/clibs" eventLabel="GitHub">
             GitHub
           </OutboundLink>
         </li>
         <li>
           <OutboundLink
             href="https://github.com/clibs/clib/issues"
-            label="GitHub Issues"
+            eventLabel="GitHub Issues"
           >
             Issues &amp; Help
           </OutboundLink>
@@ -32,7 +32,7 @@ const Footer: React.ComponentType = () => (
       &copy; {new Date().getFullYear()}{' '}
       <OutboundLink
         href="https://github.com/orgs/clibs/people"
-        label="GitHub People"
+        eventLabel="GitHub People"
       >
         Clibs Authors
       </OutboundLink>
@@ -41,7 +41,7 @@ const Footer: React.ComponentType = () => (
     <p className={styles.build}>
       <OutboundLink
         href={`https://github.com/clibs/website/tree/${revision}`}
-        label="GitHub Website Revision"
+        eventLabel="GitHub Website Revision"
       >
         revision {revision.substring(0, 8)} (
         <TimeAgo date={new Date(updatedAt)} />)

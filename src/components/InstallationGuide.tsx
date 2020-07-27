@@ -13,7 +13,7 @@ export enum Platform {
 }
 
 const Git: React.ComponentType = () => (
-  <analytics.OutboundLink href="https://git-scm.com/" label="Git">
+  <analytics.OutboundLink href="https://git-scm.com/" eventLabel="Git">
     <code>git</code>
   </analytics.OutboundLink>
 )
@@ -21,14 +21,17 @@ const Git: React.ComponentType = () => (
 const Releases: React.ComponentType = () => (
   <analytics.OutboundLink
     href="https://github.com/clibs/clib/releases"
-    label="GitHub Releases"
+    eventLabel="GitHub Releases"
   >
     GitHub Releases
   </analytics.OutboundLink>
 )
 
 const CURL: React.ComponentType = () => (
-  <analytics.OutboundLink href="https://curl.haxx.se/libcurl/" label="cURL">
+  <analytics.OutboundLink
+    href="https://curl.haxx.se/libcurl/"
+    eventLabel="cURL"
+  >
     <code>libcurl</code>
   </analytics.OutboundLink>
 )
@@ -36,7 +39,7 @@ const CURL: React.ComponentType = () => (
 const Homebrew: React.ComponentType = () => (
   <analytics.OutboundLink
     href="https://github.com/Homebrew/homebrew"
-    label="Homebrew"
+    eventLabel="Homebrew"
   >
     <code>homebrew</code>
   </analytics.OutboundLink>

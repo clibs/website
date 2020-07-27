@@ -109,7 +109,7 @@ export const missingGroup = (group: string, name: string): void => {
 interface OutboundLinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string
-  label: string
+  eventLabel: string
 }
 
 /**
@@ -118,7 +118,7 @@ interface OutboundLinkProps
 
 export const OutboundLink: React.ComponentType<OutboundLinkProps> = ({
   href,
-  label,
+  eventLabel,
   rel = 'external',
   children,
   ...props
@@ -126,7 +126,7 @@ export const OutboundLink: React.ComponentType<OutboundLinkProps> = ({
   const handleClick = (): void => {
     Analytics.outboundLink(
       {
-        label
+        label: eventLabel
       },
       (): void => {
         window.location.href = href
