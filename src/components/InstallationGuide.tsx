@@ -38,7 +38,7 @@ const CURL: React.ComponentType = () => (
 
 const Homebrew: React.ComponentType = () => (
   <analytics.OutboundLink
-    href="https://github.com/Homebrew/homebrew"
+    href="https://github.com/Homebrew/brew"
     eventLabel="Homebrew"
   >
     <code>homebrew</code>
