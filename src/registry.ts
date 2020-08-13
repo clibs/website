@@ -268,6 +268,7 @@ export const keywords: KeywordList = {
       'Gioyik/slim_color',
       'daddinuz/liblogger',
       'ararslan/termcolor-c',
+      'bonedaddy/ulog',
       'mattn/ansicolor-w32.c'
     ]
   },
@@ -566,7 +567,7 @@ export const keywords: KeywordList = {
   },
   logger: {
     slug: 'logger',
-    packages: ['daddinuz/liblogger', 'daddinuz/logger']
+    packages: ['daddinuz/liblogger', 'daddinuz/logger', 'bonedaddy/ulog']
   },
   stream: {
     slug: 'stream',
@@ -586,6 +587,7 @@ export const keywords: KeywordList = {
   merge: { slug: 'merge', packages: ['abranhe/mergesort.c'] },
   mergesort: { slug: 'mergesort', packages: ['abranhe/mergesort.c'] },
   allalgorithms: { slug: 'allalgorithms', packages: ['abranhe/mergesort.c'] },
+  threadsafe: { slug: 'threadsafe', packages: ['bonedaddy/ulog'] },
   disjoint: { slug: 'disjoint', packages: ['jmi2k/disjoint.h'] },
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
   functional: { slug: 'functional', packages: ['jmi2k/disjoint.h'] },
@@ -1282,7 +1284,8 @@ export const categories: CategoryList = {
       'daddinuz/logger',
       'ararslan/termcolor-c',
       'daddinuz/arena',
-      'abranhe/mergesort.c'
+      'abranhe/mergesort.c',
+      'bonedaddy/ulog'
     ]
   },
   'Data structure': {
@@ -3324,6 +3327,32 @@ export const packages: Package[] = [
     slug: 'abranhe-mergesort-c',
     url: 'https://github.com/abranhe/mergesort.c',
     license: 'MIT'
+  },
+  {
+    category: 'Utilities',
+    dependents: [],
+    description:
+      'Lightweight and threadsafe logger with color coded text and optional file logging',
+    manifest: {
+      name: 'bonedaddy/ulog',
+      version: '0.0.2-rc1',
+      license: 'agpl-v3',
+      description:
+        'ulog (uber log) is a lightweight and threadsafe logger in C that provides color coded output, as well as the ability to send logs to a file',
+      repo: 'bonedaddy/ulog',
+      keywords: ['logger', 'color', 'threadsafe'],
+      dependencies: { 'clibs/pthreads': '' },
+      src: [
+        'include/colors.h',
+        'include/logger.h',
+        'src/colors.c',
+        'src/logger.c'
+      ]
+    },
+    name: 'bonedaddy/ulog',
+    slug: 'bonedaddy-ulog',
+    url: 'https://github.com/bonedaddy/ulog',
+    license: 'agpl-v3'
   },
   {
     category: 'Data structure',
@@ -7548,7 +7577,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Aug 10 2020 18:03:30 GMT+0000 (Coordinated Universal Time)'
+  'Thu Aug 13 2020 12:03:32 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'b159613a200c20080156ac6ed785a44b70defe38'
+export const revision = 'e3c58682032d768fe8435a9c231c73096a8e74fc'
