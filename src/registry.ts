@@ -459,13 +459,19 @@ export const keywords: KeywordList = {
       'kdmurray91/clogged',
       'daddinuz/liblogger',
       'daddinuz/logger',
+      'aperezdc/clog',
       'clibs/logfmt',
       'clibs/debug'
     ]
   },
   debug: {
     slug: 'debug',
-    packages: ['thlorenz/log.h', 'kdmurray91/clogged', 'clibs/debug']
+    packages: [
+      'thlorenz/log.h',
+      'kdmurray91/clogged',
+      'aperezdc/clog',
+      'clibs/debug'
+    ]
   },
   print: { slug: 'print', packages: ['thlorenz/log.h', 'kdmurray91/clogged'] },
   diagnostics: {
@@ -563,7 +569,7 @@ export const keywords: KeywordList = {
   variables: { slug: 'variables', packages: ['Isty001/dotenv-c'] },
   logging: {
     slug: 'logging',
-    packages: ['daddinuz/liblogger', 'daddinuz/logger']
+    packages: ['daddinuz/liblogger', 'daddinuz/logger', 'aperezdc/clog']
   },
   logger: {
     slug: 'logger',
@@ -1285,7 +1291,8 @@ export const categories: CategoryList = {
       'ararslan/termcolor-c',
       'daddinuz/arena',
       'abranhe/mergesort.c',
-      'bonedaddy/ulog'
+      'bonedaddy/ulog',
+      'aperezdc/clog'
     ]
   },
   'Data structure': {
@@ -3353,6 +3360,26 @@ export const packages: Package[] = [
     slug: 'bonedaddy-ulog',
     url: 'https://github.com/bonedaddy/ulog',
     license: 'agpl-v3'
+  },
+  {
+    category: 'Utilities',
+    dependents: [],
+    description:
+      'Simple logger which does not allocate memory and can be configured at runtime using environment variables.',
+    manifest: {
+      name: 'aperezdc/clog',
+      version: '0.1.0',
+      repo: 'aperezdc/clog',
+      description: 'Non-allocating runtime configurable logger',
+      license: 'MIT',
+      keywords: ['log', 'logging', 'debug'],
+      src: ['clog.h', 'clog.c'],
+      dependencies: {}
+    },
+    name: 'aperezdc/clog',
+    slug: 'aperezdc-clog',
+    url: 'https://github.com/aperezdc/clog',
+    license: 'MIT'
   },
   {
     category: 'Data structure',
@@ -7577,7 +7604,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Tue Aug 18 2020 12:05:28 GMT+0000 (Coordinated Universal Time)'
+  'Wed Aug 19 2020 06:03:14 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '2253a29bf06bba08206e30b6aadaee33d0d0ba52'
+export const revision = '214d7ac273412e0c8177eafe7228e1beaa88a61c'
