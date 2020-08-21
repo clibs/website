@@ -1355,7 +1355,6 @@ export const categories: CategoryList = {
       'brendanashworth/http-parser',
       'h2non/semver.c',
       'kgabis/parson',
-      'tay10r/mini-make',
       'rikvdh/matching'
     ]
   },
@@ -4535,26 +4534,6 @@ export const packages: Package[] = [
   {
     category: 'Parsing',
     dependents: [],
-    description: 'Miniature Makefile parser, written in C.',
-    manifest: {
-      name: 'tay10r/mini-make',
-      version: '0.1.1',
-      author: 'Taylor Holberton',
-      license: 'GPLv3',
-      description: 'A miniature implementation of GNU Make',
-      repo: 'tay10r/mini-make',
-      install: 'make install',
-      keywords: [],
-      dependencies: {}
-    },
-    name: 'tay10r/mini-make',
-    slug: 'tay10r-mini-make',
-    url: 'https://github.com/tay10r/mini-make',
-    license: 'GPLv3'
-  },
-  {
-    category: 'Parsing',
-    dependents: [],
     description:
       'String-based parser based on matching strings for interpreting and handling string-based interfaces.',
     manifest: {
@@ -7605,7 +7584,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Aug 21 2020 00:05:22 GMT+0000 (Coordinated Universal Time)'
+  'Fri Aug 21 2020 18:06:11 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '02896b6b66abab7855ac73f660e897de851b655c'
+export const revision = '4c1fa529f341a2dc3e41b98384bee24dcf0d5770'
