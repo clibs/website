@@ -2245,7 +2245,7 @@ export const packages: Package[] = [
     description: 'Non-allocating command line flag parser',
     manifest: {
       name: 'aperezdc/cflag',
-      version: '1.0.0',
+      version: '1.1.1',
       repo: 'aperezdc/cflag',
       description: 'Non-allocating command line flag parser',
       license: 'MIT',
@@ -7584,7 +7584,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Aug 21 2020 18:06:11 GMT+0000 (Coordinated Universal Time)'
+  'Sun Aug 23 2020 00:05:25 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '4c1fa529f341a2dc3e41b98384bee24dcf0d5770'
+export const revision = 'bd64b01f85dbd7984be70f3475077253584c80ee'
