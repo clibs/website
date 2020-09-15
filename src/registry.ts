@@ -17,7 +17,7 @@ export const keywords: KeywordList = {
       'dhobsd/vstring',
       'gioyik/buffer-libc',
       'aperezdc/dbuf',
-      'Isty001/mem-pool',
+      'isty001/mem-pool',
       'willemt/cbuffer',
       'rikvdh/zabuffer',
       'rikvdh/zringbuf'
@@ -49,7 +49,7 @@ export const keywords: KeywordList = {
       'troydhanson/uthash',
       'rikvdh/zabuffer',
       'rikvdh/matching',
-      'adricoin2010/UTF8-Iterator'
+      'adricoin2010/utf8-iterator'
     ]
   },
   str: { slug: 'str', packages: ['clibs/buffer', 'lib-x/xstr'] },
@@ -105,7 +105,7 @@ export const keywords: KeywordList = {
       'stephenmathieson/path-join.c',
       'stephenmathieson/path-normalize.c',
       'cxong/tinydir',
-      'Isty001/copy'
+      'isty001/copy'
     ]
   },
   file: {
@@ -117,7 +117,7 @@ export const keywords: KeywordList = {
       'willemt/file2str',
       'willemt/stubfile',
       'cxong/tinydir',
-      'Isty001/copy',
+      'isty001/copy',
       'clibs/entr'
     ]
   },
@@ -147,7 +147,7 @@ export const keywords: KeywordList = {
   },
   strings: {
     slug: 'strings',
-    packages: ['chrisdew/sds', 'lib-x/xstr', 'adricoin2010/UTF8-Iterator']
+    packages: ['chrisdew/sds', 'lib-x/xstr', 'adricoin2010/utf8-iterator']
   },
   basename: { slug: 'basename', packages: ['michaelrhodes/path-basename.c'] },
   wildcard: { slug: 'wildcard', packages: ['clibs/wildcardcmp'] },
@@ -158,18 +158,18 @@ export const keywords: KeywordList = {
   asprintf: { slug: 'asprintf', packages: ['littlstar/asprintf.c'] },
   sprintf: { slug: 'sprintf', packages: ['littlstar/asprintf.c'] },
   alloc: { slug: 'alloc', packages: ['littlstar/asprintf.c'] },
-  copy: { slug: 'copy', packages: ['clibs/strdup', 'Isty001/copy'] },
-  c99: { slug: 'c99', packages: ['TingPing/ustring'] },
-  unicode: { slug: 'unicode', packages: ['TingPing/ustring'] },
+  copy: { slug: 'copy', packages: ['clibs/strdup', 'isty001/copy'] },
+  c99: { slug: 'c99', packages: ['tingping/ustring'] },
+  unicode: { slug: 'unicode', packages: ['tingping/ustring'] },
   utf8: {
     slug: 'utf8',
     packages: [
-      'TingPing/ustring',
+      'tingping/ustring',
       'jwerle/libutf8',
-      'adricoin2010/UTF8-Iterator'
+      'adricoin2010/utf8-iterator'
     ]
   },
-  'utf-8': { slug: 'utf-8', packages: ['TingPing/ustring'] },
+  'utf-8': { slug: 'utf-8', packages: ['tingping/ustring'] },
   martin: { slug: 'martin', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
   porter: { slug: 'porter', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
   stemmer: { slug: 'stemmer', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
@@ -189,11 +189,11 @@ export const keywords: KeywordList = {
     packages: [
       'gioyik/buffer-libc',
       'madmurphy/libconfini',
-      'orangeduck/LuaAutoC',
-      'Gioyik/c_printf',
-      'Gioyik/slim_color',
-      'Isty001/mem-pool',
-      'Gioyik/mapc',
+      'orangeduck/luaautoc',
+      'gioyik/c_printf',
+      'gioyik/slim_color',
+      'isty001/mem-pool',
+      'gioyik/mapc',
       'orangeduck/mpc',
       'madmurphy/zen.h',
       'guillermocalvo/exceptions4c',
@@ -204,10 +204,10 @@ export const keywords: KeywordList = {
     slug: 'lib',
     packages: [
       'gioyik/buffer-libc',
-      'Gioyik/color-sh',
-      'Gioyik/c_printf',
-      'Gioyik/slim_color',
-      'Gioyik/mapc'
+      'gioyik/color-sh',
+      'gioyik/c_printf',
+      'gioyik/slim_color',
+      'gioyik/mapc'
     ]
   },
   Vladimir: {
@@ -231,11 +231,11 @@ export const keywords: KeywordList = {
     slug: 'list',
     packages: [
       'lib-x/xstr',
-      'yrmt/ArrayList',
+      'yrmt/arraylist',
       'clibs/list',
       'troydhanson/uthash',
       'willemt/farraylist',
-      'AjayMT/list.c',
+      'ajaymt/list.c',
       'clehner/ll.c',
       'kellydunn/libkld',
       'neylsongularte/simple-linked-list-c',
@@ -246,7 +246,7 @@ export const keywords: KeywordList = {
   utilities: { slug: 'utilities', packages: ['lib-x/xstr'] },
   utility: {
     slug: 'utility',
-    packages: ['lib-x/xstr', 'AjayMT/dict.c', 'AjayMT/list.c']
+    packages: ['lib-x/xstr', 'ajaymt/dict.c', 'ajaymt/list.c']
   },
   dynamic: { slug: 'dynamic', packages: ['aperezdc/dbuf', 'rxi/vec'] },
   data: {
@@ -262,10 +262,10 @@ export const keywords: KeywordList = {
     slug: 'color',
     packages: [
       'clibs/rgba',
-      'Constellation/console-colors.c',
-      'Gioyik/color-sh',
-      'Gioyik/c_printf',
-      'Gioyik/slim_color',
+      'constellation/console-colors.c',
+      'gioyik/color-sh',
+      'gioyik/c_printf',
+      'gioyik/slim_color',
       'daddinuz/liblogger',
       'ararslan/termcolor-c',
       'bonedaddy/ulog',
@@ -348,7 +348,7 @@ export const keywords: KeywordList = {
       'doches/progressbar',
       'jwerle/progress.h',
       'xythobuz/serial',
-      'Gioyik/color-sh',
+      'gioyik/color-sh',
       'nsf/termbox',
       'ararslan/termcolor-c'
     ]
@@ -383,9 +383,9 @@ export const keywords: KeywordList = {
     packages: [
       'clibs/term',
       'doches/progressbar',
-      'Constellation/console-colors.c',
+      'constellation/console-colors.c',
       'xythobuz/serial',
-      'Gioyik/color-sh',
+      'gioyik/color-sh',
       'nsf/termbox'
     ]
   },
@@ -520,16 +520,16 @@ export const keywords: KeywordList = {
   asn1: { slug: 'asn1', packages: ['clibs/dumpasn1'] },
   ber: { slug: 'ber', packages: ['clibs/dumpasn1'] },
   der: { slug: 'der', packages: ['clibs/dumpasn1'] },
-  lua: { slug: 'lua', packages: ['orangeduck/LuaAutoC'] },
-  api: { slug: 'api', packages: ['orangeduck/LuaAutoC', 'aperezdc/apicheck'] },
+  lua: { slug: 'lua', packages: ['orangeduck/luaautoc'] },
+  api: { slug: 'api', packages: ['orangeduck/luaautoc', 'aperezdc/apicheck'] },
   automatic: {
     slug: 'automatic',
-    packages: ['orangeduck/LuaAutoC', 'aperezdc/autocleanup']
+    packages: ['orangeduck/luaautoc', 'aperezdc/autocleanup']
   },
-  functions: { slug: 'functions', packages: ['orangeduck/LuaAutoC'] },
-  structs: { slug: 'structs', packages: ['orangeduck/LuaAutoC'] },
-  sh: { slug: 'sh', packages: ['Gioyik/color-sh'] },
-  printf: { slug: 'printf', packages: ['Gioyik/c_printf'] },
+  functions: { slug: 'functions', packages: ['orangeduck/luaautoc'] },
+  structs: { slug: 'structs', packages: ['orangeduck/luaautoc'] },
+  sh: { slug: 'sh', packages: ['gioyik/color-sh'] },
+  printf: { slug: 'printf', packages: ['gioyik/c_printf'] },
   termbox: { slug: 'termbox', packages: ['nsf/termbox'] },
   portable: {
     slug: 'portable',
@@ -539,11 +539,11 @@ export const keywords: KeywordList = {
   qsort_s: { slug: 'qsort-s', packages: ['noporpoise/sort_r'] },
   qsort_r: { slug: 'qsort-r', packages: ['noporpoise/sort_r'] },
   reentrant: { slug: 'reentrant', packages: ['noporpoise/sort_r'] },
-  'memory-pool': { slug: 'memory-pool', packages: ['Isty001/mem-pool'] },
+  'memory-pool': { slug: 'memory-pool', packages: ['isty001/mem-pool'] },
   memory: {
     slug: 'memory',
     packages: [
-      'Isty001/mem-pool',
+      'isty001/mem-pool',
       'daddinuz/arena',
       'rikvdh/zabuffer',
       'rikvdh/zringbuf',
@@ -551,22 +551,22 @@ export const keywords: KeywordList = {
       'daddinuz/watchdog'
     ]
   },
-  pool: { slug: 'pool', packages: ['Isty001/mem-pool'] },
+  pool: { slug: 'pool', packages: ['isty001/mem-pool'] },
   pthread: {
     slug: 'pthread',
-    packages: ['Isty001/mem-pool', 'stephenmathieson/batch.c']
+    packages: ['isty001/mem-pool', 'stephenmathieson/batch.c']
   },
-  alignment: { slug: 'alignment', packages: ['Isty001/mem-pool'] },
-  mutex: { slug: 'mutex', packages: ['Isty001/mem-pool'] },
-  memorypool: { slug: 'memorypool', packages: ['Isty001/mem-pool'] },
-  locks: { slug: 'locks', packages: ['Isty001/mem-pool'] },
-  variable: { slug: 'variable', packages: ['Isty001/mem-pool'] },
+  alignment: { slug: 'alignment', packages: ['isty001/mem-pool'] },
+  mutex: { slug: 'mutex', packages: ['isty001/mem-pool'] },
+  memorypool: { slug: 'memorypool', packages: ['isty001/mem-pool'] },
+  locks: { slug: 'locks', packages: ['isty001/mem-pool'] },
+  variable: { slug: 'variable', packages: ['isty001/mem-pool'] },
   metric: { slug: 'metric', packages: ['alebcay/metric'] },
   customary: { slug: 'customary', packages: ['alebcay/metric'] },
-  '.env': { slug: 'env', packages: ['Isty001/dotenv-c'] },
-  dotenv: { slug: 'dotenv', packages: ['Isty001/dotenv-c'] },
-  environemnt: { slug: 'environemnt', packages: ['Isty001/dotenv-c'] },
-  variables: { slug: 'variables', packages: ['Isty001/dotenv-c'] },
+  '.env': { slug: 'env', packages: ['isty001/dotenv-c'] },
+  dotenv: { slug: 'dotenv', packages: ['isty001/dotenv-c'] },
+  environemnt: { slug: 'environemnt', packages: ['isty001/dotenv-c'] },
+  variables: { slug: 'variables', packages: ['isty001/dotenv-c'] },
   logging: {
     slug: 'logging',
     packages: ['daddinuz/liblogger', 'daddinuz/logger', 'aperezdc/clog']
@@ -598,11 +598,11 @@ export const keywords: KeywordList = {
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
   functional: { slug: 'functional', packages: ['jmi2k/disjoint.h'] },
   header: { slug: 'header', packages: ['jmi2k/disjoint.h'] },
-  tail: { slug: 'tail', packages: ['yrmt/ArrayList'] },
+  tail: { slug: 'tail', packages: ['yrmt/arraylist'] },
   queue: {
     slug: 'queue',
     packages: [
-      'yrmt/ArrayList',
+      'yrmt/arraylist',
       'willemt/bipbuffer',
       'willemt/heap',
       'willemt/linked-list-queue',
@@ -611,22 +611,22 @@ export const keywords: KeywordList = {
       'willemt/duraqueue'
     ]
   },
-  'linked-list': { slug: 'linked-list', packages: ['yrmt/ArrayList'] },
+  'linked-list': { slug: 'linked-list', packages: ['yrmt/arraylist'] },
   linked: {
     slug: 'linked',
     packages: [
-      'yrmt/ArrayList',
-      'AjayMT/list.c',
+      'yrmt/arraylist',
+      'ajaymt/list.c',
       'neylsongularte/simple-linked-list-c'
     ]
   },
-  ArrayList: { slug: 'array-list', packages: ['yrmt/ArrayList'] },
+  ArrayList: { slug: 'array-list', packages: ['yrmt/arraylist'] },
   hash: {
     slug: 'hash',
     packages: [
       'clibs/hash',
       'troydhanson/uthash',
-      'AjayMT/dict.c',
+      'ajaymt/dict.c',
       'jwerle/murmurhash.c',
       'clibs/sha1',
       'catb0t/fnv-hash'
@@ -657,9 +657,9 @@ export const keywords: KeywordList = {
       'willemt/bitfield',
       'rxi/vec',
       'willemt/farraylist',
-      'AjayMT/list.c',
-      'Gioyik/mapc',
-      'htmk/Fat-Array'
+      'ajaymt/list.c',
+      'gioyik/mapc',
+      'htmk/fat-array'
     ]
   },
   uthash: { slug: 'uthash', packages: ['troydhanson/uthash'] },
@@ -701,7 +701,7 @@ export const keywords: KeywordList = {
       'willemt/linked-list-hashmap',
       'willemt/quadratic-probing-hashmap',
       'willemt/skiplist',
-      'AjayMT/dict.c'
+      'ajaymt/dict.c'
     ]
   },
   inplace: { slug: 'inplace', packages: ['willemt/quadratic-probing-hashmap'] },
@@ -715,14 +715,14 @@ export const keywords: KeywordList = {
     packages: [
       'rxi/vec',
       'kellydunn/libkld',
-      'htmk/Fat-Array',
-      'MauroMombelli/TrigonomeC',
+      'htmk/fat-array',
+      'mauromombelli/trigonomec',
       'glisy/math'
     ]
   },
   map: {
     slug: 'map',
-    packages: ['jlcordeiro/cmap', 'willemt/skiplist', 'Gioyik/mapc']
+    packages: ['jlcordeiro/cmap', 'willemt/skiplist', 'gioyik/mapc']
   },
   skiplist: { slug: 'skiplist', packages: ['willemt/skiplist'] },
   mean: { slug: 'mean', packages: ['willemt/meanqueue'] },
@@ -742,24 +742,24 @@ export const keywords: KeywordList = {
   lmdb: { slug: 'lmdb', packages: ['clibs/lmdb'] },
   'key/value': { slug: 'key-value', packages: ['clibs/lmdb', 'clibs/sophia'] },
   database: { slug: 'database', packages: ['clibs/lmdb', 'clibs/sophia'] },
-  table: { slug: 'table', packages: ['AjayMT/dict.c'] },
+  table: { slug: 'table', packages: ['ajaymt/dict.c'] },
   'data structures': {
     slug: 'data-structures',
     packages: ['kellydunn/libkld']
   },
   graph: { slug: 'graph', packages: ['kellydunn/libkld', 'visionmedia/histo'] },
   matrix: { slug: 'matrix', packages: ['kellydunn/libkld', 'glisy/math'] },
-  mapc: { slug: 'mapc', packages: ['Gioyik/mapc'] },
+  mapc: { slug: 'mapc', packages: ['gioyik/mapc'] },
   lista: { slug: 'lista', packages: ['neylsongularte/simple-linked-list-c'] },
   encadeada: {
     slug: 'encadeada',
     packages: ['neylsongularte/simple-linked-list-c']
   },
-  fptr: { slug: 'fptr', packages: ['htmk/Fat-Array'] },
-  fat: { slug: 'fat', packages: ['htmk/Fat-Array'] },
-  pointer: { slug: 'pointer', packages: ['htmk/Fat-Array'] },
-  fatarray: { slug: 'fatarray', packages: ['htmk/Fat-Array'] },
-  fat_array: { slug: 'fat-array', packages: ['htmk/Fat-Array'] },
+  fptr: { slug: 'fptr', packages: ['htmk/fat-array'] },
+  fat: { slug: 'fat', packages: ['htmk/fat-array'] },
+  pointer: { slug: 'pointer', packages: ['htmk/fat-array'] },
+  fatarray: { slug: 'fatarray', packages: ['htmk/fat-array'] },
+  fat_array: { slug: 'fat-array', packages: ['htmk/fat-array'] },
   generic: { slug: 'generic', packages: ['laserswald/dlist'] },
   'double linked list': {
     slug: 'double-linked-list',
@@ -841,7 +841,7 @@ export const keywords: KeywordList = {
   parsing: { slug: 'parsing', packages: ['rikvdh/matching'] },
   callback: {
     slug: 'callback',
-    packages: ['rikvdh/matching', 'Mobiushorizons/closure_module']
+    packages: ['rikvdh/matching', 'mobiushorizons/closure_module']
   },
   rle: { slug: 'rle', packages: ['clibs/rle'] },
   'run-length': { slug: 'run-length', packages: ['clibs/rle'] },
@@ -857,15 +857,15 @@ export const keywords: KeywordList = {
   },
   charset: {
     slug: 'charset',
-    packages: ['jwerle/libutf8', 'adricoin2010/UTF8-Iterator']
+    packages: ['jwerle/libutf8', 'adricoin2010/utf8-iterator']
   },
   encoding: {
     slug: 'encoding',
-    packages: ['jwerle/libutf8', 'adricoin2010/UTF8-Iterator']
+    packages: ['jwerle/libutf8', 'adricoin2010/utf8-iterator']
   },
   decoding: {
     slug: 'decoding',
-    packages: ['jwerle/libutf8', 'adricoin2010/UTF8-Iterator']
+    packages: ['jwerle/libutf8', 'adricoin2010/utf8-iterator']
   },
   'little endian': { slug: 'little-endian', packages: ['willemt/fe'] },
   'big endian': { slug: 'big-endian', packages: ['willemt/fe'] },
@@ -898,9 +898,9 @@ export const keywords: KeywordList = {
   tempdir: { slug: 'tempdir', packages: ['stephenmathieson/tempdir.c'] },
   pid: { slug: 'pid', packages: ['willemt/pidfile', 'jb55/pidpath'] },
   pidfile: { slug: 'pidfile', packages: ['willemt/pidfile'] },
-  dir: { slug: 'dir', packages: ['cxong/tinydir', 'Isty001/copy'] },
+  dir: { slug: 'dir', packages: ['cxong/tinydir', 'isty001/copy'] },
   reader: { slug: 'reader', packages: ['cxong/tinydir'] },
-  recursive: { slug: 'recursive', packages: ['Isty001/copy'] },
+  recursive: { slug: 'recursive', packages: ['isty001/copy'] },
   lookup: { slug: 'lookup', packages: ['clibs/which'] },
   which: { slug: 'which', packages: ['clibs/which'] },
   locate: { slug: 'locate', packages: ['clibs/which'] },
@@ -1026,9 +1026,9 @@ export const keywords: KeywordList = {
     slug: 'error-handling',
     packages: ['guillermocalvo/exceptions4c']
   },
-  closure: { slug: 'closure', packages: ['Mobiushorizons/closure_module'] },
-  mpp: { slug: 'mpp', packages: ['Mobiushorizons/closure_module'] },
-  function: { slug: 'function', packages: ['Mobiushorizons/closure_module'] },
+  closure: { slug: 'closure', packages: ['mobiushorizons/closure_module'] },
+  mpp: { slug: 'mpp', packages: ['mobiushorizons/closure_module'] },
+  function: { slug: 'function', packages: ['mobiushorizons/closure_module'] },
   scoped: { slug: 'scoped', packages: ['aperezdc/autocleanup'] },
   cleanup: { slug: 'cleanup', packages: ['aperezdc/autocleanup'] },
   pointers: { slug: 'pointers', packages: ['aperezdc/autocleanup'] },
@@ -1162,10 +1162,10 @@ export const keywords: KeywordList = {
   bresenham: { slug: 'bresenham', packages: ['jb55/bresenham-line.c'] },
   trigonometry: {
     slug: 'trigonometry',
-    packages: ['MauroMombelli/TrigonomeC']
+    packages: ['mauromombelli/trigonomec']
   },
-  quaternion: { slug: 'quaternion', packages: ['MauroMombelli/TrigonomeC'] },
-  '3d': { slug: '3d', packages: ['MauroMombelli/TrigonomeC'] },
+  quaternion: { slug: 'quaternion', packages: ['mauromombelli/trigonomec'] },
+  '3d': { slug: '3d', packages: ['mauromombelli/trigonomec'] },
   glisy: {
     slug: 'glisy',
     packages: ['glisy/math', 'glisy/glfw-shell', 'glisy/ease']
@@ -1232,7 +1232,7 @@ export const categories: CategoryList = {
       'littlstar/asprintf.c',
       'clibs/strndup',
       'clibs/strdup',
-      'TingPing/ustring',
+      'tingping/ustring',
       'wooorm/stmr.c',
       'gioyik/buffer-libc',
       'littlstar/trim.cc',
@@ -1268,7 +1268,7 @@ export const categories: CategoryList = {
       'thlorenz/log.h',
       'sciascid/tree',
       'clehner/chains',
-      'Constellation/console-colors.c',
+      'constellation/console-colors.c',
       'stephenmathieson/expand-braces.c',
       'stephenmathieson/wiki-registry.c',
       'xythobuz/serial',
@@ -1276,16 +1276,16 @@ export const categories: CategoryList = {
       'willemt/config-re',
       'brendanashworth/genpassword.c',
       'clibs/dumpasn1',
-      'orangeduck/LuaAutoC',
-      'Gioyik/color-sh',
-      'Gioyik/c_printf',
-      'Gioyik/slim_color',
+      'orangeduck/luaautoc',
+      'gioyik/color-sh',
+      'gioyik/c_printf',
+      'gioyik/slim_color',
       'nsf/termbox',
       'noporpoise/sort_r',
       'kdmurray91/clogged',
-      'Isty001/mem-pool',
+      'isty001/mem-pool',
       'alebcay/metric',
-      'Isty001/dotenv-c',
+      'isty001/dotenv-c',
       'daddinuz/liblogger',
       'daddinuz/logger',
       'ararslan/termcolor-c',
@@ -1299,7 +1299,7 @@ export const categories: CategoryList = {
     slug: 'data-structure',
     packages: [
       'jmi2k/disjoint.h',
-      'yrmt/ArrayList',
+      'yrmt/arraylist',
       'clibs/hash',
       'clibs/list',
       'clibs/red-black-tree',
@@ -1324,15 +1324,15 @@ export const categories: CategoryList = {
       'mbucc/cqueue',
       'clibs/lmdb',
       'willemt/arrayqueue',
-      'AjayMT/dict.c',
-      'AjayMT/list.c',
+      'ajaymt/dict.c',
+      'ajaymt/list.c',
       'skeeto/lstack',
       'clehner/ll.c',
       'kellydunn/libkld',
       'willemt/duraqueue',
-      'Gioyik/mapc',
+      'gioyik/mapc',
       'neylsongularte/simple-linked-list-c',
-      'htmk/Fat-Array',
+      'htmk/fat-array',
       'laserswald/dlist',
       'catb0t/sparse',
       'arablocks/flat-tree.c',
@@ -1373,7 +1373,7 @@ export const categories: CategoryList = {
       'lemire/simdcomp',
       'pepaslabs/hexify.c',
       'aperezdc/ulid-c',
-      'adricoin2010/UTF8-Iterator',
+      'adricoin2010/utf8-iterator',
       'jwerle/libsleepfile'
     ]
   },
@@ -1388,7 +1388,7 @@ export const categories: CategoryList = {
       'stephenmathieson/tempdir.c',
       'willemt/pidfile',
       'cxong/tinydir',
-      'Isty001/copy',
+      'isty001/copy',
       'clibs/which'
     ]
   },
@@ -1453,7 +1453,7 @@ export const categories: CategoryList = {
       'willemt/uv_multiplex',
       'willemt/bmon',
       'guillermocalvo/exceptions4c',
-      'Mobiushorizons/closure_module',
+      'mobiushorizons/closure_module',
       'aperezdc/autocleanup'
     ]
   },
@@ -1475,7 +1475,7 @@ export const categories: CategoryList = {
       'stephenmathieson/assertion-macros.h',
       'silentbicycle/greatest',
       'willemt/cutest',
-      'jeradesign/MinUnit',
+      'jeradesign/minunit',
       'aperezdc/apicheck',
       'daddinuz/traits',
       'daddinuz/traits-unit'
@@ -1529,9 +1529,9 @@ export const categories: CategoryList = {
   Math: {
     slug: 'math',
     packages: [
-      'ScientificC/cmathl',
+      'scientificc/cmathl',
       'jb55/bresenham-line.c',
-      'MauroMombelli/TrigonomeC',
+      'mauromombelli/trigonomec',
       'willemt/minmax',
       'littlstar/clamp',
       'catb0t/yacbnl'
@@ -2062,7 +2062,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Utils for safely handling utf8 strings.',
     manifest: {
-      name: 'TingPing/ustring',
+      name: 'tingping/ustring',
       version: '0.1',
       repo: 'TingPing/ustring',
       description: 'Utils for safely handling utf8 strings.',
@@ -2071,7 +2071,7 @@ export const packages: Package[] = [
       keywords: ['c99', 'unicode', 'utf8', 'utf-8'],
       dependencies: {}
     },
-    name: 'TingPing/ustring',
+    name: 'tingping/ustring',
     slug: 'ting-ping-ustring',
     url: 'https://github.com/TingPing/ustring',
     license: 'MIT'
@@ -2806,7 +2806,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Write formatted string to console with colors',
     manifest: {
-      name: 'Constellation/console-colors.c',
+      name: 'constellation/console-colors.c',
       version: '1.0.3',
       repo: 'Constellation/console-colors.c',
       description: 'Write formatted string to console with colors',
@@ -2815,7 +2815,7 @@ export const packages: Package[] = [
       src: ['console-colors.c', 'console-colors.h'],
       dependencies: {}
     },
-    name: 'Constellation/console-colors.c',
+    name: 'constellation/console-colors.c',
     slug: 'constellation-console-colors-c',
     url: 'https://github.com/Constellation/console-colors.c',
     license: 'BSD'
@@ -2970,7 +2970,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Automagically use C Functions and Structs with the Lua API',
     manifest: {
-      name: 'orangeduck/LuaAutoC',
+      name: 'orangeduck/luaautoc',
       version: '2.0.1',
       repo: 'orangeduck/LuaAutoC',
       description: 'Automagically use C Functions and Structs with the Lua API',
@@ -2979,7 +2979,7 @@ export const packages: Package[] = [
       src: ['lautoc.c', 'lautoc.h', 'lautocall.h'],
       dependencies: {}
     },
-    name: 'orangeduck/LuaAutoC',
+    name: 'orangeduck/luaautoc',
     slug: 'orangeduck-lua-auto-c',
     url: 'https://github.com/orangeduck/LuaAutoC',
     license: 'BSD'
@@ -2989,7 +2989,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Display colors on your terminal',
     manifest: {
-      name: 'Gioyik/color-sh',
+      name: 'gioyik/color-sh',
       version: '1.0',
       repo: 'gioyik/color-sh',
       description: 'C lib to print colors on your terminal',
@@ -2998,7 +2998,7 @@ export const packages: Package[] = [
       src: ['src/color-sh.c', 'src/color-sh.h'],
       dependencies: {}
     },
-    name: 'Gioyik/color-sh',
+    name: 'gioyik/color-sh',
     slug: 'gioyik-color-sh',
     url: 'https://github.com/Gioyik/color-sh',
     license: 'MIT'
@@ -3008,7 +3008,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Color C lib for printf',
     manifest: {
-      name: 'Gioyik/c_printf',
+      name: 'gioyik/c_printf',
       version: '0.0.1',
       repo: 'Gioyik/c_printf',
       description: 'Color C lib for printf',
@@ -3017,7 +3017,7 @@ export const packages: Package[] = [
       src: ['sources/c_printf.c', 'sources/c_printf.h'],
       dependencies: {}
     },
-    name: 'Gioyik/c_printf',
+    name: 'gioyik/c_printf',
     slug: 'gioyik-c-printf',
     url: 'https://github.com/Gioyik/c_printf',
     license: 'MIT'
@@ -3027,7 +3027,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Ultra simple C lib to output color',
     manifest: {
-      name: 'Gioyik/slim_color',
+      name: 'gioyik/slim_color',
       version: '0.0.1',
       repo: 'gioyik/slim_color',
       description: 'Ultra simple C lib to output color',
@@ -3036,7 +3036,7 @@ export const packages: Package[] = [
       src: ['src/color.h'],
       dependencies: {}
     },
-    name: 'Gioyik/slim_color',
+    name: 'gioyik/slim_color',
     slug: 'gioyik-slim-color',
     url: 'https://github.com/Gioyik/slim_color',
     license: 'MIT'
@@ -3132,7 +3132,7 @@ export const packages: Package[] = [
     description:
       'Dynamic memory pool implementation, for reusable fixed, or variable sized memory blocks, using pthread mutex locks',
     manifest: {
-      name: 'Isty001/mem-pool',
+      name: 'isty001/mem-pool',
       version: '1.1.2',
       repo: 'isty001/mem-pool',
       description:
@@ -3161,7 +3161,7 @@ export const packages: Package[] = [
       ],
       dependencies: {}
     },
-    name: 'Isty001/mem-pool',
+    name: 'isty001/mem-pool',
     slug: 'isty001-mem-pool',
     url: 'https://github.com/isty001/mem-pool',
     license: 'MIT'
@@ -3190,7 +3190,7 @@ export const packages: Package[] = [
     dependents: [],
     description: '.env loader for C',
     manifest: {
-      name: 'Isty001/dotenv-c',
+      name: 'isty001/dotenv-c',
       description: '.env loader for C',
       license: 'MIT',
       keywords: ['.env', 'dotenv', 'environemnt', 'variables'],
@@ -3199,7 +3199,7 @@ export const packages: Package[] = [
       repo: 'Isty001/dotenv-c',
       dependencies: {}
     },
-    name: 'Isty001/dotenv-c',
+    name: 'isty001/dotenv-c',
     slug: 'isty001-dotenv-c',
     url: 'https://github.com/Isty001/dotenv-c',
     license: 'MIT'
@@ -3405,7 +3405,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'doubly linked list based on BSD TAILQ',
     manifest: {
-      name: 'yrmt/ArrayList',
+      name: 'yrmt/arraylist',
       version: '0.1',
       repo: 'yrmt/ArrayList',
       description: 'Java ArrayList like in C using BSD TAILQ',
@@ -3422,7 +3422,7 @@ export const packages: Package[] = [
       ],
       dependencies: {}
     },
-    name: 'yrmt/ArrayList',
+    name: 'yrmt/arraylist',
     slug: 'yrmt-array-list',
     url: 'https://github.com/yrmt/ArrayList',
     license: 'MIT'
@@ -3938,7 +3938,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Simple dictionary implemented through a linked list',
     manifest: {
-      name: 'AjayMT/dict.c',
+      name: 'ajaymt/dict.c',
       version: '0.0.31',
       repo: 'AjayMT/dict.c',
       src: ['src/dict.c', 'src/dict.h'],
@@ -3947,7 +3947,7 @@ export const packages: Package[] = [
       keywords: ['utility', 'dictionary', 'hash', 'table'],
       dependencies: {}
     },
-    name: 'AjayMT/dict.c',
+    name: 'ajaymt/dict.c',
     slug: 'ajay-mt-dict-c',
     url: 'https://github.com/AjayMT/dict.c',
     license: 'MIT'
@@ -3957,7 +3957,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Simple linked list',
     manifest: {
-      name: 'AjayMT/list.c',
+      name: 'ajaymt/list.c',
       description: 'linked list',
       version: '0.0.1',
       src: ['src/list.h', 'src/list.c'],
@@ -3966,7 +3966,7 @@ export const packages: Package[] = [
       keywords: ['utility', 'list', 'linked', 'array'],
       dependencies: {}
     },
-    name: 'AjayMT/list.c',
+    name: 'ajaymt/list.c',
     slug: 'ajay-mt-list-c',
     url: 'https://github.com/AjayMT/list.c',
     license: 'MIT'
@@ -4073,7 +4073,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'C lib for mapping',
     manifest: {
-      name: 'Gioyik/mapc',
+      name: 'gioyik/mapc',
       version: '0.0.1',
       repo: 'gioyik/mapc',
       description: 'A simple associative-array library for C',
@@ -4082,7 +4082,7 @@ export const packages: Package[] = [
       src: ['src/mapc_lib.c', 'src/mapc_lib.h'],
       dependencies: {}
     },
-    name: 'Gioyik/mapc',
+    name: 'gioyik/mapc',
     slug: 'gioyik-mapc',
     url: 'https://github.com/Gioyik/mapc',
     license: 'MIT'
@@ -4112,7 +4112,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Dynamic arbitrary typed array using fat pointers and macros.',
     manifest: {
-      name: 'htmk/Fat-Array',
+      name: 'htmk/fat-array',
       version: '0.0.4',
       repo: 'htmk/Fat-Array',
       description:
@@ -4130,7 +4130,7 @@ export const packages: Package[] = [
       src: ['src/fat_array.h'],
       dependencies: {}
     },
-    name: 'htmk/Fat-Array',
+    name: 'htmk/fat-array',
     slug: 'htmk-fat-array',
     url: 'https://github.com/htmk/Fat-Array',
     license: 'MIT'
@@ -4812,7 +4812,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Minimalist UTF8 Iterator for C and C++.',
     manifest: {
-      name: 'adricoin2010/UTF8-Iterator',
+      name: 'adricoin2010/utf8-iterator',
       version: '0.1.3',
       repo: 'adricoin2010/UTF8-Iterator',
       description: 'Minimalist UTF8 Iterator for C and C++',
@@ -4829,7 +4829,7 @@ export const packages: Package[] = [
       src: ['Source/UTF8.h', 'Source/UTF8.c'],
       dependencies: {}
     },
-    name: 'adricoin2010/UTF8-Iterator',
+    name: 'adricoin2010/utf8-iterator',
     slug: 'adricoin2010-utf-8-iterator',
     url: 'https://github.com/adricoin2010/UTF8-Iterator',
     license: 'MIT'
@@ -5042,7 +5042,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Copies files, directories recursively',
     manifest: {
-      name: 'Isty001/copy',
+      name: 'isty001/copy',
       description: 'Copies files, directories recursively',
       version: '0.0.0',
       repo: 'Isty001/copy',
@@ -5055,7 +5055,7 @@ export const packages: Package[] = [
       license: 'MIT',
       src: ['src/copy.c', 'src/copy.h']
     },
-    name: 'Isty001/copy',
+    name: 'isty001/copy',
     slug: 'isty001-copy',
     url: 'https://github.com/Isty001/copy',
     license: 'MIT'
@@ -6163,7 +6163,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Standardized callback interface.',
     manifest: {
-      name: 'Mobiushorizons/closure_module',
+      name: 'mobiushorizons/closure_module',
       version: '0.0.2',
       repo: 'MobiusHorizons/closure_module',
       description: 'simple callback/closure interface for C/CModules',
@@ -6172,7 +6172,7 @@ export const packages: Package[] = [
       src: ['closure.module.c', 'closure.c', 'closure.h'],
       dependencies: {}
     },
-    name: 'Mobiushorizons/closure_module',
+    name: 'mobiushorizons/closure_module',
     slug: 'mobiushorizons-closure-module',
     url: 'https://github.com/MobiusHorizons/closure_module',
     license: 'MIT'
@@ -6483,7 +6483,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'JTN002: A minimal unit testing framework for C',
     manifest: {
-      name: 'jeradesign/MinUnit',
+      name: 'jeradesign/minunit',
       description: 'A minimal unit testing framework for ANSI C',
       version: '1.0.0',
       src: ['minunit.h'],
@@ -6492,7 +6492,7 @@ export const packages: Package[] = [
       license: 'Unlicensed',
       dependencies: {}
     },
-    name: 'jeradesign/MinUnit',
+    name: 'jeradesign/minunit',
     slug: 'jeradesign-min-unit',
     url: 'https://github.com/jeradesign/MinUnit',
     license: 'Unlicensed'
@@ -7250,7 +7250,7 @@ export const packages: Package[] = [
     description:
       'A pure-C math library with a great variety of mathematical functions. Seeks to be close to C89/C90 compliant for portability.',
     manifest: {
-      name: 'ScientificC/cmathl',
+      name: 'scientificc/cmathl',
       version: '1.10.4',
       repo: 'ScientificC/cmathl',
       description:
@@ -7264,7 +7264,7 @@ export const packages: Package[] = [
       },
       dependencies: {}
     },
-    name: 'ScientificC/cmathl',
+    name: 'scientificc/cmathl',
     slug: 'scientific-c-cmathl',
     url: 'https://github.com/ScientificC/cmathl',
     license: 'MIT'
@@ -7293,7 +7293,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Basic implementation of 3d vector and quaternion',
     manifest: {
-      name: 'MauroMombelli/TrigonomeC',
+      name: 'mauromombelli/trigonomec',
       version: '0.0.1',
       repo: 'MauroMombelli/TrigonomeC',
       description: 'Helper trigonometry function',
@@ -7308,7 +7308,7 @@ export const packages: Package[] = [
       license: 'LGPL',
       dependencies: {}
     },
-    name: 'MauroMombelli/TrigonomeC',
+    name: 'mauromombelli/trigonomec',
     slug: 'mauro-mombelli-trigonome-c',
     url: 'https://github.com/MauroMombelli/TrigonomeC',
     license: 'LGPL'
@@ -7584,7 +7584,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Aug 23 2020 00:05:25 GMT+0000 (Coordinated Universal Time)'
+  'Tue Sep 15 2020 12:33:42 GMT-0400 (Eastern Daylight Time)'
 )
 
-export const revision = 'bd64b01f85dbd7984be70f3475077253584c80ee'
+export const revision = '2b11410fca2a1a81a90d7a7b1b7d280bbd2c3eb0'

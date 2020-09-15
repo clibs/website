@@ -33,7 +33,7 @@ type Props = RouteComponentProps<Params>
 
 const Package: React.ComponentType<Props> = ({ match }) => {
   const { owner, repo } = match.params
-  const pkg = packages.find(p => p.name === `${owner}/${repo}`)
+  const pkg = packages.find(p => p.name === `${owner}/${repo}`.toLowerCase())
 
   if (!pkg) {
     analytics.missingPackage(owner, repo)
