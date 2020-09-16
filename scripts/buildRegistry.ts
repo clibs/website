@@ -115,7 +115,7 @@ const getManifest = async (packageName: string): Promise<Manifest> => {
   }
 
   const json = JSON.parse(content)
-  json.name = packageName
+  json.name = packageName.toLowerCase()
 
   // Ensure the manifest has `keywords`.
   if (!Array.isArray(json.keywords)) {
@@ -199,7 +199,7 @@ const buildRegistry = async (): Promise<void> => {
         continue
       }
 
-      const slug = slugify(pkg.name)
+      const slug = slugify(pkg.name).toLowerCase()
 
       pkgMap.set(slug, {
         category,
@@ -207,7 +207,7 @@ const buildRegistry = async (): Promise<void> => {
         dependents: [],
         description: pkg.description,
         manifest,
-        name: pkg.name,
+        name: pkg.name.toLowerCase(),
         slug,
         url: pkg.url,
         license: manifest.license
