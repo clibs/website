@@ -246,7 +246,12 @@ export const keywords: KeywordList = {
   utilities: { slug: 'utilities', packages: ['lib-x/xstr'] },
   utility: {
     slug: 'utility',
-    packages: ['lib-x/xstr', 'ajaymt/dict.c', 'ajaymt/list.c']
+    packages: [
+      'lib-x/xstr',
+      'ajaymt/dict.c',
+      'ajaymt/list.c',
+      'aperezdc/netdial'
+    ]
   },
   dynamic: { slug: 'dynamic', packages: ['aperezdc/dbuf', 'rxi/vec'] },
   data: {
@@ -943,6 +948,8 @@ export const keywords: KeywordList = {
   message: { slug: 'message', packages: ['clibs/amp'] },
   https: { slug: 'https', packages: ['littlstar/request.cc', 'daddinuz/http'] },
   requests: { slug: 'requests', packages: ['daddinuz/http'] },
+  network: { slug: 'network', packages: ['aperezdc/netdial'] },
+  sockets: { slug: 'sockets', packages: ['aperezdc/netdial'] },
   libuv: {
     slug: 'libuv',
     packages: [
@@ -1414,7 +1421,8 @@ export const categories: CategoryList = {
       'willemt/yabtorrent',
       'clibs/amp',
       'littlstar/request.cc',
-      'daddinuz/http'
+      'daddinuz/http',
+      'aperezdc/netdial'
     ]
   },
   Libraries: {
@@ -5536,6 +5544,25 @@ export const packages: Package[] = [
     license: 'MIT'
   },
   {
+    category: 'Net',
+    dependents: [],
+    description: 'Utility library to simplify socket setup code',
+    manifest: {
+      name: 'aperezdc/netdial',
+      version: '0.1.0',
+      repo: 'aperezdc/netdial',
+      description: '',
+      license: 'MIT',
+      keywords: ['network', 'sockets', 'utility'],
+      src: ['netdial.h', 'netdial.c'],
+      dependencies: { 'aperezdc/dbuf': '0.1.0' }
+    },
+    name: 'aperezdc/netdial',
+    slug: 'aperezdc-netdial',
+    url: 'https://github.com/aperezdc/netdial',
+    license: 'MIT'
+  },
+  {
     category: 'Libraries',
     dependents: [],
     description: 'Cross-platform asychronous I/O',
@@ -7584,7 +7611,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Sep 24 2020 12:03:42 GMT+0000 (Coordinated Universal Time)'
+  'Mon Oct 05 2020 00:05:51 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'bc49bdda823065f09fab9cc09de27c7ee67b6180'
+export const revision = 'b059792ce6b82858f69ebca293a3730d2f8c642f'
