@@ -413,6 +413,7 @@ export const keywords: KeywordList = {
     packages: ['jwerle/libbacon', 'jwerle/libbeaufort']
   },
   beaufort: { slug: 'beaufort', packages: ['jwerle/libbeaufort'] },
+  'bare-metal': { slug: 'bare-metal', packages: ['madmurphy/libconfini'] },
   conf: { slug: 'conf', packages: ['madmurphy/libconfini'] },
   'conf-file': { slug: 'conf-file', packages: ['madmurphy/libconfini'] },
   'conf-library': { slug: 'conf-library', packages: ['madmurphy/libconfini'] },
@@ -2620,12 +2621,13 @@ export const packages: Package[] = [
     description: 'Yet another INI parser',
     manifest: {
       name: 'madmurphy/libconfini',
-      version: '1.14.2',
+      version: '1.15.0',
       description: 'Yet another INI parser',
       homepage: 'https://madmurphy.github.io/libconfini',
       author: 'madmurphy333@gmail.com',
       license: 'GPL-3.0-or-later',
       main: 'libconfini',
+      binaryVersion: '0.4.1',
       repo: 'madmurphy/libconfini',
       repository: {
         type: 'git',
@@ -2644,6 +2646,7 @@ export const packages: Package[] = [
         'docs/man/man3/libconfini.3'
       ],
       keywords: [
+        'bare-metal',
         'c',
         'conf',
         'conf-file',
@@ -7611,7 +7614,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Oct 05 2020 00:05:51 GMT+0000 (Coordinated Universal Time)'
+  'Tue Oct 06 2020 12:05:06 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'b059792ce6b82858f69ebca293a3730d2f8c642f'
+export const revision = '17129fef6dc8d963a403155fe5fda4e0f0f9870e'
