@@ -129,7 +129,10 @@ export const keywords: KeywordList = {
   ext: { slug: 'ext', packages: ['jb55/extname.c'] },
   rot13: { slug: 'rot13', packages: ['stephenmathieson/rot13.c'] },
   rotate: { slug: 'rotate', packages: ['stephenmathieson/rot13.c'] },
-  encryption: { slug: 'encryption', packages: ['stephenmathieson/rot13.c'] },
+  encryption: {
+    slug: 'encryption',
+    packages: ['stephenmathieson/rot13.c', 'veqtrus/vial_aes']
+  },
   flatten: { slug: 'flatten', packages: ['stephenmathieson/str-flatten.c'] },
   substr: { slug: 'substr', packages: ['stephenmathieson/substr.c'] },
   substring: { slug: 'substring', packages: ['stephenmathieson/substr.c'] },
@@ -927,6 +930,9 @@ export const keywords: KeywordList = {
   hmac: { slug: 'hmac', packages: ['aperezdc/hmac-sha256'] },
   hashing: { slug: 'hashing', packages: ['zackehh/siphash-c'] },
   siphash: { slug: 'siphash', packages: ['zackehh/siphash-c'] },
+  aes: { slug: 'aes', packages: ['veqtrus/vial_aes'] },
+  cmac: { slug: 'cmac', packages: ['veqtrus/vial_aes'] },
+  omac: { slug: 'omac', packages: ['veqtrus/vial_aes'] },
   async: {
     slug: 'async',
     packages: [
@@ -1411,6 +1417,7 @@ export const categories: CategoryList = {
       'catb0t/fnv-hash'
     ]
   },
+  Encryption: { slug: 'encryption', packages: ['veqtrus/vial_aes'] },
   Net: {
     slug: 'net',
     packages: [
@@ -5232,6 +5239,27 @@ export const packages: Package[] = [
     license: 'Public Domain'
   },
   {
+    category: 'Encryption',
+    dependents: [],
+    description:
+      'AES block cipher with ECB, CBC, CTR, EAX encryption/ decryption and CMAC authentication',
+    manifest: {
+      name: 'veqtrus/vial_aes',
+      version: '0.1.0',
+      repo: 'veqtrus/vial_aes',
+      description:
+        'Permissively licensed AES implementation in C with ECB, CBC, CTR, and EAX modes of operation, as well as CMAC (OMAC1)',
+      keywords: ['aes', 'encryption', 'cmac', 'omac'],
+      license: 'BSL-1.0',
+      dependencies: {},
+      src: ['README.md', 'LICENSE_1_0.txt', 'aes.h', 'aes.c']
+    },
+    name: 'veqtrus/vial_aes',
+    slug: 'veqtrus-vial-aes',
+    url: 'https://github.com/veqtrus/vial_aes',
+    license: 'BSL-1.0'
+  },
+  {
     category: 'Net',
     dependents: [],
     description: 'Async event loop library extract from from redis',
@@ -7614,7 +7642,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Oct 26 2020 18:03:54 GMT+0000 (Coordinated Universal Time)'
+  'Mon Nov 09 2020 00:06:32 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'f36610d498fdec46a6c063af53ae6be3d891495f'
+export const revision = '9231e6dc3fe21f007f695e328495f88d0180620c'
