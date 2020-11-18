@@ -3359,7 +3359,7 @@ export const packages: Package[] = [
       'Lightweight and threadsafe logger with color coded text and optional file logging',
     manifest: {
       name: 'bonedaddy/ulog',
-      version: '0.0.3-rc2',
+      version: '0.0.3-rc3',
       license: 'agpl-v3',
       description:
         'ulog (uber log) is a lightweight and threadsafe logger in C that provides color coded output, as well as the ability to send logs to a file',
@@ -3371,7 +3371,8 @@ export const packages: Package[] = [
         'include/logger.h',
         'include/version.h',
         'src/colors.c',
-        'src/logger.c'
+        'src/logger.c',
+        'cmake/CMakeLists.txt'
       ]
     },
     name: 'bonedaddy/ulog',
@@ -7642,7 +7643,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Nov 09 2020 00:06:32 GMT+0000 (Coordinated Universal Time)'
+  'Wed Nov 18 2020 00:05:19 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '9231e6dc3fe21f007f695e328495f88d0180620c'
+export const revision = 'fd59fc5f9708c2ca4074eb9aac84abcc5041b4e4'
