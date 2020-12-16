@@ -3359,7 +3359,7 @@ export const packages: Package[] = [
       'Lightweight and threadsafe logger with color coded text and optional file logging',
     manifest: {
       name: 'bonedaddy/ulog',
-      version: '0.0.3-rc3',
+      version: '0.0.3-rc4',
       license: 'agpl-v3',
       description:
         'ulog (uber log) is a lightweight and threadsafe logger in C that provides color coded output, as well as the ability to send logs to a file',
@@ -7643,7 +7643,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Dec 12 2020 00:05:52 GMT+0000 (Coordinated Universal Time)'
+  'Wed Dec 16 2020 00:05:54 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'c2addf01b60b2b4cf777ec2144f73cca0eb533f8'
+export const revision = '9b9bdc223658ad2b0ff3dcb0deaa4de2e4576f37'
