@@ -7588,10 +7588,12 @@ export const packages: Package[] = [
     description: 'Simple OpenGL Image Library',
     manifest: {
       name: 'littlstar/soil',
-      version: '0.0.3',
+      version: '0.1.0',
       repo: 'littlstar/soil',
       description: 'Simple OpenGL Image Library',
       keywords: ['soil', 'opengl', 'gl', 'image'],
+      configure: 'configure',
+      makefile: 'Makefile',
       src: [
         'include/SOIL/SOIL.h',
         'include/SOIL/image_dxt.h',
@@ -7602,7 +7604,9 @@ export const packages: Package[] = [
         'src/soil.c',
         'src/image_dxt.c',
         'src/image_helper.c',
-        'src/stb_image_aug.c'
+        'src/stb_image_aug.c',
+        'configure',
+        'Makefile.in'
       ],
       license: 'Unlicensed',
       dependencies: {}
@@ -7643,7 +7647,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Dec 17 2020 18:06:00 GMT+0000 (Coordinated Universal Time)'
+  'Mon Dec 21 2020 18:12:40 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'a8af09f8d1cb4af493977e5c372b91f695104554'
+export const revision = 'aa86ba1a44ccfe73f021fda4dc4562566f3ba312'
