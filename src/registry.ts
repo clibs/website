@@ -3213,7 +3213,7 @@ export const packages: Package[] = [
       license: 'MIT',
       keywords: ['.env', 'dotenv', 'environemnt', 'variables'],
       src: ['src/dotenv.h', 'src/dotenv.c'],
-      version: '0.0.0',
+      version: '0.1.0',
       repo: 'Isty001/dotenv-c',
       dependencies: {}
     },
@@ -7647,7 +7647,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Dec 21 2020 18:12:40 GMT+0000 (Coordinated Universal Time)'
+  'Wed Jan 20 2021 18:45:44 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'aa86ba1a44ccfe73f021fda4dc4562566f3ba312'
+export const revision = 'e17020635cb4c62c6e22def5a459715715c277f2'
