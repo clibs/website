@@ -45,6 +45,12 @@ const Homebrew: React.ComponentType = () => (
   </analytics.OutboundLink>
 )
 
+const MacPorts: React.ComponentType = () => (
+  <analytics.OutboundLink href="https://www.macports.org" eventLabel="MacPorts">
+    <code>MacPorts</code>
+  </analytics.OutboundLink>
+)
+
 const InstallationGuide: React.ComponentType = () => {
   const [index, setIndex] = React.useState(0) // Default to MacOS
 
@@ -95,6 +101,16 @@ const InstallationGuide: React.ComponentType = () => {
           </p>
 
           <CodeBlock source="brew install clib" />
+
+          <p>
+            With <MacPorts />, do:
+          </p>
+          <CodeBlock
+            source={dedent`
+              sudo port selfupdate
+              sudo port install clib
+            `}
+          />
 
           <p>
             With <Git />, do:
