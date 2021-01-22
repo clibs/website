@@ -110,7 +110,7 @@ const InstallationGuide: React.ComponentType = () => {
         </TabPanel>
         <TabPanel>
           <p>
-            First, you’ll need your distibution’s version of <CURL /> (on
+            First, you’ll need your distribution’s version of <CURL /> (on
             Ubuntu, this is <code>libcurl4-gnutls-dev</code>).
           </p>
           <p>
