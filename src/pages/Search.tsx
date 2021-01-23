@@ -4,26 +4,44 @@ import { useLocation } from 'react-router'
 import { Helmet } from 'react-helmet'
 import { getPackagesByQuery } from '../lib/search'
 import PackageList from '../components/PackageList'
+import ErrorMessage from '../components/ErrorMessage'
 import { Package } from '../types'
 
 const Search: React.ComponentType = () => {
   const location = useLocation()
   const [title, setTitle] = React.useState('Search Results')
   const [packages, setPackages] = React.useState<Package[]>([])
+  const query = React.useMemo(() => {
+    const { q } = parse(location.search.substr(1))
+    if (q) {
+      return q as string
+    }
+    return null
+  }, [location.search])
 
   React.useEffect(() => {
-    const { q: query } = parse(location.search.substr(1))
+    // If no query is provided, we'll render an error. No need to search for packages.
+    if (!query) {
+      return
+    }
+
     setTitle(`“${query}” Search Results`)
-    const matches = getPackagesByQuery(query as string)
+    const matches = getPackagesByQuery(query)
     setPackages(matches)
-  }, [location.search])
+  }, [query])
 
   return (
     <React.Fragment>
       <Helmet title={title}>
         <meta name="description" content={title} />
       </Helmet>
-      <PackageList caption={title} packages={packages} />
+      {query ? (
+        <PackageList caption={title} packages={packages} />
+      ) : (
+        <ErrorMessage title="Missing search query">
+          <p>Search query missing. Unable to search for packages</p>
+        </ErrorMessage>
+      )}
     </React.Fragment>
   )
 }
