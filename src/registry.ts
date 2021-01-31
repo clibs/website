@@ -930,9 +930,9 @@ export const keywords: KeywordList = {
   hmac: { slug: 'hmac', packages: ['aperezdc/hmac-sha256'] },
   hashing: { slug: 'hashing', packages: ['zackehh/siphash-c'] },
   siphash: { slug: 'siphash', packages: ['zackehh/siphash-c'] },
+  cryptography: { slug: 'cryptography', packages: ['veqtrus/vial_aes'] },
   aes: { slug: 'aes', packages: ['veqtrus/vial_aes'] },
-  cmac: { slug: 'cmac', packages: ['veqtrus/vial_aes'] },
-  omac: { slug: 'omac', packages: ['veqtrus/vial_aes'] },
+  mac: { slug: 'mac', packages: ['veqtrus/vial_aes'] },
   async: {
     slug: 'async',
     packages: [
@@ -5246,11 +5246,11 @@ export const packages: Package[] = [
       'AES block cipher with ECB, CBC, CTR, EAX encryption/ decryption and CMAC authentication',
     manifest: {
       name: 'veqtrus/vial_aes',
-      version: '0.1.0',
+      version: '0.2.0',
       repo: 'veqtrus/vial_aes',
       description:
-        'Permissively licensed AES implementation in C with ECB, CBC, CTR, and EAX modes of operation, as well as CMAC (OMAC1)',
-      keywords: ['aes', 'encryption', 'cmac', 'omac'],
+        'Permissively licensed AES implementation in C with ECB, CBC, CTR, GCM, and EAX modes of operation, as well as CMAC (OMAC1)',
+      keywords: ['cryptography', 'aes', 'encryption', 'mac'],
       license: 'BSL-1.0',
       dependencies: {},
       src: ['README.md', 'LICENSE_1_0.txt', 'aes.h', 'aes.c']
@@ -7647,7 +7647,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Jan 20 2021 18:45:44 GMT+0000 (Coordinated Universal Time)'
+  'Sun Jan 31 2021 00:09:14 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'e17020635cb4c62c6e22def5a459715715c277f2'
+export const revision = 'e7786904b11974a51f081e465e4eb205938e35f6'
