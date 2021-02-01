@@ -1694,7 +1694,7 @@ export const packages: Package[] = [
     description: 'string case conversion',
     manifest: {
       name: 'stephenmathieson/case.c',
-      version: '0.1.3',
+      version: '0.2.0',
       repo: 'stephenmathieson/case.c',
       description: 'String case conversion utility',
       keywords: ['string', 'uppercase', 'lowercase'],
@@ -7647,7 +7647,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Jan 31 2021 00:09:14 GMT+0000 (Coordinated Universal Time)'
+  'Mon Feb 01 2021 18:18:46 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'e7786904b11974a51f081e465e4eb205938e35f6'
+export const revision = 'c0c8bdb8833789aafeaa04e62956a7f2528cfd41'
