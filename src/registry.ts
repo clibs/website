@@ -4668,11 +4668,11 @@ export const packages: Package[] = [
     description: 'Base64 encode/decode',
     manifest: {
       name: 'littlstar/b64.c',
-      version: '0.0.1',
       repo: 'littlstar/b64.c',
+      version: '0.0.2',
       description: 'Base64 encode/decode',
       keywords: ['base', '64', 'crypto'],
-      src: ['b64.h', 'encode.c', 'decode.c'],
+      src: ['b64.h', 'encode.c', 'decode.c', 'buffer.c'],
       development: { 'jwerle/libok': '*' },
       license: 'Unlicensed',
       dependencies: {}
@@ -7647,7 +7647,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Feb 01 2021 18:18:46 GMT+0000 (Coordinated Universal Time)'
+  'Wed Feb 10 2021 00:05:07 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'c0c8bdb8833789aafeaa04e62956a7f2528cfd41'
+export const revision = 'cda5797da556a4962569a09552809e2bd6f01085'
