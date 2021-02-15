@@ -5246,7 +5246,7 @@ export const packages: Package[] = [
       'AES block cipher with ECB, CBC, CTR, EAX encryption/ decryption and CMAC authentication',
     manifest: {
       name: 'veqtrus/vial_aes',
-      version: '0.2.0',
+      version: '0.2.1',
       repo: 'veqtrus/vial_aes',
       description:
         'Permissively licensed AES implementation in C with ECB, CBC, CTR, GCM, and EAX modes of operation, as well as CMAC (OMAC1)',
@@ -7647,7 +7647,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Feb 10 2021 00:05:07 GMT+0000 (Coordinated Universal Time)'
+  'Mon Feb 15 2021 06:03:23 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'cda5797da556a4962569a09552809e2bd6f01085'
+export const revision = '1788d80f4c6dcddd0e9573af680a542ab895ccb4'
