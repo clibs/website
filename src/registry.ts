@@ -6504,7 +6504,7 @@ export const packages: Package[] = [
       'A C unit testing library in 1 file. No dependencies, no dynamic allocation',
     manifest: {
       name: 'silentbicycle/greatest',
-      version: 'v1.4.2',
+      version: 'v1.5.0',
       repo: 'silentbicycle/greatest',
       src: ['greatest.h'],
       description:
@@ -7647,7 +7647,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Feb 15 2021 06:03:23 GMT+0000 (Coordinated Universal Time)'
+  'Tue Feb 16 2021 00:06:56 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '1788d80f4c6dcddd0e9573af680a542ab895ccb4'
+export const revision = '8b9d3a37e2de21a9251dad90012a00b35e2b76a2'
