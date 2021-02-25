@@ -3568,7 +3568,7 @@ export const packages: Package[] = [
         'src/utstack.h',
         'src/utstring.h'
       ],
-      version: '2.2.0',
+      version: '2.3.0',
       license: 'Unlicensed',
       dependencies: {}
     },
@@ -7647,7 +7647,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Tue Feb 16 2021 00:06:56 GMT+0000 (Coordinated Universal Time)'
+  'Thu Feb 25 2021 18:09:11 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '8b9d3a37e2de21a9251dad90012a00b35e2b76a2'
+export const revision = '897026bc11d3bc40418e73dd4cc71285d4de88da'
