@@ -2439,13 +2439,13 @@ export const packages: Package[] = [
     description: "Parse URLs in C much like Node's url module.",
     manifest: {
       name: 'jwerle/url.h',
-      version: '0.1.0',
+      version: '0.2.0',
       repo: 'jwerle/url.h',
       description: "Parse URLs much like Node's url module",
       keywords: ['url', 'parse'],
       license: 'MIT',
       makefile: 'Makefile',
-      src: ['url.h'],
+      src: ['url.h', 'url.c'],
       dependencies: {}
     },
     name: 'jwerle/url.h',
@@ -7648,7 +7648,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Mar 08 2021 18:10:25 GMT+0000 (Coordinated Universal Time)'
+  'Sun Mar 28 2021 18:12:30 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'b59bc69010170f3ee941475a2b9a39a460e89ca0'
+export const revision = '3201dbfcc0f26bb373aa7c106aeb126fe79f03c2'
