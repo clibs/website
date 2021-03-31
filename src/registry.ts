@@ -1306,7 +1306,8 @@ export const categories: CategoryList = {
       'daddinuz/arena',
       'abranhe/mergesort.c',
       'bonedaddy/ulog',
-      'aperezdc/clog'
+      'aperezdc/clog',
+      'clibs/linenoise'
     ]
   },
   'Data structure': {
@@ -3400,6 +3401,26 @@ export const packages: Package[] = [
     slug: 'aperezdc-clog',
     url: 'https://github.com/aperezdc/clog',
     license: 'MIT'
+  },
+  {
+    category: 'Utilities',
+    dependents: [],
+    description:
+      'A minimal, zero-config, BSD licensed, readline replacement used in Redis, MongoDB, and Android.',
+    manifest: {
+      name: 'clibs/linenoise',
+      version: '1.0.0',
+      description: 'A small self-contained alternative to readline and libedit',
+      repo: 'clibs/linenoise',
+      src: ['linenoise.c', 'linenoise.h'],
+      license: 'BSD',
+      keywords: [],
+      dependencies: {}
+    },
+    name: 'clibs/linenoise',
+    slug: 'clibs-linenoise',
+    url: 'https://github.com/clibs/linenoise',
+    license: 'BSD'
   },
   {
     category: 'Data structure',
@@ -7648,7 +7669,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Mar 28 2021 18:12:30 GMT+0000 (Coordinated Universal Time)'
+  'Wed Mar 31 2021 00:03:22 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '3201dbfcc0f26bb373aa7c106aeb126fe79f03c2'
+export const revision = 'b02686c93cef8aa4e462b3cae7e9462fcf7172a0'
