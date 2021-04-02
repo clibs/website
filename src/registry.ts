@@ -831,7 +831,8 @@ export const keywords: KeywordList = {
     packages: [
       'brendanashworth/http-parser',
       'littlstar/request.cc',
-      'daddinuz/http'
+      'daddinuz/http',
+      'clibs/http-get.c'
     ]
   },
   request: {
@@ -957,6 +958,9 @@ export const keywords: KeywordList = {
   requests: { slug: 'requests', packages: ['daddinuz/http'] },
   network: { slug: 'network', packages: ['aperezdc/netdial'] },
   sockets: { slug: 'sockets', packages: ['aperezdc/netdial'] },
+  curl: { slug: 'curl', packages: ['clibs/http-get.c'] },
+  get: { slug: 'get', packages: ['clibs/http-get.c'] },
+  download: { slug: 'download', packages: ['clibs/http-get.c'] },
   libuv: {
     slug: 'libuv',
     packages: [
@@ -1431,7 +1435,8 @@ export const categories: CategoryList = {
       'clibs/amp',
       'littlstar/request.cc',
       'daddinuz/http',
-      'aperezdc/netdial'
+      'aperezdc/netdial',
+      'clibs/http-get.c'
     ]
   },
   Libraries: {
@@ -5617,6 +5622,25 @@ export const packages: Package[] = [
     license: 'MIT'
   },
   {
+    category: 'Net',
+    dependents: [],
+    description: 'Simple HTTP GET requests backed by libcurl',
+    manifest: {
+      name: 'clibs/http-get.c',
+      version: '0.4.0',
+      repo: 'clibs/http-get.c',
+      description: 'Simple HTTP GET requests backed by libcurl',
+      keywords: ['http', 'curl', 'get', 'download'],
+      license: 'MIT',
+      src: ['src/http-get.c', 'src/http-get.h'],
+      dependencies: {}
+    },
+    name: 'clibs/http-get.c',
+    slug: 'clibs-http-get-c',
+    url: 'https://github.com/clibs/http-get.c',
+    license: 'MIT'
+  },
+  {
     category: 'Libraries',
     dependents: [],
     description: 'Cross-platform asychronous I/O',
@@ -7669,7 +7693,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Mar 31 2021 00:03:22 GMT+0000 (Coordinated Universal Time)'
+  'Fri Apr 02 2021 18:12:28 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'b02686c93cef8aa4e462b3cae7e9462fcf7172a0'
+export const revision = '1894a0e7dc1d32aadb3469098d1f0dc760fb8212'
