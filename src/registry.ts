@@ -7634,7 +7634,7 @@ export const packages: Package[] = [
     description: 'Simple OpenGL Image Library',
     manifest: {
       name: 'littlstar/soil',
-      version: '0.1.0',
+      version: '0.1.1',
       repo: 'littlstar/soil',
       description: 'Simple OpenGL Image Library',
       keywords: ['soil', 'opengl', 'gl', 'image'],
@@ -7693,7 +7693,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed May 26 2021 12:12:09 GMT+0000 (Coordinated Universal Time)'
+  'Wed Jun 02 2021 01:05:57 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'd0a60c9c83a30daa5d303a821969bcbb04dcd764'
+export const revision = '97501169c6a222b09645dd995870156e7f20140a'
