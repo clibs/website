@@ -2496,12 +2496,13 @@ export const packages: Package[] = [
     description: 'Progress display lib for c',
     manifest: {
       name: 'jwerle/progress.h',
-      version: '0.2.0',
+      version: '0.4.0',
       repo: 'jwerle/progress.c',
       description: 'Simple progress bar display for the terminal',
       keywords: ['terminal', 'tty', 'progress'],
       license: 'MIT',
-      src: ['progress.h', 'progress.c'],
+      makefile: 'Makefile',
+      src: ['progress.h', 'progress.c', 'Makefile'],
       dependencies: {}
     },
     name: 'jwerle/progress.h',
@@ -7693,7 +7694,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Jun 02 2021 01:05:57 GMT+0000 (Coordinated Universal Time)'
+  'Fri Jun 04 2021 19:26:58 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '97501169c6a222b09645dd995870156e7f20140a'
+export const revision = '29ca1a784fb22676edcc0e21669a8e368f93ea82'
