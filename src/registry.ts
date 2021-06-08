@@ -1003,6 +1003,8 @@ export const keywords: KeywordList = {
     slug: 'functional-programming',
     packages: ['daddinuz/option']
   },
+  pdf: { slug: 'pdf', packages: ['andrerenaud/pdfgen'] },
+  document: { slug: 'document', packages: ['andrerenaud/pdfgen'] },
   'c-preprocessor': { slug: 'c-preprocessor', packages: ['madmurphy/zen.h'] },
   counter: { slug: 'counter', packages: ['madmurphy/zen.h'] },
   'c-preprocessor-counter': {
@@ -1453,7 +1455,8 @@ export const categories: CategoryList = {
       'jwerle/libnanoresource',
       'jwerle/libram',
       'jwerle/libras',
-      'jwerle/libalru'
+      'jwerle/libalru',
+      'andrerenaud/pdfgen'
     ]
   },
   'Preprocessor macros': {
@@ -5974,6 +5977,25 @@ export const packages: Package[] = [
     license: 'Unlicensed'
   },
   {
+    category: 'Libraries',
+    dependents: [],
+    description: 'A minimalistic C99 library for creating PDF document.',
+    manifest: {
+      name: 'andrerenaud/pdfgen',
+      version: '0.1.0',
+      repo: 'AndreRenaud/PDFGen',
+      description: 'Create PDF documents',
+      keywords: ['pdf', 'document'],
+      license: 'UNLICENSE',
+      src: ['pdfgen.c', 'pdfgen.h'],
+      dependencies: {}
+    },
+    name: 'andrerenaud/pdfgen',
+    slug: 'andrerenaud-pdfgen',
+    url: 'https://github.com/AndreRenaud/PDFGen',
+    license: 'UNLICENSE'
+  },
+  {
     category: 'Preprocessor macros',
     dependents: [],
     description: 'C preprocessor utilities',
@@ -7694,7 +7716,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Jun 04 2021 19:26:58 GMT+0000 (Coordinated Universal Time)'
+  'Tue Jun 08 2021 00:34:53 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '29ca1a784fb22676edcc0e21669a8e368f93ea82'
+export const revision = 'efddf47f5e16fb18e18ca55ae7557bfc8d38f4f7'
