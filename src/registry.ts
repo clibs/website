@@ -1559,7 +1559,8 @@ export const categories: CategoryList = {
       'mauromombelli/trigonomec',
       'willemt/minmax',
       'littlstar/clamp',
-      'catb0t/yacbnl'
+      'catb0t/yacbnl',
+      'erstan/ceval'
     ]
   },
   OpenGL: {
@@ -7532,6 +7533,35 @@ export const packages: Package[] = [
     license: 'GPL v3'
   },
   {
+    category: 'Math',
+    dependents: [],
+    description: 'Parse and evaluate math expressions',
+    manifest: {
+      name: 'erstan/ceval',
+      version: '0.0.1',
+      repo: 'erstan/ceval',
+      description: 'Parse and evaluate math expressions',
+      install: 'sudo make install',
+      uninstall: 'sudo make uninstall',
+      makefile: 'Makefile',
+      src: [
+        'ceval.h',
+        'core/tokens.h',
+        'core/functions.h',
+        'core/parser.h',
+        'core/evaluator.h',
+        'Makefile'
+      ],
+      license: 'MIT',
+      keywords: [],
+      dependencies: {}
+    },
+    name: 'erstan/ceval',
+    slug: 'erstan-ceval',
+    url: 'https://github.com/erstan/ceval',
+    license: 'MIT'
+  },
+  {
     category: 'AVR',
     dependents: [],
     description: 'max7219 LED Driver for AVR devices.',
@@ -7716,7 +7746,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Aug 06 2021 18:03:54 GMT+0000 (Coordinated Universal Time)'
+  'Mon Aug 09 2021 06:04:17 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '5e7d9deef14a9e16ca9903a2ae7366969168bceb'
+export const revision = '6518ea82652649e835d8c8bd6629fe85123dccae'
