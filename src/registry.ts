@@ -48,8 +48,7 @@ export const keywords: KeywordList = {
       'clibs/bytes',
       'troydhanson/uthash',
       'rikvdh/zabuffer',
-      'rikvdh/matching',
-      'adricoin2010/utf8-iterator'
+      'rikvdh/matching'
     ]
   },
   str: { slug: 'str', packages: ['clibs/buffer', 'lib-x/xstr'] },
@@ -148,10 +147,7 @@ export const keywords: KeywordList = {
     slug: 'trim-right',
     packages: ['stephenmathieson/trim.c', 'littlstar/trim.cc']
   },
-  strings: {
-    slug: 'strings',
-    packages: ['chrisdew/sds', 'lib-x/xstr', 'adricoin2010/utf8-iterator']
-  },
+  strings: { slug: 'strings', packages: ['chrisdew/sds', 'lib-x/xstr'] },
   basename: { slug: 'basename', packages: ['michaelrhodes/path-basename.c'] },
   wildcard: { slug: 'wildcard', packages: ['clibs/wildcardcmp'] },
   comparison: {
@@ -164,14 +160,7 @@ export const keywords: KeywordList = {
   copy: { slug: 'copy', packages: ['clibs/strdup', 'isty001/copy'] },
   c99: { slug: 'c99', packages: ['tingping/ustring'] },
   unicode: { slug: 'unicode', packages: ['tingping/ustring'] },
-  utf8: {
-    slug: 'utf8',
-    packages: [
-      'tingping/ustring',
-      'jwerle/libutf8',
-      'adricoin2010/utf8-iterator'
-    ]
-  },
+  utf8: { slug: 'utf8', packages: ['tingping/ustring', 'jwerle/libutf8'] },
   'utf-8': { slug: 'utf-8', packages: ['tingping/ustring'] },
   martin: { slug: 'martin', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
   porter: { slug: 'porter', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
@@ -865,18 +854,9 @@ export const keywords: KeywordList = {
     slug: 'crypto',
     packages: ['littlstar/b64.c', 'zackehh/siphash-c']
   },
-  charset: {
-    slug: 'charset',
-    packages: ['jwerle/libutf8', 'adricoin2010/utf8-iterator']
-  },
-  encoding: {
-    slug: 'encoding',
-    packages: ['jwerle/libutf8', 'adricoin2010/utf8-iterator']
-  },
-  decoding: {
-    slug: 'decoding',
-    packages: ['jwerle/libutf8', 'adricoin2010/utf8-iterator']
-  },
+  charset: { slug: 'charset', packages: ['jwerle/libutf8'] },
+  encoding: { slug: 'encoding', packages: ['jwerle/libutf8'] },
+  decoding: { slug: 'decoding', packages: ['jwerle/libutf8'] },
   'little endian': { slug: 'little-endian', packages: ['willemt/fe'] },
   'big endian': { slug: 'big-endian', packages: ['willemt/fe'] },
   endianess: { slug: 'endianess', packages: ['willemt/fe'] },
@@ -1394,7 +1374,6 @@ export const categories: CategoryList = {
       'lemire/simdcomp',
       'pepaslabs/hexify.c',
       'aperezdc/ulid-c',
-      'adricoin2010/utf8-iterator',
       'jwerle/libsleepfile'
     ]
   },
@@ -4861,33 +4840,6 @@ export const packages: Package[] = [
   {
     category: 'Encoding/Decoding',
     dependents: [],
-    description: 'Minimalist UTF8 Iterator for C and C++.',
-    manifest: {
-      name: 'adricoin2010/utf8-iterator',
-      version: '0.1.3',
-      repo: 'adricoin2010/UTF8-Iterator',
-      description: 'Minimalist UTF8 Iterator for C and C++',
-      author: 'Adrian Guerrero Vera',
-      keywords: [
-        'strings',
-        'string',
-        'utf8',
-        'charset',
-        'encoding',
-        'decoding'
-      ],
-      license: 'MIT',
-      src: ['Source/UTF8.h', 'Source/UTF8.c'],
-      dependencies: {}
-    },
-    name: 'adricoin2010/utf8-iterator',
-    slug: 'adricoin2010-utf-8-iterator',
-    url: 'https://github.com/adricoin2010/UTF8-Iterator',
-    license: 'MIT'
-  },
-  {
-    category: 'Encoding/Decoding',
-    dependents: [],
     description: 'A C99 library for interacting with SLEEP file storage.',
     manifest: {
       name: 'jwerle/libsleepfile',
@@ -7746,7 +7698,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Aug 09 2021 06:04:17 GMT+0000 (Coordinated Universal Time)'
+  'Thu Aug 12 2021 00:16:51 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '6518ea82652649e835d8c8bd6629fe85123dccae'
+export const revision = '1a7b59aa9c106c803aee110f8924813f8e2922ce'
