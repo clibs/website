@@ -231,7 +231,8 @@ export const keywords: KeywordList = {
       'clehner/ll.c',
       'kellydunn/libkld',
       'neylsongularte/simple-linked-list-c',
-      'arablocks/flat-tree.c'
+      'arablocks/flat-tree.c',
+      'robusgauli/cvector'
     ]
   },
   simple: { slug: 'simple', packages: ['lib-x/xstr'] },
@@ -657,7 +658,8 @@ export const keywords: KeywordList = {
       'willemt/farraylist',
       'ajaymt/list.c',
       'gioyik/mapc',
-      'htmk/fat-array'
+      'htmk/fat-array',
+      'robusgauli/cvector'
     ]
   },
   uthash: { slug: 'uthash', packages: ['troydhanson/uthash'] },
@@ -714,6 +716,7 @@ export const keywords: KeywordList = {
       'rxi/vec',
       'kellydunn/libkld',
       'htmk/fat-array',
+      'robusgauli/cvector',
       'mauromombelli/trigonomec',
       'glisy/math'
     ]
@@ -1339,7 +1342,8 @@ export const categories: CategoryList = {
       'arablocks/flat-tree.c',
       'jwerle/libmerkle',
       'rikvdh/zabuffer',
-      'rikvdh/zringbuf'
+      'rikvdh/zringbuf',
+      'robusgauli/cvector'
     ]
   },
   Parsing: {
@@ -4338,6 +4342,25 @@ export const packages: Package[] = [
     name: 'rikvdh/zringbuf',
     slug: 'rikvdh-zringbuf',
     url: 'https://github.com/rikvdh/zringbuf',
+    license: 'MIT'
+  },
+  {
+    category: 'Data structure',
+    dependents: [],
+    description: 'A Generic dynamic vector implementation with Iterator addon.',
+    manifest: {
+      name: 'robusgauli/cvector',
+      repo: 'robusgauli/cvector',
+      description: 'Generic vector implementation with iterator helpers in C',
+      version: '0.1.0',
+      license: 'MIT',
+      src: ['src/cvector.h'],
+      keywords: ['vector', 'array', 'list'],
+      dependencies: {}
+    },
+    name: 'robusgauli/cvector',
+    slug: 'robusgauli-cvector',
+    url: 'https://github.com/robusgauli/cvector',
     license: 'MIT'
   },
   {
@@ -7698,7 +7721,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Aug 12 2021 00:16:51 GMT+0000 (Coordinated Universal Time)'
+  'Thu Aug 12 2021 06:07:59 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '1a7b59aa9c106c803aee110f8924813f8e2922ce'
+export const revision = 'd196b4e6800d51186036743778ef28ab6e447fa9'
