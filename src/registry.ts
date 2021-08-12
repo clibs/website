@@ -928,7 +928,7 @@ export const keywords: KeywordList = {
   },
   eventloop: { slug: 'eventloop', packages: ['aisk/libae'] },
   redis: { slug: 'redis', packages: ['aisk/libae'] },
-  net: { slug: 'net', packages: ['aisk/libae'] },
+  net: { slug: 'net', packages: ['aisk/libae', '4thel00z/libsniff'] },
   raft: { slug: 'raft', packages: ['willemt/raft'] },
   consensus: { slug: 'consensus', packages: ['willemt/raft'] },
   protocol: { slug: 'protocol', packages: ['willemt/raft', 'clibs/amp'] },
@@ -944,6 +944,9 @@ export const keywords: KeywordList = {
   curl: { slug: 'curl', packages: ['clibs/http-get.c'] },
   get: { slug: 'get', packages: ['clibs/http-get.c'] },
   download: { slug: 'download', packages: ['clibs/http-get.c'] },
+  sniff: { slug: 'sniff', packages: ['4thel00z/libsniff'] },
+  raw: { slug: 'raw', packages: ['4thel00z/libsniff'] },
+  socket: { slug: 'socket', packages: ['4thel00z/libsniff'] },
   libuv: {
     slug: 'libuv',
     packages: [
@@ -1421,7 +1424,8 @@ export const categories: CategoryList = {
       'littlstar/request.cc',
       'daddinuz/http',
       'aperezdc/netdial',
-      'clibs/http-get.c'
+      'clibs/http-get.c',
+      '4thel00z/libsniff'
     ]
   },
   Libraries: {
@@ -5621,6 +5625,26 @@ export const packages: Package[] = [
     license: 'MIT'
   },
   {
+    category: 'Net',
+    dependents: [],
+    description: 'Simple library to help you with setting up a raw socket',
+    manifest: {
+      name: '4thel00z/libsniff',
+      version: '0.1.0',
+      repo: '4thel00z/libsniff',
+      description:
+        'A simple library that helps you set up raw sockets for sniffing',
+      keywords: ['net', 'sniff', 'raw', 'socket'],
+      license: 'GPL-3',
+      src: ['libsniff.c', 'libsniff.h'],
+      dependencies: {}
+    },
+    name: '4thel00z/libsniff',
+    slug: '4thel00z-libsniff',
+    url: 'https://github.com/4thel00z/libsniff',
+    license: 'GPL-3'
+  },
+  {
     category: 'Libraries',
     dependents: [],
     description: 'Cross-platform asychronous I/O',
@@ -7721,7 +7745,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Aug 12 2021 06:07:59 GMT+0000 (Coordinated Universal Time)'
+  'Thu Aug 12 2021 12:06:36 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'd196b4e6800d51186036743778ef28ab6e447fa9'
+export const revision = '481bb9ea3a1314fb15afcc29827cb7d589aea0c8'
