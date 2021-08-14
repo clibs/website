@@ -780,6 +780,7 @@ export const keywords: KeywordList = {
   },
   ringbuffer: { slug: 'ringbuffer', packages: ['rikvdh/zringbuf'] },
   ringbuf: { slug: 'ringbuf', packages: ['rikvdh/zringbuf'] },
+  env: { slug: 'env', packages: ['4thel00z/env.h'] },
   sax: { slug: 'sax', packages: ['clibs/logfmt'] },
   logfmt: { slug: 'logfmt', packages: ['clibs/logfmt'] },
   ragel: { slug: 'ragel', packages: ['clibs/logfmt'] },
@@ -1011,9 +1012,13 @@ export const keywords: KeywordList = {
   subscribe: { slug: 'subscribe', packages: ['clibs/trigger'] },
   trigger: { slug: 'trigger', packages: ['clibs/trigger'] },
   triggering: { slug: 'triggering', packages: ['clibs/trigger'] },
-  error: { slug: 'error', packages: ['jwerle/throw.h'] },
-  exception: { slug: 'exception', packages: ['jwerle/throw.h'] },
-  throw: { slug: 'throw', packages: ['jwerle/throw.h'] },
+  error: { slug: 'error', packages: ['jwerle/throw.h', '4thel00z/cry.h'] },
+  exception: {
+    slug: 'exception',
+    packages: ['jwerle/throw.h', '4thel00z/cry.h']
+  },
+  throw: { slug: 'throw', packages: ['jwerle/throw.h', '4thel00z/cry.h'] },
+  cry: { slug: 'cry', packages: ['4thel00z/cry.h'] },
   coroutine: { slug: 'coroutine', packages: ['clibs/coro'] },
   chan: { slug: 'chan', packages: ['tylertreat/chan'] },
   channel: { slug: 'channel', packages: ['tylertreat/chan'] },
@@ -1346,7 +1351,8 @@ export const categories: CategoryList = {
       'jwerle/libmerkle',
       'rikvdh/zabuffer',
       'rikvdh/zringbuf',
-      'robusgauli/cvector'
+      'robusgauli/cvector',
+      '4thel00z/env.h'
     ]
   },
   Parsing: {
@@ -1459,6 +1465,7 @@ export const categories: CategoryList = {
       'clibs/trigger',
       'stephenmathieson/emitter.c',
       'jwerle/throw.h',
+      '4thel00z/cry.h',
       'clibs/coro',
       'tylertreat/chan',
       'trws/libdefer',
@@ -4368,6 +4375,25 @@ export const packages: Package[] = [
     license: 'MIT'
   },
   {
+    category: 'Data structure',
+    dependents: [],
+    description: 'Utilities to nicely interact with the environment variables.',
+    manifest: {
+      name: '4thel00z/env.h',
+      version: '0.1.0',
+      repo: '4thel00z/env.h',
+      description: 'A simple getenv wrapper with defaults',
+      keywords: ['env'],
+      license: 'GPL-3',
+      src: ['env.h'],
+      dependencies: {}
+    },
+    name: '4thel00z/env.h',
+    slug: '4thel00z-env-h',
+    url: 'https://github.com/4thel00z/env.h',
+    license: 'GPL-3'
+  },
+  {
     category: 'Parsing',
     dependents: [],
     description: 'fast logfmt parser.',
@@ -6161,6 +6187,25 @@ export const packages: Package[] = [
   {
     category: 'Program flow',
     dependents: [],
+    description: 'Cry about your program (like throw.h) but with colors',
+    manifest: {
+      name: '4thel00z/cry.h',
+      version: '0.1.2',
+      repo: '4thel00z/cry.h',
+      description: 'Cry about errors in your code with colors',
+      keywords: ['cry', 'error', 'exception', 'throw'],
+      license: 'GPL-3',
+      src: ['cry.h', 'log.h'],
+      dependencies: {}
+    },
+    name: '4thel00z/cry.h',
+    slug: '4thel00z-cry-h',
+    url: 'https://github.com/4thel00z/cry.h',
+    license: 'GPL-3'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
     description: 'Coroutines in C',
     manifest: {
       name: 'clibs/coro',
@@ -7745,7 +7790,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Aug 12 2021 12:06:36 GMT+0000 (Coordinated Universal Time)'
+  'Sat Aug 14 2021 00:14:57 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '481bb9ea3a1314fb15afcc29827cb7d589aea0c8'
+export const revision = '8ec537926a8a4d9863cbfde1450a139f0678774c'
