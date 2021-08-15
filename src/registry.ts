@@ -5656,7 +5656,7 @@ export const packages: Package[] = [
     description: 'Simple library to help you with setting up a raw socket',
     manifest: {
       name: '4thel00z/libsniff',
-      version: '0.1.0',
+      version: '0.1.2',
       repo: '4thel00z/libsniff',
       description:
         'A simple library that helps you set up raw sockets for sniffing',
@@ -7790,7 +7790,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Aug 14 2021 00:14:57 GMT+0000 (Coordinated Universal Time)'
+  'Sun Aug 15 2021 12:06:09 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '8ec537926a8a4d9863cbfde1450a139f0678774c'
+export const revision = 'eee95968126a44a39ddd638080fdce2ac2ae1d77'
