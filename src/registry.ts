@@ -20,7 +20,8 @@ export const keywords: KeywordList = {
       'isty001/mem-pool',
       'willemt/cbuffer',
       'rikvdh/zabuffer',
-      'rikvdh/zringbuf'
+      'rikvdh/zringbuf',
+      'robusgauli/cvector'
     ]
   },
   string: {
@@ -64,7 +65,12 @@ export const keywords: KeywordList = {
   },
   utils: {
     slug: 'utils',
-    packages: ['clibs/buffer', 'lib-x/xstr', 'ararslan/termcolor-c']
+    packages: [
+      'clibs/buffer',
+      'lib-x/xstr',
+      'ararslan/termcolor-c',
+      'robusgauli/cvector'
+    ]
   },
   split: { slug: 'split', packages: ['jwerle/strsplit.h'] },
   char: { slug: 'char', packages: ['jwerle/chfreq.c', 'jwerle/getch.c'] },
@@ -761,7 +767,10 @@ export const keywords: KeywordList = {
   pointer: { slug: 'pointer', packages: ['htmk/fat-array'] },
   fatarray: { slug: 'fatarray', packages: ['htmk/fat-array'] },
   fat_array: { slug: 'fat-array', packages: ['htmk/fat-array'] },
-  generic: { slug: 'generic', packages: ['laserswald/dlist'] },
+  generic: {
+    slug: 'generic',
+    packages: ['laserswald/dlist', 'robusgauli/cvector']
+  },
   'double linked list': {
     slug: 'double-linked-list',
     packages: ['laserswald/dlist']
@@ -4363,10 +4372,10 @@ export const packages: Package[] = [
       name: 'robusgauli/cvector',
       repo: 'robusgauli/cvector',
       description: 'Generic vector implementation with iterator helpers in C',
-      version: '0.1.0',
+      version: '0.1.1',
       license: 'MIT',
-      src: ['src/cvector.h'],
-      keywords: ['vector', 'array', 'list'],
+      src: ['src/cvector.h', 'src/zero.h'],
+      keywords: ['vector', 'array', 'list', 'utils', 'buffer', 'generic'],
       dependencies: {}
     },
     name: 'robusgauli/cvector',
@@ -7790,7 +7799,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Aug 15 2021 12:06:09 GMT+0000 (Coordinated Universal Time)'
+  'Mon Aug 16 2021 12:10:18 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'eee95968126a44a39ddd638080fdce2ac2ae1d77'
+export const revision = '51880c8fcc6b7e2d02e8f14644f9e4dd9eb68524'
