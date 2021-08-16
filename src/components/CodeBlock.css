@@ -1,2 +1,7 @@
-.code {
+.code pre {
+  display: block;
+  overflow-x: auto;
+  padding: var(--space-small);
+  color: var(--black);
+  background: var(--light-gray);
 }
