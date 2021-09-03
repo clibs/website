@@ -688,7 +688,7 @@ export const keywords: KeywordList = {
     slug: 'self-balancing',
     packages: ['willemt/array-avl-tree']
   },
-  set: { slug: 'set', packages: ['willemt/array-avl-tree'] },
+  set: { slug: 'set', packages: ['willemt/array-avl-tree', 'robusgauli/cset'] },
   'data structure': {
     slug: 'data-structure',
     packages: ['willemt/array-avl-tree']
@@ -698,7 +698,8 @@ export const keywords: KeywordList = {
     packages: [
       'willemt/linked-list-hashmap',
       'willemt/quadratic-probing-hashmap',
-      'willemt/skiplist'
+      'willemt/skiplist',
+      'robusgauli/cset'
     ]
   },
   dictionary: {
@@ -769,7 +770,7 @@ export const keywords: KeywordList = {
   fat_array: { slug: 'fat-array', packages: ['htmk/fat-array'] },
   generic: {
     slug: 'generic',
-    packages: ['laserswald/dlist', 'robusgauli/cvector']
+    packages: ['laserswald/dlist', 'robusgauli/cvector', 'robusgauli/cset']
   },
   'double linked list': {
     slug: 'double-linked-list',
@@ -789,6 +790,13 @@ export const keywords: KeywordList = {
   },
   ringbuffer: { slug: 'ringbuffer', packages: ['rikvdh/zringbuf'] },
   ringbuf: { slug: 'ringbuf', packages: ['rikvdh/zringbuf'] },
+  xxhash: { slug: 'xxhash', packages: ['robusgauli/cset'] },
+  hashing: {
+    slug: 'hashing',
+    packages: ['robusgauli/cset', 'zackehh/siphash-c']
+  },
+  hashset: { slug: 'hashset', packages: ['robusgauli/cset'] },
+  typesafe: { slug: 'typesafe', packages: ['robusgauli/cset'] },
   env: { slug: 'env', packages: ['4thel00z/env.h'] },
   sax: { slug: 'sax', packages: ['clibs/logfmt'] },
   logfmt: { slug: 'logfmt', packages: ['clibs/logfmt'] },
@@ -922,7 +930,6 @@ export const keywords: KeywordList = {
   },
   sha2: { slug: 'sha2', packages: ['jb55/sha256.c', 'aperezdc/hmac-sha256'] },
   hmac: { slug: 'hmac', packages: ['aperezdc/hmac-sha256'] },
-  hashing: { slug: 'hashing', packages: ['zackehh/siphash-c'] },
   siphash: { slug: 'siphash', packages: ['zackehh/siphash-c'] },
   cryptography: { slug: 'cryptography', packages: ['veqtrus/vial_aes'] },
   aes: { slug: 'aes', packages: ['veqtrus/vial_aes'] },
@@ -1361,6 +1368,7 @@ export const categories: CategoryList = {
       'rikvdh/zabuffer',
       'rikvdh/zringbuf',
       'robusgauli/cvector',
+      'robusgauli/cset',
       '4thel00z/env.h'
     ]
   },
@@ -4381,6 +4389,34 @@ export const packages: Package[] = [
     name: 'robusgauli/cvector',
     slug: 'robusgauli-cvector',
     url: 'https://github.com/robusgauli/cvector',
+    license: 'MIT'
+  },
+  {
+    category: 'Data structure',
+    dependents: [],
+    description:
+      'Type safe, Generic & Fast as F**K Set Data structure (uses XXHash).',
+    manifest: {
+      name: 'robusgauli/cset',
+      repo: 'robusgauli/cset',
+      description: 'Typesafe & fastest set implementation in C',
+      version: '0.0.1',
+      license: 'MIT',
+      src: ['src/cset.h'],
+      keywords: [
+        'set',
+        'hashmap',
+        'xxhash',
+        'hashing',
+        'hashset',
+        'generic',
+        'typesafe'
+      ],
+      dependencies: {}
+    },
+    name: 'robusgauli/cset',
+    slug: 'robusgauli-cset',
+    url: 'https://github.com/robusgauli/cset',
     license: 'MIT'
   },
   {
@@ -7799,7 +7835,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Aug 18 2021 06:05:06 GMT+0000 (Coordinated Universal Time)'
+  'Fri Sep 03 2021 18:04:16 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'b7d6587d76a5f3a2172aa28c315ad823d357f974'
+export const revision = 'a2914357a0646cdf0010f9d7bb72cb1b54c854f2'
