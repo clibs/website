@@ -4380,7 +4380,7 @@ export const packages: Package[] = [
       name: 'robusgauli/cvector',
       repo: 'robusgauli/cvector',
       description: 'Generic vector implementation with iterator helpers in C',
-      version: '0.1.2',
+      version: '0.1.3',
       license: 'MIT',
       src: ['src/cvector.h', 'src/zero.h'],
       keywords: ['vector', 'array', 'list', 'utils', 'buffer', 'generic'],
@@ -7835,7 +7835,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Sep 03 2021 18:04:16 GMT+0000 (Coordinated Universal Time)'
+  'Sun Sep 05 2021 06:05:04 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'a2914357a0646cdf0010f9d7bb72cb1b54c854f2'
+export const revision = '25decc05bcb70393505ba961256c443febbdc273'
