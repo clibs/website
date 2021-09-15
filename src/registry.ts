@@ -742,6 +742,7 @@ export const keywords: KeywordList = {
       'willemt/stubfile',
       'willemt/tracker-client',
       'willemt/pwp',
+      'willemt/yabtorrent',
       'willemt/heapless-bencode',
       'willemt/streaming-bencode'
     ]
@@ -1441,6 +1442,7 @@ export const categories: CategoryList = {
       'willemt/raft',
       'willemt/tracker-client',
       'willemt/pwp',
+      'willemt/yabtorrent',
       'clibs/amp',
       'littlstar/request.cc',
       'daddinuz/http',
@@ -5490,6 +5492,79 @@ export const packages: Package[] = [
   {
     category: 'Net',
     dependents: [],
+    description: 'Cross platform Bittorrent library',
+    manifest: {
+      name: 'willemt/yabtorrent',
+      version: '0.0.1',
+      repo: 'willemt/yabtorrent',
+      description: 'A Bittorrent library',
+      keywords: ['bittorrent'],
+      license: 'BSD',
+      src: [
+        'src/bt_blacklist.c',
+        'src/bt_choker_leecher.c',
+        'src/bt_choker_seeder.c',
+        'src/bt_diskcache.c',
+        'src/bt_diskmem.c',
+        'src/bt_download_manager.c',
+        'src/bt_peer_manager.c',
+        'src/bt_piece.c',
+        'src/bt_piece_db.c',
+        'src/bt_selector_endgame.c',
+        'src/bt_selector_random.c',
+        'src/bt_selector_rarestfirst.c',
+        'src/bt_selector_sequential.c',
+        'src/bt_util.c',
+        'include/bt_blacklist.h',
+        'include/bt_choker.h',
+        'include/bt_choker_leecher.h',
+        'include/bt_choker_peer.h',
+        'include/bt_choker_seeder.h',
+        'include/bt_diskcache.h',
+        'include/bt_diskmem.h',
+        'include/bt_peermanager.h',
+        'include/bt_piece.h',
+        'include/bt_piece_db.h',
+        'include/bt_piece_selector.h',
+        'include/bt_selector_random.h',
+        'include/bt_selector_rarestfirst.h',
+        'include/bt_selector_sequential.h',
+        'include/bt_string.h',
+        'include/bt_util.h',
+        'include/network_adapter.h',
+        'include/network_adapter_mock.h'
+      ],
+      dependencies: {
+        'willemt/array-avl-tree': '*',
+        'littlstar/asprintf.c': '*',
+        'willemt/bag': '*',
+        'willemt/bipbuffer': '*',
+        'willemt/bitfield': '*',
+        'willemt/bitstream': '*',
+        'willemt/chunkybar': '*',
+        'willemt/config-re': '*',
+        'willemt/cutest': '*',
+        'willemt/event-timer': '*',
+        'willemt/fe': '*',
+        'willemt/heap': '*',
+        'willemt/linked-list-hashmap': '*',
+        'willemt/linked-list-queue': '*',
+        'willemt/meanqueue': '*',
+        'clibs/mt19937ar': '*',
+        'willemt/pseudolru': '*',
+        'willemt/pwp': '*',
+        'clibs/sha1': '*',
+        'clibs/strndup': '*'
+      }
+    },
+    name: 'willemt/yabtorrent',
+    slug: 'willemt-yabtorrent',
+    url: 'https://github.com/willemt/yabtorrent',
+    license: 'BSD'
+  },
+  {
+    category: 'Net',
+    dependents: [],
     description: 'Abstract Message Protocol C implementation',
     manifest: {
       name: 'clibs/amp',
@@ -6604,7 +6679,7 @@ export const packages: Package[] = [
   },
   {
     category: 'Testing/Quality Assurance',
-    dependents: [],
+    dependents: ['willemt/yabtorrent'],
     description: 'C unit testing',
     manifest: {
       name: 'willemt/cutest',
@@ -6769,7 +6844,7 @@ export const packages: Package[] = [
   },
   {
     category: 'Timing',
-    dependents: [],
+    dependents: ['willemt/yabtorrent'],
     description: 'A timer that fires events based off time',
     manifest: {
       name: 'willemt/event-timer',
@@ -7760,7 +7835,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Tue Sep 14 2021 18:05:45 GMT+0000 (Coordinated Universal Time)'
+  'Wed Sep 15 2021 00:16:38 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '818ddc71776acb176cd557f06574bf6bfea7ed11'
+export const revision = 'a958e10c5f20f8e2c0ed28bb609adbc5a1e9eed9'
