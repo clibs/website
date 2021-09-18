@@ -320,7 +320,6 @@ export const keywords: KeywordList = {
       'clibs/flag',
       'clibs/inih',
       'madmurphy/libconfini',
-      'clibs/logfmt',
       'orangeduck/mpc',
       'brendanashworth/http-parser',
       'h2non/semver.c',
@@ -465,7 +464,6 @@ export const keywords: KeywordList = {
       'daddinuz/liblogger',
       'daddinuz/logger',
       'aperezdc/clog',
-      'clibs/logfmt',
       'clibs/debug'
     ]
   },
@@ -798,9 +796,6 @@ export const keywords: KeywordList = {
   hashset: { slug: 'hashset', packages: ['robusgauli/cset'] },
   typesafe: { slug: 'typesafe', packages: ['robusgauli/cset'] },
   env: { slug: 'env', packages: ['4thel00z/env.h'] },
-  sax: { slug: 'sax', packages: ['clibs/logfmt'] },
-  logfmt: { slug: 'logfmt', packages: ['clibs/logfmt'] },
-  ragel: { slug: 'ragel', packages: ['clibs/logfmt'] },
   combinator: { slug: 'combinator', packages: ['orangeduck/mpc'] },
   mpc: { slug: 'mpc', packages: ['orangeduck/mpc'] },
   bencode: {
@@ -1375,7 +1370,6 @@ export const categories: CategoryList = {
   Parsing: {
     slug: 'parsing',
     packages: [
-      'clibs/logfmt',
       'clibs/jsmn',
       'orangeduck/mpc',
       'willemt/torrent-reader',
@@ -4437,25 +4431,6 @@ export const packages: Package[] = [
     slug: '4thel00z-env-h',
     url: 'https://github.com/4thel00z/env.h',
     license: 'GPL-3'
-  },
-  {
-    category: 'Parsing',
-    dependents: [],
-    description: 'fast logfmt parser.',
-    manifest: {
-      name: 'clibs/logfmt',
-      version: '1.0.0',
-      repo: 'clibs/logfmt',
-      description: 'SAX-style logfmt parser',
-      keywords: ['parser', 'sax', 'log', 'logfmt', 'ragel'],
-      license: 'MIT',
-      src: ['logfmt.h', 'logfmt.c', 'utils.c'],
-      dependencies: {}
-    },
-    name: 'clibs/logfmt',
-    slug: 'clibs-logfmt',
-    url: 'https://github.com/clibs/logfmt',
-    license: 'MIT'
   },
   {
     category: 'Parsing',
@@ -7835,7 +7810,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Sep 15 2021 00:16:38 GMT+0000 (Coordinated Universal Time)'
+  'Sat Sep 18 2021 18:05:44 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'a958e10c5f20f8e2c0ed28bb609adbc5a1e9eed9'
+export const revision = '06669cee3ae821c10f0b97b2c02b79a5cdabae72'
