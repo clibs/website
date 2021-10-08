@@ -7150,11 +7150,11 @@ export const packages: Package[] = [
     description: 'A utility for running arbitrary commands when files change',
     manifest: {
       name: 'clibs/entr',
-      version: '3.4.0',
+      version: '5.0.0',
       repo: 'clibs/entr',
       description: 'A utility for running arbitrary commands when files change',
       keywords: ['watch', 'make', 'entr', 'fs', 'file'],
-      install: './configure && make test install',
+      install: './configure && make test && sudo make install',
       license: 'Unlicensed',
       dependencies: {}
     },
@@ -7835,7 +7835,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Sep 25 2021 06:04:32 GMT+0000 (Coordinated Universal Time)'
+  'Fri Oct 08 2021 18:04:55 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '41698794be5388a88f57fe4519d247231dcbfd1c'
+export const revision = 'f51cef3b906223843da13b30534776cc91b5fa61'
