@@ -6905,7 +6905,7 @@ export const packages: Package[] = [
     description: 'periodically execute commands',
     manifest: {
       name: 'visionmedia/watch',
-      version: '0.3.1',
+      version: '0.4.0',
       repo: 'visionmedia/watch',
       description: 'Execute commands at a regular interval',
       keywords: ['watch'],
@@ -7835,7 +7835,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Oct 08 2021 18:04:55 GMT+0000 (Coordinated Universal Time)'
+  'Mon Oct 18 2021 18:05:12 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'f51cef3b906223843da13b30534776cc91b5fa61'
+export const revision = 'f8d48f6cf2bc9461273beaa02bbe821eae1ee09b'
