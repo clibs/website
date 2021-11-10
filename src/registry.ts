@@ -463,6 +463,7 @@ export const keywords: KeywordList = {
       'thlorenz/log.h',
       'kdmurray91/clogged',
       'daddinuz/liblogger',
+      'daddinuz/logger',
       'aperezdc/clog',
       'clibs/logfmt',
       'clibs/debug'
@@ -573,11 +574,11 @@ export const keywords: KeywordList = {
   variables: { slug: 'variables', packages: ['isty001/dotenv-c'] },
   logging: {
     slug: 'logging',
-    packages: ['daddinuz/liblogger', 'aperezdc/clog']
+    packages: ['daddinuz/liblogger', 'daddinuz/logger', 'aperezdc/clog']
   },
   logger: {
     slug: 'logger',
-    packages: ['daddinuz/liblogger', 'bonedaddy/ulog']
+    packages: ['daddinuz/liblogger', 'daddinuz/logger', 'bonedaddy/ulog']
   },
   stream: {
     slug: 'stream',
@@ -587,6 +588,7 @@ export const keywords: KeywordList = {
       'willemt/bitstream'
     ]
   },
+  logs: { slug: 'logs', packages: ['daddinuz/logger'] },
   termcolor: { slug: 'termcolor', packages: ['ararslan/termcolor-c'] },
   'header-only': { slug: 'header-only', packages: ['ararslan/termcolor-c'] },
   'arena-allocator': { slug: 'arena-allocator', packages: ['daddinuz/arena'] },
@@ -1312,6 +1314,7 @@ export const categories: CategoryList = {
       'alebcay/metric',
       'isty001/dotenv-c',
       'daddinuz/liblogger',
+      'daddinuz/logger',
       'ararslan/termcolor-c',
       'daddinuz/arena',
       'abranhe/mergesort.c',
@@ -3262,6 +3265,55 @@ export const packages: Package[] = [
     name: 'daddinuz/liblogger',
     slug: 'daddinuz-liblogger',
     url: 'https://github.com/daddinuz/liblogger',
+    license: 'MIT'
+  },
+  {
+    category: 'Utilities',
+    dependents: [],
+    description: 'A logging library written in C99',
+    manifest: {
+      name: 'daddinuz/logger',
+      repo: 'daddinuz/logger',
+      version: '0.3.1',
+      license: 'MIT',
+      description: 'A logging library written in C99.',
+      keywords: ['log', 'logs', 'logger', 'logging'],
+      development: {
+        'daddinuz/traits': '2.1.0',
+        'daddinuz/traits-unit': '1.1.0'
+      },
+      src: [
+        'src/logger.h',
+        'src/logger_err.h',
+        'src/logger_level.h',
+        'src/logger_stream.h',
+        'src/logger_string.h',
+        'src/logger_record.h',
+        'src/logger_formatter.h',
+        'src/logger_handler.h',
+        'src/logger_builtin_loggers.h',
+        'src/logger_builtin_formatters.h',
+        'src/logger_builtin_handlers.h',
+        'deps/sds/sdsalloc.h',
+        'deps/sds/sds.h',
+        'src/logger.c',
+        'src/logger_err.c',
+        'src/logger_level.c',
+        'src/logger_string.c',
+        'src/logger_record.c',
+        'src/logger_formatter.c',
+        'src/logger_handler.c',
+        'src/logger_builtin_loggers.c',
+        'src/logger_builtin_formatters.c',
+        'src/logger_builtin_handlers.c',
+        'deps/sds/sds.c'
+      ],
+      makefile: 'logger.cmake',
+      dependencies: {}
+    },
+    name: 'daddinuz/logger',
+    slug: 'daddinuz-logger',
+    url: 'https://github.com/daddinuz/logger',
     license: 'MIT'
   },
   {
@@ -7783,7 +7835,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Nov 10 2021 00:19:17 GMT+0000 (Coordinated Universal Time)'
+  'Wed Nov 10 2021 06:05:28 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '8250336091fb76bbaba8763cd5e7c68285f2ae03'
+export const revision = '59216ee5c3523d31b2509c414b3f888c0eb01de5'
