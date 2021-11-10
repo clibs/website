@@ -753,7 +753,7 @@ export const keywords: KeywordList = {
   table: { slug: 'table', packages: ['ajaymt/dict.c'] },
   'data structures': {
     slug: 'data-structures',
-    packages: ['kellydunn/libkld']
+    packages: ['kellydunn/libkld', 'matthewzito/lib.cartilage']
   },
   graph: { slug: 'graph', packages: ['kellydunn/libkld', 'visionmedia/histo'] },
   matrix: { slug: 'matrix', packages: ['kellydunn/libkld', 'glisy/math'] },
@@ -798,6 +798,10 @@ export const keywords: KeywordList = {
   hashset: { slug: 'hashset', packages: ['robusgauli/cset'] },
   typesafe: { slug: 'typesafe', packages: ['robusgauli/cset'] },
   env: { slug: 'env', packages: ['4thel00z/env.h'] },
+  'linked list': {
+    slug: 'linked-list',
+    packages: ['matthewzito/lib.cartilage']
+  },
   sax: { slug: 'sax', packages: ['clibs/logfmt'] },
   logfmt: { slug: 'logfmt', packages: ['clibs/logfmt'] },
   ragel: { slug: 'ragel', packages: ['clibs/logfmt'] },
@@ -1369,7 +1373,8 @@ export const categories: CategoryList = {
       'rikvdh/zringbuf',
       'robusgauli/cvector',
       'robusgauli/cset',
-      '4thel00z/env.h'
+      '4thel00z/env.h',
+      'matthewzito/lib.cartilage'
     ]
   },
   Parsing: {
@@ -4437,6 +4442,32 @@ export const packages: Package[] = [
     slug: '4thel00z-env-h',
     url: 'https://github.com/4thel00z/env.h',
     license: 'GPL-3'
+  },
+  {
+    category: 'Data structure',
+    dependents: [],
+    description: 'A library of various linked list data structures.',
+    manifest: {
+      name: 'matthewzito/lib.cartilage',
+      version: '0.0.1',
+      author: 'Matthew Zito (goldmund)',
+      repo: 'MatthewZito/lib.cartilage',
+      license: 'MIT',
+      description: 'A library of various linked list data structures',
+      keywords: ['linked list', 'data structures'],
+      src: [
+        'src/libcartilage.h',
+        'src/glthread.c',
+        'src/circular_singly_ll.c',
+        'Makefile',
+        'LICENSE'
+      ],
+      dependencies: {}
+    },
+    name: 'matthewzito/lib.cartilage',
+    slug: 'matthew-zito-lib-cartilage',
+    url: 'https://github.com/MatthewZito/lib.cartilage',
+    license: 'MIT'
   },
   {
     category: 'Parsing',
@@ -7835,7 +7866,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Nov 10 2021 06:05:28 GMT+0000 (Coordinated Universal Time)'
+  'Wed Nov 10 2021 18:05:18 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '59216ee5c3523d31b2509c414b3f888c0eb01de5'
+export const revision = '71068252fd87d1ddd7a9985bff668ba7bf83e13a'
