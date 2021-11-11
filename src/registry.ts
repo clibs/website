@@ -562,7 +562,10 @@ export const keywords: KeywordList = {
     packages: ['isty001/mem-pool', 'stephenmathieson/batch.c']
   },
   alignment: { slug: 'alignment', packages: ['isty001/mem-pool'] },
-  mutex: { slug: 'mutex', packages: ['isty001/mem-pool'] },
+  mutex: {
+    slug: 'mutex',
+    packages: ['isty001/mem-pool', 'matthewzito/lib.thread']
+  },
   memorypool: { slug: 'memorypool', packages: ['isty001/mem-pool'] },
   locks: { slug: 'locks', packages: ['isty001/mem-pool'] },
   variable: { slug: 'variable', packages: ['isty001/mem-pool'] },
@@ -599,6 +602,17 @@ export const keywords: KeywordList = {
   mergesort: { slug: 'mergesort', packages: ['abranhe/mergesort.c'] },
   allalgorithms: { slug: 'allalgorithms', packages: ['abranhe/mergesort.c'] },
   threadsafe: { slug: 'threadsafe', packages: ['bonedaddy/ulog'] },
+  'thread pool': { slug: 'thread-pool', packages: ['matthewzito/lib.thread'] },
+  threads: { slug: 'threads', packages: ['matthewzito/lib.thread'] },
+  'multi-threading': {
+    slug: 'multi-threading',
+    packages: ['matthewzito/lib.thread']
+  },
+  'multi-tasking': {
+    slug: 'multi-tasking',
+    packages: ['matthewzito/lib.thread']
+  },
+  semaphore: { slug: 'semaphore', packages: ['matthewzito/lib.thread'] },
   disjoint: { slug: 'disjoint', packages: ['jmi2k/disjoint.h'] },
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
   functional: { slug: 'functional', packages: ['jmi2k/disjoint.h'] },
@@ -1324,7 +1338,8 @@ export const categories: CategoryList = {
       'abranhe/mergesort.c',
       'bonedaddy/ulog',
       'aperezdc/clog',
-      'clibs/linenoise'
+      'clibs/linenoise',
+      'matthewzito/lib.thread'
     ]
   },
   'Data structure': {
@@ -3447,6 +3462,42 @@ export const packages: Package[] = [
     slug: 'clibs-linenoise',
     url: 'https://github.com/clibs/linenoise',
     license: 'BSD'
+  },
+  {
+    category: 'Utilities',
+    dependents: [],
+    description:
+      'Bespoke POSIX threads, mutexes, wait queues, thread pools, and semaphores for the C programming language.',
+    manifest: {
+      name: 'matthewzito/lib.thread',
+      version: '0.0.1',
+      author: 'Matthew Zito (goldmund)',
+      repo: 'MatthewZito/lib.thread',
+      license: 'MIT',
+      description: 'A utility library of custom threading data structures',
+      keywords: [
+        'thread pool',
+        'threads',
+        'multi-threading',
+        'multi-tasking',
+        'semaphore',
+        'mutex'
+      ],
+      src: [
+        'src/libthread.h',
+        'src/semaphore.c',
+        'src/suspension.c',
+        'src/thread_barrier.c',
+        'src/thread_pool.c',
+        'src/thread.c',
+        'src/util.h'
+      ],
+      dependencies: { 'MatthewZito/lib.cartilage': '*' }
+    },
+    name: 'matthewzito/lib.thread',
+    slug: 'matthew-zito-lib-thread',
+    url: 'https://github.com/MatthewZito/lib.thread',
+    license: 'MIT'
   },
   {
     category: 'Data structure',
@@ -7866,7 +7917,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Nov 10 2021 18:05:18 GMT+0000 (Coordinated Universal Time)'
+  'Thu Nov 11 2021 00:19:33 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '71068252fd87d1ddd7a9985bff668ba7bf83e13a'
+export const revision = '4d3414bf700939a183f696a21f573f7ec3fee189'
