@@ -606,13 +606,19 @@ export const keywords: KeywordList = {
   threads: { slug: 'threads', packages: ['matthewzito/lib.thread'] },
   'multi-threading': {
     slug: 'multi-threading',
-    packages: ['matthewzito/lib.thread']
+    packages: ['matthewzito/lib.thread', 'matthewzito/lib.envoy']
   },
   'multi-tasking': {
     slug: 'multi-tasking',
     packages: ['matthewzito/lib.thread']
   },
   semaphore: { slug: 'semaphore', packages: ['matthewzito/lib.thread'] },
+  timers: { slug: 'timers', packages: ['matthewzito/lib.chron'] },
+  'hierarchical wheel': {
+    slug: 'hierarchical-wheel',
+    packages: ['matthewzito/lib.chron']
+  },
+  scheduler: { slug: 'scheduler', packages: ['matthewzito/lib.chron'] },
   disjoint: { slug: 'disjoint', packages: ['jmi2k/disjoint.h'] },
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
   functional: { slug: 'functional', packages: ['jmi2k/disjoint.h'] },
@@ -814,8 +820,13 @@ export const keywords: KeywordList = {
   env: { slug: 'env', packages: ['4thel00z/env.h'] },
   'linked list': {
     slug: 'linked-list',
-    packages: ['matthewzito/lib.cartilage']
+    packages: ['matthewzito/lib.cartilage', 'matthewzito/lib.envoy']
   },
+  'notification chains': {
+    slug: 'notification-chains',
+    packages: ['matthewzito/lib.envoy']
+  },
+  'event loop': { slug: 'event-loop', packages: ['matthewzito/lib.envoy'] },
   sax: { slug: 'sax', packages: ['clibs/logfmt'] },
   logfmt: { slug: 'logfmt', packages: ['clibs/logfmt'] },
   ragel: { slug: 'ragel', packages: ['clibs/logfmt'] },
@@ -1339,7 +1350,8 @@ export const categories: CategoryList = {
       'bonedaddy/ulog',
       'aperezdc/clog',
       'clibs/linenoise',
-      'matthewzito/lib.thread'
+      'matthewzito/lib.thread',
+      'matthewzito/lib.chron'
     ]
   },
   'Data structure': {
@@ -1389,7 +1401,8 @@ export const categories: CategoryList = {
       'robusgauli/cvector',
       'robusgauli/cset',
       '4thel00z/env.h',
-      'matthewzito/lib.cartilage'
+      'matthewzito/lib.cartilage',
+      'matthewzito/lib.envoy'
     ]
   },
   Parsing: {
@@ -3500,6 +3513,27 @@ export const packages: Package[] = [
     license: 'MIT'
   },
   {
+    category: 'Utilities',
+    dependents: [],
+    description: 'Timers, hierarchical wheels, and event scheduling utilities.',
+    manifest: {
+      name: 'matthewzito/lib.chron',
+      version: '0.0.1',
+      author: 'Matthew Zito (goldmund)',
+      repo: 'MatthewZito/lib.chron',
+      license: 'MIT',
+      description:
+        'Schedulers, timers, and time-contingent eventing for the C programming language',
+      keywords: ['timers', 'hierarchical wheel', 'scheduler'],
+      src: ['src/libchron.h', 'src/timer.c', 'src/wheel.c'],
+      dependencies: { 'MatthewZito/lib.cartilage': '*' }
+    },
+    name: 'matthewzito/lib.chron',
+    slug: 'matthew-zito-lib-chron',
+    url: 'https://github.com/MatthewZito/lib.chron',
+    license: 'MIT'
+  },
+  {
     category: 'Data structure',
     dependents: [],
     description: 'disjoint types (aka sum types)',
@@ -4500,7 +4534,7 @@ export const packages: Package[] = [
     description: 'A library of various linked list data structures.',
     manifest: {
       name: 'matthewzito/lib.cartilage',
-      version: '0.0.1',
+      version: '0.0.2',
       author: 'Matthew Zito (goldmund)',
       repo: 'MatthewZito/lib.cartilage',
       license: 'MIT',
@@ -4518,6 +4552,32 @@ export const packages: Package[] = [
     name: 'matthewzito/lib.cartilage',
     slug: 'matthew-zito-lib-cartilage',
     url: 'https://github.com/MatthewZito/lib.cartilage',
+    license: 'MIT'
+  },
+  {
+    category: 'Data structure',
+    dependents: [],
+    description: 'Thread-safe notification chains.',
+    manifest: {
+      name: 'matthewzito/lib.envoy',
+      version: '0.0.1',
+      author: 'Matthew Zito (goldmund)',
+      repo: 'MatthewZito/lib.envoy',
+      license: 'MIT',
+      description:
+        'Thread-safe notification chains for the C programming language',
+      keywords: [
+        'notification chains',
+        'linked list',
+        'multi-threading',
+        'event loop'
+      ],
+      src: ['src/libenvoy.h', 'src/envoy.c'],
+      dependencies: { 'MatthewZito/lib.cartilage': '*' }
+    },
+    name: 'matthewzito/lib.envoy',
+    slug: 'matthew-zito-lib-envoy',
+    url: 'https://github.com/MatthewZito/lib.envoy',
     license: 'MIT'
   },
   {
@@ -7917,7 +7977,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Nov 11 2021 00:19:33 GMT+0000 (Coordinated Universal Time)'
+  'Thu Nov 11 2021 06:05:08 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '4d3414bf700939a183f696a21f573f7ec3fee189'
+export const revision = '68dcc3adf5707e6c651c90cef7c8de510543edda'
