@@ -160,8 +160,14 @@ export const keywords: KeywordList = {
     slug: 'comparison',
     packages: ['clibs/wildcardcmp', 'willemt/minmax']
   },
-  asprintf: { slug: 'asprintf', packages: ['littlstar/asprintf.c'] },
-  sprintf: { slug: 'sprintf', packages: ['littlstar/asprintf.c'] },
+  asprintf: {
+    slug: 'asprintf',
+    packages: ['littlstar/asprintf.c', 'promovicz/msprintf']
+  },
+  sprintf: {
+    slug: 'sprintf',
+    packages: ['littlstar/asprintf.c', 'promovicz/msprintf']
+  },
   alloc: { slug: 'alloc', packages: ['littlstar/asprintf.c'] },
   copy: { slug: 'copy', packages: ['clibs/strdup', 'isty001/copy'] },
   c99: { slug: 'c99', packages: ['tingping/ustring'] },
@@ -262,6 +268,14 @@ export const keywords: KeywordList = {
       'rikvdh/zringbuf'
     ]
   },
+  abort: { slug: 'abort', packages: ['promovicz/abortf'] },
+  printf: {
+    slug: 'printf',
+    packages: ['promovicz/abortf', 'promovicz/msprintf', 'gioyik/c_printf']
+  },
+  aborts: { slug: 'aborts', packages: ['promovicz/abortf'] },
+  abortf: { slug: 'abortf', packages: ['promovicz/abortf'] },
+  msprintf: { slug: 'msprintf', packages: ['promovicz/msprintf'] },
   color: {
     slug: 'color',
     packages: [
@@ -534,7 +548,6 @@ export const keywords: KeywordList = {
   functions: { slug: 'functions', packages: ['orangeduck/luaautoc'] },
   structs: { slug: 'structs', packages: ['orangeduck/luaautoc'] },
   sh: { slug: 'sh', packages: ['gioyik/color-sh'] },
-  printf: { slug: 'printf', packages: ['gioyik/c_printf'] },
   termbox: { slug: 'termbox', packages: ['nsf/termbox'] },
   portable: {
     slug: 'portable',
@@ -1294,7 +1307,9 @@ export const categories: CategoryList = {
       'littlstar/trim.cc',
       'wooorm/levenshtein.c',
       'lib-x/xstr',
-      'aperezdc/dbuf'
+      'aperezdc/dbuf',
+      'promovicz/abortf',
+      'promovicz/msprintf'
     ]
   },
   Utilities: {
@@ -2270,6 +2285,44 @@ export const packages: Package[] = [
     slug: 'aperezdc-dbuf',
     url: 'https://github.com/aperezdc/dbuf',
     license: 'MIT'
+  },
+  {
+    category: 'String manipulation',
+    dependents: [],
+    description: 'Printing and formatting versions of abort',
+    manifest: {
+      name: 'promovicz/abortf',
+      version: 'master',
+      repo: 'promovicz/abortf',
+      desciption: 'Printing and formatting versions of abort',
+      license: 'Unlicense',
+      keywords: ['abort', 'printf', 'aborts', 'abortf'],
+      src: ['abortf.h', 'abortf.c'],
+      dependencies: {}
+    },
+    name: 'promovicz/abortf',
+    slug: 'promovicz-abortf',
+    url: 'https://github.com/promovicz/abortf',
+    license: 'Unlicense'
+  },
+  {
+    category: 'String manipulation',
+    dependents: [],
+    description: 'Allocating versions of sprintf',
+    manifest: {
+      name: 'promovicz/msprintf',
+      version: 'master',
+      repo: 'promovicz/msprintf',
+      desciption: 'Allocating variants of sprintf',
+      license: 'Unlicense',
+      keywords: ['asprintf', 'msprintf', 'sprintf', 'printf'],
+      src: ['msprintf.h', 'msprintf.c'],
+      dependencies: {}
+    },
+    name: 'promovicz/msprintf',
+    slug: 'promovicz-msprintf',
+    url: 'https://github.com/promovicz/msprintf',
+    license: 'Unlicense'
   },
   {
     category: 'Utilities',
@@ -7977,7 +8030,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Nov 11 2021 06:05:08 GMT+0000 (Coordinated Universal Time)'
+  'Mon Nov 15 2021 12:09:47 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '68dcc3adf5707e6c651c90cef7c8de510543edda'
+export const revision = '162eeee5627b1dab27c40a53346186d7c1a003e2'
