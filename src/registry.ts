@@ -563,6 +563,7 @@ export const keywords: KeywordList = {
     packages: [
       'isty001/mem-pool',
       'daddinuz/arena',
+      'promovicz/ptralign',
       'rikvdh/zabuffer',
       'rikvdh/zringbuf',
       'rikvdh/matching',
@@ -632,6 +633,11 @@ export const keywords: KeywordList = {
     packages: ['matthewzito/lib.chron']
   },
   scheduler: { slug: 'scheduler', packages: ['matthewzito/lib.chron'] },
+  align: { slug: 'align', packages: ['promovicz/ptralign'] },
+  pointer: {
+    slug: 'pointer',
+    packages: ['promovicz/ptralign', 'htmk/fat-array']
+  },
   disjoint: { slug: 'disjoint', packages: ['jmi2k/disjoint.h'] },
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
   functional: { slug: 'functional', packages: ['jmi2k/disjoint.h'] },
@@ -798,7 +804,6 @@ export const keywords: KeywordList = {
   },
   fptr: { slug: 'fptr', packages: ['htmk/fat-array'] },
   fat: { slug: 'fat', packages: ['htmk/fat-array'] },
-  pointer: { slug: 'pointer', packages: ['htmk/fat-array'] },
   fatarray: { slug: 'fatarray', packages: ['htmk/fat-array'] },
   fat_array: { slug: 'fat-array', packages: ['htmk/fat-array'] },
   generic: {
@@ -1366,7 +1371,8 @@ export const categories: CategoryList = {
       'aperezdc/clog',
       'clibs/linenoise',
       'matthewzito/lib.thread',
-      'matthewzito/lib.chron'
+      'matthewzito/lib.chron',
+      'promovicz/ptralign'
     ]
   },
   'Data structure': {
@@ -3585,6 +3591,25 @@ export const packages: Package[] = [
     slug: 'matthew-zito-lib-chron',
     url: 'https://github.com/MatthewZito/lib.chron',
     license: 'MIT'
+  },
+  {
+    category: 'Utilities',
+    dependents: [],
+    description: 'Standard-like function for pointer alignment',
+    manifest: {
+      name: 'promovicz/ptralign',
+      version: 'master',
+      repo: 'promovicz/ptralign',
+      desciption: 'Standard-like function for pointer alignment',
+      license: 'Unlicense',
+      keywords: ['align', 'memory', 'pointer'],
+      src: ['ptralign.h'],
+      dependencies: {}
+    },
+    name: 'promovicz/ptralign',
+    slug: 'promovicz-ptralign',
+    url: 'https://github.com/promovicz/ptralign',
+    license: 'Unlicense'
   },
   {
     category: 'Data structure',
@@ -8030,7 +8055,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Nov 15 2021 12:09:47 GMT+0000 (Coordinated Universal Time)'
+  'Wed Nov 17 2021 00:18:33 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '162eeee5627b1dab27c40a53346186d7c1a003e2'
+export const revision = 'a3d5c326f18f44130978b88ad3d18da584280b47'
