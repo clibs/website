@@ -162,11 +162,11 @@ export const keywords: KeywordList = {
   },
   asprintf: {
     slug: 'asprintf',
-    packages: ['littlstar/asprintf.c', 'promovicz/msprintf']
+    packages: ['littlstar/asprintf.c', 'promsize/msprintf']
   },
   sprintf: {
     slug: 'sprintf',
-    packages: ['littlstar/asprintf.c', 'promovicz/msprintf']
+    packages: ['littlstar/asprintf.c', 'promsize/msprintf']
   },
   alloc: { slug: 'alloc', packages: ['littlstar/asprintf.c'] },
   copy: { slug: 'copy', packages: ['clibs/strdup', 'isty001/copy'] },
@@ -268,14 +268,14 @@ export const keywords: KeywordList = {
       'rikvdh/zringbuf'
     ]
   },
-  abort: { slug: 'abort', packages: ['promovicz/abortf'] },
+  abort: { slug: 'abort', packages: ['promsize/abortf'] },
   printf: {
     slug: 'printf',
-    packages: ['promovicz/abortf', 'promovicz/msprintf', 'gioyik/c_printf']
+    packages: ['promsize/abortf', 'promsize/msprintf', 'gioyik/c_printf']
   },
-  aborts: { slug: 'aborts', packages: ['promovicz/abortf'] },
-  abortf: { slug: 'abortf', packages: ['promovicz/abortf'] },
-  msprintf: { slug: 'msprintf', packages: ['promovicz/msprintf'] },
+  aborts: { slug: 'aborts', packages: ['promsize/abortf'] },
+  abortf: { slug: 'abortf', packages: ['promsize/abortf'] },
+  msprintf: { slug: 'msprintf', packages: ['promsize/msprintf'] },
   color: {
     slug: 'color',
     packages: [
@@ -563,7 +563,7 @@ export const keywords: KeywordList = {
     packages: [
       'isty001/mem-pool',
       'daddinuz/arena',
-      'promovicz/ptralign',
+      'promsize/memalign',
       'rikvdh/zabuffer',
       'rikvdh/zringbuf',
       'rikvdh/matching',
@@ -633,10 +633,10 @@ export const keywords: KeywordList = {
     packages: ['matthewzito/lib.chron']
   },
   scheduler: { slug: 'scheduler', packages: ['matthewzito/lib.chron'] },
-  align: { slug: 'align', packages: ['promovicz/ptralign'] },
+  align: { slug: 'align', packages: ['promsize/memalign'] },
   pointer: {
     slug: 'pointer',
-    packages: ['promovicz/ptralign', 'htmk/fat-array']
+    packages: ['promsize/memalign', 'htmk/fat-array']
   },
   disjoint: { slug: 'disjoint', packages: ['jmi2k/disjoint.h'] },
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
@@ -1313,8 +1313,8 @@ export const categories: CategoryList = {
       'wooorm/levenshtein.c',
       'lib-x/xstr',
       'aperezdc/dbuf',
-      'promovicz/abortf',
-      'promovicz/msprintf'
+      'promsize/abortf',
+      'promsize/msprintf'
     ]
   },
   Utilities: {
@@ -1372,7 +1372,7 @@ export const categories: CategoryList = {
       'clibs/linenoise',
       'matthewzito/lib.thread',
       'matthewzito/lib.chron',
-      'promovicz/ptralign'
+      'promsize/memalign'
     ]
   },
   'Data structure': {
@@ -2297,7 +2297,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Printing and formatting versions of abort',
     manifest: {
-      name: 'promovicz/abortf',
+      name: 'promsize/abortf',
       version: 'master',
       repo: 'promovicz/abortf',
       desciption: 'Printing and formatting versions of abort',
@@ -2306,9 +2306,9 @@ export const packages: Package[] = [
       src: ['abortf.h', 'abortf.c'],
       dependencies: {}
     },
-    name: 'promovicz/abortf',
-    slug: 'promovicz-abortf',
-    url: 'https://github.com/promovicz/abortf',
+    name: 'promsize/abortf',
+    slug: 'promsize-abortf',
+    url: 'https://github.com/promsize/abortf',
     license: 'Unlicense'
   },
   {
@@ -2316,7 +2316,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Allocating versions of sprintf',
     manifest: {
-      name: 'promovicz/msprintf',
+      name: 'promsize/msprintf',
       version: 'master',
       repo: 'promovicz/msprintf',
       desciption: 'Allocating variants of sprintf',
@@ -2325,9 +2325,9 @@ export const packages: Package[] = [
       src: ['msprintf.h', 'msprintf.c'],
       dependencies: {}
     },
-    name: 'promovicz/msprintf',
-    slug: 'promovicz-msprintf',
-    url: 'https://github.com/promovicz/msprintf',
+    name: 'promsize/msprintf',
+    slug: 'promsize-msprintf',
+    url: 'https://github.com/promsize/msprintf',
     license: 'Unlicense'
   },
   {
@@ -3595,20 +3595,20 @@ export const packages: Package[] = [
   {
     category: 'Utilities',
     dependents: [],
-    description: 'Standard-like function for pointer alignment',
+    description: 'Standard-like functions for pointer alignment',
     manifest: {
-      name: 'promovicz/ptralign',
+      name: 'promsize/memalign',
       version: 'master',
-      repo: 'promovicz/ptralign',
+      repo: 'promovicz/memalign',
       desciption: 'Standard-like function for pointer alignment',
       license: 'Unlicense',
       keywords: ['align', 'memory', 'pointer'],
-      src: ['ptralign.h'],
+      src: ['memalign.h'],
       dependencies: {}
     },
-    name: 'promovicz/ptralign',
-    slug: 'promovicz-ptralign',
-    url: 'https://github.com/promovicz/ptralign',
+    name: 'promsize/memalign',
+    slug: 'promsize-memalign',
+    url: 'https://github.com/promsize/memalign',
     license: 'Unlicense'
   },
   {
@@ -8055,7 +8055,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Dec 11 2021 18:05:27 GMT+0000 (Coordinated Universal Time)'
+  'Mon Dec 20 2021 18:05:43 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'e32901a6ca112d39627eecf341b7ee8b8bb2eac1'
+export const revision = '8a28af5235f50d3c26ba8b0838a1e631f05a6408'
