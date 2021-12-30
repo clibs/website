@@ -7847,7 +7847,7 @@ export const packages: Package[] = [
     description: 'Parse and evaluate math expressions',
     manifest: {
       name: 'erstan/ceval',
-      version: '1.0.0',
+      version: '1.0.1',
       repo: 'erstan/ceval',
       description: 'Parse and evaluate math expressions',
       install: 'sudo make install',
@@ -8055,7 +8055,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Dec 20 2021 18:05:43 GMT+0000 (Coordinated Universal Time)'
+  'Thu Dec 30 2021 18:05:34 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '8a28af5235f50d3c26ba8b0838a1e631f05a6408'
+export const revision = '7e46e89ef31eaea83e4a7c15ba29dbc2140828ed'
