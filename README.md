@@ -14,7 +14,7 @@ Next install the project's dependencies with:
 yarn
 ```
 
-Finally, start [Parcel's development server](https://parceljs.org/cli.html#serve) with:
+Finally, start [Webpack's development server](https://webpack.js.org/configuration/dev-server/) with:
 
 ```
 yarn dev
@@ -31,7 +31,7 @@ To manually rebuild the registry:
 
 ## Deployment
 
-Netlify deploys all commits that land in the `master` branch by running the `scripts/netlifyBuild.sh` program. This will perform a "regular" build (`parcel build`) and optionally "pre-render" all pages as static HTML.
+Netlify deploys all commits that land in the `master` branch by running the `scripts/netlifyBuild.sh` program. This will perform a "regular" build and optionally "pre-render" all pages as static HTML.
 
 ## License
 

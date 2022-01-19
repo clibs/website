@@ -10,7 +10,7 @@ import path from 'path'
 import fs from 'fs'
 import prettierConfig from '../.prettierrc.json'
 import * as old from '../src/registry'
-import { CategoryList, KeywordList, Package } from '../src/types'
+import type { CategoryList, KeywordList, Package } from '../src/types'
 
 const REGISTRY_FILE = path.join(__dirname, '..', 'src', 'registry.ts')
 
@@ -60,8 +60,9 @@ const getFileContents = async (
   path: string
 ): Promise<string> => {
   const result = await github.repos.getContent({ owner, repo, path })
-  const content = result.data.content
-  return Buffer.from(content, 'base64').toString('utf8')
+  // HACK: these types are a mess and don't correctly represent the returned shape of `repos#getContent()`.
+  const data = result.data as any
+  return Buffer.from(data.content, 'base64').toString('utf8')
 }
 
 interface Manifest {
@@ -104,12 +105,12 @@ const getManifest = async (packageName: string): Promise<Manifest> => {
   let content: string
   try {
     content = await getFileContents(owner, repo, 'clib.json')
-  } catch (error) {
+  } catch {
     // TODO: warn once clib@next lands.
     // console.warn('Package missing `clib.json`', { package: packageName })
     try {
       content = await getFileContents(owner, repo, 'package.json')
-    } catch (error) {
+    } catch {
       throw new Error(`Package missing manifest (${packageName})`)
     }
   }
@@ -195,7 +196,7 @@ const buildRegistry = async (): Promise<void> => {
       try {
         manifest = await getManifest(pkg.name)
       } catch (error) {
-        console.error(error.message)
+        console.error((error as Error).message)
         continue
       }
 
@@ -292,4 +293,10 @@ const buildRegistry = async (): Promise<void> => {
   console.log('Updated registry')
 }
 
-buildRegistry()
+buildRegistry().catch((error: Error) => {
+  console.error()
+  console.error('Unexpected error')
+  console.error(error)
+  console.error()
+  process.exit(1)
+})
