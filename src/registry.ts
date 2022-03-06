@@ -737,6 +737,7 @@ export const keywords: KeywordList = {
     packages: [
       'willemt/linked-list-hashmap',
       'willemt/quadratic-probing-hashmap',
+      'davidleeds/hashmap',
       'willemt/skiplist',
       'robusgauli/cset'
     ]
@@ -746,6 +747,7 @@ export const keywords: KeywordList = {
     packages: [
       'willemt/linked-list-hashmap',
       'willemt/quadratic-probing-hashmap',
+      'davidleeds/hashmap',
       'willemt/skiplist',
       'ajaymt/dict.c'
     ]
@@ -755,6 +757,7 @@ export const keywords: KeywordList = {
     slug: 'open-addressing',
     packages: ['willemt/quadratic-probing-hashmap']
   },
+  templated: { slug: 'templated', packages: ['davidleeds/hashmap'] },
   vec: { slug: 'vec', packages: ['rxi/vec'] },
   vector: {
     slug: 'vector',
@@ -1394,6 +1397,7 @@ export const categories: CategoryList = {
       'willemt/array-avl-tree',
       'willemt/linked-list-hashmap',
       'willemt/quadratic-probing-hashmap',
+      'davidleeds/hashmap',
       'rxi/vec',
       'jlcordeiro/cmap',
       'willemt/skiplist',
@@ -3963,6 +3967,27 @@ export const packages: Package[] = [
     slug: 'willemt-quadratic-probing-hashmap',
     url: 'https://github.com/willemt/quadratic-probing-hashmap',
     license: 'BSD'
+  },
+  {
+    category: 'Data structure',
+    dependents: [],
+    description:
+      'templated and type-safe hashmap using open addressing and linear probing for collision resolution.',
+    manifest: {
+      name: 'davidleeds/hashmap',
+      version: 'v2.0.2',
+      repo: 'DavidLeeds/hashmap',
+      description:
+        ' Templated type-safe hashmap implementation in C using open addressing and linear probing for collision resolution. ',
+      keywords: ['hashmap', 'dictionary', 'templated'],
+      license: 'MIT',
+      src: ['src/hashmap.c', 'include/hashmap.h', 'include/hashmap_base.h'],
+      dependencies: {}
+    },
+    name: 'davidleeds/hashmap',
+    slug: 'david-leeds-hashmap',
+    url: 'https://github.com/DavidLeeds/hashmap',
+    license: 'MIT'
   },
   {
     category: 'Data structure',
@@ -8055,7 +8080,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Feb 25 2022 00:25:39 GMT+0000 (Coordinated Universal Time)'
+  'Sun Mar 06 2022 00:25:34 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '40487726bf0571454aa6d33a6294bf905afc73d9'
+export const revision = 'c81b00591ce553cd5cc0bba14983e678cd41db18'
