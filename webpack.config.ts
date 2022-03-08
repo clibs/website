@@ -11,6 +11,7 @@ const prod = NODE_ENV === 'production'
 const config: webpack.Configuration = {
   entry: './src/main.tsx',
   output: {
+    publicPath: '/',
     path: path.resolve(__dirname, 'dist'),
     filename: prod ? '[name].[contenthash].js' : '[name].js',
     chunkFilename: '[name].[chunkhash].js'
@@ -59,12 +60,12 @@ const config: webpack.Configuration = {
   }
 }
 
-module.exports = (): webpack.Configuration => {
+export = (): webpack.Configuration => {
   if (prod) {
     config.mode = 'production'
     config.devtool = 'source-map'
     config.optimization = {
-      minimizer: ['...', new CssMinimizerPlugin()]
+      minimizer: [new CssMinimizerPlugin()]
     }
     config.plugins!.push(
       new MiniCssExtractPlugin({
