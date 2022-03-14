@@ -1692,7 +1692,7 @@ export const packages: Package[] = [
     manifest: {
       name: 'nami-doc/strlen.c',
       version: '0.0.1',
-      repo: 'nami-doc/strlen.c',
+      repo: 'vendethiel/strlen.c',
       license: 'MIT',
       src: ['strlen.c', 'strlen.h'],
       keywords: [],
@@ -8080,7 +8080,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Mar 07 2022 00:25:53 GMT+0000 (Coordinated Universal Time)'
+  'Mon Mar 14 2022 12:15:20 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'ba15c1e6a76c5ce95973260196eeefcb7e0dac76'
+export const revision = 'ee0234f4eccf97de6ed4e7461970a988777dd19b'
