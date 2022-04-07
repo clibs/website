@@ -1444,7 +1444,8 @@ export const categories: CategoryList = {
       'brendanashworth/http-parser',
       'h2non/semver.c',
       'kgabis/parson',
-      'rikvdh/matching'
+      'rikvdh/matching',
+      'likle/cargs'
     ]
   },
   'Encoding/Decoding': {
@@ -1477,7 +1478,8 @@ export const categories: CategoryList = {
       'willemt/pidfile',
       'cxong/tinydir',
       'isty001/copy',
-      'clibs/which'
+      'clibs/which',
+      'likle/cwalk'
     ]
   },
   Hashing: {
@@ -4940,6 +4942,26 @@ export const packages: Package[] = [
     license: 'MIT'
   },
   {
+    category: 'Parsing',
+    dependents: [],
+    description:
+      'A lightweight cross-platform getopt alternative that works on Linux, Windows and macOS. Command line argument parser library for C/C++. Can be used to parse argv and argc parameters.',
+    manifest: {
+      name: 'likle/cargs',
+      version: 'v1.0.3',
+      repo: 'likle/cargs',
+      description: 'command line argument library for C/C++',
+      src: ['src/cargs.c', 'include/cargs.h'],
+      keywords: [],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'likle/cargs',
+    slug: 'likle-cargs',
+    url: 'https://github.com/likle/cargs',
+    license: 'Unlicensed'
+  },
+  {
     category: 'Encoding/Decoding',
     dependents: [],
     description: 'Run-length encoding',
@@ -5433,6 +5455,26 @@ export const packages: Package[] = [
     slug: 'clibs-which',
     url: 'https://github.com/clibs/which',
     license: 'MIT'
+  },
+  {
+    category: 'Filesystem',
+    dependents: [],
+    description:
+      'Path library for C/C++. Cross-Platform for Windows, MacOS and Linux. Supports UNIX and Windows path styles on those platforms.',
+    manifest: {
+      name: 'likle/cwalk',
+      repo: 'likle/cwalk',
+      version: 'v1.2.6',
+      decription: 'libcwalk - path library for C/C++',
+      src: ['src/cwalk.c', 'include/cwalk.h'],
+      keywords: [],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'likle/cwalk',
+    slug: 'likle-cwalk',
+    url: 'https://github.com/likle/cwalk',
+    license: 'Unlicensed'
   },
   {
     category: 'Hashing',
@@ -8080,7 +8122,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Mar 14 2022 12:15:20 GMT+0000 (Coordinated Universal Time)'
+  'Thu Apr 07 2022 18:08:30 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'ee0234f4eccf97de6ed4e7461970a988777dd19b'
+export const revision = 'cb81b6538f82942154158e02fac4a6adb625fb85'
