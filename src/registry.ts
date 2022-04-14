@@ -5483,10 +5483,11 @@ export const packages: Package[] = [
       'MurmurHash3 general hash bashed lookup function implementation',
     manifest: {
       name: 'jwerle/murmurhash.c',
-      version: '0.0.3',
+      version: '0.1.0',
       repo: 'jwerle/murmurhash.c',
       description:
         'MurmurHash3 general hash bashed lookup function implementation',
+      makefile: 'Makefile',
       keywords: ['murmur', 'hash', 'murmurhash'],
       license: 'MIT',
       src: ['murmurhash.h', 'murmurhash.c'],
@@ -8122,7 +8123,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Apr 07 2022 18:08:30 GMT+0000 (Coordinated Universal Time)'
+  'Thu Apr 14 2022 18:08:45 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'cb81b6538f82942154158e02fac4a6adb625fb85'
+export const revision = '4252437c991ce673a244286b7377f872eb5d5e55'
