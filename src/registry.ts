@@ -2418,7 +2418,7 @@ export const packages: Package[] = [
     description: 'Go style flag parsing',
     manifest: {
       name: 'clibs/flag',
-      version: '0.0.1',
+      version: '0.1.0',
       repo: 'clibs/flag',
       description: 'Go-style flag parsing for C programs',
       keywords: [
@@ -2431,6 +2431,7 @@ export const packages: Package[] = [
         'flag',
         'flags'
       ],
+      makefile: 'Makefile',
       license: 'MIT',
       src: ['flag.h', 'flag.c'],
       dependencies: {}
@@ -8123,7 +8124,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Apr 14 2022 18:08:45 GMT+0000 (Coordinated Universal Time)'
+  'Sat Apr 30 2022 12:11:08 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '4252437c991ce673a244286b7377f872eb5d5e55'
+export const revision = '582705f82b564b7bf86dbdf6f0c3a8f3b5d95e44'
