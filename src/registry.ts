@@ -45,32 +45,20 @@ export const keywords: KeywordList = {
       'clibs/strndup',
       'clibs/strdup',
       'littlstar/trim.cc',
-      'lib-x/xstr',
       'clibs/bytes',
       'troydhanson/uthash',
       'rikvdh/zabuffer',
       'rikvdh/matching'
     ]
   },
-  str: { slug: 'str', packages: ['clibs/buffer', 'lib-x/xstr'] },
+  str: { slug: 'str', packages: ['clibs/buffer'] },
   util: {
     slug: 'util',
-    packages: [
-      'clibs/buffer',
-      'lib-x/xstr',
-      'clibs/ck',
-      'jwerle/async.h',
-      'sphia/sphia'
-    ]
+    packages: ['clibs/buffer', 'clibs/ck', 'jwerle/async.h', 'sphia/sphia']
   },
   utils: {
     slug: 'utils',
-    packages: [
-      'clibs/buffer',
-      'lib-x/xstr',
-      'ararslan/termcolor-c',
-      'robusgauli/cvector'
-    ]
+    packages: ['clibs/buffer', 'ararslan/termcolor-c', 'robusgauli/cvector']
   },
   split: { slug: 'split', packages: ['jwerle/strsplit.h'] },
   char: { slug: 'char', packages: ['jwerle/chfreq.c', 'jwerle/getch.c'] },
@@ -153,7 +141,7 @@ export const keywords: KeywordList = {
     slug: 'trim-right',
     packages: ['stephenmathieson/trim.c', 'littlstar/trim.cc']
   },
-  strings: { slug: 'strings', packages: ['chrisdew/sds', 'lib-x/xstr'] },
+  strings: { slug: 'strings', packages: ['chrisdew/sds'] },
   basename: { slug: 'basename', packages: ['michaelrhodes/path-basename.c'] },
   wildcard: { slug: 'wildcard', packages: ['clibs/wildcardcmp'] },
   comparison: {
@@ -229,34 +217,6 @@ export const keywords: KeywordList = {
   distance: {
     slug: 'distance',
     packages: ['wooorm/levenshtein.c', 'wooorm/levenshtein']
-  },
-  xstr: { slug: 'xstr', packages: ['lib-x/xstr'] },
-  list: {
-    slug: 'list',
-    packages: [
-      'lib-x/xstr',
-      'yrmt/arraylist',
-      'clibs/list',
-      'troydhanson/uthash',
-      'willemt/farraylist',
-      'ajaymt/list.c',
-      'clehner/ll.c',
-      'kellydunn/libkld',
-      'neylsongularte/simple-linked-list-c',
-      'arablocks/flat-tree.c',
-      'robusgauli/cvector'
-    ]
-  },
-  simple: { slug: 'simple', packages: ['lib-x/xstr'] },
-  utilities: { slug: 'utilities', packages: ['lib-x/xstr'] },
-  utility: {
-    slug: 'utility',
-    packages: [
-      'lib-x/xstr',
-      'ajaymt/dict.c',
-      'ajaymt/list.c',
-      'aperezdc/netdial'
-    ]
   },
   dynamic: { slug: 'dynamic', packages: ['aperezdc/dbuf', 'rxi/vec'] },
   data: {
@@ -642,6 +602,21 @@ export const keywords: KeywordList = {
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
   functional: { slug: 'functional', packages: ['jmi2k/disjoint.h'] },
   header: { slug: 'header', packages: ['jmi2k/disjoint.h'] },
+  list: {
+    slug: 'list',
+    packages: [
+      'yrmt/arraylist',
+      'clibs/list',
+      'troydhanson/uthash',
+      'willemt/farraylist',
+      'ajaymt/list.c',
+      'clehner/ll.c',
+      'kellydunn/libkld',
+      'neylsongularte/simple-linked-list-c',
+      'arablocks/flat-tree.c',
+      'robusgauli/cvector'
+    ]
+  },
   tail: { slug: 'tail', packages: ['yrmt/arraylist'] },
   queue: {
     slug: 'queue',
@@ -792,6 +767,10 @@ export const keywords: KeywordList = {
   lmdb: { slug: 'lmdb', packages: ['clibs/lmdb'] },
   'key/value': { slug: 'key-value', packages: ['clibs/lmdb', 'clibs/sophia'] },
   database: { slug: 'database', packages: ['clibs/lmdb', 'clibs/sophia'] },
+  utility: {
+    slug: 'utility',
+    packages: ['ajaymt/dict.c', 'ajaymt/list.c', 'aperezdc/netdial']
+  },
   table: { slug: 'table', packages: ['ajaymt/dict.c'] },
   'data structures': {
     slug: 'data-structures',
@@ -1314,7 +1293,6 @@ export const categories: CategoryList = {
       'gioyik/buffer-libc',
       'littlstar/trim.cc',
       'wooorm/levenshtein.c',
-      'lib-x/xstr',
       'aperezdc/dbuf',
       'promsize/abortf',
       'promsize/msprintf'
@@ -2248,36 +2226,6 @@ export const packages: Package[] = [
     slug: 'wooorm-levenshtein-c',
     url: 'https://github.com/wooorm/levenshtein.c',
     license: 'MIT'
-  },
-  {
-    category: 'String manipulation',
-    dependents: [],
-    description: 'A simple public domain string library',
-    manifest: {
-      name: 'lib-x/xstr',
-      version: '0.2.2',
-      repo: 'lib-x/xstr',
-      description: 'A simple public-domain string library',
-      keywords: [
-        'xstr',
-        'string',
-        'str',
-        'strings',
-        'list',
-        'simple',
-        'utilities',
-        'utility',
-        'util',
-        'utils'
-      ],
-      license: 'Unlicense',
-      src: ['src/str.c', 'src/str.h'],
-      dependencies: {}
-    },
-    name: 'lib-x/xstr',
-    slug: 'lib-x-xstr',
-    url: 'https://github.com/lib-x/xstr',
-    license: 'Unlicense'
   },
   {
     category: 'String manipulation',
@@ -8124,7 +8072,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Apr 30 2022 12:11:08 GMT+0000 (Coordinated Universal Time)'
+  'Mon May 30 2022 18:09:11 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '582705f82b564b7bf86dbdf6f0c3a8f3b5d95e44'
+export const revision = '19fb2c194668a5617ed89eee0d719feb14dcf9ac'
