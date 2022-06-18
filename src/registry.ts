@@ -160,7 +160,7 @@ export const keywords: KeywordList = {
   copy: { slug: 'copy', packages: ['clibs/strdup', 'isty001/copy'] },
   c99: { slug: 'c99', packages: ['tingping/ustring'] },
   unicode: { slug: 'unicode', packages: ['tingping/ustring'] },
-  utf8: { slug: 'utf8', packages: ['tingping/ustring', 'jwerle/libutf8'] },
+  utf8: { slug: 'utf8', packages: ['tingping/ustring'] },
   'utf-8': { slug: 'utf-8', packages: ['tingping/ustring'] },
   martin: { slug: 'martin', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
   porter: { slug: 'porter', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
@@ -904,9 +904,6 @@ export const keywords: KeywordList = {
     slug: 'crypto',
     packages: ['littlstar/b64.c', 'zackehh/siphash-c']
   },
-  charset: { slug: 'charset', packages: ['jwerle/libutf8'] },
-  encoding: { slug: 'encoding', packages: ['jwerle/libutf8'] },
-  decoding: { slug: 'decoding', packages: ['jwerle/libutf8'] },
   'little endian': { slug: 'little-endian', packages: ['willemt/fe'] },
   'big endian': { slug: 'big-endian', packages: ['willemt/fe'] },
   endianess: { slug: 'endianess', packages: ['willemt/fe'] },
@@ -1434,7 +1431,6 @@ export const categories: CategoryList = {
       'littlstar/uri.c',
       'mbucc/chtmlescape',
       'littlstar/b64.c',
-      'jwerle/libutf8',
       'willemt/bitstream',
       'willemt/fe',
       'mikepb/endian.h',
@@ -5010,26 +5006,6 @@ export const packages: Package[] = [
   {
     category: 'Encoding/Decoding',
     dependents: [],
-    description: 'A whatwg compliant UTF8 encoding and decoding library',
-    manifest: {
-      name: 'jwerle/libutf8',
-      version: '0.1.1',
-      description: 'A whatwg compliant UTF8 encoding and decoding library',
-      repo: 'jwerle/libutf8',
-      src: ['Makefile', 'utf8.h', 'encode.c', 'decode.c'],
-      keywords: ['utf8', 'charset', 'encoding', 'decoding'],
-      author: 'Joseph Werle',
-      license: 'MIT',
-      dependencies: {}
-    },
-    name: 'jwerle/libutf8',
-    slug: 'jwerle-libutf8',
-    url: 'https://github.com/jwerle/libutf8',
-    license: 'MIT'
-  },
-  {
-    category: 'Encoding/Decoding',
-    dependents: [],
     description: 'Let me write out bits to a stream',
     manifest: {
       name: 'willemt/bitstream',
@@ -8072,7 +8048,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon May 30 2022 18:09:11 GMT+0000 (Coordinated Universal Time)'
+  'Sat Jun 18 2022 18:12:07 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '19fb2c194668a5617ed89eee0d719feb14dcf9ac'
+export const revision = '6a238022a67d51811599b41042b66f211d4568b2'
