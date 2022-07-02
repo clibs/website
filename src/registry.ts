@@ -52,7 +52,10 @@ export const keywords: KeywordList = {
     ]
   },
   str: { slug: 'str', packages: ['clibs/buffer'] },
-  util: { slug: 'util', packages: ['clibs/buffer'] },
+  util: {
+    slug: 'util',
+    packages: ['clibs/buffer', 'clibs/ck', 'jwerle/async.h', 'sphia/sphia']
+  },
   utils: {
     slug: 'utils',
     packages: ['clibs/buffer', 'ararslan/termcolor-c', 'robusgauli/cvector']
@@ -71,14 +74,18 @@ export const keywords: KeywordList = {
     slug: 'occurrences',
     packages: ['stephenmathieson/occurrences.c']
   },
-  count: { slug: 'count', packages: ['stephenmathieson/occurrences.c'] },
+  count: {
+    slug: 'count',
+    packages: ['stephenmathieson/occurrences.c', 'clibs/timer']
+  },
   path: {
     slug: 'path',
     packages: [
       'stephenmathieson/path-join.c',
       'stephenmathieson/path-normalize.c',
       'michaelrhodes/path-basename.c',
-      'clibs/which'
+      'clibs/which',
+      'brendanashworth/r3'
     ]
   },
   join: {
@@ -103,14 +110,15 @@ export const keywords: KeywordList = {
       'willemt/file2str',
       'willemt/stubfile',
       'cxong/tinydir',
-      'isty001/copy'
+      'isty001/copy',
+      'clibs/entr'
     ]
   },
   normalize: {
     slug: 'normalize',
     packages: ['stephenmathieson/path-normalize.c']
   },
-  extname: { slug: 'extname', packages: ['jb55/extname.c'] },
+  extname: { slug: 'extname', packages: ['jb55/extname.c', 'jb55/extname'] },
   ext: { slug: 'ext', packages: ['jb55/extname.c'] },
   rot13: { slug: 'rot13', packages: ['stephenmathieson/rot13.c'] },
   rotate: { slug: 'rotate', packages: ['stephenmathieson/rot13.c'] },
@@ -136,7 +144,10 @@ export const keywords: KeywordList = {
   strings: { slug: 'strings', packages: ['chrisdew/sds'] },
   basename: { slug: 'basename', packages: ['michaelrhodes/path-basename.c'] },
   wildcard: { slug: 'wildcard', packages: ['clibs/wildcardcmp'] },
-  comparison: { slug: 'comparison', packages: ['clibs/wildcardcmp'] },
+  comparison: {
+    slug: 'comparison',
+    packages: ['clibs/wildcardcmp', 'willemt/minmax']
+  },
   asprintf: {
     slug: 'asprintf',
     packages: ['littlstar/asprintf.c', 'promsize/msprintf']
@@ -151,16 +162,18 @@ export const keywords: KeywordList = {
   unicode: { slug: 'unicode', packages: ['tingping/ustring'] },
   utf8: { slug: 'utf8', packages: ['tingping/ustring', 'jwerle/libutf8'] },
   'utf-8': { slug: 'utf-8', packages: ['tingping/ustring'] },
-  martin: { slug: 'martin', packages: ['wooorm/stmr.c'] },
-  porter: { slug: 'porter', packages: ['wooorm/stmr.c'] },
-  stemmer: { slug: 'stemmer', packages: ['wooorm/stmr.c'] },
+  martin: { slug: 'martin', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
+  porter: { slug: 'porter', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
+  stemmer: { slug: 'stemmer', packages: ['wooorm/stmr.c', 'wooorm/stmr'] },
   algorithm: {
     slug: 'algorithm',
     packages: [
       'wooorm/stmr.c',
       'wooorm/levenshtein.c',
       'abranhe/mergesort.c',
-      'catb0t/fnv-hash'
+      'catb0t/fnv-hash',
+      'wooorm/stmr',
+      'wooorm/levenshtein'
     ]
   },
   c: {
@@ -173,7 +186,10 @@ export const keywords: KeywordList = {
       'gioyik/slim_color',
       'isty001/mem-pool',
       'gioyik/mapc',
-      'orangeduck/mpc'
+      'orangeduck/mpc',
+      'madmurphy/zen.h',
+      'guillermocalvo/exceptions4c',
+      'orangeduck/ptest'
     ]
   },
   lib: {
@@ -186,10 +202,22 @@ export const keywords: KeywordList = {
       'gioyik/mapc'
     ]
   },
-  Vladimir: { slug: 'vladimir', packages: ['wooorm/levenshtein.c'] },
-  Levenshtein: { slug: 'levenshtein', packages: ['wooorm/levenshtein.c'] },
-  edit: { slug: 'edit', packages: ['wooorm/levenshtein.c'] },
-  distance: { slug: 'distance', packages: ['wooorm/levenshtein.c'] },
+  Vladimir: {
+    slug: 'vladimir',
+    packages: ['wooorm/levenshtein.c', 'wooorm/levenshtein']
+  },
+  Levenshtein: {
+    slug: 'levenshtein',
+    packages: ['wooorm/levenshtein.c', 'wooorm/levenshtein']
+  },
+  edit: {
+    slug: 'edit',
+    packages: ['wooorm/levenshtein.c', 'wooorm/levenshtein']
+  },
+  distance: {
+    slug: 'distance',
+    packages: ['wooorm/levenshtein.c', 'wooorm/levenshtein']
+  },
   dynamic: { slug: 'dynamic', packages: ['aperezdc/dbuf', 'rxi/vec'] },
   data: {
     slug: 'data',
@@ -218,7 +246,8 @@ export const keywords: KeywordList = {
       'gioyik/slim_color',
       'daddinuz/liblogger',
       'ararslan/termcolor-c',
-      'bonedaddy/ulog'
+      'bonedaddy/ulog',
+      'mattn/ansicolor-w32.c'
     ]
   },
   rgb: { slug: 'rgb', packages: ['clibs/rgba'] },
@@ -233,7 +262,12 @@ export const keywords: KeywordList = {
   prediction: { slug: 'prediction', packages: ['clibs/unlikely'] },
   macro: {
     slug: 'macro',
-    packages: ['clibs/unlikely', 'alebcay/metric', 'troydhanson/uthash']
+    packages: [
+      'clibs/unlikely',
+      'alebcay/metric',
+      'troydhanson/uthash',
+      'madmurphy/zen.h'
+    ]
   },
   cli: {
     slug: 'cli',
@@ -241,7 +275,10 @@ export const keywords: KeywordList = {
       'aperezdc/cflag',
       'clibs/commander',
       'clibs/flag',
-      'zackehh/siphash-c'
+      'zackehh/siphash-c',
+      'sphia/sphia',
+      'wooorm/stmr',
+      'wooorm/levenshtein'
     ]
   },
   flag: { slug: 'flag', packages: ['aperezdc/cflag', 'clibs/flag'] },
@@ -261,7 +298,9 @@ export const keywords: KeywordList = {
       'orangeduck/mpc',
       'brendanashworth/http-parser',
       'h2non/semver.c',
-      'kgabis/parson'
+      'kgabis/parson',
+      'qute/qute',
+      'littlstar/sop'
     ]
   },
   command: { slug: 'command', packages: ['clibs/commander', 'clibs/flag'] },
@@ -274,7 +313,10 @@ export const keywords: KeywordList = {
   millisecond: { slug: 'millisecond', packages: ['clibs/ms'] },
   microsecond: { slug: 'microsecond', packages: ['clibs/ms'] },
   conversion: { slug: 'conversion', packages: ['clibs/ms', 'alebcay/metric'] },
-  convert: { slug: 'convert', packages: ['clibs/ms'] },
+  convert: {
+    slug: 'convert',
+    packages: ['clibs/ms', 'stephenmathieson/tabs-to-spaces']
+  },
   bytes: { slug: 'bytes', packages: ['clibs/bytes'] },
   size: { slug: 'size', packages: ['clibs/bytes'] },
   terminal: {
@@ -305,7 +347,12 @@ export const keywords: KeywordList = {
   },
   ansi: {
     slug: 'ansi',
-    packages: ['clibs/term', 'nsf/termbox', 'h2non/semver.c']
+    packages: [
+      'clibs/term',
+      'nsf/termbox',
+      'h2non/semver.c',
+      'mattn/ansicolor-w32.c'
+    ]
   },
   escape: { slug: 'escape', packages: ['clibs/term', 'nsf/termbox'] },
   colors: { slug: 'colors', packages: ['clibs/term', 'nsf/termbox'] },
@@ -365,7 +412,11 @@ export const keywords: KeywordList = {
   'ini-reader': { slug: 'ini-reader', packages: ['madmurphy/libconfini'] },
   library: {
     slug: 'library',
-    packages: ['madmurphy/libconfini', 'orangeduck/mpc']
+    packages: [
+      'madmurphy/libconfini',
+      'orangeduck/mpc',
+      'guillermocalvo/exceptions4c'
+    ]
   },
   'shared-library': {
     slug: 'shared-library',
@@ -373,7 +424,10 @@ export const keywords: KeywordList = {
   },
   unix: { slug: 'unix', packages: ['madmurphy/libconfini'] },
   email: { slug: 'email', packages: ['stephenmathieson/is-email.c'] },
-  validate: { slug: 'validate', packages: ['stephenmathieson/is-email.c'] },
+  validate: {
+    slug: 'validate',
+    packages: ['stephenmathieson/is-email.c', 'clibs/clib-validate']
+  },
   html: { slug: 'html', packages: ['thlorenz/gumbo-parser.c'] },
   html5: { slug: 'html5', packages: ['thlorenz/gumbo-parser.c'] },
   clib: { slug: 'clib', packages: ['thlorenz/gumbo-parser.c'] },
@@ -385,12 +439,18 @@ export const keywords: KeywordList = {
       'daddinuz/liblogger',
       'daddinuz/logger',
       'aperezdc/clog',
-      'clibs/logfmt'
+      'clibs/logfmt',
+      'clibs/debug'
     ]
   },
   debug: {
     slug: 'debug',
-    packages: ['thlorenz/log.h', 'kdmurray91/clogged', 'aperezdc/clog']
+    packages: [
+      'thlorenz/log.h',
+      'kdmurray91/clogged',
+      'aperezdc/clog',
+      'clibs/debug'
+    ]
   },
   print: { slug: 'print', packages: ['thlorenz/log.h', 'kdmurray91/clogged'] },
   diagnostics: {
@@ -418,14 +478,20 @@ export const keywords: KeywordList = {
     slug: 'registry',
     packages: ['stephenmathieson/wiki-registry.c']
   },
-  github: { slug: 'github', packages: ['stephenmathieson/wiki-registry.c'] },
+  github: {
+    slug: 'github',
+    packages: ['stephenmathieson/wiki-registry.c', 'stephenmathieson/ghi']
+  },
   wiki: { slug: 'wiki', packages: ['stephenmathieson/wiki-registry.c'] },
   serial: { slug: 'serial', packages: ['xythobuz/serial'] },
   'Mersenne Twister': {
     slug: 'mersenne-twister',
     packages: ['clibs/mt19937ar']
   },
-  random: { slug: 'random', packages: ['clibs/mt19937ar', 'willemt/bag'] },
+  random: {
+    slug: 'random',
+    packages: ['clibs/mt19937ar', 'willemt/bag', 'jb55/samp']
+  },
   password: { slug: 'password', packages: ['brendanashworth/genpassword.c'] },
   generate: { slug: 'generate', packages: ['brendanashworth/genpassword.c'] },
   generator: { slug: 'generator', packages: ['brendanashworth/genpassword.c'] },
@@ -434,8 +500,11 @@ export const keywords: KeywordList = {
   ber: { slug: 'ber', packages: ['clibs/dumpasn1'] },
   der: { slug: 'der', packages: ['clibs/dumpasn1'] },
   lua: { slug: 'lua', packages: ['orangeduck/luaautoc'] },
-  api: { slug: 'api', packages: ['orangeduck/luaautoc'] },
-  automatic: { slug: 'automatic', packages: ['orangeduck/luaautoc'] },
+  api: { slug: 'api', packages: ['orangeduck/luaautoc', 'aperezdc/apicheck'] },
+  automatic: {
+    slug: 'automatic',
+    packages: ['orangeduck/luaautoc', 'aperezdc/autocleanup']
+  },
   functions: { slug: 'functions', packages: ['orangeduck/luaautoc'] },
   structs: { slug: 'structs', packages: ['orangeduck/luaautoc'] },
   sh: { slug: 'sh', packages: ['gioyik/color-sh'] },
@@ -457,11 +526,15 @@ export const keywords: KeywordList = {
       'promsize/memalign',
       'rikvdh/zabuffer',
       'rikvdh/zringbuf',
-      'rikvdh/matching'
+      'rikvdh/matching',
+      'daddinuz/watchdog'
     ]
   },
   pool: { slug: 'pool', packages: ['isty001/mem-pool'] },
-  pthread: { slug: 'pthread', packages: ['isty001/mem-pool'] },
+  pthread: {
+    slug: 'pthread',
+    packages: ['isty001/mem-pool', 'stephenmathieson/batch.c']
+  },
   alignment: { slug: 'alignment', packages: ['isty001/mem-pool'] },
   mutex: {
     slug: 'mutex',
@@ -591,7 +664,10 @@ export const keywords: KeywordList = {
   red: { slug: 'red', packages: ['clibs/red-black-tree'] },
   search: { slug: 'search', packages: ['clibs/red-black-tree'] },
   sync: { slug: 'sync', packages: ['thlorenz/sync-stream.c'] },
-  streaming: { slug: 'streaming', packages: ['thlorenz/sync-stream.c'] },
+  streaming: {
+    slug: 'streaming',
+    packages: ['thlorenz/sync-stream.c', 'willemt/streaming-bencode']
+  },
   flow: { slug: 'flow', packages: ['thlorenz/sync-stream.c'] },
   array: {
     slug: 'array',
@@ -664,7 +740,9 @@ export const keywords: KeywordList = {
       'rxi/vec',
       'kellydunn/libkld',
       'htmk/fat-array',
-      'robusgauli/cvector'
+      'robusgauli/cvector',
+      'mauromombelli/trigonomec',
+      'glisy/math'
     ]
   },
   map: {
@@ -681,20 +759,25 @@ export const keywords: KeywordList = {
       'willemt/stubfile',
       'willemt/tracker-client',
       'willemt/pwp',
-      'willemt/yabtorrent'
+      'willemt/yabtorrent',
+      'willemt/heapless-bencode',
+      'willemt/streaming-bencode'
     ]
   },
   lmdb: { slug: 'lmdb', packages: ['clibs/lmdb'] },
-  'key/value': { slug: 'key-value', packages: ['clibs/lmdb'] },
-  database: { slug: 'database', packages: ['clibs/lmdb'] },
-  utility: { slug: 'utility', packages: ['ajaymt/dict.c', 'ajaymt/list.c'] },
+  'key/value': { slug: 'key-value', packages: ['clibs/lmdb', 'clibs/sophia'] },
+  database: { slug: 'database', packages: ['clibs/lmdb', 'clibs/sophia'] },
+  utility: {
+    slug: 'utility',
+    packages: ['ajaymt/dict.c', 'ajaymt/list.c', 'aperezdc/netdial']
+  },
   table: { slug: 'table', packages: ['ajaymt/dict.c'] },
   'data structures': {
     slug: 'data-structures',
     packages: ['kellydunn/libkld', 'matthewzito/lib.cartilage']
   },
-  graph: { slug: 'graph', packages: ['kellydunn/libkld'] },
-  matrix: { slug: 'matrix', packages: ['kellydunn/libkld'] },
+  graph: { slug: 'graph', packages: ['kellydunn/libkld', 'visionmedia/histo'] },
+  matrix: { slug: 'matrix', packages: ['kellydunn/libkld', 'glisy/math'] },
   mapc: { slug: 'mapc', packages: ['gioyik/mapc'] },
   lista: { slug: 'lista', packages: ['neylsongularte/simple-linked-list-c'] },
   encadeada: {
@@ -713,10 +796,13 @@ export const keywords: KeywordList = {
     slug: 'double-linked-list',
     packages: ['laserswald/dlist']
   },
-  macros: { slug: 'macros', packages: ['laserswald/dlist'] },
-  math: { slug: 'math', packages: ['catb0t/sparse'] },
+  macros: { slug: 'macros', packages: ['laserswald/dlist', 'madmurphy/zen.h'] },
+  math: {
+    slug: 'math',
+    packages: ['catb0t/sparse', 'glisy/math', 'catb0t/yacbnl']
+  },
   arrays: { slug: 'arrays', packages: ['catb0t/sparse'] },
-  bignum: { slug: 'bignum', packages: ['catb0t/sparse'] },
+  bignum: { slug: 'bignum', packages: ['catb0t/sparse', 'catb0t/yacbnl'] },
   flat: { slug: 'flat', packages: ['arablocks/flat-tree.c'] },
   zeroallocation: {
     slug: 'zeroallocation',
@@ -746,20 +832,52 @@ export const keywords: KeywordList = {
   ragel: { slug: 'ragel', packages: ['clibs/logfmt'] },
   combinator: { slug: 'combinator', packages: ['orangeduck/mpc'] },
   mpc: { slug: 'mpc', packages: ['orangeduck/mpc'] },
-  bencode: { slug: 'bencode', packages: ['willemt/torrent-reader'] },
-  torrent: { slug: 'torrent', packages: ['willemt/torrent-reader'] },
+  bencode: {
+    slug: 'bencode',
+    packages: [
+      'willemt/torrent-reader',
+      'willemt/heapless-bencode',
+      'willemt/streaming-bencode'
+    ]
+  },
+  torrent: {
+    slug: 'torrent',
+    packages: [
+      'willemt/torrent-reader',
+      'willemt/heapless-bencode',
+      'willemt/streaming-bencode'
+    ]
+  },
   serialization: {
     slug: 'serialization',
-    packages: ['willemt/torrent-reader']
+    packages: [
+      'willemt/torrent-reader',
+      'willemt/heapless-bencode',
+      'willemt/streaming-bencode'
+    ]
   },
   cut: { slug: 'cut', packages: ['jb55/field-range-parser.c'] },
   fields: { slug: 'fields', packages: ['jb55/field-range-parser.c'] },
   querystring: { slug: 'querystring', packages: ['jb55/querystring.c'] },
-  uri: { slug: 'uri', packages: ['jb55/querystring.c', 'littlstar/uri.c'] },
+  uri: {
+    slug: 'uri',
+    packages: ['jb55/querystring.c', 'littlstar/uri.c', 'jwerle/suri']
+  },
   is_number: { slug: 'is-number', packages: ['jb55/is_number.c'] },
   number: { slug: 'number', packages: ['jb55/is_number.c'] },
-  http: { slug: 'http', packages: ['brendanashworth/http-parser'] },
-  request: { slug: 'request', packages: ['brendanashworth/http-parser'] },
+  http: {
+    slug: 'http',
+    packages: [
+      'brendanashworth/http-parser',
+      'littlstar/request.cc',
+      'daddinuz/http',
+      'clibs/http-get.c'
+    ]
+  },
+  request: {
+    slug: 'request',
+    packages: ['brendanashworth/http-parser', 'littlstar/request.cc']
+  },
   response: { slug: 'response', packages: ['brendanashworth/http-parser'] },
   semver: { slug: 'semver', packages: ['h2non/semver.c'] },
   semantic: { slug: 'semantic', packages: ['h2non/semver.c'] },
@@ -767,17 +885,20 @@ export const keywords: KeywordList = {
   version: { slug: 'version', packages: ['h2non/semver.c'] },
   dependencies: { slug: 'dependencies', packages: ['h2non/semver.c'] },
   matcher: { slug: 'matcher', packages: ['h2non/semver.c'] },
-  json: { slug: 'json', packages: ['kgabis/parson'] },
+  json: { slug: 'json', packages: ['kgabis/parson', 'clibs/clib-validate'] },
   matching: { slug: 'matching', packages: ['rikvdh/matching'] },
   parsing: { slug: 'parsing', packages: ['rikvdh/matching'] },
-  callback: { slug: 'callback', packages: ['rikvdh/matching'] },
+  callback: {
+    slug: 'callback',
+    packages: ['rikvdh/matching', 'mobiushorizons/closure_module']
+  },
   rle: { slug: 'rle', packages: ['clibs/rle'] },
   'run-length': { slug: 'run-length', packages: ['clibs/rle'] },
   compress: { slug: 'compress', packages: ['clibs/rle'] },
   codec: { slug: 'codec', packages: ['clibs/rle'] },
   component: { slug: 'component', packages: ['littlstar/uri.c'] },
-  decode: { slug: 'decode', packages: ['littlstar/uri.c'] },
-  encode: { slug: 'encode', packages: ['littlstar/uri.c'] },
+  decode: { slug: 'decode', packages: ['littlstar/uri.c', 'clibs/amp'] },
+  encode: { slug: 'encode', packages: ['littlstar/uri.c', 'clibs/amp'] },
   base: { slug: 'base', packages: ['littlstar/b64.c'] },
   crypto: {
     slug: 'crypto',
@@ -797,10 +918,13 @@ export const keywords: KeywordList = {
   sortable: { slug: 'sortable', packages: ['aperezdc/ulid-c'] },
   universal: { slug: 'universal', packages: ['aperezdc/ulid-c'] },
   ulid: { slug: 'ulid', packages: ['aperezdc/ulid-c'] },
-  fs: { slug: 'fs', packages: ['jwerle/fs.c'] },
+  fs: {
+    slug: 'fs',
+    packages: ['jwerle/fs.c', 'tomerdmnt/levelfs', 'clibs/entr']
+  },
   filesystem: {
     slug: 'filesystem',
-    packages: ['jwerle/fs.c', 'cxong/tinydir']
+    packages: ['jwerle/fs.c', 'cxong/tinydir', 'tomerdmnt/levelfs']
   },
   system: { slug: 'system', packages: ['jwerle/fs.c'] },
   mkdir: { slug: 'mkdir', packages: ['stephenmathieson/mkdirp.c'] },
@@ -812,7 +936,7 @@ export const keywords: KeywordList = {
   'stub file': { slug: 'stub-file', packages: ['willemt/stubfile'] },
   temp: { slug: 'temp', packages: ['stephenmathieson/tempdir.c'] },
   tempdir: { slug: 'tempdir', packages: ['stephenmathieson/tempdir.c'] },
-  pid: { slug: 'pid', packages: ['willemt/pidfile'] },
+  pid: { slug: 'pid', packages: ['willemt/pidfile', 'jb55/pidpath'] },
   pidfile: { slug: 'pidfile', packages: ['willemt/pidfile'] },
   dir: { slug: 'dir', packages: ['cxong/tinydir', 'isty001/copy'] },
   reader: { slug: 'reader', packages: ['cxong/tinydir'] },
@@ -821,7 +945,10 @@ export const keywords: KeywordList = {
   which: { slug: 'which', packages: ['clibs/which'] },
   locate: { slug: 'locate', packages: ['clibs/which'] },
   find: { slug: 'find', packages: ['clibs/which'] },
-  bin: { slug: 'bin', packages: ['clibs/which'] },
+  bin: {
+    slug: 'bin',
+    packages: ['clibs/which', 'jb55/samp', 'wooorm/stmr', 'wooorm/levenshtein']
+  },
   executable: { slug: 'executable', packages: ['clibs/which'] },
   murmur: { slug: 'murmur', packages: ['jwerle/murmurhash.c'] },
   murmurhash: { slug: 'murmurhash', packages: ['jwerle/murmurhash.c'] },
@@ -836,14 +963,300 @@ export const keywords: KeywordList = {
   cryptography: { slug: 'cryptography', packages: ['veqtrus/vial_aes'] },
   aes: { slug: 'aes', packages: ['veqtrus/vial_aes'] },
   mac: { slug: 'mac', packages: ['veqtrus/vial_aes'] },
-  async: { slug: 'async', packages: ['aisk/libae'] },
+  async: {
+    slug: 'async',
+    packages: [
+      'aisk/libae',
+      'clibs/uv',
+      'jwerle/async.h',
+      'stephenmathieson/batch.c'
+    ]
+  },
   eventloop: { slug: 'eventloop', packages: ['aisk/libae'] },
   redis: { slug: 'redis', packages: ['aisk/libae'] },
-  net: { slug: 'net', packages: ['aisk/libae'] },
+  net: { slug: 'net', packages: ['aisk/libae', '4thel00z/libsniff'] },
   raft: { slug: 'raft', packages: ['willemt/raft'] },
   consensus: { slug: 'consensus', packages: ['willemt/raft'] },
-  protocol: { slug: 'protocol', packages: ['willemt/raft'] },
-  tracker: { slug: 'tracker', packages: ['willemt/tracker-client'] }
+  protocol: { slug: 'protocol', packages: ['willemt/raft', 'clibs/amp'] },
+  tracker: { slug: 'tracker', packages: ['willemt/tracker-client'] },
+  amp: { slug: 'amp', packages: ['clibs/amp'] },
+  tcp: { slug: 'tcp', packages: ['clibs/amp', 'willemt/uv_multiplex'] },
+  udp: { slug: 'udp', packages: ['clibs/amp'] },
+  message: { slug: 'message', packages: ['clibs/amp'] },
+  https: { slug: 'https', packages: ['littlstar/request.cc', 'daddinuz/http'] },
+  requests: { slug: 'requests', packages: ['daddinuz/http'] },
+  network: { slug: 'network', packages: ['aperezdc/netdial'] },
+  sockets: { slug: 'sockets', packages: ['aperezdc/netdial'] },
+  curl: { slug: 'curl', packages: ['clibs/http-get.c'] },
+  get: { slug: 'get', packages: ['clibs/http-get.c'] },
+  download: { slug: 'download', packages: ['clibs/http-get.c'] },
+  sniff: { slug: 'sniff', packages: ['4thel00z/libsniff'] },
+  raw: { slug: 'raw', packages: ['4thel00z/libsniff'] },
+  socket: { slug: 'socket', packages: ['4thel00z/libsniff'] },
+  libuv: {
+    slug: 'libuv',
+    packages: [
+      'clibs/uv',
+      'jwerle/async.h',
+      'willemt/uv_multiplex',
+      'willemt/bmon'
+    ]
+  },
+  uv: { slug: 'uv', packages: ['clibs/uv'] },
+  leveldb: {
+    slug: 'leveldb',
+    packages: ['clibs/leveldb', 'hij1nx/ldb', 'tomerdmnt/levelfs']
+  },
+  level: {
+    slug: 'level',
+    packages: ['clibs/leveldb', 'hij1nx/ldb', 'tomerdmnt/levelfs']
+  },
+  db: { slug: 'db', packages: ['clibs/leveldb', 'hij1nx/ldb'] },
+  concurrency: {
+    slug: 'concurrency',
+    packages: ['clibs/ck', 'stephenmathieson/batch.c', 'tylertreat/chan']
+  },
+  ck: { slug: 'ck', packages: ['clibs/ck'] },
+  apple: { slug: 'apple', packages: ['beltex/libsmc'] },
+  osx: {
+    slug: 'osx',
+    packages: ['beltex/libsmc', 'lavoiesl/osx-cpu-temp', 'jwerle/suri']
+  },
+  smc: { slug: 'smc', packages: ['beltex/libsmc'] },
+  dispatch: { slug: 'dispatch', packages: ['brendanashworth/r3'] },
+  performance: { slug: 'performance', packages: ['brendanashworth/r3'] },
+  r3: { slug: 'r3', packages: ['brendanashworth/r3'] },
+  c9s: { slug: 'c9s', packages: ['brendanashworth/r3'] },
+  lexer: { slug: 'lexer', packages: ['qute/qute'] },
+  sophia: { slug: 'sophia', packages: ['clibs/sophia', 'sphia/sphia'] },
+  'option-type': { slug: 'option-type', packages: ['daddinuz/option'] },
+  monads: { slug: 'monads', packages: ['daddinuz/option'] },
+  'functional-programming': {
+    slug: 'functional-programming',
+    packages: ['daddinuz/option']
+  },
+  pdf: { slug: 'pdf', packages: ['andrerenaud/pdfgen'] },
+  document: { slug: 'document', packages: ['andrerenaud/pdfgen'] },
+  'c-preprocessor': { slug: 'c-preprocessor', packages: ['madmurphy/zen.h'] },
+  counter: { slug: 'counter', packages: ['madmurphy/zen.h'] },
+  'c-preprocessor-counter': {
+    slug: 'c-preprocessor-counter',
+    packages: ['madmurphy/zen.h']
+  },
+  'c-macro': { slug: 'c-macro', packages: ['madmurphy/zen.h'] },
+  'c-macros': { slug: 'c-macros', packages: ['madmurphy/zen.h'] },
+  thread: { slug: 'thread', packages: ['jlcordeiro/threadpool'] },
+  posix: { slug: 'posix', packages: ['jlcordeiro/threadpool'] },
+  event: { slug: 'event', packages: ['clibs/trigger', 'willemt/event-timer'] },
+  fire: { slug: 'fire', packages: ['clibs/trigger'] },
+  firing: { slug: 'firing', packages: ['clibs/trigger'] },
+  handle: { slug: 'handle', packages: ['clibs/trigger'] },
+  handling: { slug: 'handling', packages: ['clibs/trigger'] },
+  observe: { slug: 'observe', packages: ['clibs/trigger'] },
+  publish: { slug: 'publish', packages: ['clibs/trigger'] },
+  subscribe: { slug: 'subscribe', packages: ['clibs/trigger'] },
+  trigger: { slug: 'trigger', packages: ['clibs/trigger'] },
+  triggering: { slug: 'triggering', packages: ['clibs/trigger'] },
+  error: { slug: 'error', packages: ['jwerle/throw.h', '4thel00z/cry.h'] },
+  exception: {
+    slug: 'exception',
+    packages: ['jwerle/throw.h', '4thel00z/cry.h']
+  },
+  throw: { slug: 'throw', packages: ['jwerle/throw.h', '4thel00z/cry.h'] },
+  cry: { slug: 'cry', packages: ['4thel00z/cry.h'] },
+  coroutine: { slug: 'coroutine', packages: ['clibs/coro'] },
+  chan: { slug: 'chan', packages: ['tylertreat/chan'] },
+  channel: { slug: 'channel', packages: ['tylertreat/chan'] },
+  synchronization: { slug: 'synchronization', packages: ['tylertreat/chan'] },
+  go: { slug: 'go', packages: ['tylertreat/chan'] },
+  golang: { slug: 'golang', packages: ['tylertreat/chan'] },
+  defer: { slug: 'defer', packages: ['trws/libdefer'] },
+  goland: { slug: 'goland', packages: ['trws/libdefer'] },
+  convenience: { slug: 'convenience', packages: ['trws/libdefer'] },
+  exceptions: { slug: 'exceptions', packages: ['guillermocalvo/exceptions4c'] },
+  'exceptions-for-c': {
+    slug: 'exceptions-for-c',
+    packages: ['guillermocalvo/exceptions4c']
+  },
+  'error-handling': {
+    slug: 'error-handling',
+    packages: ['guillermocalvo/exceptions4c']
+  },
+  closure: { slug: 'closure', packages: ['mobiushorizons/closure_module'] },
+  mpp: { slug: 'mpp', packages: ['mobiushorizons/closure_module'] },
+  function: { slug: 'function', packages: ['mobiushorizons/closure_module'] },
+  scoped: { slug: 'scoped', packages: ['aperezdc/autocleanup'] },
+  cleanup: { slug: 'cleanup', packages: ['aperezdc/autocleanup'] },
+  pointers: { slug: 'pointers', packages: ['aperezdc/autocleanup'] },
+  handles: { slug: 'handles', packages: ['aperezdc/autocleanup'] },
+  testing: {
+    slug: 'testing',
+    packages: [
+      'orangeduck/ptest',
+      'stephenmathieson/describe.h',
+      'jlcordeiro/minunit',
+      'silentbicycle/greatest'
+    ]
+  },
+  microtesting: { slug: 'microtesting', packages: ['orangeduck/ptest'] },
+  DRY: { slug: 'dry', packages: ['orangeduck/ptest'] },
+  ptest: { slug: 'ptest', packages: ['orangeduck/ptest'] },
+  bdd: { slug: 'bdd', packages: ['stephenmathieson/describe.h'] },
+  assert: {
+    slug: 'assert',
+    packages: [
+      'stephenmathieson/describe.h',
+      'stephenmathieson/assertion-macros.h',
+      'aperezdc/apicheck',
+      'daddinuz/traits'
+    ]
+  },
+  describe: { slug: 'describe', packages: ['stephenmathieson/describe.h'] },
+  tap: { slug: 'tap', packages: ['jwerle/libok', 'thlorenz/tap.c'] },
+  test: {
+    slug: 'test',
+    packages: [
+      'jwerle/libok',
+      'thlorenz/tap.c',
+      'silentbicycle/greatest',
+      'daddinuz/traits-unit'
+    ]
+  },
+  check: { slug: 'check', packages: ['thlorenz/tap.c'] },
+  'tap.c': { slug: 'tap-c', packages: ['thlorenz/tap.c'] },
+  unit: {
+    slug: 'unit',
+    packages: ['jlcordeiro/minunit', 'silentbicycle/greatest']
+  },
+  assertions: {
+    slug: 'assertions',
+    packages: ['stephenmathieson/assertion-macros.h', 'daddinuz/traits']
+  },
+  'unit test': { slug: 'unit-test', packages: ['willemt/cutest'] },
+  assertion: { slug: 'assertion', packages: ['aperezdc/apicheck'] },
+  'assertions-library': {
+    slug: 'assertions-library',
+    packages: ['daddinuz/traits']
+  },
+  unittest: { slug: 'unittest', packages: ['daddinuz/traits-unit'] },
+  framework: { slug: 'framework', packages: ['daddinuz/traits-unit'] },
+  'unit-test': { slug: 'unit-test', packages: ['daddinuz/traits-unit'] },
+  unittesting: { slug: 'unittesting', packages: ['daddinuz/traits-unit'] },
+  'unit-testing': { slug: 'unit-testing', packages: ['daddinuz/traits-unit'] },
+  'test-framework': {
+    slug: 'test-framework',
+    packages: ['daddinuz/traits-unit']
+  },
+  time: { slug: 'time', packages: ['clibs/timestamp', 'clibs/timer'] },
+  timestamp: { slug: 'timestamp', packages: ['clibs/timestamp'] },
+  milliseconds: { slug: 'milliseconds', packages: ['clibs/timestamp'] },
+  bench: {
+    slug: 'bench',
+    packages: ['clibs/bench.h', 'brendanashworth/bench']
+  },
+  timer: { slug: 'timer', packages: ['clibs/timer', 'willemt/event-timer'] },
+  delta: { slug: 'delta', packages: ['clibs/timer'] },
+  second: { slug: 'second', packages: ['clibs/timer'] },
+  benchmark: { slug: 'benchmark', packages: ['brendanashworth/bench'] },
+  speed: { slug: 'speed', packages: ['brendanashworth/bench'] },
+  midi: { slug: 'midi', packages: ['opal-instruments/tiny-midi-clock'] },
+  clock: { slug: 'clock', packages: ['opal-instruments/tiny-midi-clock'] },
+  bpm: { slug: 'bpm', packages: ['opal-instruments/tiny-midi-clock'] },
+  ppqn: { slug: 'ppqn', packages: ['opal-instruments/tiny-midi-clock'] },
+  watch: { slug: 'watch', packages: ['visionmedia/watch', 'clibs/entr'] },
+  process: { slug: 'process', packages: ['visionmedia/mon'] },
+  monitoring: { slug: 'monitoring', packages: ['visionmedia/mon'] },
+  monitor: { slug: 'monitor', packages: ['visionmedia/mon'] },
+  availability: { slug: 'availability', packages: ['visionmedia/mon'] },
+  histogram: { slug: 'histogram', packages: ['visionmedia/histo'] },
+  chart: { slug: 'chart', packages: ['visionmedia/histo'] },
+  plot: { slug: 'plot', packages: ['visionmedia/histo'] },
+  stats: { slug: 'stats', packages: ['visionmedia/histo'] },
+  statistics: { slug: 'statistics', packages: ['visionmedia/histo'] },
+  extension: { slug: 'extension', packages: ['jb55/extname'] },
+  sample: { slug: 'sample', packages: ['jb55/samp'] },
+  sphia: { slug: 'sphia', packages: ['sphia/sphia'] },
+  tabs: { slug: 'tabs', packages: ['stephenmathieson/tabs-to-spaces'] },
+  spaces: { slug: 'spaces', packages: ['stephenmathieson/tabs-to-spaces'] },
+  repl: { slug: 'repl', packages: ['hij1nx/ldb'] },
+  fuse: { slug: 'fuse', packages: ['tomerdmnt/levelfs'] },
+  cpu: { slug: 'cpu', packages: ['lavoiesl/osx-cpu-temp'] },
+  temperature: { slug: 'temperature', packages: ['lavoiesl/osx-cpu-temp'] },
+  sensors: { slug: 'sensors', packages: ['lavoiesl/osx-cpu-temp'] },
+  make: { slug: 'make', packages: ['clibs/entr'] },
+  entr: { slug: 'entr', packages: ['clibs/entr'] },
+  install: { slug: 'install', packages: ['stephenmathieson/ghi'] },
+  application: { slug: 'application', packages: ['jwerle/suri'] },
+  scheme: { slug: 'scheme', packages: ['jwerle/suri'] },
+  makeheaders: { slug: 'makeheaders', packages: ['andik/makeheaders'] },
+  git: { slug: 'git', packages: ['nilsding/cnsc'] },
+  commit: { slug: 'commit', packages: ['nilsding/cnsc'] },
+  development: { slug: 'development', packages: ['nilsding/cnsc'] },
+  angular: { slug: 'angular', packages: ['nilsding/cnsc'] },
+  retrospring: { slug: 'retrospring', packages: ['nilsding/cnsc'] },
+  glsl: {
+    slug: 'glsl',
+    packages: ['glisy/glisy-earth', 'glisy/glsl-checker-blur', 'glisy/glisy']
+  },
+  'stack.gl': {
+    slug: 'stack-gl',
+    packages: ['glisy/glisy-earth', 'glisy/glsl-checker-blur']
+  },
+  earth: { slug: 'earth', packages: ['glisy/glisy-earth'] },
+  checker: { slug: 'checker', packages: ['glisy/glsl-checker-blur'] },
+  blur: { slug: 'blur', packages: ['glisy/glsl-checker-blur'] },
+  'ansicolor-w32': {
+    slug: 'ansicolor-w32',
+    packages: ['mattn/ansicolor-w32.c']
+  },
+  windows: { slug: 'windows', packages: ['mattn/ansicolor-w32.c'] },
+  w32: { slug: 'w32', packages: ['mattn/ansicolor-w32.c'] },
+  win32: { slug: 'win32', packages: ['mattn/ansicolor-w32.c'] },
+  'dark mode': { slug: 'dark-mode', packages: ['onderweg/follow-the-sun'] },
+  macos: { slug: 'macos', packages: ['onderweg/follow-the-sun'] },
+  package: { slug: 'package', packages: ['clibs/clib-validate'] },
+  bresenham: { slug: 'bresenham', packages: ['jb55/bresenham-line.c'] },
+  trigonometry: {
+    slug: 'trigonometry',
+    packages: ['mauromombelli/trigonomec']
+  },
+  quaternion: { slug: 'quaternion', packages: ['mauromombelli/trigonomec'] },
+  '3d': { slug: '3d', packages: ['mauromombelli/trigonomec'] },
+  glisy: {
+    slug: 'glisy',
+    packages: ['glisy/math', 'glisy/glfw-shell', 'glisy/ease']
+  },
+  clamp: { slug: 'clamp', packages: ['littlstar/clamp'] },
+  value: { slug: 'value', packages: ['littlstar/clamp'] },
+  max7219: { slug: 'max7219', packages: ['opal-instruments/max7219-avr'] },
+  avr: { slug: 'avr', packages: ['opal-instruments/max7219-avr'] },
+  opengl: {
+    slug: 'opengl',
+    packages: ['glisy/glisy', 'littlstar/sop', 'littlstar/soil']
+  },
+  gl: {
+    slug: 'gl',
+    packages: [
+      'glisy/glisy',
+      'glisy/glfw-shell',
+      'glisy/ease',
+      'littlstar/soil'
+    ]
+  },
+  open: { slug: 'open', packages: ['glisy/glfw-shell'] },
+  glfw: { slug: 'glfw', packages: ['glisy/glfw-shell'] },
+  easing: { slug: 'easing', packages: ['glisy/ease'] },
+  obj: { slug: 'obj', packages: ['littlstar/sop'] },
+  graphics: { slug: 'graphics', packages: ['littlstar/sop'] },
+  soil: { slug: 'soil', packages: ['littlstar/soil'] },
+  image: { slug: 'image', packages: ['littlstar/soil'] },
+  leaks: { slug: 'leaks', packages: ['daddinuz/watchdog'] },
+  'memory-leaks': { slug: 'memory-leaks', packages: ['daddinuz/watchdog'] },
+  'memory-tracer': { slug: 'memory-tracer', packages: ['daddinuz/watchdog'] },
+  'memory-leak-detection': {
+    slug: 'memory-leak-detection',
+    packages: ['daddinuz/watchdog']
+  }
 }
 
 export const categories: CategoryList = {
@@ -1067,9 +1480,151 @@ export const categories: CategoryList = {
       'willemt/raft',
       'willemt/tracker-client',
       'willemt/pwp',
-      'willemt/yabtorrent'
+      'willemt/yabtorrent',
+      'clibs/amp',
+      'littlstar/request.cc',
+      'daddinuz/http',
+      'aperezdc/netdial',
+      'clibs/http-get.c',
+      '4thel00z/libsniff'
     ]
-  }
+  },
+  Libraries: {
+    slug: 'libraries',
+    packages: [
+      'clibs/uv',
+      'clibs/leveldb',
+      'clibs/ck',
+      'beltex/libsmc',
+      'brendanashworth/r3',
+      'qute/qute',
+      'clibs/sophia',
+      'daddinuz/option',
+      'jwerle/libnanoresource',
+      'jwerle/libram',
+      'jwerle/libras',
+      'jwerle/libalru',
+      'andrerenaud/pdfgen'
+    ]
+  },
+  'Preprocessor macros': {
+    slug: 'preprocessor-macros',
+    packages: ['madmurphy/zen.h']
+  },
+  'Program flow': {
+    slug: 'program-flow',
+    packages: [
+      'jlcordeiro/threadpool',
+      'jwerle/async.h',
+      'stephenmathieson/batch.c',
+      'clibs/trigger',
+      'stephenmathieson/emitter.c',
+      'jwerle/throw.h',
+      '4thel00z/cry.h',
+      'clibs/coro',
+      'tylertreat/chan',
+      'trws/libdefer',
+      'willemt/uv_multiplex',
+      'willemt/bmon',
+      'guillermocalvo/exceptions4c',
+      'mobiushorizons/closure_module',
+      'aperezdc/autocleanup'
+    ]
+  },
+  Serialization: {
+    slug: 'serialization',
+    packages: ['willemt/heapless-bencode', 'willemt/streaming-bencode']
+  },
+  'Testing/Quality Assurance': {
+    slug: 'testing-quality-assurance',
+    packages: [
+      'orangeduck/ptest',
+      'clibs/debug',
+      'stephenmathieson/debug.c',
+      'hij1nx/debug',
+      'stephenmathieson/describe.h',
+      'jwerle/libok',
+      'thlorenz/tap.c',
+      'jlcordeiro/minunit',
+      'stephenmathieson/assertion-macros.h',
+      'silentbicycle/greatest',
+      'willemt/cutest',
+      'jeradesign/minunit',
+      'aperezdc/apicheck',
+      'daddinuz/traits',
+      'daddinuz/traits-unit'
+    ]
+  },
+  Timing: {
+    slug: 'timing',
+    packages: [
+      'clibs/timestamp',
+      'clibs/bench.h',
+      'clibs/timer',
+      'willemt/event-timer',
+      'brendanashworth/bench',
+      'opal-instruments/tiny-midi-clock'
+    ]
+  },
+  Executables: {
+    slug: 'executables',
+    packages: [
+      'visionmedia/watch',
+      'visionmedia/mon',
+      'visionmedia/histo',
+      'jb55/extname',
+      'jb55/samp',
+      'jb55/pidpath',
+      'sphia/sphia',
+      'stephenmathieson/tabs-to-spaces',
+      'stephenmathieson/sophia-repl',
+      'hij1nx/ldb',
+      'tomerdmnt/levelfs',
+      'lavoiesl/osx-cpu-temp',
+      'clibs/entr',
+      'stephenmathieson/ghi',
+      'jwerle/suri',
+      'wooorm/stmr',
+      'andik/makeheaders',
+      'wooorm/levenshtein',
+      'nilsding/cnsc',
+      'glisy/glisy-earth',
+      'glisy/glsl-checker-blur'
+    ]
+  },
+  'OS Specific': {
+    slug: 'os-specific',
+    packages: ['mattn/ansicolor-w32.c', 'onderweg/follow-the-sun']
+  },
+  Plugins: {
+    slug: 'plugins',
+    packages: ['clibs/clib-uninstall', 'clibs/clib-validate']
+  },
+  Math: {
+    slug: 'math',
+    packages: [
+      'scientificc/cmathl',
+      'jb55/bresenham-line.c',
+      'mauromombelli/trigonomec',
+      'willemt/minmax',
+      'littlstar/clamp',
+      'catb0t/yacbnl',
+      'erstan/ceval'
+    ]
+  },
+  OpenGL: {
+    slug: 'open-gl',
+    packages: [
+      'glisy/math',
+      'glisy/glisy',
+      'glisy/glfw-shell',
+      'glisy/ease',
+      'littlstar/sop',
+      'littlstar/soil'
+    ]
+  },
+  AVR: { slug: 'avr', packages: ['opal-instruments/max7219-avr'] },
+  Profiling: { slug: 'profiling', packages: ['daddinuz/watchdog'] }
 }
 
 export const packages: Package[] = [
@@ -5243,11 +5798,2281 @@ export const packages: Package[] = [
     slug: 'willemt-yabtorrent',
     url: 'https://github.com/willemt/yabtorrent',
     license: 'BSD'
+  },
+  {
+    category: 'Net',
+    dependents: [],
+    description: 'Abstract Message Protocol C implementation',
+    manifest: {
+      name: 'clibs/amp',
+      version: '0.0.1',
+      repo: 'clibs/amp',
+      description: 'Abstract Message Protocol',
+      keywords: [
+        'amp',
+        'tcp',
+        'udp',
+        'message',
+        'protocol',
+        'encode',
+        'decode'
+      ],
+      license: 'MIT',
+      src: ['amp.c', 'amp.h'],
+      dependencies: {}
+    },
+    name: 'clibs/amp',
+    slug: 'clibs-amp',
+    url: 'https://github.com/clibs/amp',
+    license: 'MIT'
+  },
+  {
+    category: 'Net',
+    dependents: [],
+    description: 'libcurl-backed HTTP request library for C++',
+    manifest: {
+      name: 'littlstar/request.cc',
+      version: '1.1.1',
+      repo: 'littlstar/request.cc',
+      description: 'Simple interface for making HTTP requests',
+      keywords: ['http', 'request', 'https'],
+      src: ['request.h', 'request.cc'],
+      dependencies: {
+        'littlstar/trim.cc': '0.1.2',
+        'littlstar/uri.c': '0.0.6'
+      },
+      license: 'Unlicensed'
+    },
+    name: 'littlstar/request.cc',
+    slug: 'littlstar-request-cc',
+    url: 'https://github.com/littlstar/request.cc',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Net',
+    dependents: [],
+    description: 'Http requests made easier',
+    manifest: {
+      name: 'daddinuz/http',
+      repo: 'daddinuz/http',
+      version: '0.3.0',
+      license: 'MIT',
+      description: 'HTTP requests made easier.',
+      keywords: ['http', 'https', 'requests'],
+      src: [
+        'sources/http.c',
+        'sources/http.h',
+        'sources/http_error.c',
+        'sources/http_error.h',
+        'sources/http_fire_result.c',
+        'sources/http_fire_result.h',
+        'sources/http_maybe_text.c',
+        'sources/http_maybe_text.h',
+        'sources/http_method.c',
+        'sources/http_method.h',
+        'sources/http_request.c',
+        'sources/http_request.h',
+        'sources/http_response.c',
+        'sources/http_response.h',
+        'sources/http_status.c',
+        'sources/http_status.h'
+      ],
+      dependencies: {
+        'daddinuz/atom': '0.1.0',
+        'daddinuz/text': '0.1.0',
+        'daddinuz/error': '0.2.0',
+        'daddinuz/panic': '0.3.0'
+      },
+      development: {
+        'daddinuz/traits': '3.2.0',
+        'daddinuz/traits-unit': '3.0.0'
+      },
+      makefile: 'sources/build.cmake'
+    },
+    name: 'daddinuz/http',
+    slug: 'daddinuz-http',
+    url: 'https://github.com/daddinuz/http',
+    license: 'MIT'
+  },
+  {
+    category: 'Net',
+    dependents: [],
+    description: 'Utility library to simplify socket setup code',
+    manifest: {
+      name: 'aperezdc/netdial',
+      version: '0.1.0',
+      repo: 'aperezdc/netdial',
+      description: '',
+      license: 'MIT',
+      keywords: ['network', 'sockets', 'utility'],
+      src: ['netdial.h', 'netdial.c'],
+      dependencies: { 'aperezdc/dbuf': '0.1.0' }
+    },
+    name: 'aperezdc/netdial',
+    slug: 'aperezdc-netdial',
+    url: 'https://github.com/aperezdc/netdial',
+    license: 'MIT'
+  },
+  {
+    category: 'Net',
+    dependents: [],
+    description: 'Simple HTTP GET requests backed by libcurl',
+    manifest: {
+      name: 'clibs/http-get.c',
+      version: '0.4.0',
+      repo: 'clibs/http-get.c',
+      description: 'Simple HTTP GET requests backed by libcurl',
+      keywords: ['http', 'curl', 'get', 'download'],
+      license: 'MIT',
+      src: ['src/http-get.c', 'src/http-get.h'],
+      dependencies: {}
+    },
+    name: 'clibs/http-get.c',
+    slug: 'clibs-http-get-c',
+    url: 'https://github.com/clibs/http-get.c',
+    license: 'MIT'
+  },
+  {
+    category: 'Net',
+    dependents: [],
+    description: 'Simple library to help you with setting up a raw socket',
+    manifest: {
+      name: '4thel00z/libsniff',
+      version: '0.1.2',
+      repo: '4thel00z/libsniff',
+      description:
+        'A simple library that helps you set up raw sockets for sniffing',
+      keywords: ['net', 'sniff', 'raw', 'socket'],
+      license: 'GPL-3',
+      src: ['libsniff.c', 'libsniff.h'],
+      dependencies: {}
+    },
+    name: '4thel00z/libsniff',
+    slug: '4thel00z-libsniff',
+    url: 'https://github.com/4thel00z/libsniff',
+    license: 'GPL-3'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description: 'Cross-platform asychronous I/O',
+    manifest: {
+      name: 'clibs/uv',
+      version: 'v1.30.1',
+      repo: 'clibs/uv',
+      description: 'Cross-platform asychronous I/O',
+      keywords: ['libuv', 'uv', 'async'],
+      makefile: 'clib-install.sh',
+      install: 'sh clib-install.sh',
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'clibs/uv',
+    slug: 'clibs-uv',
+    url: 'https://github.com/clibs/uv',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description:
+      'LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values',
+    manifest: {
+      name: 'clibs/leveldb',
+      version: '1.17.0',
+      repo: 'clibs/leveldb',
+      description:
+        'LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.',
+      keywords: ['leveldb', 'level', 'db'],
+      install: './install.sh',
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'clibs/leveldb',
+    slug: 'clibs-leveldb',
+    url: 'https://github.com/clibs/leveldb',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description:
+      'Concurrency primitives, safe memory reclamation mechanisms and non-blocking data structures designed to aid in the research, design and implementation of high performance concurrent systems.',
+    manifest: {
+      name: 'clibs/ck',
+      version: '0.4.2',
+      repo: 'clibs/ck',
+      description:
+        'Concurrency primitives, safe memory reclamation mechanisms and non-blocking data structures designed to aid in the research, design and implementation of high performance concurrent systems.',
+      keywords: ['concurrency', 'ck', 'util'],
+      install: './clib-install.sh',
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'clibs/ck',
+    slug: 'clibs-ck',
+    url: 'https://github.com/clibs/ck',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description: 'Apple System Management Controller (SMC) API',
+    manifest: {
+      name: 'beltex/libsmc',
+      version: '0.0.1',
+      repo: 'beltex/libsmc',
+      description: 'Apple SMC API in C',
+      keywords: ['apple', 'osx', 'smc'],
+      license: 'GPLv2.0',
+      install: 'make dynamic',
+      src: ['include/smc.h'],
+      dependencies: {}
+    },
+    name: 'beltex/libsmc',
+    slug: 'beltex-libsmc',
+    url: 'https://github.com/beltex/libsmc',
+    license: 'GPLv2.0'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description: 'high-performance path dispatching library for the web',
+    manifest: {
+      name: 'brendanashworth/r3',
+      version: '1.3.3',
+      repo: 'brendanashworth/r3',
+      description: 'high-performance path dispatching library',
+      keywords: ['path', 'dispatch', 'performance', 'r3', 'c9s'],
+      license: 'MIT',
+      src: [
+        '3rdparty/zmalloc.c',
+        '3rdparty/zmalloc.h',
+        'include/r3.h',
+        'include/r3.hpp',
+        'include/r3_define.h',
+        'include/r3_gvc.h',
+        'include/r3_json.h',
+        'include/r3_list.h',
+        'include/r3_str.h',
+        'include/str_array.h',
+        'src/edge.c',
+        'src/gvc.c',
+        'src/json.c',
+        'src/list.c',
+        'src/match_entry.c',
+        'src/node.c',
+        'src/slug.c',
+        'src/slug.h',
+        'src/str.c',
+        'src/token.c'
+      ],
+      dependencies: {}
+    },
+    name: 'brendanashworth/r3',
+    slug: 'brendanashworth-r3',
+    url: 'https://github.com/brendanashworth/r3',
+    license: 'MIT'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description: 'AST generation library',
+    manifest: {
+      name: 'qute/qute',
+      version: '0.0.7',
+      repo: 'qute/qute',
+      description: 'Simple lexer and parser',
+      keywords: ['parser', 'lexer'],
+      dependencies: { 'clibs/strdup': '0.0.0' },
+      devDependencies: { 'jwerle/fs.c': '*', 'jwerle/libok': '*' },
+      src: [
+        'qute.h',
+        'src/ast.c',
+        'src/lex.c',
+        'src/error.c',
+        'src/parser.c',
+        'include/qute/ast.h',
+        'include/qute/lex.h',
+        'include/qute/parser.h',
+        'include/qute/error.h'
+      ],
+      license: 'Unlicensed'
+    },
+    name: 'qute/qute',
+    slug: 'qute-qute',
+    url: 'https://github.com/qute/qute',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description: 'modern embeddable key-value database',
+    manifest: {
+      name: 'clibs/sophia',
+      version: '0.0.2',
+      repo: 'clibs/sophia',
+      description: 'modern emeddable key-value database',
+      keywords: ['sophia', 'database', 'key/value'],
+      license: 'MIT',
+      src: ['sophia.c', 'sophia.h'],
+      dependencies: {}
+    },
+    name: 'clibs/sophia',
+    slug: 'clibs-sophia',
+    url: 'https://github.com/clibs/sophia',
+    license: 'MIT'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description: "Mimic Rust's Option type",
+    manifest: {
+      name: 'daddinuz/option',
+      repo: 'daddinuz/option',
+      version: '1.0.0',
+      license: 'MIT',
+      description: 'Monadic option type.',
+      keywords: ['option-type', 'monads', 'functional-programming'],
+      src: ['sources/option.c', 'sources/option.h'],
+      dependencies: { 'daddinuz/panic': '1.0.0' },
+      development: {
+        'daddinuz/traits': '3.2.0',
+        'daddinuz/traits-unit': '3.0.0'
+      },
+      makefile: 'sources/build.cmake'
+    },
+    name: 'daddinuz/option',
+    slug: 'daddinuz-option',
+    url: 'https://github.com/daddinuz/option',
+    license: 'MIT'
+  },
+  {
+    category: 'Libraries',
+    dependents: ['jwerle/libsleepfile'],
+    description: 'A C99 library for creating tiny async resources.',
+    manifest: {
+      name: 'jwerle/libnanoresource',
+      version: '0.2.0',
+      author: 'Joseph Werle <joseph.werle@gmail.com>',
+      license: 'MIT',
+      description: 'A C99 library for creating tiny async resources.',
+      repo: 'jwerle/libnanoresource',
+      src: [
+        'include/nanoresource/allocator.h',
+        'include/nanoresource/platform.h',
+        'include/nanoresource/request.h',
+        'include/nanoresource/resource.h',
+        'include/nanoresource/version.h',
+        'include/nanoresource/nanoresource.h',
+        'src/allocator.c',
+        'src/request.c',
+        'src/require.h',
+        'src/resource.c',
+        'src/version.c',
+        'mk/brief.mk',
+        'Makefile.in',
+        'configure',
+        'README.md',
+        'LICENSE'
+      ],
+      development: { 'jwerle/libok': '0.3.0' },
+      keywords: [],
+      dependencies: {}
+    },
+    name: 'jwerle/libnanoresource',
+    slug: 'jwerle-libnanoresource',
+    url: 'https://github.com/jwerle/libnanoresource',
+    license: 'MIT'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description: 'A C99 library for creating random access memory interfaces.',
+    manifest: {
+      name: 'jwerle/libram',
+      version: '0.2.1',
+      description:
+        'A C99 library for creating random access memory interfaces.',
+      repo: 'jwerle/libram',
+      src: [
+        'include/ram/platform.h',
+        'include/ram/version.h',
+        'include/ram/ram.h',
+        'src/ram.c',
+        'src/version.c',
+        'mk/brief.mk',
+        'Makefile.in',
+        'configure',
+        'README.md',
+        'LICENSE'
+      ],
+      dependencies: { 'jwerle/libras': '0.4.1' },
+      development: { 'jwerle/libok': '0.3.0' },
+      keywords: [],
+      license: 'Unlicensed'
+    },
+    name: 'jwerle/libram',
+    slug: 'jwerle-libram',
+    url: 'https://github.com/jwerle/libram',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Libraries',
+    dependents: ['jwerle/libsleepfile', 'jwerle/libram'],
+    description: 'A C99 library for creating random access storage interfaces.',
+    manifest: {
+      name: 'jwerle/libras',
+      version: '0.4.1',
+      description:
+        'A C99 library for creating random access storage interfaces.',
+      repo: 'jwerle/libras',
+      src: [
+        'include/ras/allocator.h',
+        'include/ras/emitter.h',
+        'include/ras/platform.h',
+        'include/ras/request.h',
+        'include/ras/storage.h',
+        'include/ras/version.h',
+        'include/ras/ras.h',
+        'src/allocator.c',
+        'src/emitter.c',
+        'src/request.c',
+        'src/require.h',
+        'src/storage.c',
+        'src/version.c',
+        'mk/brief.mk',
+        'Makefile.in',
+        'configure',
+        'README.md',
+        'LICENSE'
+      ],
+      development: { 'jwerle/libok': '0.2.0' },
+      keywords: [],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'jwerle/libras',
+    slug: 'jwerle-libras',
+    url: 'https://github.com/jwerle/libras',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description:
+      "libalru is a library for creating really fast numeric based LRU caches that leverage an optimized CRC-16-CCITT ported over from @mafintosh's array-lru.",
+    manifest: {
+      name: 'jwerle/libalru',
+      version: '0.1.0',
+      repo: 'jwerle/libalru',
+      keywords: [],
+      description:
+        'libalru is a library for creating really fast numeric based LRU caches that leverage an optimized CRC-16-CCITT.',
+      development: { 'stephenmathieson/describe.h': '2.1.2' },
+      dependencies: {},
+      src: [
+        'include/alru/alru.h',
+        'include/alru/common.h',
+        'src/alru.c',
+        'src/crc16.c'
+      ],
+      license: 'Unlicensed'
+    },
+    name: 'jwerle/libalru',
+    slug: 'jwerle-libalru',
+    url: 'https://github.com/jwerle/libalru',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
+    description: 'A minimalistic C99 library for creating PDF document.',
+    manifest: {
+      name: 'andrerenaud/pdfgen',
+      version: '0.1.0',
+      repo: 'AndreRenaud/PDFGen',
+      description: 'Create PDF documents',
+      keywords: ['pdf', 'document'],
+      license: 'UNLICENSE',
+      src: ['pdfgen.c', 'pdfgen.h'],
+      dependencies: {}
+    },
+    name: 'andrerenaud/pdfgen',
+    slug: 'andrerenaud-pdfgen',
+    url: 'https://github.com/AndreRenaud/PDFGen',
+    license: 'UNLICENSE'
+  },
+  {
+    category: 'Preprocessor macros',
+    dependents: [],
+    description: 'C preprocessor utilities',
+    manifest: {
+      name: 'madmurphy/zen.h',
+      version: '1.0.0',
+      description: 'C preprocessor utilities',
+      homepage: 'https://madmurphy.github.io/zen.h/',
+      author: 'madmurphy333@gmail.com',
+      license: 'GPL-3.0',
+      main: 'zen.h',
+      repo: 'madmurphy/zen.h',
+      src: ['zen.h'],
+      bugs: {
+        url: 'https://github.com/madmurphy/zen.h/issues',
+        email: 'madmurphy333@gmail.com'
+      },
+      keywords: [
+        'c',
+        'c-preprocessor',
+        'counter',
+        'c-preprocessor-counter',
+        'macro',
+        'macros',
+        'c-macro',
+        'c-macros'
+      ],
+      dependencies: {}
+    },
+    name: 'madmurphy/zen.h',
+    slug: 'madmurphy-zen-h',
+    url: 'https://github.com/madmurphy/zen.h',
+    license: 'GPL-3.0'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'A simple thread pool implementation (POSIX)',
+    manifest: {
+      name: 'jlcordeiro/threadpool',
+      version: '0.0.1',
+      repo: 'mbrossard/threadpool',
+      description: 'Simple C Thread pool implementation.',
+      keywords: ['thread', 'posix'],
+      license: 'MIT',
+      src: ['src/threadpool.c', 'src/threadpool.h'],
+      dependencies: {}
+    },
+    name: 'jlcordeiro/threadpool',
+    slug: 'jlcordeiro-threadpool',
+    url: 'https://github.com/jlcordeiro/threadpool',
+    license: 'MIT'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Asynchronous goodies built on libuv',
+    manifest: {
+      name: 'jwerle/async.h',
+      version: '0.0.1',
+      repo: 'jwerle/uv-async',
+      description: 'Async goodies for libuv',
+      keywords: ['async', 'libuv', 'util'],
+      license: 'MIT',
+      src: ['async.h'],
+      dependencies: {}
+    },
+    name: 'jwerle/async.h',
+    slug: 'jwerle-async-h',
+    url: 'https://github.com/jwerle/async.h',
+    license: 'MIT'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Simple async batch using pthreads',
+    manifest: {
+      name: 'stephenmathieson/batch.c',
+      version: '0.0.0',
+      repo: 'stephenmathieson/batch.c',
+      description: 'A tiny async batch thingy using POSIX threads',
+      keywords: ['pthread', 'async', 'concurrency'],
+      license: 'MIT',
+      src: ['src/batch.h', 'src/batch.c'],
+      development: { 'stephenmathieson/describe.h': '*' },
+      dependencies: {}
+    },
+    name: 'stephenmathieson/batch.c',
+    slug: 'stephenmathieson-batch-c',
+    url: 'https://github.com/stephenmathieson/batch.c',
+    license: 'MIT'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Simple event handling library.',
+    manifest: {
+      dependencies: {
+        'jonathanmarvens/uthash': '1.9.9',
+        'clibs/list': '0.0.6'
+      },
+      description: 'Simple event handling library.',
+      keywords: [
+        'event',
+        'fire',
+        'firing',
+        'handle',
+        'handling',
+        'observe',
+        'publish',
+        'subscribe',
+        'trigger',
+        'triggering'
+      ],
+      license: 'MIT',
+      name: 'clibs/trigger',
+      repo: 'clibs/trigger',
+      src: ['src/trigger.c', 'src/trigger.h'],
+      version: '0.0.1'
+    },
+    name: 'clibs/trigger',
+    slug: 'clibs-trigger',
+    url: 'https://github.com/clibs/trigger',
+    license: 'MIT'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Tiny event emitter',
+    manifest: {
+      name: 'stephenmathieson/emitter.c',
+      version: '0.3.0',
+      license: 'MIT',
+      src: ['src/emitter.c', 'src/emitter.h'],
+      dependencies: { 'clibs/list': '*' },
+      development: { wildcardcmp: '*' },
+      keywords: []
+    },
+    name: 'stephenmathieson/emitter.c',
+    slug: 'stephenmathieson-emitter-c',
+    url: 'https://github.com/stephenmathieson/emitter.c',
+    license: 'MIT'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Create and throw errors easily',
+    manifest: {
+      name: 'jwerle/throw.h',
+      version: '0.0.1',
+      repo: 'jwerle/throw.h',
+      description: 'Create and throw errors easily',
+      keywords: ['error', 'exception', 'throw'],
+      license: 'MIT',
+      src: ['throw.h'],
+      dependencies: {}
+    },
+    name: 'jwerle/throw.h',
+    slug: 'jwerle-throw-h',
+    url: 'https://github.com/jwerle/throw.h',
+    license: 'MIT'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Cry about your program (like throw.h) but with colors',
+    manifest: {
+      name: '4thel00z/cry.h',
+      version: '0.1.2',
+      repo: '4thel00z/cry.h',
+      description: 'Cry about errors in your code with colors',
+      keywords: ['cry', 'error', 'exception', 'throw'],
+      license: 'GPL-3',
+      src: ['cry.h', 'log.h'],
+      dependencies: {}
+    },
+    name: '4thel00z/cry.h',
+    slug: '4thel00z-cry-h',
+    url: 'https://github.com/4thel00z/cry.h',
+    license: 'GPL-3'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Coroutines in C',
+    manifest: {
+      name: 'clibs/coro',
+      version: '2012-12-21',
+      repo: 'clibs/coro',
+      description: 'C coroutines',
+      keywords: ['coroutine'],
+      license: 'BSD',
+      src: ['coro.c', 'coro.h'],
+      dependencies: {}
+    },
+    name: 'clibs/coro',
+    slug: 'clibs-coro',
+    url: 'https://github.com/clibs/coro',
+    license: 'BSD'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Pure C implementation of Go channels',
+    manifest: {
+      name: 'tylertreat/chan',
+      version: '0.0.4',
+      repo: 'tylertreat/chan',
+      description: 'Pure C implementation of Go channels',
+      license: 'Apache',
+      keywords: [
+        'chan',
+        'channel',
+        'concurrency',
+        'synchronization',
+        'go',
+        'golang'
+      ],
+      src: ['src/chan.c', 'src/chan.h', 'src/queue.c', 'src/queue.h'],
+      dependencies: {}
+    },
+    name: 'tylertreat/chan',
+    slug: 'tylertreat-chan',
+    url: 'https://github.com/tylertreat/chan',
+    license: 'Apache'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Go-style defer in C',
+    manifest: {
+      name: 'trws/libdefer',
+      version: '0.0.1',
+      repo: 'trws/libdefer',
+      description: 'go-style defer goodness for C',
+      keywords: ['defer', 'goland', 'convenience'],
+      license: 'MIT',
+      src: ['defer.c', 'include/defer.h', 'include/defer_macros.h'],
+      dependencies: {}
+    },
+    name: 'trws/libdefer',
+    slug: 'trws-libdefer',
+    url: 'https://github.com/trws/libdefer',
+    license: 'MIT'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: "Let's share one TCP socket across multiple threads",
+    manifest: {
+      name: 'willemt/uv_multiplex',
+      version: '0.0.2',
+      repo: 'willemt/uv_multiplex',
+      description: "Let's share one TCP socket across multiple threads",
+      keywords: ['libuv', 'tcp'],
+      license: 'BSD',
+      src: ['src/dispatcher.c', 'src/worker.c', 'include/uv_multiplex.h'],
+      dependencies: {}
+    },
+    name: 'willemt/uv_multiplex',
+    slug: 'willemt-uv-multiplex',
+    url: 'https://github.com/willemt/uv_multiplex',
+    license: 'BSD'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Batch work from multiple threads',
+    manifest: {
+      name: 'willemt/bmon',
+      version: '0.0.1',
+      repo: 'willemt/bmon',
+      description:
+        'Combine work from multiple threads into a batch to gain performance',
+      keywords: ['libuv'],
+      license: 'BSD',
+      src: ['src/batch_monitor.c', 'include/batch_monitor.h'],
+      dependencies: { 'willemt/heap': '*' }
+    },
+    name: 'willemt/bmon',
+    slug: 'willemt-bmon',
+    url: 'https://github.com/willemt/bmon',
+    license: 'BSD'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'An exception handling framework for C',
+    manifest: {
+      name: 'guillermocalvo/exceptions4c',
+      version: '3.0.5',
+      description: 'An exception handling framework for C',
+      repo: 'guillermocalvo/exceptions4c',
+      license: 'LGPL',
+      src: ['src/e4c.c', 'src/e4c.h'],
+      keywords: [
+        'exceptions',
+        'library',
+        'c',
+        'exceptions-for-c',
+        'error-handling'
+      ],
+      dependencies: {}
+    },
+    name: 'guillermocalvo/exceptions4c',
+    slug: 'guillermocalvo-exceptions4c',
+    url: 'https://github.com/guillermocalvo/exceptions4c',
+    license: 'LGPL'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description: 'Standardized callback interface.',
+    manifest: {
+      name: 'mobiushorizons/closure_module',
+      version: '0.0.2',
+      repo: 'MobiusHorizons/closure_module',
+      description: 'simple callback/closure interface for C/CModules',
+      keywords: ['closure', 'mpp', 'callback', 'function'],
+      license: 'MIT',
+      src: ['closure.module.c', 'closure.c', 'closure.h'],
+      dependencies: {}
+    },
+    name: 'mobiushorizons/closure_module',
+    slug: 'mobiushorizons-closure-module',
+    url: 'https://github.com/MobiusHorizons/closure_module',
+    license: 'MIT'
+  },
+  {
+    category: 'Program flow',
+    dependents: [],
+    description:
+      'Utility macros for typesafe RAII-style scoped cleanups for variables.',
+    manifest: {
+      name: 'aperezdc/autocleanup',
+      version: '0.1.0',
+      repo: 'aperezdc/autocleanup',
+      description: 'Helpers to automatically cleanup scoped resources',
+      keywords: ['scoped', 'automatic', 'cleanup', 'pointers', 'handles'],
+      src: ['autocleanup.h'],
+      license: 'MIT',
+      dependencies: {}
+    },
+    name: 'aperezdc/autocleanup',
+    slug: 'aperezdc-autocleanup',
+    url: 'https://github.com/aperezdc/autocleanup',
+    license: 'MIT'
+  },
+  {
+    category: 'Serialization',
+    dependents: ['willemt/tracker-client'],
+    description: "Bencode reader that doesn't use the heap",
+    manifest: {
+      name: 'willemt/heapless-bencode',
+      version: '0.0.1',
+      repo: 'willemt/heapless-bencode',
+      description: "Bencode reader that doesn't use the heap",
+      keywords: ['bencode', 'bittorrent', 'torrent', 'serialization'],
+      license: 'BSD',
+      src: ['bencode.c', 'bencode.h'],
+      dependencies: {}
+    },
+    name: 'willemt/heapless-bencode',
+    slug: 'willemt-heapless-bencode',
+    url: 'https://github.com/willemt/heapless-bencode',
+    license: 'BSD'
+  },
+  {
+    category: 'Serialization',
+    dependents: [],
+    description: 'Bencode reader that loves working with streams',
+    manifest: {
+      name: 'willemt/streaming-bencode',
+      version: '0.0.1',
+      repo: 'willemt/streaming-bencode',
+      description: 'Bencode reader that works on streams',
+      keywords: [
+        'streaming',
+        'bencode',
+        'bittorrent',
+        'torrent',
+        'serialization'
+      ],
+      license: 'BSD',
+      src: ['bencode.c', 'bencode.h'],
+      dependencies: {}
+    },
+    name: 'willemt/streaming-bencode',
+    slug: 'willemt-streaming-bencode',
+    url: 'https://github.com/willemt/streaming-bencode',
+    license: 'BSD'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'DRY Microtesting for C',
+    manifest: {
+      name: 'orangeduck/ptest',
+      version: '1.0.0',
+      repo: 'orangeduck/ptest',
+      description: 'A DRY Microtesting framework for C',
+      keywords: ['testing', 'microtesting', 'DRY', 'c', 'ptest'],
+      license: 'BSD',
+      src: ['ptest.c', 'ptest.h'],
+      dependencies: {}
+    },
+    name: 'orangeduck/ptest',
+    slug: 'orangeduck-ptest',
+    url: 'https://github.com/orangeduck/ptest',
+    license: 'BSD'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'Conditional debug logging for C',
+    manifest: {
+      name: 'clibs/debug',
+      version: '0.0.3',
+      repo: 'clibs/debug',
+      description: 'Debug logging for C',
+      keywords: ['debug', 'log'],
+      src: ['debug.h', 'debug.c'],
+      dependencies: { 'jwerle/strsplit.h': '*', 'clibs/wildcardcmp': '*' },
+      license: 'Unlicensed'
+    },
+    name: 'clibs/debug',
+    slug: 'clibs-debug',
+    url: 'https://github.com/clibs/debug',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'Conditional debugging for C (again)',
+    manifest: {
+      name: 'stephenmathieson/debug.c',
+      version: '0.0.1',
+      src: ['debug.h', 'debug.c'],
+      repo: 'stephenmathieson/debug.c',
+      license: 'mit',
+      dependencies: {
+        'littlstar/asprintf.c': '0.0.3',
+        'clibs/strdup': '0.0.0',
+        'clibs/wildcardcmp': '0.0.0'
+      },
+      development: { ms: '*' },
+      keywords: []
+    },
+    name: 'stephenmathieson/debug.c',
+    slug: 'stephenmathieson-debug-c',
+    url: 'https://github.com/stephenmathieson/debug.c',
+    license: 'mit'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'Conditional debug logging for C++',
+    manifest: {
+      name: 'hij1nx/debug',
+      description: '',
+      repository: { type: 'git', url: 'git@github.com:heapwolf/debug.git' },
+      dependencies: {},
+      license: 'MIT',
+      scripts: {
+        test: [
+          'clang++ -std=c++2a -stdlib=libc++',
+          'test/index.cxx -o test/index && ./test/index'
+        ],
+        demo: [
+          'clang++ -std=c++2a -stdlib=libc++',
+          'test/demo.cxx -o test/demo && ./test/demo'
+        ]
+      },
+      flags: ['-std=c++2a', '-stdlib=stdc++', '-O3'],
+      files: ['index.hxx'],
+      devDependencies: { 'git@github.com:heapwolf/cxx-tap': '07821de0' },
+      keywords: []
+    },
+    name: 'hij1nx/debug',
+    slug: 'hij1nx-debug',
+    url: 'https://github.com/hij1nx/debug',
+    license: 'MIT'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'Simple BDD testing utility',
+    manifest: {
+      name: 'stephenmathieson/describe.h',
+      version: '2.1.2',
+      repo: 'stephenmathieson/describe.h',
+      description: 'Simple BDD describe test thingy',
+      keywords: ['testing', 'bdd', 'assert', 'describe'],
+      license: 'MIT',
+      src: ['describe.h', 'describe.c'],
+      dependencies: {
+        'stephenmathieson/assertion-macros.h': '0.3.1',
+        'Constellation/console-colors.c': '1.0.1'
+      }
+    },
+    name: 'stephenmathieson/describe.h',
+    slug: 'stephenmathieson-describe-h',
+    url: 'https://github.com/stephenmathieson/describe.h',
+    license: 'MIT'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'Super tiny tap output library',
+    manifest: {
+      name: 'jwerle/libok',
+      version: '0.3.1',
+      author: 'Joseph Werle',
+      description: 'Super tiny tap output library',
+      repo: 'jwerle/libok',
+      src: ['ok.h', 'ok.c', 'Makefile'],
+      keywords: ['tap', 'test'],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'jwerle/libok',
+    slug: 'jwerle-libok',
+    url: 'https://github.com/jwerle/libok',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'tap test runner',
+    manifest: {
+      name: 'thlorenz/tap.c',
+      version: '0.0.1',
+      description: 'Write tap tests in C.',
+      src: ['tap.c', 'tap.h'],
+      repository: { type: 'git', url: 'git://github.com/thlorenz/tap.c.git' },
+      homepage: 'https://github.com/thlorenz/tap.c',
+      dependencies: {},
+      keywords: ['tap', 'test', 'check', 'tap.c'],
+      author: {
+        name: 'Thorsten Lorenz',
+        email: 'thlorenz@gmx.de',
+        url: 'http://thlorenz.com'
+      },
+      license: 'GPLv2'
+    },
+    name: 'thlorenz/tap.c',
+    slug: 'thlorenz-tap-c',
+    url: 'https://github.com/thlorenz/tap.c',
+    license: 'GPLv2'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'A minimal, header-only, unit testing framework.',
+    manifest: {
+      name: 'jlcordeiro/minunit',
+      version: '0.0.1',
+      repo: 'jlcordeiro/minunit',
+      description: 'Minimal unit testing framework for C',
+      keywords: ['unit', 'testing'],
+      license: 'MIT',
+      src: ['minunit.h'],
+      dependencies: {}
+    },
+    name: 'jlcordeiro/minunit',
+    slug: 'jlcordeiro-minunit',
+    url: 'https://github.com/jlcordeiro/minunit',
+    license: 'MIT'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: ['stephenmathieson/describe.h'],
+    description:
+      'simple assertion macros (assert_equal, assert_str_equal, etc.)',
+    manifest: {
+      name: 'stephenmathieson/assertion-macros.h',
+      version: '0.3.1',
+      repo: 'stephenmathieson/assertion-macros.h',
+      description: 'Simple assertion macros',
+      keywords: ['assert', 'assertions'],
+      license: 'MIT',
+      src: ['assertion-macros.h'],
+      dependencies: {}
+    },
+    name: 'stephenmathieson/assertion-macros.h',
+    slug: 'stephenmathieson-assertion-macros-h',
+    url: 'https://github.com/stephenmathieson/assertion-macros.h',
+    license: 'MIT'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description:
+      'A C unit testing library in 1 file. No dependencies, no dynamic allocation',
+    manifest: {
+      name: 'silentbicycle/greatest',
+      version: 'v1.5.0',
+      repo: 'silentbicycle/greatest',
+      src: ['greatest.h'],
+      description:
+        'A C testing library in 1 file. No dependencies, no dynamic allocation.',
+      license: 'ISC',
+      keywords: ['test', 'unit', 'testing'],
+      dependencies: {}
+    },
+    name: 'silentbicycle/greatest',
+    slug: 'silentbicycle-greatest',
+    url: 'https://github.com/silentbicycle/greatest',
+    license: 'ISC'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: ['willemt/yabtorrent'],
+    description: 'C unit testing',
+    manifest: {
+      name: 'willemt/cutest',
+      version: '0.0.1',
+      repo: 'willemt/cutest',
+      description: 'TAP producing C unit test framework',
+      keywords: ['unit test'],
+      license: 'BSD',
+      src: ['CuTest.c', 'CuTest.h', 'make-tests.sh'],
+      dependencies: {}
+    },
+    name: 'willemt/cutest',
+    slug: 'willemt-cutest',
+    url: 'https://github.com/willemt/cutest',
+    license: 'BSD'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'JTN002: A minimal unit testing framework for C',
+    manifest: {
+      name: 'jeradesign/minunit',
+      description: 'A minimal unit testing framework for ANSI C',
+      version: '1.0.0',
+      src: ['minunit.h'],
+      repo: 'jeradesign/MinUnit',
+      keywords: [],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'jeradesign/minunit',
+    slug: 'jeradesign-min-unit',
+    url: 'https://github.com/jeradesign/MinUnit',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: ['aperezdc/ulid-c', 'aperezdc/hmac-sha256'],
+    description: 'Assertion macros for checking function parameters',
+    manifest: {
+      name: 'aperezdc/apicheck',
+      version: '0.1.1',
+      repo: 'aperezdc/apicheck',
+      description: 'Assertion macros for checking function parameters',
+      license: 'MIT',
+      keywords: ['api', 'assert', 'assertion'],
+      src: ['apicheck.h'],
+      dependencies: {}
+    },
+    name: 'aperezdc/apicheck',
+    slug: 'aperezdc-apicheck',
+    url: 'https://github.com/aperezdc/apicheck',
+    license: 'MIT'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'An assertions library written in C99',
+    manifest: {
+      name: 'daddinuz/traits',
+      repo: 'daddinuz/traits',
+      version: '4.1.0',
+      license: 'MIT',
+      description: 'Assertions library written in C99.',
+      keywords: ['assert', 'assertions', 'assertions-library'],
+      dependencies: {
+        'daddinuz/trace': '3.0.0',
+        'daddinuz/stringify': '3.0.0'
+      },
+      src: ['sources/traits.h']
+    },
+    name: 'daddinuz/traits',
+    slug: 'daddinuz-traits',
+    url: 'https://github.com/daddinuz/traits',
+    license: 'MIT'
+  },
+  {
+    category: 'Testing/Quality Assurance',
+    dependents: [],
+    description: 'A unittest framework written in C99',
+    manifest: {
+      name: 'daddinuz/traits-unit',
+      repo: 'daddinuz/traits-unit',
+      version: '4.1.0',
+      license: 'MIT',
+      description: 'Unittest framework written in C99.',
+      keywords: [
+        'test',
+        'unittest',
+        'framework',
+        'unit-test',
+        'unittesting',
+        'unit-testing',
+        'test-framework'
+      ],
+      development: { 'daddinuz/traits': '4.1.0' },
+      dependencies: { 'daddinuz/trace': '3.0.0' },
+      src: ['sources/traits-unit.h', 'sources/traits-unit.c'],
+      makefile: 'sources/build.cmake'
+    },
+    name: 'daddinuz/traits-unit',
+    slug: 'daddinuz-traits-unit',
+    url: 'https://github.com/daddinuz/traits-unit',
+    license: 'MIT'
+  },
+  {
+    category: 'Timing',
+    dependents: [],
+    description: 'millisecond resolution timestamps',
+    manifest: {
+      name: 'clibs/timestamp',
+      version: '0.0.2',
+      repo: 'clibs/timestamp',
+      description: 'Return a timestamp in milliseconds',
+      keywords: ['time', 'timestamp', 'milliseconds'],
+      license: 'MIT',
+      src: ['timestamp.h', 'timestamp.c'],
+      dependencies: {}
+    },
+    name: 'clibs/timestamp',
+    slug: 'clibs-timestamp',
+    url: 'https://github.com/clibs/timestamp',
+    license: 'MIT'
+  },
+  {
+    category: 'Timing',
+    dependents: [],
+    description: 'get wall and cpu time for benchmarking',
+    manifest: {
+      name: 'clibs/bench.h',
+      version: '0.0.1',
+      repo: 'clibs/bench',
+      description: 'get wall and cpu time for benchmarking',
+      keywords: ['bench'],
+      license: 'MIT',
+      src: ['bench.h'],
+      dependencies: {}
+    },
+    name: 'clibs/bench.h',
+    slug: 'clibs-bench-h',
+    url: 'https://github.com/clibs/bench.h',
+    license: 'MIT'
+  },
+  {
+    category: 'Timing',
+    dependents: [],
+    description: 'timer with microsecond resolution',
+    manifest: {
+      name: 'clibs/timer',
+      version: '1.0.0',
+      repo: 'clibs/timer',
+      description: 'Timer with microsecond resolution',
+      keywords: ['timer', 'time', 'delta', 'count', 'second'],
+      license: 'MIT',
+      src: ['src/timer.h', 'src/timer.c'],
+      dependencies: {}
+    },
+    name: 'clibs/timer',
+    slug: 'clibs-timer',
+    url: 'https://github.com/clibs/timer',
+    license: 'MIT'
+  },
+  {
+    category: 'Timing',
+    dependents: ['willemt/yabtorrent'],
+    description: 'A timer that fires events based off time',
+    manifest: {
+      name: 'willemt/event-timer',
+      version: '0.0.1',
+      repo: 'willemt/event-timer',
+      description: 'A timer that fires events based off time',
+      keywords: ['event', 'timer'],
+      license: 'BSD',
+      dependencies: { 'willemt/heap': '*' },
+      src: ['event_timer.c', 'event_timer.h']
+    },
+    name: 'willemt/event-timer',
+    slug: 'willemt-event-timer',
+    url: 'https://github.com/willemt/event-timer',
+    license: 'BSD'
+  },
+  {
+    category: 'Timing',
+    dependents: [],
+    description: 'easy to use, beautiful-looking benchmarking library',
+    manifest: {
+      name: 'brendanashworth/bench',
+      version: '0.0.2',
+      repo: 'brendanashworth/bench',
+      description: 'Easy to use, beautiful-looking benchmarking library',
+      keywords: ['benchmark', 'bench', 'speed'],
+      license: 'MIT',
+      src: ['bench.h', 'bench.c'],
+      dependencies: {}
+    },
+    name: 'brendanashworth/bench',
+    slug: 'brendanashworth-bench',
+    url: 'https://github.com/brendanashworth/bench',
+    license: 'MIT'
+  },
+  {
+    category: 'Timing',
+    dependents: [],
+    description:
+      'A small MIDI Beat Clock implementation with millisecond precision.',
+    manifest: {
+      name: 'opal-instruments/tiny-midi-clock',
+      version: '1.0.0',
+      src: ['src/midi_clock.h', 'src/midi_clock.c'],
+      repo: 'opal-instruments/tiny-midi-clock',
+      keywords: ['midi', 'clock', 'bpm', 'ppqn'],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'opal-instruments/tiny-midi-clock',
+    slug: 'opal-instruments-tiny-midi-clock',
+    url: 'https://github.com/opal-instruments/tiny-midi-clock',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'periodically execute commands',
+    manifest: {
+      name: 'visionmedia/watch',
+      version: '0.4.0',
+      repo: 'visionmedia/watch',
+      description: 'Execute commands at a regular interval',
+      keywords: ['watch'],
+      license: 'MIT',
+      install: 'make install',
+      dependencies: {}
+    },
+    name: 'visionmedia/watch',
+    slug: 'visionmedia-watch',
+    url: 'https://github.com/visionmedia/watch',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'simple process monitoring',
+    manifest: {
+      name: 'visionmedia/mon',
+      version: '1.2.2',
+      repo: 'visionmedia/mon',
+      description: 'Simple process monitoring',
+      keywords: ['process', 'monitoring', 'monitor', 'availability'],
+      license: 'MIT',
+      install: 'make install',
+      dependencies: {}
+    },
+    name: 'visionmedia/mon',
+    slug: 'visionmedia-mon',
+    url: 'https://github.com/visionmedia/mon',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'display histograms from static or streaming input',
+    manifest: {
+      name: 'visionmedia/histo',
+      version: '0.0.1',
+      repo: 'visionmedia/histo',
+      description: 'histogram plotting from arbitrary static or dynamic input',
+      keywords: ['histogram', 'chart', 'graph', 'plot', 'stats', 'statistics'],
+      license: 'MIT',
+      install: 'make install',
+      dependencies: {}
+    },
+    name: 'visionmedia/histo',
+    slug: 'visionmedia-histo',
+    url: 'https://github.com/visionmedia/histo',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'get file extensions from arguments',
+    manifest: {
+      name: 'jb55/extname',
+      version: '1.1.0',
+      repo: 'jb55/extname',
+      description: 'cli extname',
+      keywords: ['extname', 'extension'],
+      dependencies: { 'jb55/extname.c': '*' },
+      license: 'MIT',
+      install: 'make install'
+    },
+    name: 'jb55/extname',
+    slug: 'jb55-extname',
+    url: 'https://github.com/jb55/extname',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'Sample input given some probability',
+    manifest: {
+      name: 'jb55/samp',
+      version: '0.0.3',
+      repo: 'jb55/samp',
+      description: 'randomly sample lines from a file',
+      keywords: ['sample', 'random', 'bin'],
+      license: 'MIT',
+      install: 'make install',
+      dependencies: {}
+    },
+    name: 'jb55/samp',
+    slug: 'jb55-samp',
+    url: 'https://github.com/jb55/samp',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'Get the executable path from a pid on OSX',
+    manifest: {
+      name: 'jb55/pidpath',
+      version: '0.0.1',
+      repo: 'jb55/pidpath',
+      description: 'get the executable absolute path from a pid',
+      keywords: ['pid'],
+      license: 'MIT',
+      install: 'make install',
+      dependencies: {}
+    },
+    name: 'jb55/pidpath',
+    slug: 'jb55-pidpath',
+    url: 'https://github.com/jb55/pidpath',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'Command line utility for operations on a sophia database',
+    manifest: {
+      name: 'sphia/sphia',
+      version: '0.0.9',
+      repo: 'sphia/sphia',
+      description: 'Command line utility for reading a sophia database',
+      keywords: ['sophia', 'sphia', 'cli', 'util'],
+      license: 'MIT',
+      install: 'make install',
+      dependencies: {
+        'clibs/commander': '*',
+        'stephenmathieson/case.c': '*',
+        'clibs/inih': '*',
+        'jwerle/repl.h': '*',
+        'stephenmathieson/str-ends-with.c': '*',
+        'stephenmathieson/str-flatten.c': '*',
+        'stephenmathieson/trim.c': '*',
+        'clibs/which': '*'
+      }
+    },
+    name: 'sphia/sphia',
+    slug: 'sphia-sphia',
+    url: 'https://github.com/sphia/sphia',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'convert tabs to spaces in files',
+    manifest: {
+      name: 'stephenmathieson/tabs-to-spaces',
+      version: '1.0.0',
+      repo: 'stephenmathieson/tabs-to-spaces',
+      description: 'CLI for converting tabs to spaces',
+      keywords: ['tabs', 'spaces', 'convert'],
+      license: 'MIT',
+      install: 'make install',
+      uninstall: 'make uninstall',
+      dependencies: {
+        'stephenmathieson/str-replace.c': '0.0.4',
+        'clibs/commander': '1.3.2'
+      }
+    },
+    name: 'stephenmathieson/tabs-to-spaces',
+    slug: 'stephenmathieson-tabs-to-spaces',
+    url: 'https://github.com/stephenmathieson/tabs-to-spaces',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'REPL for Sophia databases',
+    manifest: {
+      name: 'stephenmathieson/sophia-repl',
+      version: '1.0.0',
+      repo: 'stephenmathieson/sophia-repl',
+      dependencies: {
+        'stephenmathieson/substr.c': '*',
+        'stephenmathieson/emitter.c': '0.1.0',
+        'clibs/linenoise': '*'
+      },
+      install: 'make install',
+      keywords: [],
+      license: 'Unlicensed'
+    },
+    name: 'stephenmathieson/sophia-repl',
+    slug: 'stephenmathieson-sophia-repl',
+    url: 'https://github.com/stephenmathieson/sophia-repl',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'A c++ repl for leveldb',
+    manifest: {
+      name: 'hij1nx/ldb',
+      version: '2.3.0',
+      repo: 'heapwolf/ldb',
+      description: 'A c++ repl for leveldb',
+      keywords: ['leveldb', 'repl', 'level', 'db'],
+      license: 'MIT',
+      install: 'make install',
+      dependencies: { 'clibs/linenoise': '*', 'clibs/docopt': '*' },
+      devDependencies: { ronn: '^0.4.0' }
+    },
+    name: 'hij1nx/ldb',
+    slug: 'hij1nx-ldb',
+    url: 'https://github.com/hij1nx/ldb',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'leveldb FUSE filesystem',
+    manifest: {
+      name: 'tomerdmnt/levelfs',
+      version: '0.1.0',
+      repo: 'tomerdmnt/levelfs',
+      description: 'leveldb FUSE filesystem',
+      keywords: ['leveldb', 'level', 'fuse', 'fs', 'filesystem'],
+      license: 'MIT',
+      install: 'make install',
+      dependencies: {}
+    },
+    name: 'tomerdmnt/levelfs',
+    slug: 'tomerdmnt-levelfs',
+    url: 'https://github.com/tomerdmnt/levelfs',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'Outputs current CPU temperature in °C for OSX',
+    manifest: {
+      name: 'lavoiesl/osx-cpu-temp',
+      version: '1.1.0',
+      repo: 'lavoiesl/osx-cpu-temp',
+      description: 'Outputs current CPU temperature in °C for OSX',
+      keywords: ['osx', 'cpu', 'temperature', 'sensors'],
+      install: 'make install',
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'lavoiesl/osx-cpu-temp',
+    slug: 'lavoiesl-osx-cpu-temp',
+    url: 'https://github.com/lavoiesl/osx-cpu-temp',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'A utility for running arbitrary commands when files change',
+    manifest: {
+      name: 'clibs/entr',
+      version: '5.0.0',
+      repo: 'clibs/entr',
+      description: 'A utility for running arbitrary commands when files change',
+      keywords: ['watch', 'make', 'entr', 'fs', 'file'],
+      install: './configure && make test && sudo make install',
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'clibs/entr',
+    slug: 'clibs-entr',
+    url: 'https://github.com/clibs/entr',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'less opinionated clib-install for non clib-enabled repos',
+    manifest: {
+      name: 'stephenmathieson/ghi',
+      version: '0.2.2',
+      description: 'github repo installer',
+      keywords: ['github', 'install'],
+      license: 'MIT',
+      repo: 'stephenmathieson/ghi',
+      dependencies: {
+        'stephenmathieson/tempdir.c': '0.0.2',
+        'littlstar/asprintf.c': '0.0.3',
+        'stephenmathieson/http-get.c': '0.1.1',
+        'stephenmathieson/parse-repo.c': '1.1.1',
+        'stephenmathieson/mkdirp.c': '0.1.5',
+        'stephenmathieson/batch.c': '0.0.0',
+        'clibs/commander': '1.3.2',
+        'clibs/strdup': '0.0.0',
+        'clibs/logger': '0.0.1'
+      },
+      install: 'make install',
+      uninstall: 'make uninstall'
+    },
+    name: 'stephenmathieson/ghi',
+    slug: 'stephenmathieson-ghi',
+    url: 'https://github.com/stephenmathieson/ghi',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'Set and get application URI schemes for OS X',
+    manifest: {
+      name: 'jwerle/suri',
+      version: '0.0.4',
+      repo: 'jwerle/suri',
+      description: 'Set and get application URI schemes for OS X',
+      keywords: ['application', 'uri', 'scheme', 'osx'],
+      install: 'make suri install',
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'jwerle/suri',
+    slug: 'jwerle-suri',
+    url: 'https://github.com/jwerle/suri',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'Porter Stemmer CLI',
+    manifest: {
+      name: 'wooorm/stmr',
+      version: '1.0.0',
+      description: 'Porter Stemmer CLI',
+      license: 'MIT',
+      repo: 'wooorm/stmr',
+      keywords: ['martin', 'porter', 'stemmer', 'algorithm', 'bin', 'cli'],
+      dependencies: { 'wooorm/stmr.c': '*' },
+      install: 'make install'
+    },
+    name: 'wooorm/stmr',
+    slug: 'wooorm-stmr',
+    url: 'https://github.com/wooorm/stmr',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'make headers from .c source files',
+    manifest: {
+      name: 'andik/makeheaders',
+      version: '1.4.0',
+      repo: 'andik/makeheaders',
+      description: 'clib package of http://www.hwaci.com/sw/mkhdr/',
+      keywords: ['makeheaders'],
+      license: 'BSD',
+      src: ['src/makeheaders.c'],
+      install: 'make install',
+      dependencies: {}
+    },
+    name: 'andik/makeheaders',
+    slug: 'andik-makeheaders',
+    url: 'https://github.com/andik/makeheaders.git',
+    license: 'BSD'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'Levenshtein’s string edit distance algorithm CLI',
+    manifest: {
+      name: 'wooorm/levenshtein',
+      version: '1.1.1',
+      description: 'Levenshtein algorithm CLI',
+      license: 'MIT',
+      keywords: [
+        'Vladimir',
+        'Levenshtein',
+        'algorithm',
+        'edit',
+        'distance',
+        'bin',
+        'cli'
+      ],
+      repo: 'wooorm/levenshtein',
+      dependencies: { 'wooorm/levenshtein.c': '*' },
+      install: 'make install'
+    },
+    name: 'wooorm/levenshtein',
+    slug: 'wooorm-levenshtein',
+    url: 'https://github.com/wooorm/levenshtein',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description: 'C No Scope Commits: Angular commits minus scope and stuff',
+    manifest: {
+      name: 'nilsding/cnsc',
+      version: '0.1.2',
+      repo: 'nilsding/cnsc',
+      description: 'C No Scope Commits',
+      keywords: ['git', 'commit', 'development', 'angular', 'retrospring'],
+      license: 'MIT',
+      install: 'make install',
+      dependencies: {}
+    },
+    name: 'nilsding/cnsc',
+    slug: 'nilsding-cnsc',
+    url: 'https://github.com/nilsding/cnsc',
+    license: 'MIT'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description:
+      'Glisy example rendering glsl-earth and using glsl-fog for fade in effects.',
+    manifest: {
+      name: 'glisy/glisy-earth',
+      version: '0.0.2',
+      repo: 'glisy/glisy-earth',
+      description:
+        'Glisy example rendering glsl-earth and using glsl-fog for fade in effects.',
+      keywords: ['glsl', 'stack.gl', 'earth'],
+      global: true,
+      install: 'make && cp -f program ${PREFIX:-/usr/local}/bin/glisy-earth',
+      dependencies: {
+        'glisy/glfw-shell': '0.0.5',
+        'glisy/geometry': '0.0.2',
+        'glisy/uniform': '0.0.1',
+        'glisy/program': '0.0.4',
+        'glisy/shader': '0.0.1',
+        'glisy/color': '0.0.5',
+        'glisy/math': '0.0.4',
+        'glisy/gl': '0.0.1',
+        'jwerle/fs.c': '0.1.2'
+      },
+      license: 'Unlicensed'
+    },
+    name: 'glisy/glisy-earth',
+    slug: 'glisy-glisy-earth',
+    url: 'glisy/glisy-earth',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Executables',
+    dependents: [],
+    description:
+      'Glisy example using glsl-hash-blur and glsl-check from stack.gl',
+    manifest: {
+      name: 'glisy/glsl-checker-blur',
+      version: '0.0.3',
+      repo: 'glisy/glsl-checker-blur',
+      description:
+        'Glisy example using glsl-hash-blur and glsl-check from stack.gl',
+      keywords: ['glsl', 'stack.gl', 'checker', 'blur'],
+      global: true,
+      install:
+        'make && cp -f program ${PREFIX:-/usr/local}/bin/glsl-checker-blur',
+      dependencies: {
+        'glisy/glfw-shell': '0.0.5',
+        'glisy/geometry': '0.0.2',
+        'glisy/uniform': '0.0.1',
+        'glisy/program': '0.0.4',
+        'glisy/shader': '0.0.1',
+        'glisy/color': '0.0.5',
+        'glisy/math': '0.0.4',
+        'glisy/gl': '0.0.1',
+        'jwerle/fs.c': '0.1.2'
+      },
+      license: 'Unlicensed'
+    },
+    name: 'glisy/glsl-checker-blur',
+    slug: 'glisy-glsl-checker-blur',
+    url: 'glisy/glsl-checker-blurk',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'OS Specific',
+    dependents: ['daddinuz/liblogger'],
+    description: 'ANSI color support on windows',
+    manifest: {
+      name: 'mattn/ansicolor-w32.c',
+      version: '0.0.1',
+      description: 'ANSI color support on windows',
+      repo: 'mattn/ansicolor-w32.c',
+      src: ['ansicolor-w32.h', 'ansicolor-w32.c'],
+      scripts: { test: 'make test' },
+      repository: {
+        type: 'git',
+        url: 'https://github.com/mattn/ansicolor-w32.c.git'
+      },
+      keywords: ['ansicolor-w32', 'ansi', 'color', 'windows', 'w32', 'win32'],
+      author: 'Yasuhiro Matsumoto',
+      license: 'MIT',
+      bugs: { url: 'https://github.com/mattn/ansicolor-w32.c/issues' },
+      dependencies: {}
+    },
+    name: 'mattn/ansicolor-w32.c',
+    slug: 'mattn-ansicolor-w32-c',
+    url: 'https://github.com/mattn/ansicolor-w32.c',
+    license: 'MIT'
+  },
+  {
+    category: 'OS Specific',
+    dependents: [],
+    description: 'Automatic dark mode in macOS',
+    manifest: {
+      name: 'onderweg/follow-the-sun',
+      version: '1.0.2',
+      repo: 'onderweg/follow-the-sun',
+      description: 'Switch to Dark mode automatically after sunset',
+      keywords: ['dark mode', 'macos'],
+      install: 'make package_install',
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'onderweg/follow-the-sun',
+    slug: 'onderweg-follow-the-sun',
+    url: 'https://github.com/onderweg/follow-the-sun',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Plugins',
+    dependents: [],
+    description: 'plugin for uninstalling executables',
+    manifest: {
+      name: 'clibs/clib-uninstall',
+      repo: 'clibs/clib-uninstall',
+      version: '1.0.1',
+      install: 'make install',
+      uninstall: 'make uninstall',
+      dependencies: {
+        'kgabis/parson': '*',
+        'stephenmathieson/http-get.c': '0.1.0',
+        'Constellation/console-colors.c': '1.0.0',
+        'littlstar/asprintf.c': '0.0.3',
+        'stephenmathieson/substr.c': '0.1.2',
+        'stephenmathieson/parse-repo.c': '1.1.1',
+        'clibs/commander': '1.3.2',
+        'clibs/strdup': '*',
+        'clibs/logger': '*'
+      },
+      keywords: [],
+      license: 'Unlicensed'
+    },
+    name: 'clibs/clib-uninstall',
+    slug: 'clibs-clib-uninstall',
+    url: 'https://github.com/clibs/clib-uninstall',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Plugins',
+    dependents: [],
+    description: 'validate a package.json',
+    manifest: {
+      name: 'clibs/clib-validate',
+      repo: 'clibs/clib-validate',
+      version: '0.1.1',
+      license: 'MIT',
+      description: 'validate your package.json',
+      keywords: ['validate', 'json', 'package'],
+      install: 'make install',
+      uninstall: 'make uninstall',
+      dependencies: {
+        'stephenmathieson/parse-repo.c': '1.1.1',
+        'kgabis/parson': '*',
+        'stephenmathieson/path-join.c': '0.0.6',
+        'clibs/logger': '0.0.1',
+        'clibs/strdup': '0.0.0'
+      }
+    },
+    name: 'clibs/clib-validate',
+    slug: 'clibs-clib-validate',
+    url: 'https://github.com/clibs/clib-validate',
+    license: 'MIT'
+  },
+  {
+    category: 'Math',
+    dependents: [],
+    description:
+      'A pure-C math library with a great variety of mathematical functions. Seeks to be close to C89/C90 compliant for portability.',
+    manifest: {
+      name: 'scientificc/cmathl',
+      version: '1.10.4',
+      repo: 'ScientificC/cmathl',
+      description:
+        'A pure-C math library with a great variety of mathematical functions. Seeks to be close to C89/C90 compliant for portability.',
+      keywords: [],
+      license: 'MIT',
+      install: './install.sh',
+      development: {
+        'ScientificC/errno': '1.0.0',
+        'ScientificC/vector': '1.0.0'
+      },
+      dependencies: {}
+    },
+    name: 'scientificc/cmathl',
+    slug: 'scientific-c-cmathl',
+    url: 'https://github.com/ScientificC/cmathl',
+    license: 'MIT'
+  },
+  {
+    category: 'Math',
+    dependents: [],
+    description: "Bresenham's line drawing algorithm",
+    manifest: {
+      name: 'jb55/bresenham-line.c',
+      version: '0.0.1',
+      repo: 'jb55/bresenham-line.c',
+      description: "Bresenham's line drawing algorithm",
+      keywords: ['bresenham'],
+      license: 'MIT',
+      src: ['bresenham_line.c', 'bresenham_line.h'],
+      dependencies: {}
+    },
+    name: 'jb55/bresenham-line.c',
+    slug: 'jb55-bresenham-line-c',
+    url: 'https://github.com/jb55/bresenham-line.c',
+    license: 'MIT'
+  },
+  {
+    category: 'Math',
+    dependents: [],
+    description: 'Basic implementation of 3d vector and quaternion',
+    manifest: {
+      name: 'mauromombelli/trigonomec',
+      version: '0.0.1',
+      repo: 'MauroMombelli/TrigonomeC',
+      description: 'Helper trigonometry function',
+      keywords: ['trigonometry', 'quaternion', 'vector', '3d'],
+      src: [
+        'my_math.c',
+        'my_math.h',
+        'quaternionf.h',
+        'vector3f.h',
+        'vector3i16.h'
+      ],
+      license: 'LGPL',
+      dependencies: {}
+    },
+    name: 'mauromombelli/trigonomec',
+    slug: 'mauro-mombelli-trigonome-c',
+    url: 'https://github.com/MauroMombelli/TrigonomeC',
+    license: 'LGPL'
+  },
+  {
+    category: 'Math',
+    dependents: [],
+    description: 'min and max functions',
+    manifest: {
+      name: 'willemt/minmax',
+      version: '0.0.1',
+      repo: 'willemt/minmax',
+      description: 'min and max functions',
+      keywords: ['comparison'],
+      license: 'public domain',
+      src: ['include/minmax.h'],
+      dependencies: {}
+    },
+    name: 'willemt/minmax',
+    slug: 'willemt-minmax',
+    url: 'https://github.com/willemt/minmax',
+    license: 'public domain'
+  },
+  {
+    category: 'OpenGL',
+    dependents: ['glisy/glisy-earth', 'glisy/glsl-checker-blur'],
+    description: 'Common linear algebra functions for OpenGL',
+    manifest: {
+      name: 'glisy/math',
+      version: '0.1.1',
+      repo: 'glisy/math',
+      description: 'Math functions for Glisy',
+      keywords: ['glisy', 'math', 'matrix', 'vector'],
+      src: [
+        'include/glisy/vector.h',
+        'include/glisy/matrix.h',
+        'include/glisy/euler.h',
+        'include/glisy/math.h',
+        'include/glisy/vec2.h',
+        'include/glisy/vec3.h',
+        'include/glisy/vec4.h',
+        'include/glisy/quat.h',
+        'include/glisy/mat2.h',
+        'include/glisy/mat3.h',
+        'include/glisy/mat4.h'
+      ],
+      development: { 'jwerle/libok': '0.0.2' },
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'glisy/math',
+    slug: 'glisy-math',
+    url: 'https://github.com/glisy/math',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Math',
+    dependents: [],
+    description: 'Macro to clamp a value between two other values',
+    manifest: {
+      name: 'littlstar/clamp',
+      version: '0.0.1',
+      repo: 'littlstar/clamp',
+      description: 'Clamp a value between two other values',
+      keywords: ['clamp', 'value'],
+      src: ['clamp.h'],
+      development: { 'jwerle/libok': '0.0.2' },
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'littlstar/clamp',
+    slug: 'littlstar-clamp',
+    url: 'https://github.com/littlstar/clamp',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Math',
+    dependents: ['catb0t/sparse'],
+    description: 'yet another C bignum library for C99',
+    manifest: {
+      name: 'catb0t/yacbnl',
+      version: '0.0.1',
+      repo: 'catb0t/yacbnl',
+      description: 'Yet Another C BigNum Library',
+      keywords: ['math', 'bignum'],
+      license: 'GPL v3',
+      src: ['min/yacbnl.min.c', 'min/yacbnl.min.h', 'README.md', 'LICENSE'],
+      dependencies: {}
+    },
+    name: 'catb0t/yacbnl',
+    slug: 'catb0t-yacbnl',
+    url: 'https://github.com/catb0t/yacbnl',
+    license: 'GPL v3'
+  },
+  {
+    category: 'Math',
+    dependents: [],
+    description: 'Parse and evaluate math expressions',
+    manifest: {
+      name: 'erstan/ceval',
+      version: '1.0.1',
+      repo: 'erstan/ceval',
+      description: 'Parse and evaluate math expressions',
+      install: 'sudo make install',
+      uninstall: 'sudo make uninstall',
+      makefile: 'Makefile',
+      src: [
+        'ceval.h',
+        'core/tokens.h',
+        'core/functions.h',
+        'core/parser.h',
+        'core/evaluator.h',
+        'Makefile'
+      ],
+      license: 'MIT',
+      keywords: [],
+      dependencies: {}
+    },
+    name: 'erstan/ceval',
+    slug: 'erstan-ceval',
+    url: 'https://github.com/erstan/ceval',
+    license: 'MIT'
+  },
+  {
+    category: 'AVR',
+    dependents: [],
+    description: 'max7219 LED Driver for AVR devices.',
+    manifest: {
+      name: 'opal-instruments/max7219-avr',
+      version: '1.0.1',
+      src: ['src/max7219.h', 'src/max7219.c'],
+      repo: 'opal-instruments/max7219-avr',
+      keywords: ['max7219', 'avr'],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'opal-instruments/max7219-avr',
+    slug: 'opal-instruments-max7219-avr',
+    url: 'https://github.com/opal-instruments/max7219-avr',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'OpenGL',
+    dependents: [],
+    description: 'Higher level operations for OpenGL',
+    manifest: {
+      name: 'glisy/glisy',
+      version: '0.0.2',
+      repo: 'glisy/glisy',
+      description: 'Higher level operations for OpenGLES in C(99)',
+      keywords: ['opengl', 'gl', 'glsl'],
+      src: [],
+      dependencies: {
+        'glisy/geometry': 'master',
+        'glisy/program': 'master',
+        'glisy/uniform': 'master',
+        'glisy/texture': 'master',
+        'glisy/camera': 'master',
+        'glisy/buffer': 'master',
+        'glisy/shader': 'master',
+        'glisy/color': 'master',
+        'glisy/math': 'master',
+        'glisy/ease': 'master',
+        'glisy/vao': 'master',
+        'glisy/gl': 'master'
+      },
+      development: {
+        'littlstar/sop': 'master',
+        'jwerle/fs.c': 'master',
+        'glisy/glfw-shell': 'master'
+      },
+      license: 'Unlicensed'
+    },
+    name: 'glisy/glisy',
+    slug: 'glisy-glisy',
+    url: 'https://github.com/glisy/glisy',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'OpenGL',
+    dependents: ['glisy/glisy-earth', 'glisy/glsl-checker-blur'],
+    description: 'Setup a GLFW context and render loop now',
+    manifest: {
+      name: 'glisy/glfw-shell',
+      version: '0.0.5',
+      repo: 'glisy/glfw-shell',
+      description: 'GLFW context creation and render loop helper',
+      keywords: ['glisy', 'open', 'gl', 'glfw'],
+      src: ['include/glfw-shell.h'],
+      dependencies: { 'glisy/gl': 'master' },
+      license: 'Unlicensed'
+    },
+    name: 'glisy/glfw-shell',
+    slug: 'glisy-glfw-shell',
+    url: 'https://github.com/glisy/glfw-shell',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'OpenGL',
+    dependents: ['glisy/glisy'],
+    description: 'Common easing functions',
+    manifest: {
+      name: 'glisy/ease',
+      version: '0.0.2',
+      repo: 'glisy/ease',
+      description: 'Easing function macros',
+      keywords: ['gl', 'glisy', 'easing'],
+      src: ['include/glisy/ease.h'],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'glisy/ease',
+    slug: 'glisy-ease',
+    url: 'https://github.com/glisy/ease',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'OpenGL',
+    dependents: [],
+    description:
+      'Simple OBJ Parser for deriving simplicial complexes and material data from .obj file formats exported from Blender/Max',
+    manifest: {
+      name: 'littlstar/sop',
+      version: '0.0.7',
+      repo: 'littlstar/sop',
+      description: 'Simple OBJ File Format Parser written in C99',
+      keywords: ['obj', 'parser', 'opengl', 'graphics'],
+      src: ['include/sop/sop.h', 'src/sop.c'],
+      development: {
+        'clibs/commander': '1.3.2',
+        'jwerle/fs.c': '0.1.2',
+        'jwerle/libok': '0.0.2',
+        'glisy/glisy': 'master',
+        'glisy/glfw-shell': 'master'
+      },
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'littlstar/sop',
+    slug: 'littlstar-sop',
+    url: 'https://github.com/littlstar/sop',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'OpenGL',
+    dependents: [],
+    description: 'Simple OpenGL Image Library',
+    manifest: {
+      name: 'littlstar/soil',
+      version: '0.1.1',
+      repo: 'littlstar/soil',
+      description: 'Simple OpenGL Image Library',
+      keywords: ['soil', 'opengl', 'gl', 'image'],
+      configure: 'configure',
+      makefile: 'Makefile',
+      src: [
+        'include/SOIL/SOIL.h',
+        'include/SOIL/image_dxt.h',
+        'include/SOIL/image_helper.h',
+        'include/SOIL/stb_image_aug.h',
+        'include/SOIL/stbi_dds_aug.h',
+        'include/SOIL/stbi_dds_aug_c.h',
+        'src/soil.c',
+        'src/image_dxt.c',
+        'src/image_helper.c',
+        'src/stb_image_aug.c',
+        'configure',
+        'Makefile.in'
+      ],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'littlstar/soil',
+    slug: 'littlstar-soil',
+    url: 'https://github.com/littlstar/soil',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Profiling',
+    dependents: [],
+    description:
+      'A memory tracer useful to analyze memory usage or detect leaks.',
+    manifest: {
+      name: 'daddinuz/watchdog',
+      repo: 'daddinuz/watchdog',
+      version: '1.0.0',
+      license: 'MIT',
+      description:
+        'C99-compliant runtime memory tracer library useful to find memory leaks or analyze memory usage.',
+      keywords: [
+        'leaks',
+        'memory',
+        'memory-leaks',
+        'memory-tracer',
+        'memory-leak-detection'
+      ],
+      src: ['sources/watchdog.h', 'sources/watchdog.c'],
+      dependencies: { 'daddinuz/process': '0.3.0', 'daddinuz/panic': '1.0.0' },
+      makefile: 'sources/build.cmake'
+    },
+    name: 'daddinuz/watchdog',
+    slug: 'daddinuz-watchdog',
+    url: 'https://github.com/daddinuz/watchdog',
+    license: 'MIT'
   }
 ]
 
 export const updatedAt = new Date(
-  'Fri Jul 01 2022 18:24:28 GMT+0000 (Coordinated Universal Time)'
+  'Sat Jul 02 2022 00:35:33 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '8513a6c2f49311c36e49aa392d3888d9d8367a37'
+export const revision = 'cd1156beea1a9931b6dad977eed2f72981c35ed4'
