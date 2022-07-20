@@ -1,5 +1,5 @@
 .footer {
-  margin-bottom: var(--space-large);
+  padding-bottom: var(--space-large);
 }
 
 .links {
