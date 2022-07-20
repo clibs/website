@@ -3,7 +3,7 @@
 set -e
 
 # Build the app.
-yarn build
+NODE_ENV=production yarn build
 
 # Only pre-render the app if we're in the master branch and _NOT_ part of a PR.
 if [ "$PULL_REQUEST" == "false" ] && [ "$BRANCH" == "master" ]; then
