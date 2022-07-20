@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch, useLocation } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import * as analytics from '../lib/analytics'
 import Home from '../pages/Home'
@@ -28,14 +28,14 @@ const App: React.ComponentType = () => {
       />
       <Header />
       <main className={styles.main}>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/search" component={Search} />
-          <Route exact path="/:group/:slug" component={Group} />
-          <Route exact path="/packages" component={Packages} />
-          <Route exact path="/packages/:owner/:repo" component={Package} />
-          <Route component={NotFound} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/:group/:slug" element={<Group />} />
+          <Route path="/packages" element={<Packages />} />
+          <Route path="/packages/:owner/:repo" element={<Package />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
       <Footer />
     </div>

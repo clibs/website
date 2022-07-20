@@ -1,6 +1,6 @@
 import React from 'react'
 import Autocomplete from 'react-autocomplete'
-import { useHistory, useLocation } from 'react-router'
+import { useNavigate, useLocation } from 'react-router'
 import { stringify, parse } from 'qs'
 import * as analytics from '../lib/analytics'
 import classNames from '@sindresorhus/class-names'
@@ -25,7 +25,7 @@ const renderItem = (p: Package, highlight: boolean): React.ReactElement => (
 )
 
 const SearchForm: React.ComponentType = () => {
-  const history = useHistory()
+  const navigate = useNavigate()
   const location = useLocation()
 
   const { q } = parse(location.search.substr(1))
@@ -41,7 +41,7 @@ const SearchForm: React.ComponentType = () => {
 
     e.preventDefault()
     const q = stringify({ q: value })
-    history.push(`/search?${q}`)
+    navigate(`/search?${q}`)
   }
 
   const handleChange = (e: React.ChangeEvent, name: string): void =>
@@ -49,7 +49,7 @@ const SearchForm: React.ComponentType = () => {
 
   const handleSelect = (name: string): void => {
     analytics.selectPackage()
-    history.push(`/packages/${name}`)
+    navigate(`/packages/${name}`)
   }
 
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { RouteComponentProps } from 'react-router'
+import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import slugify from '@sindresorhus/slugify'
@@ -24,15 +24,10 @@ const renderPackage = (packageName: string): React.ReactElement => (
   </li>
 )
 
-interface Params {
-  owner: string
-  repo: string
-}
-
-type Props = RouteComponentProps<Params>
-
-const Package: React.ComponentType<Props> = ({ match }) => {
-  const { owner, repo } = match.params
+const Package: React.ComponentType = () => {
+  const params = useParams()
+  const owner = params.owner as string
+  const repo = params.repo as string
   const pkg = packages.find(p => p.name === `${owner}/${repo}`.toLowerCase())
 
   if (!pkg) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { RouteComponentProps } from 'react-router'
+import { useParams } from 'react-router'
 import { Helmet } from 'react-helmet'
 import * as analytics from '../lib/analytics'
 import { getNameFromSlug, getPackagesBySlug } from '../lib/search'
@@ -7,13 +7,10 @@ import PackageList from '../components/PackageList'
 import NotFoundError from '../components/NotFoundError'
 import NotFound from './NotFound'
 
-type Props = RouteComponentProps<{
-  group: 'keyword' | 'category'
-  slug: string
-}>
-
-const Group: React.ComponentType<Props> = ({ match }) => {
-  const { group, slug } = match.params
+const Group: React.ComponentType = () => {
+  const params = useParams()
+  const slug = params.slug as string
+  const group = params.group as 'category' | 'keyword'
   const name = getNameFromSlug(slug, group)
   const packages = getPackagesBySlug(slug, group)
 
