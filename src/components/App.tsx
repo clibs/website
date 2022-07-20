@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
 import * as analytics from '../lib/analytics'
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
@@ -22,10 +21,6 @@ const App: React.ComponentType = () => {
 
   return (
     <div className={styles.app}>
-      <Helmet
-        titleTemplate="%s | clibs &mdash; C package manager"
-        defaultTitle="clibs &mdash; C package manager"
-      />
       <Header />
       <main className={styles.main}>
         <Routes>

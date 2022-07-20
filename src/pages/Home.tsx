@@ -1,19 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import GithubForkRibbon from 'react-github-fork-ribbon'
-import { Helmet } from 'react-helmet'
+import Meta from 'react-document-meta'
 import { OutboundLink } from '../lib/analytics'
 import InstallationGuide from '../components/InstallationGuide'
 import styles from './Home.css'
 
 const Home: React.ComponentType = () => (
   <div className={styles.home}>
-    <Helmet>
-      <meta
-        name="description"
-        content="clib &mdash; Package manager for the C programming language"
-      />
-    </Helmet>
+    <Meta
+      title="clibs &mdash; C package manager"
+      description="Package manager for the C programming language"
+    />
 
     <GithubForkRibbon
       position="right"

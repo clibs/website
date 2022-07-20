@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import { Helmet } from 'react-helmet'
+import Meta from 'react-document-meta'
 import * as analytics from '../lib/analytics'
 import { getNameFromSlug, getPackagesBySlug } from '../lib/search'
 import PackageList from '../components/PackageList'
@@ -22,9 +22,10 @@ const Group: React.ComponentType = () => {
     analytics.missingGroup(group, slug)
     return (
       <React.Fragment>
-        <Helmet title="No packages found">
-          <meta name="robots" content="noindex" />
-        </Helmet>
+        <Meta
+          title="No packages found | clibs &mdash; C package manager"
+          meta={{ name: { robots: 'noindex' } }}
+        />
         <NotFoundError
           title={`Unknown ${group}`}
           header={
@@ -44,9 +45,10 @@ const Group: React.ComponentType = () => {
 
   return (
     <React.Fragment>
-      <Helmet title={title}>
-        <meta name="description" content={title} />
-      </Helmet>
+      <Meta
+        title={title + ' | clibs &mdash; C package manager'}
+        description={title}
+      />
       <PackageList
         hideCategory={group === 'category'}
         packages={packages}
