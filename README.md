@@ -22,7 +22,7 @@ yarn dev
 
 ### Updating the registry
 
-The registry is [automatically updated](https://github.com/clibs/website/blob/master/.github/workflows/registry.yml) every 6 hours.
+The registry is [automatically updated](https://github.com/clibs/website/blob/main/.github/workflows/registry.yml) every 6 hours.
 
 To manually rebuild the registry:
 
@@ -31,7 +31,7 @@ To manually rebuild the registry:
 
 ## Deployment
 
-Netlify deploys all commits that land in the `master` branch by running the `scripts/netlifyBuild.sh` program. This will perform a "regular" build and optionally "pre-render" all pages as static HTML.
+Netlify deploys all commits that land in the `main` branch by running the `scripts/netlifyBuild.sh` program. This will perform a "regular" build and optionally "pre-render" all pages as static HTML.
 
 ## License
 
