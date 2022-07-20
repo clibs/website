@@ -1,7 +1,7 @@
 import React from 'react'
 import { parse } from 'qs'
 import { useLocation } from 'react-router'
-import { Helmet } from 'react-helmet'
+import Meta from 'react-document-meta'
 import { getPackagesByQuery } from '../lib/search'
 import PackageList from '../components/PackageList'
 import ErrorMessage from '../components/ErrorMessage'
@@ -32,9 +32,10 @@ const Search: React.ComponentType = () => {
 
   return (
     <React.Fragment>
-      <Helmet title={title}>
-        <meta name="description" content={title} />
-      </Helmet>
+      <Meta
+        title={title + ' | clibs &mdash; C package manager'}
+        description={title}
+      />
       {query ? (
         <PackageList caption={title} packages={packages} />
       ) : (

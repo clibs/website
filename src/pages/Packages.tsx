@@ -1,13 +1,14 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import Meta from 'react-document-meta'
 import { packages } from '../registry'
 import PackagesList from '../components/PackageList'
 
 const Packages: React.ComponentType = () => (
   <React.Fragment>
-    <Helmet title="Package Listing">
-      <meta name="description" content="Package listing for clibs" />
-    </Helmet>
+    <Meta
+      title="Package Listing | clibs &mdash; C package manager"
+      description="Package listing for clibs"
+    />
     <PackagesList packages={packages} />
   </React.Fragment>
 )

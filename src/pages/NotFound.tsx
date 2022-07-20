@@ -1,13 +1,13 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import Meta from 'react-document-meta'
 import styles from './NotFound.css'
 
 const NotFound: React.ComponentType = () => (
   <div className={styles.notFound}>
-    <Helmet title="404 &mdash; Not Found">
-      <meta name="robots" content="noindex" />
-    </Helmet>
-
+    <Meta
+      title="404 &mdash; Not Found | clibs &mdash; C package manager"
+      meta={{ name: { robots: 'noindex' } }}
+    />
     <h1>Not Found</h1>
   </div>
 )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
+import Meta from 'react-document-meta'
 import slugify from '@sindresorhus/slugify'
 import { packages } from '../registry'
 import * as analytics from '../lib/analytics'
@@ -34,9 +34,10 @@ const Package: React.ComponentType = () => {
     analytics.missingPackage(owner, repo)
     return (
       <React.Fragment>
-        <Helmet title={`Package “${owner}/${repo}” Not Found`}>
-          <meta name="robots" content="noindex" />
-        </Helmet>
+        <Meta
+          title={`Package “${owner}/${repo}” Not Found | clibs &mdash; C package manager`}
+          meta={{ name: { robots: 'noindex' } }}
+        />
         <NotFoundError
           title="Error loading package"
           header={`The package “${owner}/${repo}” could not be found.`}
@@ -51,12 +52,10 @@ const Package: React.ComponentType = () => {
 
   return (
     <div className={styles.package}>
-      <Helmet title={`Package “${owner}/${repo}”`}>
-        <meta
-          name="description"
-          content={`Package “${owner}/${repo}” &mdash; ${pkg.description}`}
-        />
-      </Helmet>
+      <Meta
+        title={`Package “${owner}/${repo}” | clibs &mdash; C package manager`}
+        description={`Package “${owner}/${repo}” &mdash; ${pkg.description}`}
+      />
 
       <h1>
         {owner}/{repo}
