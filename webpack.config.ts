@@ -3,10 +3,13 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import WorkboxWebpackPlugin from 'workbox-webpack-plugin'
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+import { execSync } from 'child_process'
 import path from 'path'
 
 const { NODE_ENV = 'development' } = process.env
 const prod = NODE_ENV === 'production'
+const GIT_SHA = execSync('git rev-parse HEAD')
+const UPDATED_AT = new Date()
 
 const config: webpack.Configuration = {
   entry: './src/main.tsx',
@@ -23,7 +26,9 @@ const config: webpack.Configuration = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: `"${prod ? 'production' : 'development'}"`
+        NODE_ENV: `"${prod ? 'production' : 'development'}"`,
+        GIT_SHA: `"${GIT_SHA.toString().trim()}"`,
+        UPDATED_AT: `"${UPDATED_AT.toISOString()}"`
       }
     })
   ],
