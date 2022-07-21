@@ -2699,13 +2699,13 @@ export const packages: Package[] = [
     description: 'Yet another INI parser',
     manifest: {
       name: 'madmurphy/libconfini',
-      version: '1.16.3',
+      version: '1.16.4',
       description: 'Yet another INI parser',
       homepage: 'https://madmurphy.github.io/libconfini',
       author: 'madmurphy333@gmail.com',
       license: 'GPL-3.0-or-later',
       main: 'libconfini',
-      binaryVersion: '0.5.2',
+      binaryVersion: '0.5.3',
       repo: 'madmurphy/libconfini',
       repository: {
         type: 'git',
@@ -8114,7 +8114,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Jul 21 2022 00:38:50 GMT+0000 (Coordinated Universal Time)'
+  'Thu Jul 21 2022 06:09:51 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '49e40e130a343e465094c70ceaafcac2ebaab1e4'
+export const revision = '4f122def661fca98ce5f5d8d8e2fb2b3cd4457c5'
