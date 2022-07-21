@@ -1499,6 +1499,7 @@ export const categories: CategoryList = {
       'brendanashworth/r3',
       'qute/qute',
       'clibs/sophia',
+      'clibs/stb',
       'daddinuz/option',
       'jwerle/libnanoresource',
       'jwerle/libram',
@@ -6126,6 +6127,47 @@ export const packages: Package[] = [
   {
     category: 'Libraries',
     dependents: [],
+    description: 'stb single-file public domain libraries for C/C++',
+    manifest: {
+      name: 'clibs/stb',
+      version: 'master',
+      description:
+        'A clib pointer to https://github.com/nothings/stb - stb single-file public domain libraries for C/C++',
+      repo: 'nothings/stb',
+      src: [
+        'stb_c_lexer.h',
+        'stb_connected_components.h',
+        'stb_divide.h',
+        'stb_ds.h',
+        'stb_dxt.h',
+        'stb_easy_font.h',
+        'stb_herringbone_wang_tile.h',
+        'stb_hexwave.h',
+        'stb_image.h',
+        'stb_image_resize.h',
+        'stb_image_write.h',
+        'stb_include.h',
+        'stb_leakcheck.h',
+        'stb_rect_pack.h',
+        'stb_sprintf.h',
+        'stb_textedit.h',
+        'stb_tilemap_editor.h',
+        'stb_truetype.h',
+        'stb_vorbis.c',
+        'stb_voxel_render.h'
+      ],
+      keywords: [],
+      license: 'Unlicensed',
+      dependencies: {}
+    },
+    name: 'clibs/stb',
+    slug: 'clibs-stb',
+    url: 'https://github.com/clibs/stb',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
     description: "Mimic Rust's Option type",
     manifest: {
       name: 'daddinuz/option',
@@ -8072,7 +8114,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Jul 02 2022 00:35:33 GMT+0000 (Coordinated Universal Time)'
+  'Thu Jul 21 2022 00:38:50 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'cd1156beea1a9931b6dad977eed2f72981c35ed4'
+export const revision = '49e40e130a343e465094c70ceaafcac2ebaab1e4'
