@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import WorkboxWebpackPlugin from 'workbox-webpack-plugin'
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+import TerserPlugin from 'terser-webpack-plugin'
 import { execSync } from 'child_process'
 import path from 'path'
 
@@ -70,7 +71,7 @@ export = (): webpack.Configuration => {
     config.mode = 'production'
     config.devtool = 'source-map'
     config.optimization = {
-      minimizer: [new CssMinimizerPlugin()]
+      minimizer: [new CssMinimizerPlugin(), new TerserPlugin()]
     }
     config.plugins!.push(
       new MiniCssExtractPlugin({
