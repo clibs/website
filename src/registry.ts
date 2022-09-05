@@ -3638,7 +3638,7 @@ export const packages: Package[] = [
     description: 'simple doubly linked list',
     manifest: {
       name: 'clibs/list',
-      version: '0.2.0',
+      version: '0.4.0',
       repo: 'clibs/list',
       description: 'Simple linked list',
       keywords: ['list', 'structure'],
@@ -8114,7 +8114,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Jul 21 2022 06:09:51 GMT+0000 (Coordinated Universal Time)'
+  'Mon Sep 05 2022 18:12:42 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '4f122def661fca98ce5f5d8d8e2fb2b3cd4457c5'
+export const revision = '9b572fe8a9e34c30b2adc03ea39919d619fe9be1'
