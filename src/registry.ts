@@ -2215,7 +2215,7 @@ export const packages: Package[] = [
     description: 'Levenshtein’s string edit distance algorithm',
     manifest: {
       name: 'wooorm/levenshtein.c',
-      version: '2.0.1',
+      version: '2.0.2',
       description: 'Levenshtein algorithm',
       license: 'MIT',
       keywords: ['Vladimir', 'Levenshtein', 'algorithm', 'edit', 'distance'],
@@ -8114,7 +8114,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Sep 05 2022 18:12:42 GMT+0000 (Coordinated Universal Time)'
+  'Thu Sep 08 2022 18:13:29 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '9b572fe8a9e34c30b2adc03ea39919d619fe9be1'
+export const revision = 'a7853c2409ddfac70bfb459aa2abbbaf492f7887'
