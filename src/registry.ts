@@ -7755,11 +7755,10 @@ export const packages: Package[] = [
       keywords: [],
       license: 'MIT',
       install: './install.sh',
-      development: {
+      dependencies: {
         'ScientificC/errno': '1.0.0',
         'ScientificC/vector': '1.0.0'
-      },
-      dependencies: {}
+      }
     },
     name: 'scientificc/cmathl',
     slug: 'scientific-c-cmathl',
@@ -8114,7 +8113,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Sep 08 2022 18:13:29 GMT+0000 (Coordinated Universal Time)'
+  'Mon Oct 10 2022 00:52:29 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'a7853c2409ddfac70bfb459aa2abbbaf492f7887'
+export const revision = 'ea6db5802a15f140639d4b4a9918f008e413a24b'
