@@ -538,7 +538,7 @@ export const keywords: KeywordList = {
   alignment: { slug: 'alignment', packages: ['isty001/mem-pool'] },
   mutex: {
     slug: 'mutex',
-    packages: ['isty001/mem-pool', 'matthewzito/lib.thread']
+    packages: ['isty001/mem-pool', 'exbotanical/lib.thread']
   },
   memorypool: { slug: 'memorypool', packages: ['isty001/mem-pool'] },
   locks: { slug: 'locks', packages: ['isty001/mem-pool'] },
@@ -576,23 +576,23 @@ export const keywords: KeywordList = {
   mergesort: { slug: 'mergesort', packages: ['abranhe/mergesort.c'] },
   allalgorithms: { slug: 'allalgorithms', packages: ['abranhe/mergesort.c'] },
   threadsafe: { slug: 'threadsafe', packages: ['bonedaddy/ulog'] },
-  'thread pool': { slug: 'thread-pool', packages: ['matthewzito/lib.thread'] },
-  threads: { slug: 'threads', packages: ['matthewzito/lib.thread'] },
+  'thread pool': { slug: 'thread-pool', packages: ['exbotanical/lib.thread'] },
+  threads: { slug: 'threads', packages: ['exbotanical/lib.thread'] },
   'multi-threading': {
     slug: 'multi-threading',
-    packages: ['matthewzito/lib.thread', 'matthewzito/lib.envoy']
+    packages: ['exbotanical/lib.thread', 'exbotanical/lib.envoy']
   },
   'multi-tasking': {
     slug: 'multi-tasking',
-    packages: ['matthewzito/lib.thread']
+    packages: ['exbotanical/lib.thread']
   },
-  semaphore: { slug: 'semaphore', packages: ['matthewzito/lib.thread'] },
-  timers: { slug: 'timers', packages: ['matthewzito/lib.chron'] },
+  semaphore: { slug: 'semaphore', packages: ['exbotanical/lib.thread'] },
+  timers: { slug: 'timers', packages: ['exbotanical/lib.chron'] },
   'hierarchical wheel': {
     slug: 'hierarchical-wheel',
-    packages: ['matthewzito/lib.chron']
+    packages: ['exbotanical/lib.chron']
   },
-  scheduler: { slug: 'scheduler', packages: ['matthewzito/lib.chron'] },
+  scheduler: { slug: 'scheduler', packages: ['exbotanical/lib.chron'] },
   align: { slug: 'align', packages: ['promsize/memalign'] },
   pointer: {
     slug: 'pointer',
@@ -705,7 +705,7 @@ export const keywords: KeywordList = {
   set: { slug: 'set', packages: ['willemt/array-avl-tree', 'robusgauli/cset'] },
   'data structure': {
     slug: 'data-structure',
-    packages: ['willemt/array-avl-tree']
+    packages: ['willemt/array-avl-tree', 'exbotanical/lib.hash']
   },
   hashmap: {
     slug: 'hashmap',
@@ -730,7 +730,7 @@ export const keywords: KeywordList = {
   inplace: { slug: 'inplace', packages: ['willemt/quadratic-probing-hashmap'] },
   'open addressing': {
     slug: 'open-addressing',
-    packages: ['willemt/quadratic-probing-hashmap']
+    packages: ['willemt/quadratic-probing-hashmap', 'exbotanical/lib.hash']
   },
   templated: { slug: 'templated', packages: ['davidleeds/hashmap'] },
   vec: { slug: 'vec', packages: ['rxi/vec'] },
@@ -774,7 +774,7 @@ export const keywords: KeywordList = {
   table: { slug: 'table', packages: ['ajaymt/dict.c'] },
   'data structures': {
     slug: 'data-structures',
-    packages: ['kellydunn/libkld', 'matthewzito/lib.cartilage']
+    packages: ['kellydunn/libkld', 'exbotanical/lib.cartilage']
   },
   graph: { slug: 'graph', packages: ['kellydunn/libkld', 'visionmedia/histo'] },
   matrix: { slug: 'matrix', packages: ['kellydunn/libkld', 'glisy/math'] },
@@ -813,20 +813,20 @@ export const keywords: KeywordList = {
   xxhash: { slug: 'xxhash', packages: ['robusgauli/cset'] },
   hashing: {
     slug: 'hashing',
-    packages: ['robusgauli/cset', 'zackehh/siphash-c']
+    packages: ['robusgauli/cset', 'zackehh/siphash-c', 'exbotanical/lib.hash']
   },
   hashset: { slug: 'hashset', packages: ['robusgauli/cset'] },
   typesafe: { slug: 'typesafe', packages: ['robusgauli/cset'] },
   env: { slug: 'env', packages: ['4thel00z/env.h'] },
   'linked list': {
     slug: 'linked-list',
-    packages: ['matthewzito/lib.cartilage', 'matthewzito/lib.envoy']
+    packages: ['exbotanical/lib.cartilage', 'exbotanical/lib.envoy']
   },
   'notification chains': {
     slug: 'notification-chains',
-    packages: ['matthewzito/lib.envoy']
+    packages: ['exbotanical/lib.envoy']
   },
-  'event loop': { slug: 'event-loop', packages: ['matthewzito/lib.envoy'] },
+  'event loop': { slug: 'event-loop', packages: ['exbotanical/lib.envoy'] },
   sax: { slug: 'sax', packages: ['clibs/logfmt'] },
   logfmt: { slug: 'logfmt', packages: ['clibs/logfmt'] },
   ragel: { slug: 'ragel', packages: ['clibs/logfmt'] },
@@ -960,6 +960,7 @@ export const keywords: KeywordList = {
   sha2: { slug: 'sha2', packages: ['jb55/sha256.c', 'aperezdc/hmac-sha256'] },
   hmac: { slug: 'hmac', packages: ['aperezdc/hmac-sha256'] },
   siphash: { slug: 'siphash', packages: ['zackehh/siphash-c'] },
+  'hash table': { slug: 'hash-table', packages: ['exbotanical/lib.hash'] },
   cryptography: { slug: 'cryptography', packages: ['veqtrus/vial_aes'] },
   aes: { slug: 'aes', packages: ['veqtrus/vial_aes'] },
   mac: { slug: 'mac', packages: ['veqtrus/vial_aes'] },
@@ -1351,8 +1352,8 @@ export const categories: CategoryList = {
       'bonedaddy/ulog',
       'aperezdc/clog',
       'clibs/linenoise',
-      'matthewzito/lib.thread',
-      'matthewzito/lib.chron',
+      'exbotanical/lib.thread',
+      'exbotanical/lib.chron',
       'promsize/memalign'
     ]
   },
@@ -1404,8 +1405,8 @@ export const categories: CategoryList = {
       'robusgauli/cvector',
       'robusgauli/cset',
       '4thel00z/env.h',
-      'matthewzito/lib.cartilage',
-      'matthewzito/lib.envoy'
+      'exbotanical/lib.cartilage',
+      'exbotanical/lib.envoy'
     ]
   },
   Parsing: {
@@ -1468,7 +1469,8 @@ export const categories: CategoryList = {
       'jb55/sha256.c',
       'aperezdc/hmac-sha256',
       'zackehh/siphash-c',
-      'catb0t/fnv-hash'
+      'catb0t/fnv-hash',
+      'exbotanical/lib.hash'
     ]
   },
   Encryption: { slug: 'encryption', packages: ['veqtrus/vial_aes'] },
@@ -3497,7 +3499,7 @@ export const packages: Package[] = [
     description:
       'Bespoke POSIX threads, mutexes, wait queues, thread pools, and semaphores for the C programming language.',
     manifest: {
-      name: 'matthewzito/lib.thread',
+      name: 'exbotanical/lib.thread',
       version: '0.0.1',
       author: 'Matthew Zito (goldmund)',
       repo: 'MatthewZito/lib.thread',
@@ -3522,9 +3524,9 @@ export const packages: Package[] = [
       ],
       dependencies: { 'MatthewZito/lib.cartilage': '*' }
     },
-    name: 'matthewzito/lib.thread',
-    slug: 'matthew-zito-lib-thread',
-    url: 'https://github.com/MatthewZito/lib.thread',
+    name: 'exbotanical/lib.thread',
+    slug: 'exbotanical-lib-thread',
+    url: 'https://github.com/exbotanical/lib.thread',
     license: 'MIT'
   },
   {
@@ -3532,7 +3534,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Timers, hierarchical wheels, and event scheduling utilities.',
     manifest: {
-      name: 'matthewzito/lib.chron',
+      name: 'exbotanical/lib.chron',
       version: '0.0.1',
       author: 'Matthew Zito (goldmund)',
       repo: 'MatthewZito/lib.chron',
@@ -3543,9 +3545,9 @@ export const packages: Package[] = [
       src: ['src/libchron.h', 'src/timer.c', 'src/wheel.c'],
       dependencies: { 'MatthewZito/lib.cartilage': '*' }
     },
-    name: 'matthewzito/lib.chron',
-    slug: 'matthew-zito-lib-chron',
-    url: 'https://github.com/MatthewZito/lib.chron',
+    name: 'exbotanical/lib.chron',
+    slug: 'exbotanical-lib-chron',
+    url: 'https://github.com/exbotanical/lib.chron',
     license: 'MIT'
   },
   {
@@ -4588,7 +4590,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'A library of various linked list data structures.',
     manifest: {
-      name: 'matthewzito/lib.cartilage',
+      name: 'exbotanical/lib.cartilage',
       version: '0.0.2',
       author: 'Matthew Zito (goldmund)',
       repo: 'MatthewZito/lib.cartilage',
@@ -4604,9 +4606,9 @@ export const packages: Package[] = [
       ],
       dependencies: {}
     },
-    name: 'matthewzito/lib.cartilage',
-    slug: 'matthew-zito-lib-cartilage',
-    url: 'https://github.com/MatthewZito/lib.cartilage',
+    name: 'exbotanical/lib.cartilage',
+    slug: 'exbotanical-lib-cartilage',
+    url: 'https://github.com/exbotanical/lib.cartilage',
     license: 'MIT'
   },
   {
@@ -4614,7 +4616,7 @@ export const packages: Package[] = [
     dependents: [],
     description: 'Thread-safe notification chains.',
     manifest: {
-      name: 'matthewzito/lib.envoy',
+      name: 'exbotanical/lib.envoy',
       version: '0.0.1',
       author: 'Matthew Zito (goldmund)',
       repo: 'MatthewZito/lib.envoy',
@@ -4630,9 +4632,9 @@ export const packages: Package[] = [
       src: ['src/libenvoy.h', 'src/envoy.c'],
       dependencies: { 'MatthewZito/lib.cartilage': '*' }
     },
-    name: 'matthewzito/lib.envoy',
-    slug: 'matthew-zito-lib-envoy',
-    url: 'https://github.com/MatthewZito/lib.envoy',
+    name: 'exbotanical/lib.envoy',
+    slug: 'exbotanical-lib-envoy',
+    url: 'https://github.com/exbotanical/lib.envoy',
     license: 'MIT'
   },
   {
@@ -5558,6 +5560,27 @@ export const packages: Package[] = [
     slug: 'catb0t-fnv-hash',
     url: 'https://github.com/catb0t/fnv-hash',
     license: 'Public Domain'
+  },
+  {
+    category: 'Hashing',
+    dependents: [],
+    description: 'A simple open-addressed, double-hashed hash table.',
+    manifest: {
+      name: 'exbotanical/lib.hash',
+      version: '0.0.1',
+      author: 'Matthew Zito',
+      repo: 'exbotanical/lib.hash',
+      license: 'MIT',
+      description: 'A simple open-addressed, double-hashed hash table',
+      keywords: ['hashing', 'hash table', 'data structure', 'open addressing'],
+      src: ['src/hash.h', 'src/hash.c', 'src/prime.h', 'src/prime.c'],
+      development: { 'thlorenz/tap.c': '*' },
+      dependencies: {}
+    },
+    name: 'exbotanical/lib.hash',
+    slug: 'exbotanical-lib-hash',
+    url: 'https://github.com/exbotanical/lib.hash',
+    license: 'MIT'
   },
   {
     category: 'Encryption',
@@ -8113,7 +8136,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Oct 10 2022 00:52:29 GMT+0000 (Coordinated Universal Time)'
+  'Mon Oct 31 2022 06:12:13 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'ea6db5802a15f140639d4b4a9918f008e413a24b'
+export const revision = 'b2118e4bebba98ed8f7e70cfdbb2561ef70a8afa'
