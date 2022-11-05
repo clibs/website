@@ -3501,8 +3501,8 @@ export const packages: Package[] = [
     manifest: {
       name: 'exbotanical/lib.thread',
       version: '0.0.1',
-      author: 'Matthew Zito (goldmund)',
-      repo: 'MatthewZito/lib.thread',
+      author: 'Matthew Zito',
+      repo: 'exbotanical/lib.thread',
       license: 'MIT',
       description: 'A utility library of custom threading data structures',
       keywords: [
@@ -8136,7 +8136,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Nov 05 2022 12:12:00 GMT+0000 (Coordinated Universal Time)'
+  'Sat Nov 05 2022 18:08:46 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '5ba03ff945fffb2e6352d6ad4d934c52d671145c'
+export const revision = '5f38e80b57a6173c7ba8832a630e408e01d2eea6'
