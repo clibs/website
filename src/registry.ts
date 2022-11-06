@@ -3522,7 +3522,7 @@ export const packages: Package[] = [
         'src/thread.c',
         'src/util.h'
       ],
-      dependencies: { 'MatthewZito/lib.cartilage': '*' }
+      dependencies: { 'exbotanical/lib.cartilage': '0.0.2' }
     },
     name: 'exbotanical/lib.thread',
     slug: 'exbotanical-lib-thread',
@@ -4587,13 +4587,13 @@ export const packages: Package[] = [
   },
   {
     category: 'Data structure',
-    dependents: [],
+    dependents: ['exbotanical/lib.thread'],
     description: 'A library of various linked list data structures.',
     manifest: {
       name: 'exbotanical/lib.cartilage',
       version: '0.0.2',
-      author: 'Matthew Zito (goldmund)',
-      repo: 'MatthewZito/lib.cartilage',
+      author: 'Matthew Zito',
+      repo: 'exbotanical/lib.cartilage',
       license: 'MIT',
       description: 'A library of various linked list data structures',
       keywords: ['linked list', 'data structures'],
@@ -8136,7 +8136,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Nov 05 2022 18:08:46 GMT+0000 (Coordinated Universal Time)'
+  'Sun Nov 06 2022 00:38:47 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '5f38e80b57a6173c7ba8832a630e408e01d2eea6'
+export const revision = '11310d35230d56e2fbc4e7714f83e6d94c3815e0'
