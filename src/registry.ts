@@ -1038,6 +1038,18 @@ export const keywords: KeywordList = {
   },
   pdf: { slug: 'pdf', packages: ['andrerenaud/pdfgen'] },
   document: { slug: 'document', packages: ['andrerenaud/pdfgen'] },
+  gl: {
+    slug: 'gl',
+    packages: [
+      'immediate-mode-ui/nuklear',
+      'glisy/glisy',
+      'glisy/glfw-shell',
+      'glisy/ease',
+      'littlstar/soil'
+    ]
+  },
+  ui: { slug: 'ui', packages: ['immediate-mode-ui/nuklear'] },
+  toolkit: { slug: 'toolkit', packages: ['immediate-mode-ui/nuklear'] },
   'c-preprocessor': { slug: 'c-preprocessor', packages: ['madmurphy/zen.h'] },
   counter: { slug: 'counter', packages: ['madmurphy/zen.h'] },
   'c-preprocessor-counter': {
@@ -1234,15 +1246,6 @@ export const keywords: KeywordList = {
   opengl: {
     slug: 'opengl',
     packages: ['glisy/glisy', 'littlstar/sop', 'littlstar/soil']
-  },
-  gl: {
-    slug: 'gl',
-    packages: [
-      'glisy/glisy',
-      'glisy/glfw-shell',
-      'glisy/ease',
-      'littlstar/soil'
-    ]
   },
   open: { slug: 'open', packages: ['glisy/glfw-shell'] },
   glfw: { slug: 'glfw', packages: ['glisy/glfw-shell'] },
@@ -1507,7 +1510,8 @@ export const categories: CategoryList = {
       'jwerle/libram',
       'jwerle/libras',
       'jwerle/libalru',
-      'andrerenaud/pdfgen'
+      'andrerenaud/pdfgen',
+      'immediate-mode-ui/nuklear'
     ]
   },
   'Preprocessor macros': {
@@ -6369,6 +6373,26 @@ export const packages: Package[] = [
     license: 'UNLICENSE'
   },
   {
+    category: 'Libraries',
+    dependents: [],
+    description:
+      'A single-header ANSI C immediate mode cross-platform GUI library.',
+    manifest: {
+      name: 'immediate-mode-ui/nuklear',
+      version: '4.10.1',
+      repo: 'Immediate-Mode-UI/Nuklear',
+      description: 'A small ANSI C gui toolkit',
+      keywords: ['gl', 'ui', 'toolkit'],
+      license: 'MIT, Unlicense',
+      src: ['nuklear.h'],
+      dependencies: {}
+    },
+    name: 'immediate-mode-ui/nuklear',
+    slug: 'immediate-mode-ui-nuklear',
+    url: 'https://github.com/Immediate-Mode-UI/Nuklear',
+    license: 'MIT, Unlicense'
+  },
+  {
     category: 'Preprocessor macros',
     dependents: [],
     description: 'C preprocessor utilities',
@@ -8136,7 +8160,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Nov 06 2022 00:38:47 GMT+0000 (Coordinated Universal Time)'
+  'Thu Nov 10 2022 18:10:04 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '11310d35230d56e2fbc4e7714f83e6d94c3815e0'
+export const revision = '8a3a9365a3b51a3aa65bd4713d2b4f70c3de1bee'
