@@ -5202,7 +5202,7 @@ export const packages: Package[] = [
     description: "File system API much like Node's fs module",
     manifest: {
       name: 'jwerle/fs.c',
-      version: '0.2.0',
+      version: '0.2.1',
       description: "File system API much like Node's fs module",
       repo: 'jwerle/fs.c',
       src: ['fs.h', 'fs.c'],
@@ -8160,7 +8160,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Nov 13 2022 00:34:39 GMT+0000 (Coordinated Universal Time)'
+  'Wed Dec 07 2022 18:10:08 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'ad31a1e9b5cc5f153475320dab27d9bb9282e9ae'
+export const revision = 'ddd57ba77f466328e7039571ac82d1c26cf3f104'
