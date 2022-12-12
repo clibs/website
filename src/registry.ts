@@ -21,7 +21,8 @@ export const keywords: KeywordList = {
       'willemt/cbuffer',
       'rikvdh/zabuffer',
       'rikvdh/zringbuf',
-      'robusgauli/cvector'
+      'robusgauli/cvector',
+      'exbotanical/libutil'
     ]
   },
   string: {
@@ -679,7 +680,8 @@ export const keywords: KeywordList = {
       'ajaymt/list.c',
       'gioyik/mapc',
       'htmk/fat-array',
-      'robusgauli/cvector'
+      'robusgauli/cvector',
+      'exbotanical/libutil'
     ]
   },
   uthash: { slug: 'uthash', packages: ['troydhanson/uthash'] },
@@ -1050,6 +1052,9 @@ export const keywords: KeywordList = {
   },
   ui: { slug: 'ui', packages: ['immediate-mode-ui/nuklear'] },
   toolkit: { slug: 'toolkit', packages: ['immediate-mode-ui/nuklear'] },
+  formatting: { slug: 'formatting', packages: ['exbotanical/libutil'] },
+  utilities: { slug: 'utilities', packages: ['exbotanical/libutil'] },
+  helpers: { slug: 'helpers', packages: ['exbotanical/libutil'] },
   'c-preprocessor': { slug: 'c-preprocessor', packages: ['madmurphy/zen.h'] },
   counter: { slug: 'counter', packages: ['madmurphy/zen.h'] },
   'c-preprocessor-counter': {
@@ -1511,7 +1516,8 @@ export const categories: CategoryList = {
       'jwerle/libras',
       'jwerle/libalru',
       'andrerenaud/pdfgen',
-      'immediate-mode-ui/nuklear'
+      'immediate-mode-ui/nuklear',
+      'exbotanical/libutil'
     ]
   },
   'Preprocessor macros': {
@@ -6393,6 +6399,38 @@ export const packages: Package[] = [
     license: 'MIT, Unlicense'
   },
   {
+    category: 'Libraries',
+    dependents: [],
+    description:
+      'A library of useful C utilities with JavaScript-like array, buffer, and string APIs.',
+    manifest: {
+      name: 'exbotanical/libutil',
+      version: '0.0.1',
+      author: 'Matthew Zito',
+      repo: 'exbotanical/libutil',
+      license: 'MIT',
+      description:
+        'A library of useful C utilities with JavaScript-like array, buffer, and string APIs',
+      keywords: ['array', 'buffer', 'formatting', 'utilities', 'helpers'],
+      src: [
+        'src/array.h',
+        'src/buffer.h',
+        'src/fmt.h',
+        'src/str.h',
+        'src/array.c',
+        'src/buffer.c',
+        'src/fmt.c',
+        'src/str.c'
+      ],
+      development: { 'thlorenz/tap.c': '*' },
+      dependencies: {}
+    },
+    name: 'exbotanical/libutil',
+    slug: 'exbotanical-libutil',
+    url: 'https://github.com/exbotanical/libutil',
+    license: 'MIT'
+  },
+  {
     category: 'Preprocessor macros',
     dependents: [],
     description: 'C preprocessor utilities',
@@ -8160,7 +8198,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Dec 07 2022 18:10:08 GMT+0000 (Coordinated Universal Time)'
+  'Mon Dec 12 2022 00:35:11 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'ddd57ba77f466328e7039571ac82d1c26cf3f104'
+export const revision = 'cee5547aef51ad322e6f27b1356b0aa1b04f946b'
