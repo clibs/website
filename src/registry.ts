@@ -6385,7 +6385,7 @@ export const packages: Package[] = [
       'A single-header ANSI C immediate mode cross-platform GUI library.',
     manifest: {
       name: 'immediate-mode-ui/nuklear',
-      version: '4.10.1',
+      version: '4.10.5',
       repo: 'Immediate-Mode-UI/Nuklear',
       description: 'A small ANSI C gui toolkit',
       keywords: ['gl', 'ui', 'toolkit'],
@@ -8198,7 +8198,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Dec 12 2022 00:35:11 GMT+0000 (Coordinated Universal Time)'
+  'Sun Dec 18 2022 00:30:10 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'cee5547aef51ad322e6f27b1356b0aa1b04f946b'
+export const revision = '01d5293388e7735e8c796d0d55e9e999a084c480'
