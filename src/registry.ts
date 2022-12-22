@@ -300,6 +300,7 @@ export const keywords: KeywordList = {
       'brendanashworth/http-parser',
       'h2non/semver.c',
       'kgabis/parson',
+      'qute/qute',
       'littlstar/sop'
     ]
   },
@@ -1029,6 +1030,7 @@ export const keywords: KeywordList = {
   performance: { slug: 'performance', packages: ['brendanashworth/r3'] },
   r3: { slug: 'r3', packages: ['brendanashworth/r3'] },
   c9s: { slug: 'c9s', packages: ['brendanashworth/r3'] },
+  lexer: { slug: 'lexer', packages: ['qute/qute'] },
   sophia: { slug: 'sophia', packages: ['clibs/sophia', 'sphia/sphia'] },
   'option-type': { slug: 'option-type', packages: ['daddinuz/option'] },
   monads: { slug: 'monads', packages: ['daddinuz/option'] },
@@ -1505,6 +1507,7 @@ export const categories: CategoryList = {
       'clibs/ck',
       'beltex/libsmc',
       'brendanashworth/r3',
+      'qute/qute',
       'clibs/sophia',
       'clibs/stb',
       'daddinuz/option',
@@ -6108,6 +6111,36 @@ export const packages: Package[] = [
   {
     category: 'Libraries',
     dependents: [],
+    description: 'AST generation library',
+    manifest: {
+      name: 'qute/qute',
+      version: '0.0.7',
+      repo: 'qute/qute',
+      description: 'Simple lexer and parser',
+      keywords: ['parser', 'lexer'],
+      dependencies: { 'clibs/strdup': '0.0.0' },
+      devDependencies: { 'jwerle/fs.c': '*', 'jwerle/libok': '*' },
+      src: [
+        'qute.h',
+        'src/ast.c',
+        'src/lex.c',
+        'src/error.c',
+        'src/parser.c',
+        'include/qute/ast.h',
+        'include/qute/lex.h',
+        'include/qute/parser.h',
+        'include/qute/error.h'
+      ],
+      license: 'Unlicensed'
+    },
+    name: 'qute/qute',
+    slug: 'qute-qute',
+    url: 'https://github.com/qute/qute',
+    license: 'Unlicensed'
+  },
+  {
+    category: 'Libraries',
+    dependents: [],
     description: 'modern embeddable key-value database',
     manifest: {
       name: 'clibs/sophia',
@@ -8165,7 +8198,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Dec 22 2022 06:11:27 GMT+0000 (Coordinated Universal Time)'
+  'Thu Dec 22 2022 12:11:46 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '3a33685c342d3c178627456e8d077dede2a0c00e'
+export const revision = '18d6c0007829fb907e526b4216d8a3f37ed3c629'
