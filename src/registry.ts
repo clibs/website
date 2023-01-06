@@ -237,6 +237,9 @@ export const keywords: KeywordList = {
   aborts: { slug: 'aborts', packages: ['promsize/abortf'] },
   abortf: { slug: 'abortf', packages: ['promsize/abortf'] },
   msprintf: { slug: 'msprintf', packages: ['promsize/msprintf'] },
+  tiny: { slug: 'tiny', packages: ['kokke/tiny-regex-c'] },
+  regex: { slug: 'regex', packages: ['kokke/tiny-regex-c'] },
+  pcre: { slug: 'pcre', packages: ['kokke/tiny-regex-c'] },
   color: {
     slug: 'color',
     packages: [
@@ -1304,7 +1307,8 @@ export const categories: CategoryList = {
       'wooorm/levenshtein.c',
       'aperezdc/dbuf',
       'promsize/abortf',
-      'promsize/msprintf'
+      'promsize/msprintf',
+      'kokke/tiny-regex-c'
     ]
   },
   Utilities: {
@@ -2296,6 +2300,25 @@ export const packages: Package[] = [
     slug: 'promsize-msprintf',
     url: 'https://github.com/promsize/msprintf',
     license: 'Unlicense'
+  },
+  {
+    category: 'String manipulation',
+    dependents: [],
+    description: 'Small portable regex',
+    manifest: {
+      name: 'kokke/tiny-regex-c',
+      version: '0.1.0',
+      repo: 'kokke/tiny-regex-c',
+      keywords: ['tiny', 'regex', 'pcre'],
+      license: 'Public Domain',
+      makefile: 'Makefile',
+      src: ['re.h', 're.c'],
+      dependencies: {}
+    },
+    name: 'kokke/tiny-regex-c',
+    slug: 'kokke-tiny-regex-c',
+    url: 'https://github.com/kokke/tiny-regex-c',
+    license: 'Public Domain'
   },
   {
     category: 'Utilities',
@@ -8198,7 +8221,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Dec 22 2022 12:11:46 GMT+0000 (Coordinated Universal Time)'
+  'Fri Jan 06 2023 00:34:04 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '18d6c0007829fb907e526b4216d8a3f37ed3c629'
+export const revision = 'a70901d61a59df7e699f86063e62df6654c7b753'
