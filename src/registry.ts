@@ -5029,8 +5029,8 @@ export const packages: Package[] = [
     description: 'Base64 encode/decode',
     manifest: {
       name: 'littlstar/b64.c',
-      repo: 'littlstar/b64.c',
-      version: '0.0.2',
+      repo: 'jwerle/b64.c',
+      version: '0.1.0',
       description: 'Base64 encode/decode',
       keywords: ['base', '64', 'crypto'],
       src: ['b64.h', 'encode.c', 'decode.c', 'buffer.c'],
@@ -8221,7 +8221,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Jan 06 2023 00:34:04 GMT+0000 (Coordinated Universal Time)'
+  'Fri Jan 06 2023 18:09:40 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'a70901d61a59df7e699f86063e62df6654c7b753'
+export const revision = '5a9a4bf0f86954eedde56d737f5baa9895c4c071'
