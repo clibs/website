@@ -971,12 +971,7 @@ export const keywords: KeywordList = {
   mac: { slug: 'mac', packages: ['veqtrus/vial_aes'] },
   async: {
     slug: 'async',
-    packages: [
-      'aisk/libae',
-      'clibs/uv',
-      'jwerle/async.h',
-      'stephenmathieson/batch.c'
-    ]
+    packages: ['aisk/libae', 'jwerle/async.h', 'stephenmathieson/batch.c']
   },
   eventloop: { slug: 'eventloop', packages: ['aisk/libae'] },
   redis: { slug: 'redis', packages: ['aisk/libae'] },
@@ -999,16 +994,6 @@ export const keywords: KeywordList = {
   sniff: { slug: 'sniff', packages: ['4thel00z/libsniff'] },
   raw: { slug: 'raw', packages: ['4thel00z/libsniff'] },
   socket: { slug: 'socket', packages: ['4thel00z/libsniff'] },
-  libuv: {
-    slug: 'libuv',
-    packages: [
-      'clibs/uv',
-      'jwerle/async.h',
-      'willemt/uv_multiplex',
-      'willemt/bmon'
-    ]
-  },
-  uv: { slug: 'uv', packages: ['clibs/uv'] },
   leveldb: {
     slug: 'leveldb',
     packages: ['clibs/leveldb', 'hij1nx/ldb', 'tomerdmnt/levelfs']
@@ -1068,6 +1053,10 @@ export const keywords: KeywordList = {
   'c-macros': { slug: 'c-macros', packages: ['madmurphy/zen.h'] },
   thread: { slug: 'thread', packages: ['jlcordeiro/threadpool'] },
   posix: { slug: 'posix', packages: ['jlcordeiro/threadpool'] },
+  libuv: {
+    slug: 'libuv',
+    packages: ['jwerle/async.h', 'willemt/uv_multiplex', 'willemt/bmon']
+  },
   event: { slug: 'event', packages: ['clibs/trigger', 'willemt/event-timer'] },
   fire: { slug: 'fire', packages: ['clibs/trigger'] },
   firing: { slug: 'firing', packages: ['clibs/trigger'] },
@@ -6015,12 +6004,12 @@ export const packages: Package[] = [
     description: 'Cross-platform asychronous I/O',
     manifest: {
       name: 'clibs/uv',
-      version: 'v1.30.1',
-      repo: 'clibs/uv',
-      description: 'Cross-platform asychronous I/O',
-      keywords: ['libuv', 'uv', 'async'],
-      makefile: 'clib-install.sh',
-      install: 'sh clib-install.sh',
+      repo: 'libuv/libuv',
+      version: 'master',
+      description: 'Cross-platform asynchronous I/O',
+      install:
+        'sh autogen.sh && ./configure --prefix ${PREFIX:-/usr/local} && make install',
+      keywords: [],
       license: 'Unlicensed',
       dependencies: {}
     },
@@ -8221,7 +8210,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Jan 06 2023 18:09:40 GMT+0000 (Coordinated Universal Time)'
+  'Wed Jan 18 2023 18:09:02 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '5a9a4bf0f86954eedde56d737f5baa9895c4c071'
+export const revision = '6b9a6d793fb4d7428a59c8a787cbf869a09c88c8'
