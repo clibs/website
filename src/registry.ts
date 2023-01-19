@@ -4684,19 +4684,18 @@ export const packages: Package[] = [
     description: 'JSON parser.',
     manifest: {
       name: 'clibs/jsmn',
-      version: '1.0.0',
-      repo: 'clibs/jsmn',
-      description: 'json parser',
-      license: 'MIT',
-      src: ['jsmn.c', 'jsmn.h', 'LICENSE'],
-      makefile: 'Makefile',
+      repo: 'zserge/jsmn',
+      version: 'master',
+      description: 'Jsmn is a world fastest JSON parser/tokenizer. ',
+      src: ['LICENSE', 'jsmn.h'],
       keywords: [],
+      license: 'Unlicensed',
       dependencies: {}
     },
     name: 'clibs/jsmn',
     slug: 'clibs-jsmn',
     url: 'https://github.com/clibs/jsmn',
-    license: 'MIT'
+    license: 'Unlicensed'
   },
   {
     category: 'Parsing',
@@ -8210,7 +8209,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Jan 18 2023 18:09:02 GMT+0000 (Coordinated Universal Time)'
+  'Thu Jan 19 2023 00:34:00 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '6b9a6d793fb4d7428a59c8a787cbf869a09c88c8'
+export const revision = 'acce873163f2a5dfdeb0a9545087bc0616179e5c'
