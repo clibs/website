@@ -863,11 +863,6 @@ export const keywords: KeywordList = {
   },
   cut: { slug: 'cut', packages: ['jb55/field-range-parser.c'] },
   fields: { slug: 'fields', packages: ['jb55/field-range-parser.c'] },
-  querystring: { slug: 'querystring', packages: ['jb55/querystring.c'] },
-  uri: {
-    slug: 'uri',
-    packages: ['jb55/querystring.c', 'littlstar/uri.c', 'jwerle/suri']
-  },
   is_number: { slug: 'is-number', packages: ['jb55/is_number.c'] },
   number: { slug: 'number', packages: ['jb55/is_number.c'] },
   http: {
@@ -901,6 +896,7 @@ export const keywords: KeywordList = {
   'run-length': { slug: 'run-length', packages: ['clibs/rle'] },
   compress: { slug: 'compress', packages: ['clibs/rle'] },
   codec: { slug: 'codec', packages: ['clibs/rle'] },
+  uri: { slug: 'uri', packages: ['littlstar/uri.c', 'jwerle/suri'] },
   component: { slug: 'component', packages: ['littlstar/uri.c'] },
   decode: { slug: 'decode', packages: ['littlstar/uri.c', 'clibs/amp'] },
   encode: { slug: 'encode', packages: ['littlstar/uri.c', 'clibs/amp'] },
@@ -1419,7 +1415,6 @@ export const categories: CategoryList = {
       'willemt/torrent-reader',
       'mbucc/js0n',
       'jb55/field-range-parser.c',
-      'jb55/querystring.c',
       'jb55/is_number.c',
       'brendanashworth/http-parser',
       'h2non/semver.c',
@@ -4773,25 +4768,6 @@ export const packages: Package[] = [
     slug: 'jb55-field-range-parser-c',
     url: 'https://github.com/jb55/field-range-parser.c',
     license: 'MIT'
-  },
-  {
-    category: 'Parsing',
-    dependents: [],
-    description: 'Querystring parser',
-    manifest: {
-      name: 'jb55/querystring.c',
-      version: '0.1.1',
-      repo: 'https://github.com/jb55/querystring.c',
-      description: 'querystring parser',
-      keywords: ['querystring', 'uri'],
-      src: ['querystring.c', 'querystring.h'],
-      license: 'Unlicensed',
-      dependencies: {}
-    },
-    name: 'jb55/querystring.c',
-    slug: 'jb55-querystring-c',
-    url: 'https://github.com/jb55/querystring.c',
-    license: 'Unlicensed'
   },
   {
     category: 'Parsing',
@@ -8209,7 +8185,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Jan 19 2023 00:34:00 GMT+0000 (Coordinated Universal Time)'
+  'Sat Jan 21 2023 12:10:54 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'acce873163f2a5dfdeb0a9545087bc0616179e5c'
+export const revision = '394a900cf1d23ddc84bafcd69d7e0c60b9a18252'
