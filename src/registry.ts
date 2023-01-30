@@ -53,10 +53,7 @@ export const keywords: KeywordList = {
     ]
   },
   str: { slug: 'str', packages: ['clibs/buffer'] },
-  util: {
-    slug: 'util',
-    packages: ['clibs/buffer', 'clibs/ck', 'jwerle/async.h', 'sphia/sphia']
-  },
+  util: { slug: 'util', packages: ['clibs/buffer', 'clibs/ck', 'sphia/sphia'] },
   utils: {
     slug: 'utils',
     packages: ['clibs/buffer', 'ararslan/termcolor-c', 'robusgauli/cvector']
@@ -971,7 +968,7 @@ export const keywords: KeywordList = {
   mac: { slug: 'mac', packages: ['veqtrus/vial_aes'] },
   async: {
     slug: 'async',
-    packages: ['aisk/libae', 'jwerle/async.h', 'stephenmathieson/batch.c']
+    packages: ['aisk/libae', 'stephenmathieson/batch.c']
   },
   eventloop: { slug: 'eventloop', packages: ['aisk/libae'] },
   redis: { slug: 'redis', packages: ['aisk/libae'] },
@@ -1053,10 +1050,6 @@ export const keywords: KeywordList = {
   'c-macros': { slug: 'c-macros', packages: ['madmurphy/zen.h'] },
   thread: { slug: 'thread', packages: ['jlcordeiro/threadpool'] },
   posix: { slug: 'posix', packages: ['jlcordeiro/threadpool'] },
-  libuv: {
-    slug: 'libuv',
-    packages: ['jwerle/async.h', 'willemt/uv_multiplex', 'willemt/bmon']
-  },
   event: { slug: 'event', packages: ['clibs/trigger', 'willemt/event-timer'] },
   fire: { slug: 'fire', packages: ['clibs/trigger'] },
   firing: { slug: 'firing', packages: ['clibs/trigger'] },
@@ -1083,6 +1076,7 @@ export const keywords: KeywordList = {
   defer: { slug: 'defer', packages: ['trws/libdefer'] },
   goland: { slug: 'goland', packages: ['trws/libdefer'] },
   convenience: { slug: 'convenience', packages: ['trws/libdefer'] },
+  libuv: { slug: 'libuv', packages: ['willemt/uv_multiplex', 'willemt/bmon'] },
   exceptions: { slug: 'exceptions', packages: ['guillermocalvo/exceptions4c'] },
   'exceptions-for-c': {
     slug: 'exceptions-for-c',
@@ -1521,7 +1515,6 @@ export const categories: CategoryList = {
     slug: 'program-flow',
     packages: [
       'jlcordeiro/threadpool',
-      'jwerle/async.h',
       'stephenmathieson/batch.c',
       'clibs/trigger',
       'stephenmathieson/emitter.c',
@@ -6498,25 +6491,6 @@ export const packages: Package[] = [
   {
     category: 'Program flow',
     dependents: [],
-    description: 'Asynchronous goodies built on libuv',
-    manifest: {
-      name: 'jwerle/async.h',
-      version: '0.0.1',
-      repo: 'jwerle/uv-async',
-      description: 'Async goodies for libuv',
-      keywords: ['async', 'libuv', 'util'],
-      license: 'MIT',
-      src: ['async.h'],
-      dependencies: {}
-    },
-    name: 'jwerle/async.h',
-    slug: 'jwerle-async-h',
-    url: 'https://github.com/jwerle/async.h',
-    license: 'MIT'
-  },
-  {
-    category: 'Program flow',
-    dependents: [],
     description: 'Simple async batch using pthreads',
     manifest: {
       name: 'stephenmathieson/batch.c',
@@ -8209,7 +8183,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Jan 21 2023 18:06:27 GMT+0000 (Coordinated Universal Time)'
+  'Mon Jan 30 2023 06:11:26 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '51004a7d573cb8e8df2df4b48cb1015c1f2fc1ab'
+export const revision = 'f1b4a0b677d640c25af22a2844d168a579ae79d0'
