@@ -4866,7 +4866,7 @@ export const packages: Package[] = [
     description: 'Lightweight JSON library written in C.',
     manifest: {
       name: 'kgabis/parson',
-      version: '1.5.0',
+      version: '1.5.1',
       repo: 'kgabis/parson',
       description: 'Small json parser and reader',
       keywords: ['json', 'parser'],
@@ -8209,7 +8209,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Jan 30 2023 12:12:27 GMT+0000 (Coordinated Universal Time)'
+  'Thu Feb 16 2023 00:33:46 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'beb2e228ab0a06668ebf2132d3ce9198784acb00'
+export const revision = '75742cf4f4508582a8ca9e2238bc5d9425990b19'
