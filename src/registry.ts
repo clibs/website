@@ -6424,10 +6424,7 @@ export const packages: Package[] = [
         'A library of useful C utilities with JavaScript-like array, buffer, and string APIs',
       keywords: ['array', 'buffer', 'formatting', 'utilities', 'helpers'],
       src: [
-        'src/array.h',
-        'src/buffer.h',
-        'src/fmt.h',
-        'src/str.h',
+        'src/libutil.h',
         'src/array.c',
         'src/buffer.c',
         'src/fmt.c',
@@ -8209,7 +8206,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Feb 16 2023 00:33:46 GMT+0000 (Coordinated Universal Time)'
+  'Sun Feb 26 2023 12:11:46 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '75742cf4f4508582a8ca9e2238bc5d9425990b19'
+export const revision = 'ca237e5d3bf610dcd3c83996bd994c99e5ea784e'
