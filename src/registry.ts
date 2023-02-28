@@ -710,7 +710,7 @@ export const keywords: KeywordList = {
   set: { slug: 'set', packages: ['willemt/array-avl-tree', 'robusgauli/cset'] },
   'data structure': {
     slug: 'data-structure',
-    packages: ['willemt/array-avl-tree', 'exbotanical/lib.hash']
+    packages: ['willemt/array-avl-tree', 'exbotanical/libhash']
   },
   hashmap: {
     slug: 'hashmap',
@@ -735,7 +735,7 @@ export const keywords: KeywordList = {
   inplace: { slug: 'inplace', packages: ['willemt/quadratic-probing-hashmap'] },
   'open addressing': {
     slug: 'open-addressing',
-    packages: ['willemt/quadratic-probing-hashmap', 'exbotanical/lib.hash']
+    packages: ['willemt/quadratic-probing-hashmap', 'exbotanical/libhash']
   },
   templated: { slug: 'templated', packages: ['davidleeds/hashmap'] },
   vec: { slug: 'vec', packages: ['rxi/vec'] },
@@ -818,7 +818,7 @@ export const keywords: KeywordList = {
   xxhash: { slug: 'xxhash', packages: ['robusgauli/cset'] },
   hashing: {
     slug: 'hashing',
-    packages: ['robusgauli/cset', 'zackehh/siphash-c', 'exbotanical/lib.hash']
+    packages: ['robusgauli/cset', 'zackehh/siphash-c', 'exbotanical/libhash']
   },
   hashset: { slug: 'hashset', packages: ['robusgauli/cset'] },
   typesafe: { slug: 'typesafe', packages: ['robusgauli/cset'] },
@@ -965,7 +965,7 @@ export const keywords: KeywordList = {
   sha2: { slug: 'sha2', packages: ['jb55/sha256.c', 'aperezdc/hmac-sha256'] },
   hmac: { slug: 'hmac', packages: ['aperezdc/hmac-sha256'] },
   siphash: { slug: 'siphash', packages: ['zackehh/siphash-c'] },
-  'hash table': { slug: 'hash-table', packages: ['exbotanical/lib.hash'] },
+  'hash table': { slug: 'hash-table', packages: ['exbotanical/libhash'] },
   cryptography: { slug: 'cryptography', packages: ['veqtrus/vial_aes'] },
   aes: { slug: 'aes', packages: ['veqtrus/vial_aes'] },
   mac: { slug: 'mac', packages: ['veqtrus/vial_aes'] },
@@ -1471,7 +1471,7 @@ export const categories: CategoryList = {
       'aperezdc/hmac-sha256',
       'zackehh/siphash-c',
       'catb0t/fnv-hash',
-      'exbotanical/lib.hash'
+      'exbotanical/libhash'
     ]
   },
   Encryption: { slug: 'encryption', packages: ['veqtrus/vial_aes'] },
@@ -5587,20 +5587,20 @@ export const packages: Package[] = [
     dependents: [],
     description: 'A simple open-addressed, double-hashed hash table.',
     manifest: {
-      name: 'exbotanical/lib.hash',
-      version: '0.0.2',
+      name: 'exbotanical/libhash',
+      version: '0.0.3',
       author: 'Matthew Zito',
-      repo: 'exbotanical/lib.hash',
+      repo: 'exbotanical/libhash',
       license: 'MIT',
       description: 'A simple open-addressed, double-hashed hash table',
       keywords: ['hashing', 'hash table', 'data structure', 'open addressing'],
-      src: ['src/hash.h', 'src/hash.c', 'src/prime.h', 'src/prime.c'],
+      src: ['src/hash.c', 'include/libhash.h'],
       development: { 'thlorenz/tap.c': '*' },
       dependencies: {}
     },
-    name: 'exbotanical/lib.hash',
-    slug: 'exbotanical-lib-hash',
-    url: 'https://github.com/exbotanical/lib.hash',
+    name: 'exbotanical/libhash',
+    slug: 'exbotanical-libhash',
+    url: 'https://github.com/exbotanical/libhash',
     license: 'MIT'
   },
   {
@@ -6424,7 +6424,7 @@ export const packages: Package[] = [
         'A library of useful C utilities with JavaScript-like array, buffer, and string APIs',
       keywords: ['array', 'buffer', 'formatting', 'utilities', 'helpers'],
       src: [
-        'src/libutil.h',
+        'include/libutil.h',
         'src/array.c',
         'src/buffer.c',
         'src/fmt.c',
@@ -8206,7 +8206,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Feb 26 2023 12:11:46 GMT+0000 (Coordinated Universal Time)'
+  'Tue Feb 28 2023 06:12:22 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'ca237e5d3bf610dcd3c83996bd994c99e5ea784e'
+export const revision = '6d148b8c6cddac5e0e238e7e0a52c5e7f4762bbd'
