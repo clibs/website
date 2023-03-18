@@ -5588,15 +5588,23 @@ export const packages: Package[] = [
     description: 'A simple open-addressed, double-hashed hash table.',
     manifest: {
       name: 'exbotanical/libhash',
-      version: '0.0.3',
+      version: '0.0.5',
       author: 'Matthew Zito',
       repo: 'exbotanical/libhash',
       license: 'MIT',
       description: 'A simple open-addressed, double-hashed hash table',
       keywords: ['hashing', 'hash table', 'data structure', 'open addressing'],
-      src: ['src/hash.c', 'include/libhash.h'],
-      development: { 'thlorenz/tap.c': '*' },
-      dependencies: {}
+      src: [
+        'src/hash_set.c',
+        'src/hash_table.c',
+        'src/hash.c',
+        'src/hash.h',
+        'src/prime.c',
+        'src/prime.h',
+        'include/libhash.h'
+      ],
+      dependencies: { 'clibs/strdup': '*' },
+      development: { 'thlorenz/tap.c': '*' }
     },
     name: 'exbotanical/libhash',
     slug: 'exbotanical-libhash',
@@ -8206,7 +8214,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Mar 12 2023 00:36:31 GMT+0000 (Coordinated Universal Time)'
+  'Sat Mar 18 2023 18:09:13 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '03772c4a191ea2f51532cae96949a8eb88aa01dc'
+export const revision = '7ce2a51f08c78f3542ad6ae8178020a8ecbb1db5'
