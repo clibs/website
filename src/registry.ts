@@ -5588,7 +5588,7 @@ export const packages: Package[] = [
     description: 'A simple open-addressed, double-hashed hash table.',
     manifest: {
       name: 'exbotanical/libhash',
-      version: '0.0.5',
+      version: '0.0.6',
       author: 'Matthew Zito',
       repo: 'exbotanical/libhash',
       license: 'MIT',
@@ -8214,7 +8214,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Mar 18 2023 18:09:13 GMT+0000 (Coordinated Universal Time)'
+  'Sun Mar 19 2023 06:09:59 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '7ce2a51f08c78f3542ad6ae8178020a8ecbb1db5'
+export const revision = '81a40f33dfaa47e4e20e26d5e82baf282d74445c'
