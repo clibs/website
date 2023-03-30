@@ -8208,7 +8208,7 @@ export const packages: Package[] = [
   {
     category: 'OpenGL',
     dependents: [],
-    description: 'Simple OpenGL Image Library',
+    description: 'An implementation of OpenGL 3.x-ish in clean C',
     manifest: {
       name: 'rswinkle/portablegl',
       version: '0.97.1',
@@ -8263,7 +8263,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Tue Mar 28 2023 06:10:16 GMT+0000 (Coordinated Universal Time)'
+  'Thu Mar 30 2023 18:09:10 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '24a70cd5e0fee022c43f928982549bfa590cf88f'
+export const revision = 'c3a3740df937ddfbe17f09099fe6b05c92277ace'
