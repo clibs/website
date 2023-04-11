@@ -6446,7 +6446,7 @@ export const packages: Package[] = [
       'A library of useful C utilities with JavaScript-like array, buffer, and string APIs.',
     manifest: {
       name: 'exbotanical/libutil',
-      version: '0.0.8',
+      version: '0.0.9',
       author: 'Matthew Zito',
       repo: 'exbotanical/libutil',
       license: 'MIT',
@@ -8263,7 +8263,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Mar 31 2023 06:09:46 GMT+0000 (Coordinated Universal Time)'
+  'Tue Apr 11 2023 18:06:45 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'cbe4071efb5cd9ea12d66053fbe9aedb26b700fb'
+export const revision = '449bb66b15528b0dcf26faa6586dd361fe1688c5'
