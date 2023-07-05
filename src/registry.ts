@@ -626,6 +626,7 @@ export const keywords: KeywordList = {
     slug: 'queue',
     packages: [
       'yrmt/arraylist',
+      'willemt/bipbuffer',
       'willemt/heap',
       'willemt/linked-list-queue',
       'willemt/meanqueue',
@@ -688,7 +689,12 @@ export const keywords: KeywordList = {
   },
   uthash: { slug: 'uthash', packages: ['troydhanson/uthash'] },
   'ring buffer': { slug: 'ring-buffer', packages: ['willemt/cbuffer'] },
-  'circular buffer': { slug: 'circular-buffer', packages: ['willemt/cbuffer'] },
+  'circular buffer': {
+    slug: 'circular-buffer',
+    packages: ['willemt/cbuffer', 'willemt/bipbuffer']
+  },
+  bipbuffer: { slug: 'bipbuffer', packages: ['willemt/bipbuffer'] },
+  ring: { slug: 'ring', packages: ['willemt/bipbuffer', 'rikvdh/zringbuf'] },
   heap: { slug: 'heap', packages: ['willemt/heap'] },
   'priority queue': { slug: 'priority-queue', packages: ['willemt/heap'] },
   LRU: { slug: 'lru', packages: ['willemt/pseudolru'] },
@@ -809,7 +815,6 @@ export const keywords: KeywordList = {
   },
   ringbuffer: { slug: 'ringbuffer', packages: ['rikvdh/zringbuf'] },
   ringbuf: { slug: 'ringbuf', packages: ['rikvdh/zringbuf'] },
-  ring: { slug: 'ring', packages: ['rikvdh/zringbuf'] },
   xxhash: { slug: 'xxhash', packages: ['robusgauli/cset'] },
   hashing: {
     slug: 'hashing',
@@ -1385,6 +1390,7 @@ export const categories: CategoryList = {
       'thlorenz/sync-stream.c',
       'troydhanson/uthash',
       'willemt/cbuffer',
+      'willemt/bipbuffer',
       'willemt/heap',
       'willemt/pseudolru',
       'willemt/bag',
@@ -3801,6 +3807,25 @@ export const packages: Package[] = [
     name: 'willemt/cbuffer',
     slug: 'willemt-cbuffer',
     url: 'https://github.com/willemt/cbuffer',
+    license: 'BSD'
+  },
+  {
+    category: 'Data structure',
+    dependents: [],
+    description: 'circular buffer alternative',
+    manifest: {
+      name: 'willemt/bipbuffer',
+      version: '0.0.1',
+      repo: 'willemt/bipbuffer',
+      description: 'Circular buffer alternative',
+      keywords: ['circular buffer', 'bipbuffer', 'queue', 'ring'],
+      license: 'BSD',
+      src: ['bipbuffer.c', 'bipbuffer.h'],
+      dependencies: {}
+    },
+    name: 'willemt/bipbuffer',
+    slug: 'willemt-bipbuffer',
+    url: 'https://github.com/willemt/bipbuffer',
     license: 'BSD'
   },
   {
@@ -8238,7 +8263,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Jul 05 2023 06:11:47 GMT+0000 (Coordinated Universal Time)'
+  'Wed Jul 05 2023 12:14:38 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '017e2056724f02c2652d7ec6de65ed6749e31ada'
+export const revision = '84b71e8552ae9e01b08594c70e5ced36958d4c64'
