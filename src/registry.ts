@@ -650,6 +650,7 @@ export const keywords: KeywordList = {
       'clibs/hash',
       'troydhanson/uthash',
       'ajaymt/dict.c',
+      'jwerle/murmurhash.c',
       'clibs/sha1',
       'catb0t/fnv-hash'
     ]
@@ -954,6 +955,8 @@ export const keywords: KeywordList = {
     packages: ['clibs/which', 'jb55/samp', 'wooorm/stmr', 'wooorm/levenshtein']
   },
   executable: { slug: 'executable', packages: ['clibs/which'] },
+  murmur: { slug: 'murmur', packages: ['jwerle/murmurhash.c'] },
+  murmurhash: { slug: 'murmurhash', packages: ['jwerle/murmurhash.c'] },
   sha1: { slug: 'sha1', packages: ['clibs/sha1'] },
   sha256: {
     slug: 'sha256',
@@ -1483,6 +1486,7 @@ export const categories: CategoryList = {
   Hashing: {
     slug: 'hashing',
     packages: [
+      'jwerle/murmurhash.c',
       'clibs/sha1',
       'jb55/sha256.c',
       'aperezdc/hmac-sha256',
@@ -5470,6 +5474,28 @@ export const packages: Package[] = [
   {
     category: 'Hashing',
     dependents: [],
+    description:
+      'MurmurHash3 general hash bashed lookup function implementation',
+    manifest: {
+      name: 'jwerle/murmurhash.c',
+      version: '0.1.0',
+      repo: 'jwerle/murmurhash.c',
+      description:
+        'MurmurHash3 general hash bashed lookup function implementation',
+      makefile: 'Makefile',
+      keywords: ['murmur', 'hash', 'murmurhash'],
+      license: 'MIT',
+      src: ['murmurhash.h', 'murmurhash.c'],
+      dependencies: {}
+    },
+    name: 'jwerle/murmurhash.c',
+    slug: 'jwerle-murmurhash-c',
+    url: 'https://github.com/jwerle/murmurhash.c',
+    license: 'MIT'
+  },
+  {
+    category: 'Hashing',
+    dependents: [],
     description: 'sha1 hash algorithm',
     manifest: {
       name: 'clibs/sha1',
@@ -8237,7 +8263,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Tue Jul 11 2023 12:14:39 GMT+0000 (Coordinated Universal Time)'
+  'Tue Jul 11 2023 18:09:46 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '2b37f677ba38146cf7176176f198496fa0a4aeb3'
+export const revision = '4b186e3e762fbbe0bc3937ae57df810c64ec3b1f'
