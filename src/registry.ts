@@ -55,11 +55,22 @@ export const keywords: KeywordList = {
   str: { slug: 'str', packages: ['clibs/buffer'] },
   util: {
     slug: 'util',
-    packages: ['clibs/buffer', 'clibs/ck', 'jwerle/async.h', 'sphia/sphia']
+    packages: [
+      'clibs/buffer',
+      'phoenixpinpoint/md4c-clib',
+      'clibs/ck',
+      'jwerle/async.h',
+      'sphia/sphia'
+    ]
   },
   utils: {
     slug: 'utils',
-    packages: ['clibs/buffer', 'ararslan/termcolor-c', 'robusgauli/cvector']
+    packages: [
+      'clibs/buffer',
+      'ararslan/termcolor-c',
+      'robusgauli/cvector',
+      'phoenixpinpoint/md4c-clib'
+    ]
   },
   split: { slug: 'split', packages: ['jwerle/strsplit.h'] },
   char: { slug: 'char', packages: ['jwerle/chfreq.c', 'jwerle/getch.c'] },
@@ -432,7 +443,10 @@ export const keywords: KeywordList = {
     slug: 'validate',
     packages: ['stephenmathieson/is-email.c', 'clibs/clib-validate']
   },
-  html: { slug: 'html', packages: ['thlorenz/gumbo-parser.c'] },
+  html: {
+    slug: 'html',
+    packages: ['thlorenz/gumbo-parser.c', 'phoenixpinpoint/md4c-clib']
+  },
   html5: { slug: 'html5', packages: ['thlorenz/gumbo-parser.c'] },
   clib: { slug: 'clib', packages: ['thlorenz/gumbo-parser.c'] },
   log: {
@@ -897,6 +911,8 @@ export const keywords: KeywordList = {
     slug: 'callback',
     packages: ['rikvdh/matching', 'mobiushorizons/closure_module']
   },
+  md: { slug: 'md', packages: ['phoenixpinpoint/md4c-clib'] },
+  markdown: { slug: 'markdown', packages: ['phoenixpinpoint/md4c-clib'] },
   rle: { slug: 'rle', packages: ['clibs/rle'] },
   'run-length': { slug: 'run-length', packages: ['clibs/rle'] },
   compress: { slug: 'compress', packages: ['clibs/rle'] },
@@ -1446,7 +1462,8 @@ export const categories: CategoryList = {
       'h2non/semver.c',
       'kgabis/parson',
       'rikvdh/matching',
-      'likle/cargs'
+      'likle/cargs',
+      'phoenixpinpoint/md4c-clib'
     ]
   },
   'Encoding/Decoding': {
@@ -4957,6 +4974,34 @@ export const packages: Package[] = [
     license: 'Unlicensed'
   },
   {
+    category: 'Parsing',
+    dependents: [],
+    description:
+      'Markdown Parser and HTML Generator for C. Ported from github.com/mity.',
+    manifest: {
+      name: 'phoenixpinpoint/md4c-clib',
+      version: '0.4.8',
+      repo: 'phoenixpinpoint/md4c-clib',
+      description:
+        'Clib Package for Markdown Parser and HTML Generator for C. Ported from mity/md4c',
+      keywords: ['md', 'markdown', 'html', 'util', 'utils'],
+      license: 'MIT',
+      src: [
+        'src/md4c.c',
+        'src/md4c.h',
+        'src/entity.c',
+        'src/entity.h',
+        'src/md4c-html.c',
+        'src/md4c-html.h'
+      ],
+      dependencies: {}
+    },
+    name: 'phoenixpinpoint/md4c-clib',
+    slug: 'phoenixpinpoint-md4c-clib',
+    url: 'https://github.com/phoenixpinpoint/md4c-clib',
+    license: 'MIT'
+  },
+  {
     category: 'Encoding/Decoding',
     dependents: [],
     description: 'Run-length encoding',
@@ -8263,7 +8308,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Tue Jul 11 2023 18:09:46 GMT+0000 (Coordinated Universal Time)'
+  'Wed Jul 12 2023 00:40:54 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '4b186e3e762fbbe0bc3937ae57df810c64ec3b1f'
+export const revision = '62b215efcabcb44e585ef9a5882643dbeaad8f72'
