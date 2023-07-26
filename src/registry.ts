@@ -1060,6 +1060,9 @@ export const keywords: KeywordList = {
   formatting: { slug: 'formatting', packages: ['exbotanical/libutil'] },
   utilities: { slug: 'utilities', packages: ['exbotanical/libutil'] },
   helpers: { slug: 'helpers', packages: ['exbotanical/libutil'] },
+  WebC: { slug: 'web-c', packages: ['phoenixpinpoint/butterknife'] },
+  HTML: { slug: 'html', packages: ['phoenixpinpoint/butterknife'] },
+  Templating: { slug: 'templating', packages: ['phoenixpinpoint/butterknife'] },
   'c-preprocessor': { slug: 'c-preprocessor', packages: ['madmurphy/zen.h'] },
   counter: { slug: 'counter', packages: ['madmurphy/zen.h'] },
   'c-preprocessor-counter': {
@@ -1548,7 +1551,8 @@ export const categories: CategoryList = {
       'jwerle/libalru',
       'andrerenaud/pdfgen',
       'immediate-mode-ui/nuklear',
-      'exbotanical/libutil'
+      'exbotanical/libutil',
+      'phoenixpinpoint/butterknife'
     ]
   },
   'Preprocessor macros': {
@@ -6514,6 +6518,31 @@ export const packages: Package[] = [
     license: 'MIT'
   },
   {
+    category: 'Libraries',
+    dependents: [],
+    description: 'A simple HTML templating system.',
+    manifest: {
+      name: 'phoenixpinpoint/butterknife',
+      description: 'A simple HTML Templating Engine for C',
+      version: '0.1.0',
+      repo: 'phoenixpinpoint/butterknife',
+      keywords: ['WebC', 'HTML', 'Templating'],
+      license: 'MIT',
+      src: ['butterknife.c', 'butterknife.h'],
+      dependencies: {
+        'clibs/buffer': '*',
+        'jwerle/fs.c': '*',
+        'kokke/tiny-regex-c': '*',
+        'likle/cwalk': '*',
+        'rxi/vec': '*'
+      }
+    },
+    name: 'phoenixpinpoint/butterknife',
+    slug: 'phoenixpinpoint-butterknife',
+    url: 'https://github.com/phoenixpinpoint/butterknife',
+    license: 'MIT'
+  },
+  {
     category: 'Preprocessor macros',
     dependents: [],
     description: 'C preprocessor utilities',
@@ -8308,7 +8337,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Jul 12 2023 00:40:54 GMT+0000 (Coordinated Universal Time)'
+  'Wed Jul 26 2023 00:34:21 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '62b215efcabcb44e585ef9a5882643dbeaad8f72'
+export const revision = 'e260d86c76a44766206a77a0cf19698bdccf04fd'
