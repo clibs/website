@@ -6524,7 +6524,7 @@ export const packages: Package[] = [
     manifest: {
       name: 'phoenixpinpoint/butterknife',
       description: 'A simple HTML Templating Engine for C',
-      version: '0.1.0',
+      version: '0.1.1',
       repo: 'phoenixpinpoint/butterknife',
       keywords: ['WebC', 'HTML', 'Templating'],
       license: 'MIT',
@@ -8337,7 +8337,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Jul 26 2023 00:34:21 GMT+0000 (Coordinated Universal Time)'
+  'Sat Jul 29 2023 00:31:41 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'e260d86c76a44766206a77a0cf19698bdccf04fd'
+export const revision = 'a73054cf0ac6ad9a9a575aeee3e847a1148752ba'
