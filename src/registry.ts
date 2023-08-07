@@ -506,10 +506,7 @@ export const keywords: KeywordList = {
     slug: 'mersenne-twister',
     packages: ['clibs/mt19937ar']
   },
-  random: {
-    slug: 'random',
-    packages: ['clibs/mt19937ar', 'willemt/bag', 'jb55/samp']
-  },
+  random: { slug: 'random', packages: ['clibs/mt19937ar', 'jb55/samp'] },
   password: { slug: 'password', packages: ['brendanashworth/genpassword.c'] },
   generate: { slug: 'generate', packages: ['brendanashworth/genpassword.c'] },
   generator: { slug: 'generator', packages: ['brendanashworth/genpassword.c'] },
@@ -612,10 +609,7 @@ export const keywords: KeywordList = {
   },
   scheduler: { slug: 'scheduler', packages: ['exbotanical/lib.chron'] },
   align: { slug: 'align', packages: ['promsize/memalign'] },
-  pointer: {
-    slug: 'pointer',
-    packages: ['promsize/memalign', 'htmk/fat-array']
-  },
+  pointer: { slug: 'pointer', packages: ['promsize/memalign'] },
   disjoint: { slug: 'disjoint', packages: ['jmi2k/disjoint.h'] },
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
   functional: { slug: 'functional', packages: ['jmi2k/disjoint.h'] },
@@ -644,7 +638,6 @@ export const keywords: KeywordList = {
       'willemt/heap',
       'willemt/linked-list-queue',
       'willemt/meanqueue',
-      'willemt/arrayqueue',
       'willemt/duraqueue'
     ]
   },
@@ -696,7 +689,6 @@ export const keywords: KeywordList = {
       'willemt/farraylist',
       'ajaymt/list.c',
       'gioyik/mapc',
-      'htmk/fat-array',
       'robusgauli/cvector',
       'exbotanical/libutil'
     ]
@@ -713,7 +705,6 @@ export const keywords: KeywordList = {
   'priority queue': { slug: 'priority-queue', packages: ['willemt/heap'] },
   LRU: { slug: 'lru', packages: ['willemt/pseudolru'] },
   cache: { slug: 'cache', packages: ['willemt/pseudolru'] },
-  bag: { slug: 'bag', packages: ['willemt/bag'] },
   bits: { slug: 'bits', packages: ['willemt/bitfield', 'willemt/bitstream'] },
   bitfield: { slug: 'bitfield', packages: ['willemt/bitfield'] },
   'AVL tree': { slug: 'avl-tree', packages: ['willemt/array-avl-tree'] },
@@ -758,7 +749,6 @@ export const keywords: KeywordList = {
     packages: [
       'rxi/vec',
       'kellydunn/libkld',
-      'htmk/fat-array',
       'robusgauli/cvector',
       'mauromombelli/trigonomec',
       'glisy/math'
@@ -803,10 +793,6 @@ export const keywords: KeywordList = {
     slug: 'encadeada',
     packages: ['neylsongularte/simple-linked-list-c']
   },
-  fptr: { slug: 'fptr', packages: ['htmk/fat-array'] },
-  fat: { slug: 'fat', packages: ['htmk/fat-array'] },
-  fatarray: { slug: 'fatarray', packages: ['htmk/fat-array'] },
-  fat_array: { slug: 'fat-array', packages: ['htmk/fat-array'] },
   generic: {
     slug: 'generic',
     packages: ['laserswald/dlist', 'robusgauli/cvector', 'robusgauli/cset']
@@ -1075,7 +1061,7 @@ export const keywords: KeywordList = {
   posix: { slug: 'posix', packages: ['jlcordeiro/threadpool'] },
   libuv: {
     slug: 'libuv',
-    packages: ['jwerle/async.h', 'willemt/uv_multiplex', 'willemt/bmon']
+    packages: ['jwerle/async.h', 'willemt/uv_multiplex']
   },
   event: { slug: 'event', packages: ['clibs/trigger', 'willemt/event-timer'] },
   fire: { slug: 'fire', packages: ['clibs/trigger'] },
@@ -1412,7 +1398,6 @@ export const categories: CategoryList = {
       'willemt/bipbuffer',
       'willemt/heap',
       'willemt/pseudolru',
-      'willemt/bag',
       'willemt/bitfield',
       'willemt/array-avl-tree',
       'willemt/linked-list-hashmap',
@@ -1427,7 +1412,6 @@ export const categories: CategoryList = {
       'willemt/farraylist',
       'mbucc/cqueue',
       'clibs/lmdb',
-      'willemt/arrayqueue',
       'ajaymt/dict.c',
       'ajaymt/list.c',
       'skeeto/lstack',
@@ -1436,7 +1420,6 @@ export const categories: CategoryList = {
       'willemt/duraqueue',
       'gioyik/mapc',
       'neylsongularte/simple-linked-list-c',
-      'htmk/fat-array',
       'laserswald/dlist',
       'catb0t/sparse',
       'arablocks/flat-tree.c',
@@ -1573,7 +1556,6 @@ export const categories: CategoryList = {
       'tylertreat/chan',
       'trws/libdefer',
       'willemt/uv_multiplex',
-      'willemt/bmon',
       'guillermocalvo/exceptions4c',
       'mobiushorizons/closure_module',
       'aperezdc/autocleanup'
@@ -3890,27 +3872,6 @@ export const packages: Package[] = [
   {
     category: 'Data structure',
     dependents: [],
-    description:
-      'data structure which only has put and randomised take operations',
-    manifest: {
-      name: 'willemt/bag',
-      version: '0.0.1',
-      repo: 'willemt/bag',
-      description:
-        'Data structure which only has PUT and TAKE operations (TAKE removes a random item)',
-      keywords: ['random', 'bag'],
-      license: 'BSD',
-      src: ['bag.c', 'bag.h'],
-      dependencies: {}
-    },
-    name: 'willemt/bag',
-    slug: 'willemt-bag',
-    url: 'https://github.com/willemt/bag',
-    license: 'BSD'
-  },
-  {
-    category: 'Data structure',
-    dependents: [],
     description: 'easily get and set bits in a bitfield',
     manifest: {
       name: 'willemt/bitfield',
@@ -4191,25 +4152,6 @@ export const packages: Package[] = [
   {
     category: 'Data structure',
     dependents: [],
-    description: 'Queue implemented using an array',
-    manifest: {
-      name: 'willemt/arrayqueue',
-      version: '0.0.1',
-      repo: 'willemt/arrayqueue',
-      description: 'Queue implemented using an array',
-      keywords: ['queue'],
-      license: 'BSD',
-      src: ['arrayqueue.c', 'arrayqueue.h'],
-      dependencies: {}
-    },
-    name: 'willemt/arrayqueue',
-    slug: 'willemt-arrayqueue',
-    url: 'https://github.com/willemt/arrayqueue',
-    license: 'BSD'
-  },
-  {
-    category: 'Data structure',
-    dependents: [],
     description: 'Simple dictionary implemented through a linked list',
     manifest: {
       name: 'ajaymt/dict.c',
@@ -4380,34 +4322,6 @@ export const packages: Package[] = [
     slug: 'neylsongularte-simple-linked-list-c',
     url: 'https://github.com/neylsongularte/simple-linked-list-c',
     license: 'Unlicensed'
-  },
-  {
-    category: 'Data structure',
-    dependents: [],
-    description: 'Dynamic arbitrary typed array using fat pointers and macros.',
-    manifest: {
-      name: 'htmk/fat-array',
-      version: '0.0.4',
-      repo: 'htmk/Fat-Array',
-      description:
-        'Fat array is a dynamic arbitrary typed array using fat pointers and macros.',
-      keywords: [
-        'fptr',
-        'fat',
-        'array',
-        'pointer',
-        'vector',
-        'fatarray',
-        'fat_array'
-      ],
-      license: 'MIT',
-      src: ['src/fat_array.h'],
-      dependencies: {}
-    },
-    name: 'htmk/fat-array',
-    slug: 'htmk-fat-array',
-    url: 'https://github.com/htmk/Fat-Array',
-    license: 'MIT'
   },
   {
     category: 'Data structure',
@@ -6810,26 +6724,6 @@ export const packages: Package[] = [
   {
     category: 'Program flow',
     dependents: [],
-    description: 'Batch work from multiple threads',
-    manifest: {
-      name: 'willemt/bmon',
-      version: '0.0.1',
-      repo: 'willemt/bmon',
-      description:
-        'Combine work from multiple threads into a batch to gain performance',
-      keywords: ['libuv'],
-      license: 'BSD',
-      src: ['src/batch_monitor.c', 'include/batch_monitor.h'],
-      dependencies: { 'willemt/heap': '*' }
-    },
-    name: 'willemt/bmon',
-    slug: 'willemt-bmon',
-    url: 'https://github.com/willemt/bmon',
-    license: 'BSD'
-  },
-  {
-    category: 'Program flow',
-    dependents: [],
     description: 'An exception handling framework for C',
     manifest: {
       name: 'guillermocalvo/exceptions4c',
@@ -8337,7 +8231,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Aug 03 2023 12:12:27 GMT+0000 (Coordinated Universal Time)'
+  'Mon Aug 07 2023 00:35:37 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'c1abe2f423d749ffd27d5a8c1a4725a37d0b9e87'
+export const revision = 'b6fe7c059266561a37cb1d58a6eea270467da08b'
