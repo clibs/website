@@ -95,7 +95,6 @@ export const keywords: KeywordList = {
     packages: [
       'stephenmathieson/path-join.c',
       'stephenmathieson/path-normalize.c',
-      'michaelrhodes/path-basename.c',
       'clibs/which',
       'brendanashworth/r3'
     ]
@@ -154,7 +153,6 @@ export const keywords: KeywordList = {
     packages: ['stephenmathieson/trim.c', 'littlstar/trim.cc']
   },
   strings: { slug: 'strings', packages: ['chrisdew/sds'] },
-  basename: { slug: 'basename', packages: ['michaelrhodes/path-basename.c'] },
   wildcard: { slug: 'wildcard', packages: ['clibs/wildcardcmp'] },
   comparison: {
     slug: 'comparison',
@@ -1324,7 +1322,6 @@ export const categories: CategoryList = {
       'stephenmathieson/trim.c',
       'dhobsd/vstring',
       'chrisdew/sds',
-      'michaelrhodes/path-basename.c',
       'clibs/wildcardcmp',
       'littlstar/asprintf.c',
       'clibs/strndup',
@@ -2076,27 +2073,6 @@ export const packages: Package[] = [
     slug: 'chrisdew-sds',
     url: 'https://github.com/chrisdew/sds',
     license: 'BSD'
-  },
-  {
-    category: 'String manipulation',
-    dependents: [],
-    description:
-      'Find the last portion of a path. Similar to Node’s path.basename method.',
-    manifest: {
-      name: 'michaelrhodes/path-basename.c',
-      version: '0.0.1',
-      repo: 'michaelrhodes/path-basename.c',
-      description:
-        'Find the last portion of a path. Similar to Node’s path.basename method.',
-      keywords: ['path', 'basename'],
-      license: 'MIT',
-      src: ['src/path-basename.c', 'src/path-basename.h'],
-      dependencies: { 'stephenmathieson/str-replace.c': '0.0.5' }
-    },
-    name: 'michaelrhodes/path-basename.c',
-    slug: 'michaelrhodes-path-basename-c',
-    url: 'https://github.com/michaelrhodes/path-basename.c',
-    license: 'MIT'
   },
   {
     category: 'String manipulation',
@@ -8337,7 +8313,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Aug 07 2023 06:11:17 GMT+0000 (Coordinated Universal Time)'
+  'Sun Aug 13 2023 00:29:52 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '594a8edffad0aded1f3789ea385ccd81e6a989a6'
+export const revision = '95e96e077327cb1eb8fd6b19e7043be6a032b2f3'
