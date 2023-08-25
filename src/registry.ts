@@ -5335,7 +5335,7 @@ export const packages: Package[] = [
     description: 'rm -rf',
     manifest: {
       name: 'stephenmathieson/rimraf.c',
-      version: '0.1.0',
+      version: '0.1.1',
       repo: 'stephenmathieson/rimraf.c',
       description: 'rm -rf',
       keywords: ['rm', 'rimraf', 'unlink'],
@@ -8337,7 +8337,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Aug 13 2023 06:08:50 GMT+0000 (Coordinated Universal Time)'
+  'Fri Aug 25 2023 18:09:36 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '5840dbe1e7d787a945199cfdca5ac2d0d86ccd94'
+export const revision = 'dae5559fd32426f52f3346988ca074c402c06556'
