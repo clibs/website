@@ -6389,38 +6389,29 @@ export const packages: Package[] = [
     manifest: {
       name: 'jwerle/libras',
       version: '0.4.1',
+      clib: true,
       description:
         'A C99 library for creating random access storage interfaces.',
-      repo: 'jwerle/libras',
-      src: [
-        'include/ras/allocator.h',
-        'include/ras/emitter.h',
-        'include/ras/platform.h',
-        'include/ras/request.h',
-        'include/ras/storage.h',
-        'include/ras/version.h',
-        'include/ras/ras.h',
-        'src/allocator.c',
-        'src/emitter.c',
-        'src/request.c',
-        'src/require.h',
-        'src/storage.c',
-        'src/version.c',
-        'mk/brief.mk',
-        'Makefile.in',
-        'configure',
-        'README.md',
-        'LICENSE'
-      ],
-      development: { 'jwerle/libok': '0.2.0' },
+      directories: { example: 'example', test: 'test' },
+      scripts: {
+        version: './scripts/update-clib-json && git add clib.json',
+        test: 'make test'
+      },
+      repository: {
+        type: 'git',
+        url: 'git+https://github.com/jwerle/libras.git'
+      },
+      author: 'Joseph Werle <joseph.werle@gmail.com>',
+      license: 'MIT',
+      bugs: { url: 'https://github.com/jwerle/libras/issues' },
+      homepage: 'https://github.com/jwerle/libras#readme',
       keywords: [],
-      license: 'Unlicensed',
       dependencies: {}
     },
     name: 'jwerle/libras',
     slug: 'jwerle-libras',
     url: 'https://github.com/jwerle/libras',
-    license: 'Unlicensed'
+    license: 'MIT'
   },
   {
     category: 'Libraries',
@@ -8337,7 +8328,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Oct 04 2023 18:12:07 GMT+0000 (Coordinated Universal Time)'
+  'Mon Oct 09 2023 12:13:43 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '8a653cd7a390fde46a550a4f972a93eb639b2152'
+export const revision = '3ade53d822046ba0f03a51b9cdce85a05c37c45c'
