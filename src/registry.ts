@@ -7054,7 +7054,7 @@ export const packages: Package[] = [
     description: 'Super tiny tap output library',
     manifest: {
       name: 'jwerle/libok',
-      version: '0.6.3',
+      version: '0.6.5',
       author: 'Joseph Werle',
       description: 'Super tiny tap output library',
       repo: 'jwerle/libok',
@@ -8337,7 +8337,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Oct 13 2023 18:09:17 GMT+0000 (Coordinated Universal Time)'
+  'Sat Oct 14 2023 00:28:52 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'd32fdf06789e96f716c04e6e9d0d1931d13e7b3a'
+export const revision = 'acd1fa377acd2788c0f7451ff8b4cc85c4860d1e'
