@@ -3994,7 +3994,7 @@ export const packages: Package[] = [
       'templated and type-safe hashmap using open addressing and linear probing for collision resolution.',
     manifest: {
       name: 'davidleeds/hashmap',
-      version: 'v2.0.2',
+      version: 'v2.0.3',
       repo: 'DavidLeeds/hashmap',
       description:
         ' Templated type-safe hashmap implementation in C using open addressing and linear probing for collision resolution. ',
@@ -8337,7 +8337,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Wed Nov 01 2023 00:31:11 GMT+0000 (Coordinated Universal Time)'
+  'Mon Nov 06 2023 12:13:28 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'b6cce263307ed22ca68c0ae2175a8be14f8f34ad'
+export const revision = '9e19c8ebe9fffc53cea67bc9a1e5acadb2ac3b84'
