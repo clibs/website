@@ -18,11 +18,11 @@ export const keywords: KeywordList = {
       'gioyik/buffer-libc',
       'aperezdc/dbuf',
       'isty001/mem-pool',
+      'exbotanical/libutil',
       'willemt/cbuffer',
       'rikvdh/zabuffer',
       'rikvdh/zringbuf',
-      'robusgauli/cvector',
-      'exbotanical/libutil'
+      'robusgauli/cvector'
     ]
   },
   string: {
@@ -616,6 +616,23 @@ export const keywords: KeywordList = {
     slug: 'pointer',
     packages: ['promsize/memalign', 'htmk/fat-array']
   },
+  array: {
+    slug: 'array',
+    packages: [
+      'exbotanical/libutil',
+      'troydhanson/uthash',
+      'willemt/bitfield',
+      'rxi/vec',
+      'willemt/farraylist',
+      'ajaymt/list.c',
+      'gioyik/mapc',
+      'htmk/fat-array',
+      'robusgauli/cvector'
+    ]
+  },
+  formatting: { slug: 'formatting', packages: ['exbotanical/libutil'] },
+  utilities: { slug: 'utilities', packages: ['exbotanical/libutil'] },
+  helpers: { slug: 'helpers', packages: ['exbotanical/libutil'] },
   disjoint: { slug: 'disjoint', packages: ['jmi2k/disjoint.h'] },
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
   functional: { slug: 'functional', packages: ['jmi2k/disjoint.h'] },
@@ -687,20 +704,6 @@ export const keywords: KeywordList = {
     packages: ['thlorenz/sync-stream.c', 'willemt/streaming-bencode']
   },
   flow: { slug: 'flow', packages: ['thlorenz/sync-stream.c'] },
-  array: {
-    slug: 'array',
-    packages: [
-      'troydhanson/uthash',
-      'willemt/bitfield',
-      'rxi/vec',
-      'willemt/farraylist',
-      'ajaymt/list.c',
-      'gioyik/mapc',
-      'htmk/fat-array',
-      'robusgauli/cvector',
-      'exbotanical/libutil'
-    ]
-  },
   uthash: { slug: 'uthash', packages: ['troydhanson/uthash'] },
   'ring buffer': { slug: 'ring-buffer', packages: ['willemt/cbuffer'] },
   'circular buffer': {
@@ -1057,9 +1060,6 @@ export const keywords: KeywordList = {
   },
   ui: { slug: 'ui', packages: ['immediate-mode-ui/nuklear'] },
   toolkit: { slug: 'toolkit', packages: ['immediate-mode-ui/nuklear'] },
-  formatting: { slug: 'formatting', packages: ['exbotanical/libutil'] },
-  utilities: { slug: 'utilities', packages: ['exbotanical/libutil'] },
-  helpers: { slug: 'helpers', packages: ['exbotanical/libutil'] },
   WebC: { slug: 'web-c', packages: ['phoenixpinpoint/butterknife'] },
   HTML: { slug: 'html', packages: ['phoenixpinpoint/butterknife'] },
   Templating: { slug: 'templating', packages: ['phoenixpinpoint/butterknife'] },
@@ -1395,7 +1395,8 @@ export const categories: CategoryList = {
       'clibs/linenoise',
       'exbotanical/lib.thread',
       'exbotanical/lib.chron',
-      'promsize/memalign'
+      'promsize/memalign',
+      'exbotanical/libutil'
     ]
   },
   'Data structure': {
@@ -1551,7 +1552,6 @@ export const categories: CategoryList = {
       'jwerle/libalru',
       'andrerenaud/pdfgen',
       'immediate-mode-ui/nuklear',
-      'exbotanical/libutil',
       'phoenixpinpoint/butterknife'
     ]
   },
@@ -3633,6 +3633,34 @@ export const packages: Package[] = [
     slug: 'promsize-memalign',
     url: 'https://github.com/promsize/memalign',
     license: 'Unlicense'
+  },
+  {
+    category: 'Utilities',
+    dependents: [],
+    description: 'JavaScript-inspired utilities for arrays and buffers.',
+    manifest: {
+      name: 'exbotanical/libutil',
+      version: '0.0.11',
+      author: 'Matthew Zito',
+      repo: 'exbotanical/libutil',
+      license: 'MIT',
+      description:
+        'A library of useful C utilities with JavaScript-like array, buffer, and string APIs',
+      keywords: ['array', 'buffer', 'formatting', 'utilities', 'helpers'],
+      src: [
+        'include/libutil.h',
+        'src/array.c',
+        'src/buffer.c',
+        'src/fmt.c',
+        'src/str.c'
+      ],
+      development: { 'thlorenz/tap.c': '*' },
+      dependencies: {}
+    },
+    name: 'exbotanical/libutil',
+    slug: 'exbotanical-libutil',
+    url: 'https://github.com/exbotanical/libutil',
+    license: 'MIT'
   },
   {
     category: 'Data structure',
@@ -6491,35 +6519,6 @@ export const packages: Package[] = [
   {
     category: 'Libraries',
     dependents: [],
-    description:
-      'A library of useful C utilities with JavaScript-like array, buffer, and string APIs.',
-    manifest: {
-      name: 'exbotanical/libutil',
-      version: '0.0.11',
-      author: 'Matthew Zito',
-      repo: 'exbotanical/libutil',
-      license: 'MIT',
-      description:
-        'A library of useful C utilities with JavaScript-like array, buffer, and string APIs',
-      keywords: ['array', 'buffer', 'formatting', 'utilities', 'helpers'],
-      src: [
-        'include/libutil.h',
-        'src/array.c',
-        'src/buffer.c',
-        'src/fmt.c',
-        'src/str.c'
-      ],
-      development: { 'thlorenz/tap.c': '*' },
-      dependencies: {}
-    },
-    name: 'exbotanical/libutil',
-    slug: 'exbotanical-libutil',
-    url: 'https://github.com/exbotanical/libutil',
-    license: 'MIT'
-  },
-  {
-    category: 'Libraries',
-    dependents: [],
     description: 'A simple HTML templating system.',
     manifest: {
       name: 'phoenixpinpoint/butterknife',
@@ -8337,7 +8336,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Nov 06 2023 12:13:28 GMT+0000 (Coordinated Universal Time)'
+  'Fri Nov 10 2023 06:09:37 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '9e19c8ebe9fffc53cea67bc9a1e5acadb2ac3b84'
+export const revision = '07f26c0eaf9e8db984f9a06548a28327fc7a97d6'
