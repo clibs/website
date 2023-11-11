@@ -6134,8 +6134,17 @@ export const packages: Package[] = [
         'javascript'
       ],
       license: 'GPLv3',
-      dependencies: { 'clibs/buffer': '*' },
-      src: ['src/*', 'docs/*']
+      dependencies: { 'clibs/buffer': '*', 'kgabis/parson': '*' },
+      src: [
+        'headers.h',
+        'headers.c',
+        'request.h',
+        'request.c',
+        'response.h',
+        'response.c',
+        'fido.h',
+        'fido.c'
+      ]
     },
     name: 'phoenixpinpoint/fido',
     slug: 'phoenixpinpoint-fido',
@@ -8374,7 +8383,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Nov 11 2023 12:10:14 GMT+0000 (Coordinated Universal Time)'
+  'Sat Nov 11 2023 18:08:40 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '0eb961b260c9990e5ba36328fdfb44f87f44f253'
+export const revision = '7f5d676c079b978fbf97c80b200249ff8809062f'
