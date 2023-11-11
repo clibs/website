@@ -1013,6 +1013,15 @@ export const keywords: KeywordList = {
   sniff: { slug: 'sniff', packages: ['4thel00z/libsniff'] },
   raw: { slug: 'raw', packages: ['4thel00z/libsniff'] },
   socket: { slug: 'socket', packages: ['4thel00z/libsniff'] },
+  'Web Development': {
+    slug: 'web-development',
+    packages: ['phoenixpinpoint/fido']
+  },
+  WebAssembly: { slug: 'web-assembly', packages: ['phoenixpinpoint/fido'] },
+  WASM: { slug: 'wasm', packages: ['phoenixpinpoint/fido'] },
+  REST: { slug: 'rest', packages: ['phoenixpinpoint/fido'] },
+  JS: { slug: 'js', packages: ['phoenixpinpoint/fido'] },
+  javascript: { slug: 'javascript', packages: ['phoenixpinpoint/fido'] },
   leveldb: {
     slug: 'leveldb',
     packages: ['clibs/leveldb', 'hij1nx/ldb', 'tomerdmnt/levelfs']
@@ -1531,7 +1540,8 @@ export const categories: CategoryList = {
       'daddinuz/http',
       'aperezdc/netdial',
       'clibs/http-get.c',
-      '4thel00z/libsniff'
+      '4thel00z/libsniff',
+      'phoenixpinpoint/fido'
     ]
   },
   Libraries: {
@@ -6105,6 +6115,34 @@ export const packages: Package[] = [
     license: 'GPL-3'
   },
   {
+    category: 'Net',
+    dependents: [],
+    description:
+      'Fido provides JS Fetch API bindings in C for use in WASM. Additionally Fido provides a simple Header, Request and, Response API.',
+    manifest: {
+      name: 'phoenixpinpoint/fido',
+      version: '0.1.1',
+      repo: 'phoenixpinpoint/fido',
+      description:
+        'Fido provides JS Fetch API bindings in C for use in WASM. Additionally Fido provides a simple Header, Request and, Response API',
+      keywords: [
+        'Web Development',
+        'WebAssembly',
+        'WASM',
+        'REST',
+        'JS',
+        'javascript'
+      ],
+      license: 'GPLv3',
+      dependencies: { 'clibs/buffer': '*' },
+      src: ['src/*', 'docs/*']
+    },
+    name: 'phoenixpinpoint/fido',
+    slug: 'phoenixpinpoint-fido',
+    url: 'https://github.com/phoenixpinpoint/fido',
+    license: 'GPLv3'
+  },
+  {
     category: 'Libraries',
     dependents: [],
     description: 'Cross-platform asychronous I/O',
@@ -8336,7 +8374,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Nov 10 2023 06:09:37 GMT+0000 (Coordinated Universal Time)'
+  'Sat Nov 11 2023 12:10:14 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '07f26c0eaf9e8db984f9a06548a28327fc7a97d6'
+export const revision = '0eb961b260c9990e5ba36328fdfb44f87f44f253'
