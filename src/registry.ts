@@ -199,6 +199,7 @@ export const keywords: KeywordList = {
       'isty001/mem-pool',
       'gioyik/mapc',
       'orangeduck/mpc',
+      'phoenixpinpoint/fracture',
       'madmurphy/zen.h',
       'guillermocalvo/exceptions4c',
       'orangeduck/ptest'
@@ -1015,10 +1016,16 @@ export const keywords: KeywordList = {
   socket: { slug: 'socket', packages: ['4thel00z/libsniff'] },
   'Web Development': {
     slug: 'web-development',
-    packages: ['phoenixpinpoint/fido']
+    packages: ['phoenixpinpoint/fido', 'phoenixpinpoint/fracture']
   },
-  WebAssembly: { slug: 'web-assembly', packages: ['phoenixpinpoint/fido'] },
-  WASM: { slug: 'wasm', packages: ['phoenixpinpoint/fido'] },
+  WebAssembly: {
+    slug: 'web-assembly',
+    packages: ['phoenixpinpoint/fido', 'phoenixpinpoint/fracture']
+  },
+  WASM: {
+    slug: 'wasm',
+    packages: ['phoenixpinpoint/fido', 'phoenixpinpoint/fracture']
+  },
   REST: { slug: 'rest', packages: ['phoenixpinpoint/fido'] },
   JS: { slug: 'js', packages: ['phoenixpinpoint/fido'] },
   javascript: { slug: 'javascript', packages: ['phoenixpinpoint/fido'] },
@@ -1072,6 +1079,8 @@ export const keywords: KeywordList = {
   WebC: { slug: 'web-c', packages: ['phoenixpinpoint/butterknife'] },
   HTML: { slug: 'html', packages: ['phoenixpinpoint/butterknife'] },
   Templating: { slug: 'templating', packages: ['phoenixpinpoint/butterknife'] },
+  Javascript: { slug: 'javascript', packages: ['phoenixpinpoint/fracture'] },
+  js: { slug: 'js', packages: ['phoenixpinpoint/fracture'] },
   'c-preprocessor': { slug: 'c-preprocessor', packages: ['madmurphy/zen.h'] },
   counter: { slug: 'counter', packages: ['madmurphy/zen.h'] },
   'c-preprocessor-counter': {
@@ -1562,7 +1571,8 @@ export const categories: CategoryList = {
       'jwerle/libalru',
       'andrerenaud/pdfgen',
       'immediate-mode-ui/nuklear',
-      'phoenixpinpoint/butterknife'
+      'phoenixpinpoint/butterknife',
+      'phoenixpinpoint/fracture'
     ]
   },
   'Preprocessor macros': {
@@ -3650,7 +3660,7 @@ export const packages: Package[] = [
     description: 'JavaScript-inspired utilities for arrays and buffers.',
     manifest: {
       name: 'exbotanical/libutil',
-      version: '0.0.11',
+      version: '0.0.12',
       author: 'Matthew Zito',
       repo: 'exbotanical/libutil',
       license: 'MIT',
@@ -6589,6 +6599,39 @@ export const packages: Package[] = [
     license: 'MIT'
   },
   {
+    category: 'Libraries',
+    dependents: [],
+    description:
+      'Fracture provides a robust set of tools for developing web applications in C. Build to JS or WASM.',
+    manifest: {
+      name: 'phoenixpinpoint/fracture',
+      version: '0.1.1',
+      repo: 'phoenixpinpoint/Fracture',
+      description:
+        'Fracture provides a robust set of tools for developing web applications in C. Build to JS or WASM',
+      keywords: [
+        'Web Development',
+        'WebAssembly',
+        'WASM',
+        'Javascript',
+        'c',
+        'js'
+      ],
+      license: 'MIT',
+      dependencies: {
+        'clibs/buffer': '*',
+        'kgabis/parson': '*',
+        'phoenixpinpoint/fido': '*',
+        'phoenixpinpoint/butterknife': '*'
+      },
+      src: ['src/*']
+    },
+    name: 'phoenixpinpoint/fracture',
+    slug: 'phoenixpinpoint-fracture',
+    url: 'https://github.com/phoenixpinpoint/Fracture',
+    license: 'MIT'
+  },
+  {
     category: 'Preprocessor macros',
     dependents: [],
     description: 'C preprocessor utilities',
@@ -8383,7 +8426,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Nov 11 2023 18:08:40 GMT+0000 (Coordinated Universal Time)'
+  'Mon Nov 13 2023 00:30:41 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '7f5d676c079b978fbf97c80b200249ff8809062f'
+export const revision = '21751980b41cc14b047792015763b45f26356ead'
