@@ -42,6 +42,7 @@ export const keywords: KeywordList = {
       'dhobsd/vstring',
       'chrisdew/sds',
       'clibs/wildcardcmp',
+      'neved4/asprintf',
       'littlstar/asprintf.c',
       'clibs/strndup',
       'clibs/strdup',
@@ -162,13 +163,16 @@ export const keywords: KeywordList = {
   },
   asprintf: {
     slug: 'asprintf',
-    packages: ['littlstar/asprintf.c', 'promsize/msprintf']
+    packages: ['neved4/asprintf', 'littlstar/asprintf.c', 'promsize/msprintf']
   },
   sprintf: {
     slug: 'sprintf',
-    packages: ['littlstar/asprintf.c', 'promsize/msprintf']
+    packages: ['neved4/asprintf', 'littlstar/asprintf.c', 'promsize/msprintf']
   },
-  alloc: { slug: 'alloc', packages: ['littlstar/asprintf.c'] },
+  alloc: {
+    slug: 'alloc',
+    packages: ['neved4/asprintf', 'littlstar/asprintf.c']
+  },
   copy: { slug: 'copy', packages: ['clibs/strdup', 'isty001/copy'] },
   c99: { slug: 'c99', packages: ['tingping/ustring'] },
   unicode: { slug: 'unicode', packages: ['tingping/ustring'] },
@@ -1344,6 +1348,7 @@ export const categories: CategoryList = {
       'chrisdew/sds',
       'michaelrhodes/path-basename.c',
       'clibs/wildcardcmp',
+      'neved4/asprintf',
       'littlstar/asprintf.c',
       'clibs/strndup',
       'clibs/strdup',
@@ -2135,6 +2140,25 @@ export const packages: Package[] = [
     name: 'clibs/wildcardcmp',
     slug: 'clibs-wildcardcmp',
     url: 'https://github.com/clibs/wildcardcmp',
+    license: 'MIT'
+  },
+  {
+    category: 'String manipulation',
+    dependents: [],
+    description: 'Robust, portable asprintf, vasprintf implementation',
+    manifest: {
+      name: 'neved4/asprintf',
+      version: '1.0.0',
+      repo: 'Neved4/asprintf',
+      description: 'asprintf, vasprintf - print to allocated string',
+      license: 'MIT',
+      keywords: ['asprintf', 'sprintf', 'alloc', 'string'],
+      src: ['asprintf.c', 'asprintf.h'],
+      dependencies: {}
+    },
+    name: 'neved4/asprintf',
+    slug: 'neved4-asprintf',
+    url: 'https://github.com/Neved4/asprintf',
     license: 'MIT'
   },
   {
@@ -8428,7 +8452,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Nov 27 2023 00:30:48 GMT+0000 (Coordinated Universal Time)'
+  'Thu Dec 28 2023 12:11:37 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '911fb4c53456884a4892cf91c434c1d21804bbf6'
+export const revision = '53e2c88dcaab8c2668deed6d4360c30f0bda6077'
