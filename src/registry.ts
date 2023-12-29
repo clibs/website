@@ -201,6 +201,7 @@ export const keywords: KeywordList = {
       'gioyik/c_printf',
       'gioyik/slim_color',
       'isty001/mem-pool',
+      'phoenixpinpoint/surveyor',
       'gioyik/mapc',
       'orangeduck/mpc',
       'phoenixpinpoint/fracture',
@@ -638,6 +639,22 @@ export const keywords: KeywordList = {
   formatting: { slug: 'formatting', packages: ['exbotanical/libutil'] },
   utilities: { slug: 'utilities', packages: ['exbotanical/libutil'] },
   helpers: { slug: 'helpers', packages: ['exbotanical/libutil'] },
+  WebAssembly: {
+    slug: 'web-assembly',
+    packages: [
+      'phoenixpinpoint/surveyor',
+      'phoenixpinpoint/fido',
+      'phoenixpinpoint/fracture'
+    ]
+  },
+  WASM: {
+    slug: 'wasm',
+    packages: [
+      'phoenixpinpoint/surveyor',
+      'phoenixpinpoint/fido',
+      'phoenixpinpoint/fracture'
+    ]
+  },
   disjoint: { slug: 'disjoint', packages: ['jmi2k/disjoint.h'] },
   sum: { slug: 'sum', packages: ['jmi2k/disjoint.h'] },
   functional: { slug: 'functional', packages: ['jmi2k/disjoint.h'] },
@@ -1020,14 +1037,6 @@ export const keywords: KeywordList = {
   socket: { slug: 'socket', packages: ['4thel00z/libsniff'] },
   'Web Development': {
     slug: 'web-development',
-    packages: ['phoenixpinpoint/fido', 'phoenixpinpoint/fracture']
-  },
-  WebAssembly: {
-    slug: 'web-assembly',
-    packages: ['phoenixpinpoint/fido', 'phoenixpinpoint/fracture']
-  },
-  WASM: {
-    slug: 'wasm',
     packages: ['phoenixpinpoint/fido', 'phoenixpinpoint/fracture']
   },
   REST: { slug: 'rest', packages: ['phoenixpinpoint/fido'] },
@@ -1419,7 +1428,8 @@ export const categories: CategoryList = {
       'exbotanical/lib.thread',
       'exbotanical/lib.chron',
       'promsize/memalign',
-      'exbotanical/libutil'
+      'exbotanical/libutil',
+      'phoenixpinpoint/surveyor'
     ]
   },
   'Data structure': {
@@ -3709,6 +3719,31 @@ export const packages: Package[] = [
     license: 'MIT'
   },
   {
+    category: 'Utilities',
+    dependents: [],
+    description: 'A dependency build management tool for clib',
+    manifest: {
+      name: 'phoenixpinpoint/surveyor',
+      version: '0.1.1',
+      repo: 'phoenixpinpoint/Surveyor',
+      description: 'Dependency Builder Generator for C',
+      keywords: ['WebAssembly', 'WASM', 'c'],
+      license: 'MIT',
+      dependencies: {
+        'clibs/buffer': '*',
+        'kgabis/parson': '*',
+        'likle/cwalk': '*',
+        'rxi/vec': '*',
+        'jwerle/fs.c': '*'
+      },
+      src: ['surveyor.c']
+    },
+    name: 'phoenixpinpoint/surveyor',
+    slug: 'phoenixpinpoint-surveyor',
+    url: 'https://github.com/phoenixpinpoint/Surveyor',
+    license: 'MIT'
+  },
+  {
     category: 'Data structure',
     dependents: [],
     description: 'disjoint types (aka sum types)',
@@ -4084,7 +4119,7 @@ export const packages: Package[] = [
   },
   {
     category: 'Data structure',
-    dependents: [],
+    dependents: ['phoenixpinpoint/surveyor'],
     description: 'dynamic array',
     manifest: {
       name: 'rxi/vec',
@@ -4979,7 +5014,7 @@ export const packages: Package[] = [
   },
   {
     category: 'Parsing',
-    dependents: [],
+    dependents: ['phoenixpinpoint/surveyor'],
     description: 'Lightweight JSON library written in C.',
     manifest: {
       name: 'kgabis/parson',
@@ -5360,7 +5395,7 @@ export const packages: Package[] = [
   },
   {
     category: 'Filesystem',
-    dependents: [],
+    dependents: ['phoenixpinpoint/surveyor'],
     description: "File system API much like Node's fs module",
     manifest: {
       name: 'jwerle/fs.c',
@@ -5576,7 +5611,7 @@ export const packages: Package[] = [
   },
   {
     category: 'Filesystem',
-    dependents: [],
+    dependents: ['phoenixpinpoint/surveyor'],
     description:
       'Path library for C/C++. Cross-Platform for Windows, MacOS and Linux. Supports UNIX and Windows path styles on those platforms.',
     manifest: {
@@ -8452,7 +8487,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Thu Dec 28 2023 12:11:37 GMT+0000 (Coordinated Universal Time)'
+  'Fri Dec 29 2023 00:26:02 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '53e2c88dcaab8c2668deed6d4360c30f0bda6077'
+export const revision = 'd3975734ab1ee2dd781292d482f47d93eee7693a'
