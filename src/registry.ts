@@ -3736,7 +3736,8 @@ export const packages: Package[] = [
         'rxi/vec': '*',
         'jwerle/fs.c': '*'
       },
-      src: ['surveyor.c']
+      src: ['surveyor.c'],
+      install: 'make local'
     },
     name: 'phoenixpinpoint/surveyor',
     slug: 'phoenixpinpoint-surveyor',
@@ -8487,7 +8488,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Dec 29 2023 00:26:02 GMT+0000 (Coordinated Universal Time)'
+  'Mon Jan 01 2024 00:34:01 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'd3975734ab1ee2dd781292d482f47d93eee7693a'
+export const revision = 'f05121a17ea4dc78495de864ee639986cefebcf9'
