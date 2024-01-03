@@ -6686,7 +6686,17 @@ export const packages: Package[] = [
         'phoenixpinpoint/fido': '*',
         'phoenixpinpoint/butterknife': '*'
       },
-      src: ['src/*']
+      src: [
+        'src/ui/element.c',
+        'src/ui/element.h',
+        'src/ui/renderer.c',
+        'src/ui/renderer.h',
+        'src/fracture.c',
+        'src/fracture.h',
+        'install.sh',
+        'package.json',
+        'tailwind.config.js'
+      ]
     },
     name: 'phoenixpinpoint/fracture',
     slug: 'phoenixpinpoint-fracture',
@@ -8488,7 +8498,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Mon Jan 01 2024 00:34:01 GMT+0000 (Coordinated Universal Time)'
+  'Wed Jan 03 2024 00:31:22 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'f05121a17ea4dc78495de864ee639986cefebcf9'
+export const revision = '53eb90a75edae7ed29fdc2d7eaa5b1acfc838c65'
