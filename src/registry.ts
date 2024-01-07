@@ -5074,7 +5074,7 @@ export const packages: Package[] = [
       'A lightweight cross-platform getopt alternative that works on Linux, Windows and macOS. Command line argument parser library for C/C++. Can be used to parse argv and argc parameters.',
     manifest: {
       name: 'likle/cargs',
-      version: 'v1.2.0',
+      version: 'v1.1.0',
       repo: 'likle/cargs',
       description: 'command line argument library for C/C++',
       src: ['src/cargs.c', 'include/cargs.h'],
@@ -8498,7 +8498,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sun Jan 07 2024 12:10:58 GMT+0000 (Coordinated Universal Time)'
+  'Sun Jan 07 2024 18:08:28 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '7e5b5fe97977f707bf7c4094821cfe5cd847c334'
+export const revision = '3a4011ad8997dbb3b9ae7e3838044c57b6eb9a57'
