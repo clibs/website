@@ -3694,20 +3694,14 @@ export const packages: Package[] = [
     description: 'JavaScript-inspired utilities for arrays and buffers.',
     manifest: {
       name: 'exbotanical/libutil',
-      version: '0.0.13',
+      version: '0.1.13',
       author: 'Matthew Zito',
       repo: 'exbotanical/libutil',
       license: 'MIT',
       description:
         'A library of useful C utilities with JavaScript-like array, buffer, and string APIs',
       keywords: ['array', 'buffer', 'formatting', 'utilities', 'helpers'],
-      src: [
-        'include/libutil.h',
-        'src/array.c',
-        'src/buffer.c',
-        'src/fmt.c',
-        'src/str.c'
-      ],
+      src: ['include/libutil.h', 'src/array.c', 'src/buffer.c', 'src/str.c'],
       install: 'make install',
       uninstall: 'make uninstall',
       development: { 'thlorenz/tap.c': '*' },
@@ -8498,7 +8492,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Tue Jan 09 2024 00:31:34 GMT+0000 (Coordinated Universal Time)'
+  'Sat Jan 20 2024 12:12:12 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = 'de808a3b1dea9cf7cdc2bb1b5b3a7875fe703cfc'
+export const revision = '315429581dc3c654a0acee60e7f24a462b15cdde'
