@@ -3702,8 +3702,6 @@ export const packages: Package[] = [
         'A library of useful C utilities with JavaScript-like array, buffer, and string APIs',
       keywords: ['array', 'buffer', 'formatting', 'utilities', 'helpers'],
       src: ['include/libutil.h', 'src/array.c', 'src/buffer.c', 'src/str.c'],
-      install: 'make install',
-      uninstall: 'make uninstall',
       development: { 'thlorenz/tap.c': '*' },
       dependencies: {}
     },
@@ -8492,7 +8490,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Sat Jan 20 2024 12:12:12 GMT+0000 (Coordinated Universal Time)'
+  'Sun Jan 21 2024 18:10:11 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '315429581dc3c654a0acee60e7f24a462b15cdde'
+export const revision = '78fd3f4394bb74355fd03f3e6622ebb01e2514d0'
