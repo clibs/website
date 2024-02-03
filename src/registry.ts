@@ -5610,7 +5610,7 @@ export const packages: Package[] = [
     manifest: {
       name: 'likle/cwalk',
       repo: 'likle/cwalk',
-      version: 'v1.2.8',
+      version: 'v1.2.9',
       decription: 'libcwalk - path library for C/C++',
       src: ['src/cwalk.c', 'include/cwalk.h'],
       keywords: [],
@@ -8490,7 +8490,7 @@ export const packages: Package[] = [
 ]
 
 export const updatedAt = new Date(
-  'Fri Feb 02 2024 12:11:19 GMT+0000 (Coordinated Universal Time)'
+  'Sat Feb 03 2024 12:10:47 GMT+0000 (Coordinated Universal Time)'
 )
 
-export const revision = '2f60c6d2fff68b1122a8f96e0eed00de5f290380'
+export const revision = '64cac1465a1e352e591d5ba05be7d1d55279b911'
